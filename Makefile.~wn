@@ -1,0 +1,33 @@
+# Project: SETestApp1
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = ./obj/main.o ./obj/SETestApp1.o $(RES)
+LINKOBJ  = ./obj/main.o ./obj/SETestApp1.o $(RES)
+LIBS =  -L"C:/MinGW/lib" -L"C:/MinGW/mingw32/lib" -L"E:/D/Meus Documentos/Projetos/SimpleEngine/bin" -lglui -lfreeglut -lglu32 -lopengl32 -lse  
+INCS =  -I"C:/MinGW/include"  -I"C:/MinGW/mingw32/include"  -I"E:/D/Meus Documentos/Projetos/SimpleEngine/inc" 
+CXXINCS =  -I"C:/MinGW/include"  -I"C:/MinGW/mingw32/include"  -I"E:/D/Meus Documentos/Projetos/SimpleEngine/inc" 
+BIN  = bin/SETestApp1.exe
+CXXFLAGS = $(CXXINCS)   -Wno-write-strings
+CFLAGS = $(INCS)    -Wno-write-strings
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before bin/SETestApp1.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "bin\SETestApp1.exe" $(LIBS)
+
+./obj/main.o: SETestApp1/main.cpp
+	$(CPP) -c SETestApp1/main.cpp -o ./obj/main.o $(CXXFLAGS)
+
+./obj/SETestApp1.o: SETestApp1/SETestApp1.cpp
+	$(CPP) -c SETestApp1/SETestApp1.cpp -o ./obj/SETestApp1.o $(CXXFLAGS)

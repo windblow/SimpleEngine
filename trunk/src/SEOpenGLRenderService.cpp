@@ -8,15 +8,25 @@ int SEOpenGLRenderService::shutdown()
 {
 }
 
+uint32_t SEOpenGLRenderService::pushComponent(SERenderComponent *c)
+{
+
+}
+
+void SEOpenGLRenderService::popComponent(uint32_t i)
+{
+
+}
+
 void SEOpenGLRenderService::startFrame()
 {
 	glClearColor(0.0, 0.0, 0.0, 1.0);
 	glClear(GL_DEPTH_BUFFER_BIT|GL_COLOR_BUFFER_BIT);
 	glClearDepth(1.0);
-		
+
 	glLineWidth(1);
 	glPointSize(1);
-	
+
 	glHint(GL_LINE_SMOOTH_HINT, GL_NICEST);
 
 	glDisable(GL_FOG);
@@ -37,7 +47,7 @@ void SEOpenGLRenderService::startFrame()
 	glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
 	glEnable(GL_ALPHA_TEST);
 	glAlphaFunc(GL_GREATER,0.5);
-	
+
 	glEnable(GL_LIGHTING);
 	glShadeModel(GL_SMOOTH);
 

@@ -5,17 +5,31 @@ class SEFlowController
 {
   public:
     typedef enum {NULL_FC, GLUT_FC, NUM_FC} tFlowController;
-  
+
     virtual void mainLoop() = 0;
+
+    tFlowController getType() { return t_; }
+
+    void requestExit() { exit_=true; }
+
+    ~SEFlowController() {}
+  protected:
+    SEFlowController(tFlowController t) { t_=t; exit_=false; }
+
+    bool exitRequested() { return exit_; }
+
+  private:
+    tFlowController t_;
+    bool            exit_;
 };
 
 class SENullFlowController : public SEFlowController
 {
   public:
-    virtual void mainLoop()
-    {
-      return;
-    }
+    SENullFlowController() : SEFlowController(SEFlowController::NULL_FC) {}
+    ~SENullFlowController() {}
+
+    virtual void mainLoop() { while (!exitRequested()) int a=1; }
 };
 
 #endif

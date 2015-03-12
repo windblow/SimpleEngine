@@ -8,6 +8,9 @@
 class SEGLUTFlowController : public SEFlowController
 {
   public:
+    SEGLUTFlowController();
+    ~SEGLUTFlowController() {}
+
     virtual void mainLoop() { glutMainLoop(); }
 };
 

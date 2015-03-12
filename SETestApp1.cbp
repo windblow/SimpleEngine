@@ -11,6 +11,7 @@
 				<Option object_output="./obj" />
 				<Option type="1" />
 				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="0" />
 			</Target>
 		</Build>
 		<Compiler>
@@ -19,7 +20,7 @@
 		<Linker>
 			<Add library="se" />
 			<Add library="glui" />
-			<Add library="freeglut" />
+			<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\freeglut.lib" />
 			<Add library="glu32" />
 			<Add library="opengl32" />
 			<Add directory='&quot;E:/D/Meus Documentos/Projetos/SimpleEngine/bin&quot;' />

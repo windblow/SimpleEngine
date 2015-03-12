@@ -7,7 +7,7 @@ SEApplication::~SEApplication()
   SimpleEngine::sl()->destroyWindowManager();
   SimpleEngine::sl()->destroyRenderService();
 }
- 
+
 void SEApplication::init(int argc, char **argv)
 {
      // Inicialização geral da aplicação
@@ -21,6 +21,10 @@ void SEApplication::init(int argc, char **argv)
     fc_ = SimpleEngine::sl()->getFlowController();
 }
 
+void SEApplication::mainLoop()
+{
+    if (fc_ != NULL) fc_->mainLoop();
+}
 void SEApplication::quit()
 {
      // Procedimentos finais da aplicação

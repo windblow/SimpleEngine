@@ -22,7 +22,9 @@
 			<Add library="opengl32" />
 		</Linker>
 		<Unit filename="inc/SEApplication.h" />
+		<Unit filename="inc/SEComponent.h" />
 		<Unit filename="inc/SEConfigurationLoader.h" />
+		<Unit filename="inc/SEEntity.h" />
 		<Unit filename="inc/SEEventHandler.h" />
 		<Unit filename="inc/SEFlowController.h" />
 		<Unit filename="inc/SEGLUIWindow.h" />
@@ -45,6 +47,7 @@
 		<Unit filename="src/SEGLUIWindow.cpp" />
 		<Unit filename="src/SEGLUIWindowManager.cpp" />
 		<Unit filename="src/SEMath.cpp" />
+		<Unit filename="src/SEObject.cpp" />
 		<Unit filename="src/SEOpenGLRenderService.cpp" />
 		<Unit filename="src/SEServiceLocator.cpp" />
 		<Unit filename="src/SimpleEngine.cpp" />

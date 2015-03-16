@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1426171300 source:e:\d\meus documentos\projetos\simpleengine\setestapp1\main.cpp
+	<cstdlib>
+	<iostream>
+	<SimpleEngine.h>
+	"SETestApp1.hpp"
+
+1426169522 e:\d\meus documentos\projetos\simpleengine\setestapp1\setestapp1.hpp
+	<SimpleEngine.h>
+
+1426214799 source:e:\d\meus documentos\projetos\simpleengine\setestapp1\setestapp1.cpp
+	"SETestApp1.hpp"
+	<iostream>
+

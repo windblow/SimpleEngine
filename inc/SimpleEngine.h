@@ -11,14 +11,12 @@
 #include "SEServiceLocator.h"
 #include "SEFlowController.h"
 
-#include "SEApplication.h"
+#include "SEApplicationInterface.h"
 
 #include "SEObject.h"
 #include "SEEntity.h"
 #include "SEComponent.h"
 #include "SESceneGraph.h"
-
-
 
 /*
  * Classe: SimpleEngine
@@ -43,7 +41,7 @@ class SimpleEngine
 	static void quitApplication();
 
 	/** Carga e descarga de apps **/
-    static void loadApp(SEApplication *app);
+    static void loadApp(SEApplicationInterface *app);
     static void unloadApp();
 
     static bool appLoaded() { return appLoaded_; }
@@ -60,9 +58,9 @@ class SimpleEngine
     static SEFlowController      *flowController() { return fc(); }
     static SEFlowController      *getFlowController() { return fc(); }
 
-    static SEApplication         *app() { return app_; }
-    static SEApplication         *application() { return app(); }
-    static SEApplication         *getApplication() { return app(); }
+    static SEApplicationInterface *app() { return app_; }
+    static SEApplicationInterface *application() { return app(); }
+    static SEApplicationInterface *getApplication() { return app(); }
 
     /** Getters de módulos da aplicação **/
     static SEWindowManager  *wm() { if (appLoaded()) return app_->wm(); return (NULL); }
@@ -89,12 +87,12 @@ class SimpleEngine
 
   private:
 
-    static SEApplication *app_;
-    static bool           appLoaded_;
+    static SEApplicationInterface *app_;
+    static bool                    appLoaded_;
 
-    static SEConfigurationLoader *cl_;
-    static SEServiceLocator      *sl_;
-    static SEFlowController      *fc_;
+    static SEConfigurationLoader  *cl_;
+    static SEServiceLocator       *sl_;
+    static SEFlowController       *fc_;
 
     static int argc_;
     static char **argv_;

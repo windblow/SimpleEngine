@@ -10,7 +10,7 @@
 
 
 
-template <class T> class SEMesh : public SERenderObject<T>
+template <class T> class SEMesh : public virtual SERenderObject<T>
 {
   public:
     typedef typename std::map<uint32_t, SEVertexBuffer<T> >           tVertexBufferMap;

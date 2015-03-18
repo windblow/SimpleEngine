@@ -11,10 +11,10 @@
 class SEGLUIWindow : public SEWindow
 {
   friend class SEGLUIWindowManager;
-  
+
   protected:
           SEGLUIWindow(int w, int h, std::string t="", int px=0, int py=0);
-          ~SEGLUIWindow() {}
+          virtual ~SEGLUIWindow();
 
   public:
          virtual void reshape(int nw, int nh);

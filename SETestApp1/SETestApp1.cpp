@@ -4,7 +4,7 @@
 
 void SETestApp1::init(int argc, char **argv)
 {
-     SEApplication::init(argc, argv);
+     SEApplication<GLfloat>::init(argc, argv);
 
      wm_->createNewWindow(1024,768,title_,10,10);
 
@@ -22,18 +22,24 @@ void SETestApp1::run()
     std::cout << ent2.name.str << std::endl;
     std::cout << ent3.name.str << std::endl;
 
-    SEApplication::run();
+    SEApplication<GLfloat>::run();
 }
 
 void SETestApp1::quit()
 {
-    SEApplication::quit();
+    SEApplication<GLfloat>::quit();
+}
+
+void SETestApp1::update()
+{
+
 }
 
 void SETestApp1::display()
 {
 
 }
+
 void SETestApp1::key(unsigned char key, int x, int y)
 {
     switch(key)

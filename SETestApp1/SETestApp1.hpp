@@ -1,15 +1,20 @@
 #ifndef __SETESTAPP1_H__
 #define __SETESTAPP1_H__
 
-#include <SimpleEngine.h>
+#include <GL/gl.h>
 
-class SETestApp1 : public SEApplication
+#include <SimpleEngine.h>
+#include <SEApplication.h>
+
+class SETestApp1 : public SEApplication<GLfloat>
 {
   public:
-            SETestApp1() : SEApplication("SETestApp1") {}
-           ~SETestApp1() {}
+            SETestApp1() : SEApplication<GLfloat>("SETestApp1") {}
+    virtual ~SETestApp1() {}
 
     virtual void init(int argc, char **argv);
+
+    virtual void update();
 
     virtual void run();
 

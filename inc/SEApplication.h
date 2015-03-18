@@ -2,11 +2,11 @@
 #define __SEAPPLICATION_H__
 
 #include <string>
+#include <iostream>
 
+#include "SEApplicationInterface.h"
 #include "SESceneManager.h"
-#include "SERenderService.h"
-#include "SEWindowManager.h"
-#include "SEFlowController.h"
+#include "SimpleEngine.h"
 
 /*
  * Classe: SEApplication
@@ -15,60 +15,79 @@
  *
 */
 
-class SEApplication
+template <class T> class SEApplication : public SEApplicationInterface
 {
   public:
-    const bool &isRunning;
-    const bool &isUpdating;
-
-    ~SEApplication();
 
     virtual void init(int argc, char **argv);
 
     virtual void run();
-    virtual void update()=0;
 
     virtual void quit();
 
-    virtual void pause() { update_=!update_; }
+    virtual ~SEApplication();
 
-    SERenderService  *rs() { return rs_; }
-    SEWindowManager  *wm() { return wm_; }
-    SEFlowController *fc() { return fc_; }
+    virtual SERenderService              *rs() { return static_cast<SERenderService *>(rs_); }
+    virtual SEWindowManager              *wm() { return wm_; }
+    virtual SEFlowController             *fc() { return fc_; }
 
-    // Funções virtuais de controle
-	virtual void reshape(int width, int height) {}
 	virtual void display() { if (rs_!=NULL) rs_->renderFrame(); }
-	virtual void key(unsigned char key, int x, int y) {}
-	virtual void pressFuncKey(int key, int x1, int y1) {}
-	virtual void releaseFuncKey(int key, int x, int y) {}
-	virtual void mouseMotion(int x, int y) {}
-	virtual void mousePassiveMotion(int x, int y) {}
-	virtual void mouseButton(int button, int state, int x, int y) {}
-	virtual void idle() {}
 
   protected:
     std::string title_;
 
     SESceneManager sm_;
 
-    bool run_;
-    bool update_;
-
-    SERenderService  *rs_;
-    SEWindowManager  *wm_;
-    SEFlowController *fc_;
+    SERenderServiceInternals<T>  *rs_;
+    SEWindowManager              *wm_;
+    SEFlowController             *fc_;
 
     SEApplication(std::string t) :
-        title_(t), run_(true), update_(true), rs_(NULL), wm_(NULL), fc_(NULL), isRunning(run_), isUpdating(update_)
+        SEApplicationInterface(), title_(t), rs_(NULL), wm_(NULL), fc_(NULL)
     {}
 
     SEApplication(const char *t) :
-        title_(t), run_(true), update_(true), rs_(NULL), wm_(NULL), fc_(NULL), isRunning(run_), isUpdating(update_)
+        SEApplicationInterface(), title_(t), rs_(NULL), wm_(NULL), fc_(NULL)
     {}
 
 
 };
+
+// Declara os templates de função no header pois não há compilação de .cpp para classes template
+
+template <class T> SEApplication<T>::~SEApplication()
+{
+    SimpleEngine::sl()->destroyFlowController();
+    SimpleEngine::sl()->destroyWindowManager();
+    SimpleEngine::sl()->destroyRenderService();
+}
+
+template <class T> void SEApplication<T>::init(int argc, char **argv)
+{
+     // Inicialização geral da aplicação
+    SimpleEngine::sl()->configRenderService(SERenderService::OPENGL_RS);
+    if (SimpleEngine::sl()->getRenderService()->RStype == SERenderService::OPENGL_RS)
+      rs_ = static_cast<SERenderServiceInternals<T> *>(SimpleEngine::sl()->getRenderService());
+    else
+      rs_ = NULL;
+
+    SimpleEngine::sl()->configWindowManager(SEWindowManager::GLUI_WM, argc, argv);
+    wm_ = SimpleEngine::sl()->getWindowManager();
+
+    SimpleEngine::sl()->configFlowController(SEFlowController::GLUT_FC);
+    fc_ = SimpleEngine::sl()->getFlowController();
+}
+
+template <class T> void SEApplication<T>::run()
+{
+    run_=true;
+    if (fc_ != NULL) fc_->mainLoop();
+}
+
+template <class T> void SEApplication<T>::quit()
+{
+     run_=false;
+}
 
 
 #endif

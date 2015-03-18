@@ -1,6 +1,8 @@
 #include "../inc/SEGLUTFlowController.h"
 #include "../inc/SimpleEngine.h"
 
+#include <iostream>
+
 SEGLUTFlowController::SEGLUTFlowController()
  : SEFlowController(SEFlowController::GLUT_FC)
 {

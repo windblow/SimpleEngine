@@ -1,1 +1,108 @@
 # depslib dependency file v1.0
+1415725320 source:e:\d\meus documentos\projetos\simpleengine\src\json.cpp
+	"../inc/json.h"
+	<stdlib.h>
+	<string>
+	<algorithm>
+	<cstdlib>
+	<cstdio>
+	<climits>
+	<string.h>
+	<functional>
+	<cctype>
+	<stack>
+	<cerrno>
+
+1415725321 e:\d\meus documentos\projetos\simpleengine\inc\json.h
+	<vector>
+	<map>
+	<string>
+	<stdexcept>
+
+1426685856 source:e:\d\meus documentos\projetos\simpleengine\src\seapplication.cpp
+	"../inc/SEApplication.h"
+	"../inc/SimpleEngine.h"
+
+1426685868 e:\d\meus documentos\projetos\simpleengine\inc\seapplication.h
+	<string>
+	"SESceneManager.h"
+	"SERenderService.h"
+	"SEWindowManager.h"
+	"SEFlowController.h"
+
+1425851922 e:\d\meus documentos\projetos\simpleengine\inc\sescenemanager.h
+	<string>
+	<map>
+	"SEScene.h"
+	"SEMath.h"
+
+1425851922 e:\d\meus documentos\projetos\simpleengine\inc\sescene.h
+	"SESceneGraph.h"
+
+1424877024 e:\d\meus documentos\projetos\simpleengine\inc\sescenegraph.h
+
+1426657172 e:\d\meus documentos\projetos\simpleengine\inc\semath.h
+	<cmath>
+	<cassert>
+	<iostream>
+	<string>
+	<cstdlib>
+	<ctime>
+
+1426668188 e:\d\meus documentos\projetos\simpleengine\inc\serenderservice.h
+	"SERenderObject.h"
+	<string>
+	<vector>
+
+1426663882 e:\d\meus documentos\projetos\simpleengine\inc\serenderobject.h
+	"SEMath.h"
+
+1424898086 e:\d\meus documentos\projetos\simpleengine\inc\sewindowmanager.h
+	<map>
+	<string>
+	"SEWindow.h"
+
+1416832125 e:\d\meus documentos\projetos\simpleengine\inc\sewindow.h
+	<string>
+
+1426182417 e:\d\meus documentos\projetos\simpleengine\inc\seflowcontroller.h
+
+1426668708 e:\d\meus documentos\projetos\simpleengine\inc\simpleengine.h
+	<stdlib.h>
+	<time.h>
+	<list>
+	"SEMath.h"
+	"SEConfigurationLoader.h"
+	"SEServiceLocator.h"
+	"SEFlowController.h"
+	"SEApplication.h"
+	"SEObject.h"
+	"SEEntity.h"
+	"SEComponent.h"
+	"SESceneGraph.h"
+
+1417610230 e:\d\meus documentos\projetos\simpleengine\inc\seconfigurationloader.h
+	<string>
+	<map>
+
+1426668296 e:\d\meus documentos\projetos\simpleengine\inc\seservicelocator.h
+	<string>
+	"SEConfigurationLoader.h"
+	"SERenderService.h"
+	"SEWindowManager.h"
+	"SEFlowController.h"
+
+1426106349 e:\d\meus documentos\projetos\simpleengine\inc\seobject.h
+	<string>
+	<set>
+	<map>
+
+1425852981 e:\d\meus documentos\projetos\simpleengine\inc\seentity.h
+	<string>
+	"SEObject.h"
+	"SEComponent.h"
+	"SEMath.h"
+
+1425852981 e:\d\meus documentos\projetos\simpleengine\inc\secomponent.h
+	"SEObject.h"
+

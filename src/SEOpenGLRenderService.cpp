@@ -8,12 +8,38 @@ int SEOpenGLRenderService::shutdown()
 {
 }
 
+void SEOpenGLRenderService::renderFrame()
+{
+
+
+}
+
 uint32_t SEOpenGLRenderService::pushComponent(SERenderComponent *c)
 {
 
 }
 
 void SEOpenGLRenderService::popComponent(uint32_t i)
+{
+
+}
+
+void SEOpenGLRenderService::setCamera(uint32_t c)
+{
+
+}
+
+void SEOpenGLRenderService::activateLight(uint32_t l)
+{
+
+}
+
+void SEOpenGLRenderService::deactivateLight(uint32_t l)
+{
+
+}
+
+SERenderObject<GLfloat> * SEOpenGLRenderService::getObject(uint32_t o)
 {
 
 }
@@ -35,14 +61,14 @@ void SEOpenGLRenderService::startFrame()
 	glCullFace(GL_BACK);
 
 	glEnable(GL_DEPTH_TEST);
-  glDepthFunc(GL_LESS);
+    glDepthFunc(GL_LESS);
 	glDepthMask(GL_TRUE);
 
 	glShadeModel(GL_SMOOTH);
 	glPolygonMode(GL_FRONT,GL_FILL);
 	glPolygonMode(GL_BACK,GL_FILL);
 
-  glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
+    glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
 	glEnable(GL_ALPHA_TEST);
@@ -56,5 +82,5 @@ void SEOpenGLRenderService::startFrame()
 
 void SEOpenGLRenderService::endFrame()
 {
-  glFlush();
+    glFlush();
 }

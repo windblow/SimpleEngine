@@ -13,5 +13,8 @@ int main(int argc, char *argv[])
 
     SimpleEngine::runApp();
 
+    SimpleEngine::quit();
+
+    system("pause");
     return EXIT_SUCCESS;
 }

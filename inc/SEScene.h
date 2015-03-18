@@ -14,7 +14,7 @@ class SEScene
                  &postSG_;
 
     SEScene() : initialized_(false), preSG_(sg_[0]), mainSG_(sg_[1]), postSG_(sg_[2]) {}
-    ~SEScene() { if (initialized_) this->finish(); }
+    virtual ~SEScene() { if (initialized_) this->finish(); }
 
   public:
     virtual void init()=0;

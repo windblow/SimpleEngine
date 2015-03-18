@@ -4,16 +4,16 @@
 #include <string>
 
 // Inicialização das variáveis estáticas
-SEConfigurationLoader *SimpleEngine::cl_        = NULL;
-SEServiceLocator      *SimpleEngine::sl_        = NULL;
-SEFlowController      *SimpleEngine::fc_        = NULL;
+SEConfigurationLoader  *SimpleEngine::cl_        = NULL;
+SEServiceLocator       *SimpleEngine::sl_        = NULL;
+SEFlowController       *SimpleEngine::fc_        = NULL;
 //
-SEApplication         *SimpleEngine::app_       = NULL;
+SEApplicationInterface *SimpleEngine::app_       = NULL;
 //
-int                    SimpleEngine::argc_      = 0;
-char                 **SimpleEngine::argv_      = NULL;
+int                     SimpleEngine::argc_      = 0;
+char                  **SimpleEngine::argv_      = NULL;
 //
-bool                   SimpleEngine::appLoaded_ = false;
+bool                    SimpleEngine::appLoaded_ = false;
 //
 
 void SimpleEngine::startup(int argc, char **argv)
@@ -24,7 +24,7 @@ void SimpleEngine::startup(int argc, char **argv)
   init();
 }
 
-void SimpleEngine::loadApp(SEApplication *app)
+void SimpleEngine::loadApp(SEApplicationInterface *app)
 {
   if (appLoaded())
     unloadApp();
@@ -40,9 +40,10 @@ void SimpleEngine::unloadApp()
 {
   if (appLoaded_)
   {
-    app_->quit();
+    //app_->quit();
     appLoaded_=false;
     delete(app_);
+    appLoaded_=false;
     app_=NULL;
   }
 }

@@ -5,18 +5,29 @@
 
 #include "SERenderObject.h"
 
-class SEOpenGLRenderObject : public SERenderObject<GLfloat>
-{
-  public:
-    ~SEOpenGLRenderObject() {}
+class SEOpenGLRenderService;
 
-    virtual void            draw() = 0;
+class SEOpenGLRenderObject : public virtual SERenderObject<GLfloat>
+{
+  friend class SEOpenGLRenderService;
+
+  public:
+    class Builder;
+
+    virtual void draw() const =0;
 
   protected:
-    SEOpenGLRenderObject(SEROType::tRenderObject rt) : SERenderObject<GLfloat>(rt) {}
+    SEOpenGLRenderObject(SEROType::tRenderObject t) : SERenderObject<GLfloat>(t) {}
+    virtual ~SEOpenGLRenderObject() {}
 
-    virtual void            applyTransformation() { glMatrixMode(GL_MODELVIEW); glPushMatrix(); glMultMatrixf(getTransformationMatrix().transposed().m); }
+    virtual void applyTransformation() { glMatrixMode(GL_MODELVIEW); glPushMatrix(); glMultMatrixf(getModelMatrix().transposed().m); }
 
+};
+
+class SEOpenGLRenderObject::Builder : public SERenderObject<GLfloat>::Builder
+{
+  public:
+    virtual SERenderObject<GLfloat> *build() = 0;
 };
 
 #endif // __SEOPENGLRENDEROBJECT_H__

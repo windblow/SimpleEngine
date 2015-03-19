@@ -141,6 +141,11 @@ template <class T> class SEMathUtil
     // Inverte dois valores
     static       void            SWAP(T &a, T &b)                 { register T t=a; a=b; b=t; }
 
+    // Calcula determinante de uma matriz 3x3
+    static       T               DET3x3(T m0, T m1, T m2,
+                                        T m3, T m4, T m5,
+                                        T m6, T m7, T m8)         { return m0*(m4*m8-m7*m5) + m1*(m6*m5-m3*m8) + m2*(m3*m7-m6*m4); }
+
     // Converte ângulos para radianos e vice-versa
     static       T               toRadians(const T &a)            { return rad(a); }
     static       T               rad(const T &a)                  { return (a * PIOVER180); }
@@ -771,13 +776,36 @@ template <class T> class SEMat3
     friend   std::ostream   &operator <<(std::ostream &os, const SEMat3<T> &m)                  { os<<"|"<<m.m00<<"\t"<<m.m01<<"\t"<<m.m02<<"|\n|"<<m.m10<<"\t"<<m.m11<<"\t"<<m.m12<<"|\n|"<<m.m20<<"\t"<<m.m21<<"\t"<<m.m22<<"|"; return os; }
 
              T               trace()                                                      const { return (m00+m11+m22); }
+             T               det()                                                        const { return m00 * (m11 * m22 - m21 * m12) - m10 * (m01 * m22 - m21 * m02) + m20 * (m01 * m12 - m11 * m02); }
+             T               determinant()                                                const { return det(); }
 
              SEMat3<T>       transposed()                                                 const { return SEMat3<T>(*this).transpose(); }
+             SEMat3<T>       inverse()                                                    const { return SEMat3<T>(*this).invert(); }
 
              SEMat3<T>      &null()                                                             { for (int i=0;i<9;++i) m[i]=0; return(*this); } //função nulificadora
              SEMat3<T>      &identity()                                                         { null(); m00=m11=m22=1; return(*this); }
              SEMat3<T>      &transpose()                                                        { SEMathUtil<T>::SWAP(m01,m10); SEMathUtil<T>::SWAP(m02,m20); SEMathUtil<T>::SWAP(m12,m21); return(*this); }
              SEMat3<T>      &transpose(const SEMat3<T> &m)                                      { (*this)=m; return(transpose()); }
+             SEMat3<T>      &invert()                                                           { T det, invDet; T tmp[9];
+                                                                                                  tmp[0] = m[4] * m[8] - m[7] * m[5];
+                                                                                                  tmp[1] = m[7] * m[2] - m[1] * m[8];
+                                                                                                  tmp[2] = m[1] * m[5] - m[4] * m[2];
+                                                                                                  // verifica se a determinante é zero antes de continuar a calcular. Se for, retorna matriz identidade
+                                                                                                  det = m[0] * tmp[0] + m[3] * tmp[1] + m[6] * tmp[2];
+                                                                                                  if (ABS(det) <= SEMathUtil<T>::EPSILON) return identity();
+                                                                                                  tmp[3] = m[6] * m[5] - m[3] * m[8];
+                                                                                                  tmp[4] = m[0] * m[8] - m[6] * m[2];
+                                                                                                  tmp[5] = m[3] * m[2] - m[0] * m[5];
+                                                                                                  tmp[6] = m[3] * m[7] - m[6] * m[4];
+                                                                                                  tmp[7] = m[6] * m[1] - m[0] * m[7];
+                                                                                                  tmp[8] = m[0] * m[4] - m[3] * m[1];
+                                                                                                  // divide pela determinante
+                                                                                                  invDet = (T)1.0 / det;
+                                                                                                  m[0] = invDet * tmp[0]; m[1] = invDet * tmp[1]; m[2] = invDet * tmp[2];
+                                                                                                  m[3] = invDet * tmp[3]; m[4] = invDet * tmp[4]; m[5] = invDet * tmp[5];
+                                                                                                  m[6] = invDet * tmp[6]; m[7] = invDet * tmp[7]; m[8] = invDet * tmp[8];
+                                                                                                  return (*this); }
+             SEMat3<T>      &invert(const SEMat3<T> &m)                                         { (*this)=m; return(invert()); }
 
 
              SEMat3<T>      &set(const T &f)                                                    { null(); m00=m11=m22=f; return(*this); }
@@ -936,13 +964,66 @@ template <class T> class SEMat4
     friend   std::ostream    &operator <<(std::ostream &os, const SEMat4<T> &m)           { os<<"|"<<m.m00<<"\t"<<m.m01<<"\t"<<m.m02<<"\t"<<m.m03<<"|\n|"<<m.m10<<"\t"<<m.m11<<"\t"<<m.m12<<"\t"<<m.m13<<"|\n|"<<m.m20<<"\t"<<m.m21<<"\t"<<m.m22<<"\t"<<m.m23<<"|\n|"<<m.m30<<"\t"<<m.m31<<"\t"<<m.m32<<"\t"<<m.m33<<"|"; return os; }
 
              T                trace()                                               const { return (m00+m11+m22+m33); }
+             T                det()                                                 const { return m00 * SEMathUtil<T>::DET3x3(m11,m12,m13, m21,m22,m23, m31,m32,m33) -
+                                                                                                   m10 * SEMathUtil<T>::DET3x3(m01,m02,m03, m21,m22,m23, m31,m32,m33) +
+                                                                                                   m20 * SEMathUtil<T>::DET3x3(m01,m02,m03, m11,m12,m13, m31,m32,m33) -
+                                                                                                   m30 * SEMathUtil<T>::DET3x3(m01,m02,m03, m11,m12,m13, m21,m22,m23); }
+             T                determinant()                                         const { return det(); }
 
-             SEMat4<T>        transposed()                                          const { SEMat4 t(*this); return(t.transpose()); }
+             bool             isAffine()                                            const { if (m30 != 0.0 || m31 != 0.0 || m32 != 0.0 || m33 != 1.0) return false; return true; }
+
+             SEMat4<T>        transposed()                                          const { return SEMat4<T>(*this).transpose(); }
+             SEMat4<T>        inverse()                                             const { return SEMat4<T>(*this).invert(); }
 
              SEMat4<T>       &null()                                                      { for (int i=0;i<16;++i) m[i]=0; return(*this); } //função nulificadora
              SEMat4<T>       &identity()                                                  { null(); m00=m11=m22=m33=1; return(*this); }
              SEMat4<T>       &transpose()                                                 { SEMathUtil<T>::SWAP(m01,m10); SEMathUtil<T>::SWAP(m02,m20); SEMathUtil<T>::SWAP(m03,m30); SEMathUtil<T>::SWAP(m12,m21); SEMathUtil<T>::SWAP(m13,m31); SEMathUtil<T>::SWAP(m23,m32); return(*this); }
              SEMat4<T>       &transpose(const SEMat4<T> &m)                               { (*this)=m; return(transpose()); }
+             SEMat4<T>       &invertAffine()                                              { // R^-1
+                                                                                            SEMat3<T> r(m[0],m[1],m[2], m[4],m[5],m[6], m[8],m[9],m[10]); r.invert();
+                                                                                            m[0] = r[0];  m[1] = r[1];  m[2] = r[2];
+                                                                                            m[4] = r[3];  m[5] = r[4];  m[6] = r[5];
+                                                                                            m[8] = r[6];  m[9] = r[7];  m[10]= r[8];
+                                                                                            // -R^-1 * T
+                                                                                            T x = m[3]; T y = m[7]; T z = m[11];
+                                                                                            m[3]  = -(r[0] * x + r[1] * y + r[2] * z);
+                                                                                            m[7]  = -(r[3] * x + r[4] * y + r[5] * z);
+                                                                                            m[11] = -(r[6] * x + r[7] * y + r[8] * z);
+                                                                                            // a última linha permanece como está (0,0,0,1)
+                                                                                            //m[12] = m[13] = m[14] = 0.f; m[15] = 1.0;
+                                                                                            return (*this); }
+             SEMat4<T>       &invert()                                                    { // Para matrizes afins, usa algoritmo otimizado
+                                                                                            if (isAffine()) return invertAffine();
+                                                                                            // Para matrizes não-afins, faz cálculo completo da inversa
+                                                                                            T cof00 = SEMathUtil<T>::DET3x3(m11,m12,m13, m21,m22,m23, m31,m32,m33);
+                                                                                            T cof10 = SEMathUtil<T>::DET3x3(m01,m02,m03, m21,m22,m23, m31,m32,m33);
+                                                                                            T cof20 = SEMathUtil<T>::DET3x3(m01,m02,m03, m11,m12,m13, m31,m32,m33);
+                                                                                            T cof30 = SEMathUtil<T>::DET3x3(m01,m02,m03, m11,m12,m13, m21,m22,m23);
+                                                                                            // Se a determinante é zero, retorna identidade
+                                                                                            T det = m00 * cof00 - m10 * cof10 + m20 * cof20 - m30 * cof30;
+                                                                                            if(ABS(det) <= SEMathUtil<T>::EPSILON) return identity();
+                                                                                            // Senão continua o cáçlculo
+                                                                                            T cof01 = SEMathUtil<T>::DET3x3(m10,m12,m13, m20,m22,m23, m30,m32,m33);
+                                                                                            T cof11 = SEMathUtil<T>::DET3x3(m00,m02,m03, m20,m22,m23, m30,m32,m33);
+                                                                                            T cof21 = SEMathUtil<T>::DET3x3(m00,m02,m03, m10,m12,m13, m30,m32,m33);
+                                                                                            T cof31 = SEMathUtil<T>::DET3x3(m00,m02,m03, m10,m12,m13, m20,m22,m23);
+                                                                                            T cof02 = SEMathUtil<T>::DET3x3(m10,m11,m13, m20,m21,m23, m30,m31,m33);
+                                                                                            T cof12 = SEMathUtil<T>::DET3x3(m00,m01,m03, m20,m21,m23, m30,m31,m33);
+                                                                                            T cof22 = SEMathUtil<T>::DET3x3(m00,m01,m03, m10,m11,m13, m30,m31,m33);
+                                                                                            T cof32 = SEMathUtil<T>::DET3x3(m00,m01,m03, m10,m11,m13, m20,m21,m23);
+                                                                                            T cof03 = SEMathUtil<T>::DET3x3(m10,m11,m12, m20,m21,m22, m30,m31,m32);
+                                                                                            T cof13 = SEMathUtil<T>::DET3x3(m00,m01,m02, m20,m21,m22, m30,m31,m32);
+                                                                                            T cof23 = SEMathUtil<T>::DET3x3(m00,m01,m02, m10,m11,m12, m30,m31,m32);
+                                                                                            T cof33 = SEMathUtil<T>::DET3x3(m00,m01,m02, m10,m11,m12, m20,m21,m22);
+                                                                                            // constrói a matriz inversa = adj(M) / det(M)
+                                                                                            // adjunta de M é a transposta da matriz de cofatores de M
+                                                                                            T invDet = 1.0 / det;
+                                                                                            m00 = invDet*cof00; m01 =-invDet*cof10; m02 = invDet*cof20; m03 =-invDet*cof30;
+                                                                                            m10 =-invDet*cof01; m11 = invDet*cof11; m12 =-invDet*cof21; m13 = invDet*cof31;
+                                                                                            m20 = invDet*cof02; m21 =-invDet*cof12; m22 = invDet*cof22; m23 =-invDet*cof32;
+                                                                                            m30 =-invDet*cof03; m31 = invDet*cof13; m32 =-invDet*cof23; m33 = invDet*cof33;
+                                                                                            return(*this); }
+             SEMat4<T>       &invert(const SEMat4<T> &m)                                  { (*this)=m; return(invert()); }
 
              SEMat4<T>       &set(const T &f)                                             { null(); m00=m11=m22=m33=f; return(*this); }
              SEMat4<T>       &set(const SEVec3<T> &v)                                     { return (*this)=v.mat(); }

@@ -1,53 +1,66 @@
 #ifndef __SEOPENGLRENDERSERVICE_H__
 #define __SEOPENGLRENDERSERVICE_H__
 
-#include "SERenderService.h"
-
 #include <string>
+#include <vector>
+#include <map>
+
 #include <GL/gl.h>
 
-#include <vector>
+#include "SERenderService.h"
+
+struct SEROType;
+
+class SEOpenGLRenderObject;
+class SEOpenGLCamera;
+class SEOpenGLLight;
 
 class SEOpenGLRenderService : public SERenderServiceInternals<GLfloat>
 {
   friend class SEServiceLocator;
 
   public:
-    typedef typename std::vector<SERenderObject<GLfloat>*>           tROVector;
-    typedef typename std::vector<SERenderObject<GLfloat>*>::iterator tROVectorIt;
+    const   int      &currentCamera;
 
-    typedef std::vector<SECamera*>                                   tCamVector;
-    typedef std::vector<SECamera*>::iterator                         tCamVectorIt;
+    typedef typename std::vector<SEOpenGLRenderObject*>            tROVector;
+    typedef typename std::vector<SEOpenGLRenderObject*>::iterator  tROVectorIt;
 
-    typedef std::vector<SELight*>                                    tLightVector;
-    typedef std::vector<SELight*>::iterator                          tLightVectorIt;
+    typedef typename std::map<uint32_t, SEOpenGLCamera*>           tCamMap;
+    typedef typename std::map<uint32_t, SEOpenGLCamera*>::iterator tCamMapIt;
+
+    typedef typename std::map<uint32_t, SEOpenGLLight*>            tLightMap;
+    typedef typename std::map<uint32_t, SEOpenGLLight*>::iterator  tLightMapIt;
 
     virtual int      startup();
     virtual int      shutdown();
 
     virtual void     renderFrame();
 
-    virtual uint32_t pushComponent(SERenderComponent *c);
-    virtual void     popComponent(uint32_t i);
+    virtual int      createRO(SEROType::tRenderObject t, int t1=-1, int t2=-1, int t3=-1);
+    virtual void     destroyRO(uint32_t i);
 
     virtual void     setCamera(uint32_t c);
     virtual void     activateLight(uint32_t l);
     virtual void     deactivateLight(uint32_t l);
 
     virtual SERenderObject<GLfloat> *getObject(uint32_t o);
+    virtual SECamera<GLfloat>       *getCamera(uint32_t c);
+    virtual SELight<GLfloat>        *getLight(uint32_t l);
+
   protected:
-    SEOpenGLRenderService() : SERenderServiceInternals<GLfloat>(OPENGL_RS), ro_(), c_(), l_(), cc_(-1) {}
-    virtual ~SEOpenGLRenderService() {}
+    SEOpenGLRenderService() : SERenderServiceInternals<GLfloat>(OPENGL_RS), ro_(), c_(), l_(), cc_(-1), currentCamera(cc_) { startup(); }
+    virtual ~SEOpenGLRenderService() { shutdown(); }
 
   private:
             void         startFrame();
+            void         setupCamera();
             void         endFrame();
 
-            tROVector    ro_;
-            tCamVector   c_;
-            tLightVector l_;
+            tROVector ro_;
+            tCamMap   c_;
+            tLightMap l_;
 
-            int          cc_;
+            int       cc_;
 };
 
 #endif

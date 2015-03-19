@@ -3,6 +3,8 @@
 
 #include "SEMath.h"
 
+class SERenderService;
+
 struct SEROType
 {
     typedef enum {MODEL_RO, PRIMITIVE_RO, CAMERA_RO, LIGHT_RO, FONT_RO, NUM_ROS} tRenderObject;
@@ -10,17 +12,27 @@ struct SEROType
 
 template <class T> class SERenderObject
 {
+  friend class SERenderService;
+
   public:
+    class   Builder; // Interface de construtor para objetos do serviço de renderização
+
     const   SEROType::tRenderObject &ROtype;
-    const   SEMat4<T>               &translation;
+    const   SEVec3<T>               &translation;
     const   SEQuaternion<T>         &rotation;
+    const   T                       &scale;
 
-    ~SERenderObject() {}
+            void            setTranslation(T x, T y, T z)                   { t_.vec(x,y,z); }
+            void            setTranslation(const SEVec3<T> &t)              { t_=t; }
+            void            setTranslation(const SEVec4<T> &t)              { setTranslation(t.x, t.y, t.z); }
+            void            setTranslation(const SEMat4<T> &t)              { setTranslation(t[3],t[7],t[11]); }
 
-            void            setTranslation(const SEMat4<T> &t)              { t_=t; }
-            void            translateBy(const SEMat4<T> &dt)                { setTranslation(t_+dt); }
-            void            translateBy(const SEVec3<T> &dir, const T len)  { setTranslation(t_+(dir.normal()*len).mat4()); }
-            void            translateBy(T x, T y, T z, T len)               { setTranslation(t_+(SEVec3<T>(x,y,z).normal()*len).mat4()); }
+            void            translateBy(T x, T y, T z)                      { t_[0]+=x; t_[1]+=y; t_[2]+=z; }
+            void            translateBy(const SEVec3<T> &dt)                { t_+=dt; }
+            void            translateBy(const SEVec4<T> &dt)                { translateBy(dt.x,dt.y,dt.z); }
+            void            translateBy(const SEMat4<T> &dt)                { translateBy(dt[3],dt[7],dt[11]); }
+            void            translateBy(const SEVec3<T> &dir, T len)        { translateBy(dir.normal()*len); }
+            void            translateBy(T x, T y, T z, T len)               { translateBy(SEVec3<T>(x,y,z),len); }
 
             void            setRotation(const SEQuaternion<T> &r)           { r_=r; }
             void            rotateBy(const SEQuaternion<T> &r)              { setRotation(r_.rotate(r)); }
@@ -29,29 +41,48 @@ template <class T> class SERenderObject
             void            rotateByRadians(const SEVec3<T> &axis, T angle) { setRotation(r_.rotateLocally(angle, axis)); }
             void            rotateByRadians(T x, T y, T z, T angle)         { setRotation(r_.rotateLocally(angle, SEVec3<T>(x,y,z))); }
 
+            void            setScale(T s)                                   { s_=s; }
+            void            scaleBy(T ds)                                   { s_*=ds; }
 
-            void            render() const { this->preRender(); this->applyTransformation(); this->applyMaterial(); this->draw(); this->postRender(); }
+            SEMat4<T>       getScaleMatrix()        const { return SEMat4<T>(s_,0,0,0,
+                                                                             0,s_,0,0,
+                                                                             0,0,s_,0,
+                                                                             0,0,0, 1); }
+            SEMat4<T>       getRotationMatrix()     const { return r_.mat4(); }
+            SEMat4<T>       getTranslationMatrix()  const { return SEMat4<T>(1,0,0,t_.x,
+                                                                             0,1,0,t_.y,
+                                                                             0,0,1,t_.z,
+                                                                             0,0,0,   1); }
 
-    virtual void            draw() const = 0;
+            SEMat4<T>       getModelMatrix()        const { return getTranslationMatrix()*getRotationMatrix()*getScaleMatrix(); }
+            SEMat4<T>       getInverseModelMatrix() const { return getModelMatrix().invert(); }
 
   protected:
-    SERenderObject(SEROType::tRenderObject rt) : rt_(rt), t_(), r_(), ROtype(rt_), translation(t_), rotation(r_) {}
-
-            SEMat4<T>       getTransformationMatrix() const { return t_*r_.mat4(); }
+    SERenderObject(SEROType::tRenderObject rt) : rt_(rt), t_(), r_(), s_(1), ROtype(rt_), translation(t_), rotation(r_), scale(s_) {}
+    virtual ~SERenderObject() {}
 
     virtual void            preRender() const {}
     virtual void            applyTransformation() const {}
     virtual void            applyMaterial() const {}
+    virtual void            draw() const = 0;
     virtual void            postRender() const {}
 
+    virtual void            render() const { this->preRender(); this->applyTransformation(); this->applyMaterial(); this->draw(); this->postRender(); }
 
 
   private:
     SEROType::tRenderObject rt_;
 
-    SEMat4<T>               t_;
+    SEVec3<T>               t_;
     SEQuaternion<T>         r_;
+    T                       s_;
 
+};
+
+template <class T> class SERenderObject<T>::Builder
+{
+  public:
+    virtual SERenderObject<T> *build() = 0;
 };
 
 #endif // __SERENDEROBJECT_H__

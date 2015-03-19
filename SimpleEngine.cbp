@@ -43,6 +43,8 @@
 		<Unit filename="inc/MD2Normals.h" />
 		<Unit filename="inc/MD2NormalsTab.h" />
 		<Unit filename="inc/SEApplication.h" />
+		<Unit filename="inc/SEApplicationInterface.h" />
+		<Unit filename="inc/SECamera.h" />
 		<Unit filename="inc/SEComponent.h" />
 		<Unit filename="inc/SEConfigurationLoader.h" />
 		<Unit filename="inc/SEEntity.h" />
@@ -51,12 +53,16 @@
 		<Unit filename="inc/SEGLUIWindow.h" />
 		<Unit filename="inc/SEGLUIWindowManager.h" />
 		<Unit filename="inc/SEGLUTFlowController.h" />
+		<Unit filename="inc/SELight.h" />
 		<Unit filename="inc/SEMD2Mesh.h" />
 		<Unit filename="inc/SEMaterial.h" />
 		<Unit filename="inc/SEMath.h" />
 		<Unit filename="inc/SEMesh.h" />
 		<Unit filename="inc/SEModel.h" />
 		<Unit filename="inc/SEObject.h" />
+		<Unit filename="inc/SEOpenGLCamera.h" />
+		<Unit filename="inc/SEOpenGLPrimitive.h" />
+		<Unit filename="inc/SEOpenGLRenderObject.h" />
 		<Unit filename="inc/SEOpenGLRenderService.h" />
 		<Unit filename="inc/SEPrimitive.h" />
 		<Unit filename="inc/SERenderComponent.h" />
@@ -72,7 +78,6 @@
 		<Unit filename="inc/SEWindowManager.h" />
 		<Unit filename="inc/SimpleEngine.h" />
 		<Unit filename="inc/json.h" />
-		<Unit filename="src/SEApplication.cpp" />
 		<Unit filename="src/SEConfigurationLoader.cpp" />
 		<Unit filename="src/SEGLUIWindow.cpp" />
 		<Unit filename="src/SEGLUIWindowManager.cpp" />

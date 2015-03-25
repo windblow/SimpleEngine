@@ -5,11 +5,14 @@
 
 #include <SimpleEngine.h>
 #include <SEApplication.h>
+#include <SEMath.h>
+
+template <class T> class SETeapot;
 
 class SETestApp1 : public SEApplication<GLfloat>
 {
   public:
-            SETestApp1() : SEApplication<GLfloat>("SETestApp1") {}
+            SETestApp1() : SEApplication<GLfloat>("SETestApp1"), speedFactor(500) {}
     virtual ~SETestApp1() {}
 
     virtual void init(int argc, char **argv);
@@ -29,6 +32,12 @@ class SETestApp1 : public SEApplication<GLfloat>
 	virtual void mousePassiveMotion(int x, int y) {}
 	virtual void mouseButton(int button, int state, int x, int y) {}
 	virtual void idle() {}
+
+  private:
+    uint32_t objId;
+    SETeapot<GLfloat> *teapot;
+    SETimer<GLfloat>   t_;
+    GLfloat            speedFactor;
 };
 
 #endif // __SETESTAPP1_H__

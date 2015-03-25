@@ -7,6 +7,12 @@
 #include "SEOpenGLRenderObject.h"
 #include "SEPrimitive.h"
 
+#include <iostream>
+
+#define DUMPONCE(x) if (dumpOnce) std::cout << x << std::endl
+
+extern bool dumpOnce;
+
 class SEOpenGLSphere : public SESphere<GLfloat>, public SEOpenGLRenderObject
 {
   public:
@@ -64,7 +70,9 @@ class SEOpenGLTeapot : public SETeapot<GLfloat>, public SEOpenGLRenderObject
     SEOpenGLTeapot(GLfloat sz, tState st) : SETeapot<GLfloat>(sz, st), SEOpenGLRenderObject(SEROType::PRIMITIVE_RO), SERenderObject<GLfloat>(SEROType::PRIMITIVE_RO) {}
     ~SEOpenGLTeapot() {}
 
-    virtual void draw() const { if (state==SOLID_ST) glutSolidTeapot(size); else glutWireTeapot(size);  }
+    virtual void applyMaterial() const { glEnable(GL_COLOR_MATERIAL); DUMPONCE("glEnable(GL_COLOR_MATERIAL)"); }
+    virtual void draw() const { if (state==SOLID_ST) { glutSolidTeapot(size); DUMPONCE("glutSolidTeapot("<<size<<")"); } else { glutWireTeapot(size); DUMPONCE("glutWireTeapot("<<size<<")"); }  }
+    virtual void clearMaterial() const { glDisable(GL_COLOR_MATERIAL); DUMPONCE("glDisable(GL_COLOR_MATERIAL)"); }
 };
 
 #endif // __SEOPENGLPRIMITIVE_H__

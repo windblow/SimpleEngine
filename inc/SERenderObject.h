@@ -4,6 +4,7 @@
 #include "SEMath.h"
 
 class SERenderService;
+template <class T> class SERenderServiceInternals;
 
 struct SEROType
 {
@@ -15,9 +16,7 @@ template <class T> class SERenderObject
   friend class SERenderService;
 
   public:
-    class   Builder; // Interface de construtor para objetos do serviço de renderização
-
-    const   SEROType::tRenderObject &ROtype;
+    const   SEROType::tRenderObject &objectType;
     const   SEVec3<T>               &translation;
     const   SEQuaternion<T>         &rotation;
     const   T                       &scale;
@@ -58,16 +57,20 @@ template <class T> class SERenderObject
             SEMat4<T>       getInverseModelMatrix() const { return getModelMatrix().invert(); }
 
   protected:
-    SERenderObject(SEROType::tRenderObject rt) : rt_(rt), t_(), r_(), s_(1), ROtype(rt_), translation(t_), rotation(r_), scale(s_) {}
+    SERenderObject(SEROType::tRenderObject rt) : rt_(rt), t_(), r_(), s_(1), objectType(rt_), translation(t_), rotation(r_), scale(s_) {}
     virtual ~SERenderObject() {}
 
     virtual void            preRender() const {}
     virtual void            applyTransformation() const {}
+    virtual void            applyLighting(const SERenderServiceInternals<T> &rs) const {}
     virtual void            applyMaterial() const {}
     virtual void            draw() const = 0;
+    virtual void            clearMaterial() const {}
+    virtual void            clearLighting(const SERenderServiceInternals<T> &rs) const {}
+    virtual void            clearTransformation() const {}
     virtual void            postRender() const {}
 
-    virtual void            render() const { this->preRender(); this->applyTransformation(); this->applyMaterial(); this->draw(); this->postRender(); }
+    virtual void            render(const SERenderServiceInternals<T> &rs) const { this->preRender(); this->applyTransformation(); this->applyLighting(rs); this->applyMaterial(); this->draw(); this->clearMaterial(); this->clearLighting(rs); this->clearTransformation(); this->postRender(); }
 
 
   private:
@@ -77,12 +80,6 @@ template <class T> class SERenderObject
     SEQuaternion<T>         r_;
     T                       s_;
 
-};
-
-template <class T> class SERenderObject<T>::Builder
-{
-  public:
-    virtual SERenderObject<T> *build() = 0;
 };
 
 #endif // __SERENDEROBJECT_H__

@@ -23,7 +23,7 @@ template <class T> class SECamera : public virtual SERenderObject<T>
     void  useOrthoProjection() { f_=SEFrustumType::ORTHO; p_=defaultOrthoFrustum; }
     void  usePerspectiveProjection() { f_=SEFrustumType::PERSPECTIVE; p_=defaultPerspectiveFrustum; }
 
-    virtual void setupFrame() = 0;
+    virtual void setupFrame() const = 0;
 
   protected:
     SECamera() : SERenderObject<T>(SEROType::CAMERA_RO), t_(SECameraType::STATIC_CAM), f_(SEFrustumType::PERSPECTIVE),

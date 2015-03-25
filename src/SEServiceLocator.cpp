@@ -13,8 +13,6 @@ void SEServiceLocator::configRenderService(SERenderService::tRenderService s)
     case (SERenderService::DIRECTX_RS):
     default: return;
   }
-
-  rs_->startup();
 }
 
 void SEServiceLocator::configWindowManager(SEWindowManager::tWindowManager s, int argc, char **argv)

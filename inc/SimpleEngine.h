@@ -72,7 +72,7 @@ class SimpleEngine
 
  	/** Funções de callback **/
 	static void reshape(int width, int height)                      { wm()->reshapeActive(width, height); app()->reshape(width, height); }
-	static void display()                                           { app()->update(); app()->display(); }
+	static void display()                                           { app()->update(); app()->display(); wm()->redisplayActive(); }
 	static void key(unsigned char key, int x, int y)                { app()->key(key, x, y); }
 	static void pressFuncKey(int key, int x1, int y1)               { app()->pressFuncKey(key, x1, y1); }
 	static void releaseFuncKey(int key, int x, int y)               { app()->releaseFuncKey(key, x, y); }

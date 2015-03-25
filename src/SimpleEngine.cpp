@@ -40,10 +40,8 @@ void SimpleEngine::unloadApp()
 {
   if (appLoaded_)
   {
-    //app_->quit();
     appLoaded_=false;
     delete(app_);
-    appLoaded_=false;
     app_=NULL;
   }
 }

@@ -10,6 +10,7 @@
 #include "SERenderService.h"
 
 struct SEROType;
+struct SELightTypes;
 
 class SEOpenGLRenderObject;
 class SEOpenGLCamera;
@@ -34,7 +35,7 @@ class SEOpenGLRenderService : public SERenderServiceInternals<GLfloat>
     virtual int      startup();
     virtual int      shutdown();
 
-    virtual void     renderFrame();
+    virtual void     renderFrame() const;
 
     virtual int      createRO(SEROType::tRenderObject t, int t1=-1, int t2=-1, int t3=-1);
     virtual void     destroyRO(uint32_t i);
@@ -42,6 +43,13 @@ class SEOpenGLRenderService : public SERenderServiceInternals<GLfloat>
     virtual void     setCamera(uint32_t c);
     virtual void     activateLight(uint32_t l);
     virtual void     deactivateLight(uint32_t l);
+
+    virtual void     enableLighting() const;
+    virtual void     disableLighting() const;
+
+    virtual const SERenderObject<GLfloat> *getObject(uint32_t o) const;
+    virtual const SECamera<GLfloat>       *getCamera(uint32_t c) const;
+    virtual const SELight<GLfloat>        *getLight(uint32_t l) const;
 
     virtual SERenderObject<GLfloat> *getObject(uint32_t o);
     virtual SECamera<GLfloat>       *getCamera(uint32_t c);
@@ -52,9 +60,9 @@ class SEOpenGLRenderService : public SERenderServiceInternals<GLfloat>
     virtual ~SEOpenGLRenderService() { shutdown(); }
 
   private:
-            void         startFrame();
-            void         setupCamera();
-            void         endFrame();
+            void         startFrame() const;
+            void         setupCamera() const;
+            void         endFrame() const;
 
             tROVector ro_;
             tCamMap   c_;

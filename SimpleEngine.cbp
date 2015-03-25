@@ -47,6 +47,7 @@
 		<Unit filename="inc/SECamera.h" />
 		<Unit filename="inc/SEComponent.h" />
 		<Unit filename="inc/SEConfigurationLoader.h" />
+		<Unit filename="inc/SEDebugTools.h" />
 		<Unit filename="inc/SEEntity.h" />
 		<Unit filename="inc/SEEventHandler.h" />
 		<Unit filename="inc/SEFlowController.h" />
@@ -61,6 +62,7 @@
 		<Unit filename="inc/SEModel.h" />
 		<Unit filename="inc/SEObject.h" />
 		<Unit filename="inc/SEOpenGLCamera.h" />
+		<Unit filename="inc/SEOpenGLLight.h" />
 		<Unit filename="inc/SEOpenGLPrimitive.h" />
 		<Unit filename="inc/SEOpenGLRenderObject.h" />
 		<Unit filename="inc/SEOpenGLRenderService.h" />
@@ -87,6 +89,9 @@
 		<Unit filename="src/SEMesh.cpp" />
 		<Unit filename="src/SEModel.cpp" />
 		<Unit filename="src/SEObject.cpp" />
+		<Unit filename="src/SEOpenGLCamera.cpp" />
+		<Unit filename="src/SEOpenGLLight.cpp" />
+		<Unit filename="src/SEOpenGLRenderObject.cpp" />
 		<Unit filename="src/SEOpenGLRenderService.cpp" />
 		<Unit filename="src/SEServiceLocator.cpp" />
 		<Unit filename="src/SimpleEngine.cpp" />

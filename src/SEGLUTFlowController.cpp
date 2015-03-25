@@ -3,6 +3,10 @@
 
 #include <iostream>
 
+#define DUMPONCE(x) if (dumpOnce) std::cout << x << std::endl
+
+bool dumpOnce;
+
 SEGLUTFlowController::SEGLUTFlowController()
  : SEFlowController(SEFlowController::GLUT_FC)
 {
@@ -23,8 +27,11 @@ void SEGLUTFlowController::bindCallbacks()
 
 void SEGLUTFlowController::mainLoop()
 {
+    dumpOnce = true;
     while (SimpleEngine::app()->isRunning)
     {
         glutMainLoopEvent();
+        glutSwapBuffers();
+        dumpOnce=false;
     }
 }

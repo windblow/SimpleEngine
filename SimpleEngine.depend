@@ -41,7 +41,7 @@
 
 1424877024 e:\d\meus documentos\projetos\simpleengine\inc\sescenegraph.h
 
-1426657172 e:\d\meus documentos\projetos\simpleengine\inc\semath.h
+1426742134 e:\d\meus documentos\projetos\simpleengine\inc\semath.h
 	<cmath>
 	<cassert>
 	<iostream>
@@ -49,25 +49,27 @@
 	<cstdlib>
 	<ctime>
 
-1426668188 e:\d\meus documentos\projetos\simpleengine\inc\serenderservice.h
+1426967918 e:\d\meus documentos\projetos\simpleengine\inc\serenderservice.h
 	"SERenderObject.h"
+	"SECamera.h"
+	"SELight.h"
 	<string>
 	<vector>
 
-1426663882 e:\d\meus documentos\projetos\simpleengine\inc\serenderobject.h
+1426966489 e:\d\meus documentos\projetos\simpleengine\inc\serenderobject.h
 	"SEMath.h"
 
-1424898086 e:\d\meus documentos\projetos\simpleengine\inc\sewindowmanager.h
+1426700251 e:\d\meus documentos\projetos\simpleengine\inc\sewindowmanager.h
 	<map>
 	<string>
 	"SEWindow.h"
 
-1416832125 e:\d\meus documentos\projetos\simpleengine\inc\sewindow.h
+1426693798 e:\d\meus documentos\projetos\simpleengine\inc\sewindow.h
 	<string>
 
-1426182417 e:\d\meus documentos\projetos\simpleengine\inc\seflowcontroller.h
+1426693938 e:\d\meus documentos\projetos\simpleengine\inc\seflowcontroller.h
 
-1426668708 e:\d\meus documentos\projetos\simpleengine\inc\simpleengine.h
+1426970664 e:\d\meus documentos\projetos\simpleengine\inc\simpleengine.h
 	<stdlib.h>
 	<time.h>
 	<list>
@@ -75,7 +77,7 @@
 	"SEConfigurationLoader.h"
 	"SEServiceLocator.h"
 	"SEFlowController.h"
-	"SEApplication.h"
+	"SEApplicationInterface.h"
 	"SEObject.h"
 	"SEEntity.h"
 	"SEComponent.h"
@@ -105,4 +107,130 @@
 
 1425852981 e:\d\meus documentos\projetos\simpleengine\inc\secomponent.h
 	"SEObject.h"
+
+1415733506 source:e:\d\meus documentos\projetos\simpleengine\src\seconfigurationloader.cpp
+	"../inc/SEConfigurationLoader.h"
+	"../inc/json.h"
+	<fstream>
+
+1426700638 source:e:\d\meus documentos\projetos\simpleengine\src\segluiwindow.cpp
+	"../inc/SEGLUIWindow.h"
+	<iostream>
+
+1426692812 e:\d\meus documentos\projetos\simpleengine\inc\segluiwindow.h
+	"SEWindow.h"
+	<GL/glui.h>
+	<GL/glut.h>
+	<string>
+
+1424898204 source:e:\d\meus documentos\projetos\simpleengine\src\segluiwindowmanager.cpp
+	"../inc/SEGLUIWindowManager.h"
+	"../inc/SEGLUIWindow.h"
+
+1426693023 e:\d\meus documentos\projetos\simpleengine\inc\segluiwindowmanager.h
+	<GL/glui.h>
+	<GL/glut.h>
+	"SEWindowManager.h"
+
+1426972003 source:e:\d\meus documentos\projetos\simpleengine\src\seglutflowcontroller.cpp
+	"../inc/SEGLUTFlowController.h"
+	"../inc/SimpleEngine.h"
+	<iostream>
+
+1426218451 e:\d\meus documentos\projetos\simpleengine\inc\seglutflowcontroller.h
+	<GL/freeglut.h>
+	"SEFlowController.h"
+	"SimpleEngine.h"
+
+1426966990 e:\d\meus documentos\projetos\simpleengine\inc\secamera.h
+	"SERenderObject.h"
+
+1426979764 e:\d\meus documentos\projetos\simpleengine\inc\selight.h
+	"SERenderObject.h"
+	"SEMath.h"
+
+1426970084 e:\d\meus documentos\projetos\simpleengine\inc\seapplicationinterface.h
+	"SERenderService.h"
+	"SEWindowManager.h"
+	"SEFlowController.h"
+
+1418135926 source:e:\d\meus documentos\projetos\simpleengine\src\semath.cpp
+	"../inc/SEMath.h"
+
+1426141665 source:e:\d\meus documentos\projetos\simpleengine\src\semd2mesh.cpp
+	"../inc/SEMD2Mesh.h"
+	<cstdio>
+
+1426142149 e:\d\meus documentos\projetos\simpleengine\inc\semd2mesh.h
+	"SEMesh.h"
+	<string>
+	"../inc/MD2Normals.h"
+	"../inc/MD2NormalsTab.h"
+
+1426616516 e:\d\meus documentos\projetos\simpleengine\inc\semesh.h
+	"SEMath.h"
+	"SERenderObject.h"
+	"SEVertexBuffer.h"
+	<map>
+	<string>
+
+1426140874 e:\d\meus documentos\projetos\simpleengine\inc\severtexbuffer.h
+	"SEVertex.h"
+	<vector>
+
+1426231537 e:\d\meus documentos\projetos\simpleengine\inc\severtex.h
+	"SEMath.h"
+
+1426137589 e:\d\meus documentos\projetos\simpleengine\inc\md2normals.h
+
+1426137617 e:\d\meus documentos\projetos\simpleengine\inc\md2normalstab.h
+
+1426140741 source:e:\d\meus documentos\projetos\simpleengine\src\semesh.cpp
+	"../inc/SEMesh.h"
+	"../inc/SEObject.h"
+
+1426226478 source:e:\d\meus documentos\projetos\simpleengine\src\semodel.cpp
+	"../inc/../inc/SEModel.h"
+
+1426231676 e:\d\meus documentos\projetos\simpleengine\inc\semodel.h
+	"SERenderObject.h"
+	"SEMath.h"
+	"SEMesh.h"
+	"SEMaterial.h"
+
+1426231676 e:\d\meus documentos\projetos\simpleengine\inc\sematerial.h
+
+1426106349 source:e:\d\meus documentos\projetos\simpleengine\src\seobject.cpp
+	<sstream>
+	"../inc/SEObject.h"
+
+1426966990 source:e:\d\meus documentos\projetos\simpleengine\src\seopenglcamera.cpp
+	"../inc/SEOpenGLCamera.h"
+
+1426966990 e:\d\meus documentos\projetos\simpleengine\inc\seopenglcamera.h
+	"SEOpenGLRenderObject.h"
+	"SECamera.h"
+
+1426794389 e:\d\meus documentos\projetos\simpleengine\inc\seopenglrenderobject.h
+	<GL/gl.h>
+	"SERenderObject.h"
+
+1426617751 source:e:\d\meus documentos\projetos\simpleengine\src\seservicelocator.cpp
+	"../inc/SEServiceLocator.h"
+	"../inc/SimpleEngine.h"
+	"../inc/SEOpenGLRenderService.h"
+	"../inc/SEGLUIWindowManager.h"
+	"../inc/SEGLUTFlowController.h"
+
+1426967918 e:\d\meus documentos\projetos\simpleengine\inc\seopenglrenderservice.h
+	<string>
+	<vector>
+	<map>
+	<GL/gl.h>
+	"SERenderService.h"
+
+1426980862 source:e:\d\meus documentos\projetos\simpleengine\src\simpleengine.cpp
+	"../inc/SimpleEngine.h"
+	<iostream>
+	<string>
 

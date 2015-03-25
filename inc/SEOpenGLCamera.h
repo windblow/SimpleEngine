@@ -11,7 +11,7 @@ class SEOpenGLCamera : public SECamera<GLfloat>, public SEOpenGLRenderObject
     SEOpenGLCamera(SECameraType::tCamera t) : SERenderObject<GLfloat>(SEROType::CAMERA_RO), SECamera<GLfloat>(t), SEOpenGLRenderObject(SEROType::CAMERA_RO) {}
     virtual ~SEOpenGLCamera() {}
 
-    virtual void setupFrame();
+    virtual void setupFrame() const;
 
     virtual void draw() const {}
 };

@@ -5,12 +5,17 @@
 	<SimpleEngine.h>
 	"SETestApp1.hpp"
 
-1426693798 e:\d\meus documentos\projetos\simpleengine\setestapp1\setestapp1.hpp
+1426971423 e:\d\meus documentos\projetos\simpleengine\setestapp1\setestapp1.hpp
 	<GL/gl.h>
 	<SimpleEngine.h>
 	<SEApplication.h>
+	<SEMath.h>
 
-1426691903 source:e:\d\meus documentos\projetos\simpleengine\setestapp1\setestapp1.cpp
+1426972351 source:e:\d\meus documentos\projetos\simpleengine\setestapp1\setestapp1.cpp
 	"SETestApp1.hpp"
 	<iostream>
+	<SERenderService.h>
+	<SERenderObject.h>
+	<SEPrimitive.h>
+	<SEMath.h>
 

@@ -32,6 +32,7 @@ template <class T> class SEApplication : public SEApplicationInterface
     virtual SEFlowController             *fc() { return fc_; }
 
 	virtual void display() { if (rs_!=NULL) rs_->renderFrame(); }
+	virtual void idle()    { this->update(); this->display(); }
 
   protected:
     std::string title_;

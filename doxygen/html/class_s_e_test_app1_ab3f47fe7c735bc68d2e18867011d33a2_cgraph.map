@@ -1,0 +1,6 @@
+<map id="SETestApp1::run" name="SETestApp1::run">
+<area shape="rect" id="node2" href="$class_s_e_timer.html#a64a879f64147e80b8333dfb97585a89b" title="SETimer::reset" alt="" coords="224,5,333,32"/>
+<area shape="rect" id="node3" href="$class_s_e_timer.html#a96a9c1e4e964cfd43213c8907a0c7763" title="SETimer::setAccumulatorPeriod" alt="" coords="175,56,383,83"/>
+<area shape="rect" id="node4" href="$class_s_e_timer.html#ad5483ed7bc351162f00c649046665c00" title="SETimer::setSpeedFactor" alt="" coords="193,107,365,133"/>
+<area shape="rect" id="node5" href="$class_s_e_application.html#a1cb54d6b2e488ec96ec0bd743f73e68e" title="SEApplication::run" alt="" coords="213,157,344,184"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="SEOpenGLCamera::setupFrame" name="SEOpenGLCamera::setupFrame">
+<area shape="rect" id="node2" href="$class_s_e_mat4.html#a0319108985da370d176b646d2d889e0b" title="SEMat4::transposed" alt="" coords="279,5,421,32"/>
+<area shape="rect" id="node3" href="$class_s_e_render_object.html#aa5f5bd4eba7fb9109f92c017b69ecfbe" title="SERenderObject\&lt; GLfloat\l \&gt;::getInverseModelMatrix" alt="" coords="264,57,436,98"/>
+<area shape="rect" id="node4" href="$class_s_e_render_object.html#ad6c69b40a2086e8fecc61942160b9d02" title="SERenderObject::getModel\lMatrix" alt="" coords="484,57,664,98"/>
+</map>

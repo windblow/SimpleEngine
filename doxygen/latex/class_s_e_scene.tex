@@ -1,0 +1,178 @@
+\section{S\+E\+Scene Class Reference}
+\label{class_s_e_scene}\index{S\+E\+Scene@{S\+E\+Scene}}
+
+
+{\ttfamily \#include $<$S\+E\+Scene.\+h$>$}
+
+
+
+Collaboration diagram for S\+E\+Scene\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{class_s_e_scene__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bf init} ()=0
+\item 
+virtual void {\bf reset} ()=0
+\item 
+virtual void {\bf finish} ()=0
+\item 
+virtual void {\bf update} (double dt)=0
+\item 
+bool {\bf is\+Initialized} () const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Scene} ()
+\item 
+virtual {\bf $\sim$\+S\+E\+Scene} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf initialized\+\_\+}
+\item 
+{\bf S\+E\+Scene\+Graph} {\bf sg\+\_\+} [3]
+\item 
+{\bf S\+E\+Scene\+Graph} \& {\bf pre\+S\+G\+\_\+}
+\item 
+{\bf S\+E\+Scene\+Graph} \& {\bf main\+S\+G\+\_\+}
+\item 
+{\bf S\+E\+Scene\+Graph} \& {\bf post\+S\+G\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 6 of file S\+E\+Scene.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{S\+E\+Scene@{S\+E\+Scene}!S\+E\+Scene@{S\+E\+Scene}}
+\index{S\+E\+Scene@{S\+E\+Scene}!S\+E\+Scene@{S\+E\+Scene}}
+\subsubsection[{S\+E\+Scene}]{\setlength{\rightskip}{0pt plus 5cm}S\+E\+Scene\+::\+S\+E\+Scene (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_s_e_scene_a1ecb22aabb37fb549719a8192cb69698}
+
+
+Definition at line 16 of file S\+E\+Scene.\+h.
+
+\index{S\+E\+Scene@{S\+E\+Scene}!````~S\+E\+Scene@{$\sim$\+S\+E\+Scene}}
+\index{````~S\+E\+Scene@{$\sim$\+S\+E\+Scene}!S\+E\+Scene@{S\+E\+Scene}}
+\subsubsection[{$\sim$\+S\+E\+Scene}]{\setlength{\rightskip}{0pt plus 5cm}virtual S\+E\+Scene\+::$\sim$\+S\+E\+Scene (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_s_e_scene_a3620943bf3c4c3e856fa27fc21af47f2}
+
+
+Definition at line 17 of file S\+E\+Scene.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{class_s_e_scene_a3620943bf3c4c3e856fa27fc21af47f2_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{S\+E\+Scene@{S\+E\+Scene}!finish@{finish}}
+\index{finish@{finish}!S\+E\+Scene@{S\+E\+Scene}}
+\subsubsection[{finish}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+E\+Scene\+::finish (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_scene_a44ba8145102b4b31e16920a6c45e7880}
+\index{S\+E\+Scene@{S\+E\+Scene}!init@{init}}
+\index{init@{init}!S\+E\+Scene@{S\+E\+Scene}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+E\+Scene\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_scene_a44b64f41021229746841ef10f5437392}
+\index{S\+E\+Scene@{S\+E\+Scene}!is\+Initialized@{is\+Initialized}}
+\index{is\+Initialized@{is\+Initialized}!S\+E\+Scene@{S\+E\+Scene}}
+\subsubsection[{is\+Initialized}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+E\+Scene\+::is\+Initialized (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_scene_aa28c37aed0983d03651a06a77ec8124b}
+
+
+Definition at line 26 of file S\+E\+Scene.\+h.
+
+\index{S\+E\+Scene@{S\+E\+Scene}!reset@{reset}}
+\index{reset@{reset}!S\+E\+Scene@{S\+E\+Scene}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+E\+Scene\+::reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_scene_aa9ff7389d86fefe41edcec3496856752}
+\index{S\+E\+Scene@{S\+E\+Scene}!update@{update}}
+\index{update@{update}!S\+E\+Scene@{S\+E\+Scene}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+E\+Scene\+::update (
+\begin{DoxyParamCaption}
+\item[{double}]{dt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_scene_a82843b361834eaa7fad1bece3f0a1551}
+
+
+\subsection{Member Data Documentation}
+\index{S\+E\+Scene@{S\+E\+Scene}!initialized\+\_\+@{initialized\+\_\+}}
+\index{initialized\+\_\+@{initialized\+\_\+}!S\+E\+Scene@{S\+E\+Scene}}
+\subsubsection[{initialized\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+E\+Scene\+::initialized\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_e_scene_a7da57a226261beab879c98d74512e714}
+
+
+Definition at line 9 of file S\+E\+Scene.\+h.
+
+\index{S\+E\+Scene@{S\+E\+Scene}!main\+S\+G\+\_\+@{main\+S\+G\+\_\+}}
+\index{main\+S\+G\+\_\+@{main\+S\+G\+\_\+}!S\+E\+Scene@{S\+E\+Scene}}
+\subsubsection[{main\+S\+G\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+E\+Scene\+Graph} \& S\+E\+Scene\+::main\+S\+G\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_e_scene_aa830831d5ac3a9dedf5bd2ed30edafe4}
+
+
+Definition at line 11 of file S\+E\+Scene.\+h.
+
+\index{S\+E\+Scene@{S\+E\+Scene}!post\+S\+G\+\_\+@{post\+S\+G\+\_\+}}
+\index{post\+S\+G\+\_\+@{post\+S\+G\+\_\+}!S\+E\+Scene@{S\+E\+Scene}}
+\subsubsection[{post\+S\+G\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+E\+Scene\+Graph} \& S\+E\+Scene\+::post\+S\+G\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_e_scene_a8f570a13657cd0d6ac62f3fc40132022}
+
+
+Definition at line 11 of file S\+E\+Scene.\+h.
+
+\index{S\+E\+Scene@{S\+E\+Scene}!pre\+S\+G\+\_\+@{pre\+S\+G\+\_\+}}
+\index{pre\+S\+G\+\_\+@{pre\+S\+G\+\_\+}!S\+E\+Scene@{S\+E\+Scene}}
+\subsubsection[{pre\+S\+G\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+E\+Scene\+Graph} \& S\+E\+Scene\+::pre\+S\+G\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_e_scene_a09986320f15c1c898be803060d6cefe2}
+
+
+Definition at line 11 of file S\+E\+Scene.\+h.
+
+\index{S\+E\+Scene@{S\+E\+Scene}!sg\+\_\+@{sg\+\_\+}}
+\index{sg\+\_\+@{sg\+\_\+}!S\+E\+Scene@{S\+E\+Scene}}
+\subsubsection[{sg\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+E\+Scene\+Graph} S\+E\+Scene\+::sg\+\_\+[3]\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_e_scene_a3465bac3ffdafbb9fb34b54cae537e7d}
+
+
+Definition at line 11 of file S\+E\+Scene.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Scene.\+h}\end{DoxyCompactItemize}

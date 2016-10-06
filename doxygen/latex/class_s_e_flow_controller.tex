@@ -1,0 +1,175 @@
+\section{S\+E\+Flow\+Controller Class Reference}
+\label{class_s_e_flow_controller}\index{S\+E\+Flow\+Controller@{S\+E\+Flow\+Controller}}
+
+
+{\ttfamily \#include $<$S\+E\+Flow\+Controller.\+h$>$}
+
+
+
+Inheritance diagram for S\+E\+Flow\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{class_s_e_flow_controller__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf t\+Flow\+Controller} \{ {\bf N\+U\+L\+L\+\_\+\+F\+C}, 
+{\bf G\+L\+U\+T\+\_\+\+F\+C}, 
+{\bf N\+U\+M\+\_\+\+F\+C}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bf main\+Loop} ()=0
+\item 
+virtual void {\bf bind\+Callbacks} ()=0
+\item 
+{\bf t\+Flow\+Controller} {\bf get\+Type} ()
+\item 
+void {\bf request\+Exit} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Flow\+Controller} ({\bf t\+Flow\+Controller} t)
+\item 
+virtual {\bf $\sim$\+S\+E\+Flow\+Controller} ()
+\item 
+bool {\bf exit\+Requested} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf S\+E\+Service\+Locator}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 6 of file S\+E\+Flow\+Controller.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\index{S\+E\+Flow\+Controller@{S\+E\+Flow\+Controller}!t\+Flow\+Controller@{t\+Flow\+Controller}}
+\index{t\+Flow\+Controller@{t\+Flow\+Controller}!S\+E\+Flow\+Controller@{S\+E\+Flow\+Controller}}
+\subsubsection[{t\+Flow\+Controller}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf S\+E\+Flow\+Controller\+::t\+Flow\+Controller}}\label{class_s_e_flow_controller_a2ca9e81fa8dc412a8839ebf6aff4c5af}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{N\+U\+L\+L\+\_\+\+F\+C@{N\+U\+L\+L\+\_\+\+F\+C}!S\+E\+Flow\+Controller@{S\+E\+Flow\+Controller}}\index{S\+E\+Flow\+Controller@{S\+E\+Flow\+Controller}!N\+U\+L\+L\+\_\+\+F\+C@{N\+U\+L\+L\+\_\+\+F\+C}}\item[{\em 
+N\+U\+L\+L\+\_\+\+F\+C\label{class_s_e_flow_controller_a2ca9e81fa8dc412a8839ebf6aff4c5afa0db9cbc43127ea9b71efa55cb84560e5}
+}]\index{G\+L\+U\+T\+\_\+\+F\+C@{G\+L\+U\+T\+\_\+\+F\+C}!S\+E\+Flow\+Controller@{S\+E\+Flow\+Controller}}\index{S\+E\+Flow\+Controller@{S\+E\+Flow\+Controller}!G\+L\+U\+T\+\_\+\+F\+C@{G\+L\+U\+T\+\_\+\+F\+C}}\item[{\em 
+G\+L\+U\+T\+\_\+\+F\+C\label{class_s_e_flow_controller_a2ca9e81fa8dc412a8839ebf6aff4c5afa36736697a115f9d76b2ca9f8ca6f9959}
+}]\index{N\+U\+M\+\_\+\+F\+C@{N\+U\+M\+\_\+\+F\+C}!S\+E\+Flow\+Controller@{S\+E\+Flow\+Controller}}\index{S\+E\+Flow\+Controller@{S\+E\+Flow\+Controller}!N\+U\+M\+\_\+\+F\+C@{N\+U\+M\+\_\+\+F\+C}}\item[{\em 
+N\+U\+M\+\_\+\+F\+C\label{class_s_e_flow_controller_a2ca9e81fa8dc412a8839ebf6aff4c5afad1e2c98decaffe2ff4b94e6b8a87168e}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 11 of file S\+E\+Flow\+Controller.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{S\+E\+Flow\+Controller@{S\+E\+Flow\+Controller}!S\+E\+Flow\+Controller@{S\+E\+Flow\+Controller}}
+\index{S\+E\+Flow\+Controller@{S\+E\+Flow\+Controller}!S\+E\+Flow\+Controller@{S\+E\+Flow\+Controller}}
+\subsubsection[{S\+E\+Flow\+Controller}]{\setlength{\rightskip}{0pt plus 5cm}S\+E\+Flow\+Controller\+::\+S\+E\+Flow\+Controller (
+\begin{DoxyParamCaption}
+\item[{{\bf t\+Flow\+Controller}}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_s_e_flow_controller_aeb9887dc9b0371e34bf41701f06c9092}
+
+
+Definition at line 21 of file S\+E\+Flow\+Controller.\+h.
+
+\index{S\+E\+Flow\+Controller@{S\+E\+Flow\+Controller}!````~S\+E\+Flow\+Controller@{$\sim$\+S\+E\+Flow\+Controller}}
+\index{````~S\+E\+Flow\+Controller@{$\sim$\+S\+E\+Flow\+Controller}!S\+E\+Flow\+Controller@{S\+E\+Flow\+Controller}}
+\subsubsection[{$\sim$\+S\+E\+Flow\+Controller}]{\setlength{\rightskip}{0pt plus 5cm}virtual S\+E\+Flow\+Controller\+::$\sim$\+S\+E\+Flow\+Controller (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_s_e_flow_controller_a923e0a2a9a72ec765b132130bae89b37}
+
+
+Definition at line 22 of file S\+E\+Flow\+Controller.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\index{S\+E\+Flow\+Controller@{S\+E\+Flow\+Controller}!bind\+Callbacks@{bind\+Callbacks}}
+\index{bind\+Callbacks@{bind\+Callbacks}!S\+E\+Flow\+Controller@{S\+E\+Flow\+Controller}}
+\subsubsection[{bind\+Callbacks}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+E\+Flow\+Controller\+::bind\+Callbacks (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_flow_controller_a7ce1c8c45745d5626398598662a6e72e}
+
+
+Implemented in {\bf S\+E\+Null\+Flow\+Controller} \doxyref{}{p.}{class_s_e_null_flow_controller_a67232e62806d2b576f521516341b2327}, and {\bf S\+E\+G\+L\+U\+T\+Flow\+Controller} \doxyref{}{p.}{class_s_e_g_l_u_t_flow_controller_a3107f0bfa1e911ba020fa93ae8e940f7}.
+
+\index{S\+E\+Flow\+Controller@{S\+E\+Flow\+Controller}!exit\+Requested@{exit\+Requested}}
+\index{exit\+Requested@{exit\+Requested}!S\+E\+Flow\+Controller@{S\+E\+Flow\+Controller}}
+\subsubsection[{exit\+Requested}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+E\+Flow\+Controller\+::exit\+Requested (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_s_e_flow_controller_adcf88c3ae71c790d546fca930293a801}
+
+
+Definition at line 24 of file S\+E\+Flow\+Controller.\+h.
+
+\index{S\+E\+Flow\+Controller@{S\+E\+Flow\+Controller}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!S\+E\+Flow\+Controller@{S\+E\+Flow\+Controller}}
+\subsubsection[{get\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\+Flow\+Controller} S\+E\+Flow\+Controller\+::get\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_flow_controller_a7707eeb043bf25947f24c6c7ab811997}
+
+
+Definition at line 16 of file S\+E\+Flow\+Controller.\+h.
+
+\index{S\+E\+Flow\+Controller@{S\+E\+Flow\+Controller}!main\+Loop@{main\+Loop}}
+\index{main\+Loop@{main\+Loop}!S\+E\+Flow\+Controller@{S\+E\+Flow\+Controller}}
+\subsubsection[{main\+Loop}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+E\+Flow\+Controller\+::main\+Loop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_flow_controller_a66f3714c1697c7b040e6c6f09374953b}
+
+
+Implemented in {\bf S\+E\+Null\+Flow\+Controller} \doxyref{}{p.}{class_s_e_null_flow_controller_a9498c332f22bec64c769592948d2eb3b}, and {\bf S\+E\+G\+L\+U\+T\+Flow\+Controller} \doxyref{}{p.}{class_s_e_g_l_u_t_flow_controller_ad580e608fafbc0a48d30985e8bc9f7f2}.
+
+\index{S\+E\+Flow\+Controller@{S\+E\+Flow\+Controller}!request\+Exit@{request\+Exit}}
+\index{request\+Exit@{request\+Exit}!S\+E\+Flow\+Controller@{S\+E\+Flow\+Controller}}
+\subsubsection[{request\+Exit}]{\setlength{\rightskip}{0pt plus 5cm}void S\+E\+Flow\+Controller\+::request\+Exit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_flow_controller_a544d65bf412307b71fced345881eb968}
+
+
+Definition at line 18 of file S\+E\+Flow\+Controller.\+h.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\index{S\+E\+Flow\+Controller@{S\+E\+Flow\+Controller}!S\+E\+Service\+Locator@{S\+E\+Service\+Locator}}
+\index{S\+E\+Service\+Locator@{S\+E\+Service\+Locator}!S\+E\+Flow\+Controller@{S\+E\+Flow\+Controller}}
+\subsubsection[{S\+E\+Service\+Locator}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf S\+E\+Service\+Locator}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_e_flow_controller_ab6e41e6b8528b0fe19953837048fbde6}
+
+
+Definition at line 8 of file S\+E\+Flow\+Controller.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Flow\+Controller.\+h}\end{DoxyCompactItemize}

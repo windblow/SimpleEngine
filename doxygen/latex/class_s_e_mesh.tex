@@ -1,0 +1,288 @@
+\section{S\+E\+Mesh$<$ T $>$ Class Template Reference}
+\label{class_s_e_mesh}\index{S\+E\+Mesh$<$ T $>$@{S\+E\+Mesh$<$ T $>$}}
+
+
+{\ttfamily \#include $<$S\+E\+Mesh.\+h$>$}
+
+
+
+Inheritance diagram for S\+E\+Mesh$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{class_s_e_mesh__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for S\+E\+Mesh$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{class_s_e_mesh__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ uint32\+\_\+t, {\bf S\+E\+Vertex\+Buffer}$<$ T $>$ $>$ {\bf t\+Vertex\+Buffer\+Map}
+\item 
+typedef std\+::map$<$ uint32\+\_\+t, {\bf S\+E\+Vertex\+Buffer}$<$ T $>$ $>$\+::iterator {\bf t\+Vertex\+Buffer\+Map\+It}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Mesh} ()
+\item 
+{\bf S\+E\+Mesh} (std\+::string {\bf filename})
+\item 
+{\bf $\sim$\+S\+E\+Mesh} ()
+\item 
+bool {\bf is\+Loaded} ()
+\item 
+bool {\bf load\+Mesh} (std\+::string f)
+\item 
+virtual bool {\bf load\+Buffer\+From\+File} (std\+::string f, uint32\+\_\+t i)=0
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void {\bf clear\+Vertex\+Buffers} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string \& {\bf filename}
+\item 
+const uint32\+\_\+t \& {\bf buffer}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf t\+Vertex\+Buffer\+Map} {\bf new\+Vertex\+Buffer\+Map} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bf n\+\_\+}
+\item 
+uint32\+\_\+t {\bf b\+\_\+}
+\item 
+bool {\bf l\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf t\+Vertex\+Buffer\+Map} {\bf vb\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$class S\+E\+Mesh$<$ T $>$}
+
+
+
+Definition at line 13 of file S\+E\+Mesh.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\index{S\+E\+Mesh@{S\+E\+Mesh}!t\+Vertex\+Buffer\+Map@{t\+Vertex\+Buffer\+Map}}
+\index{t\+Vertex\+Buffer\+Map@{t\+Vertex\+Buffer\+Map}!S\+E\+Mesh@{S\+E\+Mesh}}
+\subsubsection[{t\+Vertex\+Buffer\+Map}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ typedef std\+::map$<$uint32\+\_\+t, {\bf S\+E\+Vertex\+Buffer}$<$T$>$ $>$ {\bf S\+E\+Mesh}$<$ T $>$\+::{\bf t\+Vertex\+Buffer\+Map}}\label{class_s_e_mesh_a9580c9b8dea91721b5717cc519c01eab}
+
+
+Definition at line 16 of file S\+E\+Mesh.\+h.
+
+\index{S\+E\+Mesh@{S\+E\+Mesh}!t\+Vertex\+Buffer\+Map\+It@{t\+Vertex\+Buffer\+Map\+It}}
+\index{t\+Vertex\+Buffer\+Map\+It@{t\+Vertex\+Buffer\+Map\+It}!S\+E\+Mesh@{S\+E\+Mesh}}
+\subsubsection[{t\+Vertex\+Buffer\+Map\+It}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ typedef std\+::map$<$uint32\+\_\+t, {\bf S\+E\+Vertex\+Buffer}$<$T$>$ $>$\+::iterator {\bf S\+E\+Mesh}$<$ T $>$\+::{\bf t\+Vertex\+Buffer\+Map\+It}}\label{class_s_e_mesh_ab9b6857fdb3d5f8940d09cf649e1ba05}
+
+
+Definition at line 17 of file S\+E\+Mesh.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{S\+E\+Mesh@{S\+E\+Mesh}!S\+E\+Mesh@{S\+E\+Mesh}}
+\index{S\+E\+Mesh@{S\+E\+Mesh}!S\+E\+Mesh@{S\+E\+Mesh}}
+\subsubsection[{S\+E\+Mesh}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Mesh}$<$ T $>$\+::{\bf S\+E\+Mesh} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_mesh_a9b662670f6c42d0bac4f22c99dafe610}
+
+
+Definition at line 22 of file S\+E\+Mesh.\+h.
+
+\index{S\+E\+Mesh@{S\+E\+Mesh}!S\+E\+Mesh@{S\+E\+Mesh}}
+\index{S\+E\+Mesh@{S\+E\+Mesh}!S\+E\+Mesh@{S\+E\+Mesh}}
+\subsubsection[{S\+E\+Mesh}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Mesh}$<$ T $>$\+::{\bf S\+E\+Mesh} (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_mesh_a09d7fcfaa528fbcf91f331b335f48ff0}
+
+
+Definition at line 23 of file S\+E\+Mesh.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_e_mesh_a09d7fcfaa528fbcf91f331b335f48ff0_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+Mesh@{S\+E\+Mesh}!````~S\+E\+Mesh@{$\sim$\+S\+E\+Mesh}}
+\index{````~S\+E\+Mesh@{$\sim$\+S\+E\+Mesh}!S\+E\+Mesh@{S\+E\+Mesh}}
+\subsubsection[{$\sim$\+S\+E\+Mesh}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Mesh}$<$ T $>$\+::$\sim${\bf S\+E\+Mesh} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_mesh_abd9edf7a643256ba42a44bf264e2047e}
+
+
+Definition at line 24 of file S\+E\+Mesh.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{class_s_e_mesh_abd9edf7a643256ba42a44bf264e2047e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{S\+E\+Mesh@{S\+E\+Mesh}!clear\+Vertex\+Buffers@{clear\+Vertex\+Buffers}}
+\index{clear\+Vertex\+Buffers@{clear\+Vertex\+Buffers}!S\+E\+Mesh@{S\+E\+Mesh}}
+\subsubsection[{clear\+Vertex\+Buffers}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf S\+E\+Mesh}$<$ T $>$\+::clear\+Vertex\+Buffers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_s_e_mesh_a93bd7bbffcb07661b09b4abf4b475e7f}
+
+
+Definition at line 24 of file S\+E\+Mesh.\+cpp.
+
+\index{S\+E\+Mesh@{S\+E\+Mesh}!is\+Loaded@{is\+Loaded}}
+\index{is\+Loaded@{is\+Loaded}!S\+E\+Mesh@{S\+E\+Mesh}}
+\subsubsection[{is\+Loaded}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ bool {\bf S\+E\+Mesh}$<$ T $>$\+::is\+Loaded (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_mesh_a9e5db8dba2b786adc55755577f0d4584}
+
+
+Definition at line 26 of file S\+E\+Mesh.\+h.
+
+\index{S\+E\+Mesh@{S\+E\+Mesh}!load\+Buffer\+From\+File@{load\+Buffer\+From\+File}}
+\index{load\+Buffer\+From\+File@{load\+Buffer\+From\+File}!S\+E\+Mesh@{S\+E\+Mesh}}
+\subsubsection[{load\+Buffer\+From\+File}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ virtual bool {\bf S\+E\+Mesh}$<$ T $>$\+::load\+Buffer\+From\+File (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{f, }
+\item[{uint32\+\_\+t}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_mesh_a4d85c57ed30d44a842833766105576d9}
+
+
+Implemented in {\bf S\+E\+M\+D2\+Mesh$<$ T $>$} \doxyref{}{p.}{class_s_e_m_d2_mesh_a6812daa71c01eb8e4c1999d9e92b9ea6}.
+
+\index{S\+E\+Mesh@{S\+E\+Mesh}!load\+Mesh@{load\+Mesh}}
+\index{load\+Mesh@{load\+Mesh}!S\+E\+Mesh@{S\+E\+Mesh}}
+\subsubsection[{load\+Mesh}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ bool {\bf S\+E\+Mesh}$<$ T $>$\+::load\+Mesh (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{f}
+\end{DoxyParamCaption}
+)}\label{class_s_e_mesh_ac9b4caab15efbfecd4db11cd56afa7a5}
+
+
+Definition at line 4 of file S\+E\+Mesh.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_e_mesh_ac9b4caab15efbfecd4db11cd56afa7a5_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+Mesh@{S\+E\+Mesh}!new\+Vertex\+Buffer\+Map@{new\+Vertex\+Buffer\+Map}}
+\index{new\+Vertex\+Buffer\+Map@{new\+Vertex\+Buffer\+Map}!S\+E\+Mesh@{S\+E\+Mesh}}
+\subsubsection[{new\+Vertex\+Buffer\+Map}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ static {\bf t\+Vertex\+Buffer\+Map} {\bf S\+E\+Mesh}$<$ T $>$\+::new\+Vertex\+Buffer\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}\label{class_s_e_mesh_a99f428904801beff5a16e6bf3d093f48}
+
+
+Definition at line 39 of file S\+E\+Mesh.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\index{S\+E\+Mesh@{S\+E\+Mesh}!b\+\_\+@{b\+\_\+}}
+\index{b\+\_\+@{b\+\_\+}!S\+E\+Mesh@{S\+E\+Mesh}}
+\subsubsection[{b\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ uint32\+\_\+t {\bf S\+E\+Mesh}$<$ T $>$\+::b\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_e_mesh_a29293957c66e14b8013a1f8fe40deef8}
+
+
+Definition at line 35 of file S\+E\+Mesh.\+h.
+
+\index{S\+E\+Mesh@{S\+E\+Mesh}!buffer@{buffer}}
+\index{buffer@{buffer}!S\+E\+Mesh@{S\+E\+Mesh}}
+\subsubsection[{buffer}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ const uint32\+\_\+t\& {\bf S\+E\+Mesh}$<$ T $>$\+::buffer}\label{class_s_e_mesh_a7ed72e309fbdbaac5026697587a8d549}
+
+
+Definition at line 20 of file S\+E\+Mesh.\+h.
+
+\index{S\+E\+Mesh@{S\+E\+Mesh}!filename@{filename}}
+\index{filename@{filename}!S\+E\+Mesh@{S\+E\+Mesh}}
+\subsubsection[{filename}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ const std\+::string\& {\bf S\+E\+Mesh}$<$ T $>$\+::filename}\label{class_s_e_mesh_ac52c753abe143d39db7b0f24009fd036}
+
+
+Definition at line 19 of file S\+E\+Mesh.\+h.
+
+\index{S\+E\+Mesh@{S\+E\+Mesh}!l\+\_\+@{l\+\_\+}}
+\index{l\+\_\+@{l\+\_\+}!S\+E\+Mesh@{S\+E\+Mesh}}
+\subsubsection[{l\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ bool {\bf S\+E\+Mesh}$<$ T $>$\+::l\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_e_mesh_ab27f693acde98f8a0c10056316e14f6a}
+
+
+Definition at line 36 of file S\+E\+Mesh.\+h.
+
+\index{S\+E\+Mesh@{S\+E\+Mesh}!n\+\_\+@{n\+\_\+}}
+\index{n\+\_\+@{n\+\_\+}!S\+E\+Mesh@{S\+E\+Mesh}}
+\subsubsection[{n\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ std\+::string {\bf S\+E\+Mesh}$<$ T $>$\+::n\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_e_mesh_ab877988ab6313d77ffed6f7bf58e1f38}
+
+
+Definition at line 34 of file S\+E\+Mesh.\+h.
+
+\index{S\+E\+Mesh@{S\+E\+Mesh}!vb\+\_\+@{vb\+\_\+}}
+\index{vb\+\_\+@{vb\+\_\+}!S\+E\+Mesh@{S\+E\+Mesh}}
+\subsubsection[{vb\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Mesh}$<$ T $>$\+::{\bf t\+Vertex\+Buffer\+Map} {\bf S\+E\+Mesh}$<$ T $>$\+::vb\+\_\+\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\label{class_s_e_mesh_a4580c2abcc90d1f7fa3fbe2e8dcaf040}
+
+
+Definition at line 38 of file S\+E\+Mesh.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Mesh.\+h}\item 
+{\bf S\+E\+Mesh.\+cpp}\end{DoxyCompactItemize}

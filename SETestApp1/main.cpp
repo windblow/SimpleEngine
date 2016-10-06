@@ -1,7 +1,7 @@
 #include <cstdlib>
 #include <iostream>
 
-#include <SimpleEngine.h>
+#include <se.h>
 
 #include "SETestApp1.hpp"
 
@@ -15,6 +15,6 @@ int main(int argc, char *argv[])
 
     SimpleEngine::quit();
 
-    system("pause");
+    SYSTEMPAUSE;
     return EXIT_SUCCESS;
 }

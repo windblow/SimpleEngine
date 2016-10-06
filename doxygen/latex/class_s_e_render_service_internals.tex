@@ -1,0 +1,190 @@
+\section{S\+E\+Render\+Service\+Internals$<$ T $>$ Class Template Reference}
+\label{class_s_e_render_service_internals}\index{S\+E\+Render\+Service\+Internals$<$ T $>$@{S\+E\+Render\+Service\+Internals$<$ T $>$}}
+
+
+{\ttfamily \#include $<$S\+E\+Camera.\+h$>$}
+
+
+
+Inheritance diagram for S\+E\+Render\+Service\+Internals$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{class_s_e_render_service_internals__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for S\+E\+Render\+Service\+Internals$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{class_s_e_render_service_internals__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual const {\bf S\+E\+Render\+Object}$<$ T $>$ $\ast$ {\bf get\+Object} (uint32\+\_\+t o) const =0
+\item 
+virtual const {\bf S\+E\+Camera}$<$ T $>$ $\ast$ {\bf get\+Camera} (uint32\+\_\+t c) const =0
+\item 
+virtual const {\bf S\+E\+Light}$<$ T $>$ $\ast$ {\bf get\+Light} (uint32\+\_\+t l) const =0
+\item 
+virtual {\bf S\+E\+Render\+Object}$<$ T $>$ $\ast$ {\bf get\+Object} (uint32\+\_\+t o)=0
+\item 
+virtual {\bf S\+E\+Camera}$<$ T $>$ $\ast$ {\bf get\+Camera} (uint32\+\_\+t c)=0
+\item 
+virtual {\bf S\+E\+Light}$<$ T $>$ $\ast$ {\bf get\+Light} (uint32\+\_\+t l)=0
+\item 
+virtual void {\bf set\+Global\+Ambient\+Light} (T r, T g, T b, T a) const =0
+\item 
+virtual void {\bf set\+Global\+Ambient\+Lighti} (int r, int g, int b, int a) const =0
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Render\+Service\+Internals} ({\bf t\+Render\+Service} t)
+\item 
+virtual {\bf $\sim$\+S\+E\+Render\+Service\+Internals} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$class S\+E\+Render\+Service\+Internals$<$ T $>$}
+
+
+
+Definition at line 6 of file S\+E\+Camera.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{S\+E\+Render\+Service\+Internals@{S\+E\+Render\+Service\+Internals}!S\+E\+Render\+Service\+Internals@{S\+E\+Render\+Service\+Internals}}
+\index{S\+E\+Render\+Service\+Internals@{S\+E\+Render\+Service\+Internals}!S\+E\+Render\+Service\+Internals@{S\+E\+Render\+Service\+Internals}}
+\subsubsection[{S\+E\+Render\+Service\+Internals}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Render\+Service\+Internals}$<$ T $>$\+::{\bf S\+E\+Render\+Service\+Internals} (
+\begin{DoxyParamCaption}
+\item[{{\bf t\+Render\+Service}}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_s_e_render_service_internals_a3dd139c3ad5706ae3e3556a8b6fdb5d1}
+
+
+Definition at line 78 of file S\+E\+Render\+Service.\+h.
+
+\index{S\+E\+Render\+Service\+Internals@{S\+E\+Render\+Service\+Internals}!````~S\+E\+Render\+Service\+Internals@{$\sim$\+S\+E\+Render\+Service\+Internals}}
+\index{````~S\+E\+Render\+Service\+Internals@{$\sim$\+S\+E\+Render\+Service\+Internals}!S\+E\+Render\+Service\+Internals@{S\+E\+Render\+Service\+Internals}}
+\subsubsection[{$\sim$\+S\+E\+Render\+Service\+Internals}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ virtual {\bf S\+E\+Render\+Service\+Internals}$<$ T $>$\+::$\sim${\bf S\+E\+Render\+Service\+Internals} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_s_e_render_service_internals_abdc69f02b92c428be238de18b6d2367c}
+
+
+Definition at line 79 of file S\+E\+Render\+Service.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\index{S\+E\+Render\+Service\+Internals@{S\+E\+Render\+Service\+Internals}!get\+Camera@{get\+Camera}}
+\index{get\+Camera@{get\+Camera}!S\+E\+Render\+Service\+Internals@{S\+E\+Render\+Service\+Internals}}
+\subsubsection[{get\+Camera}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ virtual const {\bf S\+E\+Camera}$<$T$>$$\ast$ {\bf S\+E\+Render\+Service\+Internals}$<$ T $>$\+::get\+Camera (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{c}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_render_service_internals_a492f565a6b70ec90f29e5c61e3c41c99}
+
+
+Implemented in {\bf S\+E\+Null\+Render\+Service} \doxyref{}{p.}{class_s_e_null_render_service_a304d0c6d6452b556bf53c9a0e515bd21}, and {\bf S\+E\+Open\+G\+L\+Render\+Service} \doxyref{}{p.}{class_s_e_open_g_l_render_service_ab03ba469de9643cb06e1bdd3d34aedc7}.
+
+\index{S\+E\+Render\+Service\+Internals@{S\+E\+Render\+Service\+Internals}!get\+Camera@{get\+Camera}}
+\index{get\+Camera@{get\+Camera}!S\+E\+Render\+Service\+Internals@{S\+E\+Render\+Service\+Internals}}
+\subsubsection[{get\+Camera}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ virtual {\bf S\+E\+Camera}$<$T$>$$\ast$ {\bf S\+E\+Render\+Service\+Internals}$<$ T $>$\+::get\+Camera (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_render_service_internals_a2c3dc0e9bfa936b88df6fe0840b0ee52}
+
+
+Implemented in {\bf S\+E\+Null\+Render\+Service} \doxyref{}{p.}{class_s_e_null_render_service_a42726e41a17c3e1d7cbc2e44d295a2e4}, and {\bf S\+E\+Open\+G\+L\+Render\+Service} \doxyref{}{p.}{class_s_e_open_g_l_render_service_aa24d88cb1c57b16703f712d8f563ab4c}.
+
+\index{S\+E\+Render\+Service\+Internals@{S\+E\+Render\+Service\+Internals}!get\+Light@{get\+Light}}
+\index{get\+Light@{get\+Light}!S\+E\+Render\+Service\+Internals@{S\+E\+Render\+Service\+Internals}}
+\subsubsection[{get\+Light}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ virtual const {\bf S\+E\+Light}$<$T$>$$\ast$ {\bf S\+E\+Render\+Service\+Internals}$<$ T $>$\+::get\+Light (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{l}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_render_service_internals_a0020d3cddd573e7a4585cb67d86ab603}
+
+
+Implemented in {\bf S\+E\+Null\+Render\+Service} \doxyref{}{p.}{class_s_e_null_render_service_a4c259b07956b008c35cbf93f5484c173}, and {\bf S\+E\+Open\+G\+L\+Render\+Service} \doxyref{}{p.}{class_s_e_open_g_l_render_service_a764a8a2046a45191b662914ee4f12555}.
+
+\index{S\+E\+Render\+Service\+Internals@{S\+E\+Render\+Service\+Internals}!get\+Light@{get\+Light}}
+\index{get\+Light@{get\+Light}!S\+E\+Render\+Service\+Internals@{S\+E\+Render\+Service\+Internals}}
+\subsubsection[{get\+Light}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ virtual {\bf S\+E\+Light}$<$T$>$$\ast$ {\bf S\+E\+Render\+Service\+Internals}$<$ T $>$\+::get\+Light (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{l}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_render_service_internals_a76f1f37331215dce7fd699897a9d9117}
+
+
+Implemented in {\bf S\+E\+Null\+Render\+Service} \doxyref{}{p.}{class_s_e_null_render_service_a32b1df4458c7929b53752273b7eaba29}, and {\bf S\+E\+Open\+G\+L\+Render\+Service} \doxyref{}{p.}{class_s_e_open_g_l_render_service_a98e8fac21db385ab7a70848da8a4404b}.
+
+\index{S\+E\+Render\+Service\+Internals@{S\+E\+Render\+Service\+Internals}!get\+Object@{get\+Object}}
+\index{get\+Object@{get\+Object}!S\+E\+Render\+Service\+Internals@{S\+E\+Render\+Service\+Internals}}
+\subsubsection[{get\+Object}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ virtual const {\bf S\+E\+Render\+Object}$<$T$>$$\ast$ {\bf S\+E\+Render\+Service\+Internals}$<$ T $>$\+::get\+Object (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{o}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_render_service_internals_ab020f013a5bf9f3e613d5b1f5ba6664d}
+
+
+Implemented in {\bf S\+E\+Null\+Render\+Service} \doxyref{}{p.}{class_s_e_null_render_service_a936c799903b6a1889a5e0c4fca70c4c2}, and {\bf S\+E\+Open\+G\+L\+Render\+Service} \doxyref{}{p.}{class_s_e_open_g_l_render_service_a9a25c1cae8d35cd864000a5f40418fef}.
+
+\index{S\+E\+Render\+Service\+Internals@{S\+E\+Render\+Service\+Internals}!get\+Object@{get\+Object}}
+\index{get\+Object@{get\+Object}!S\+E\+Render\+Service\+Internals@{S\+E\+Render\+Service\+Internals}}
+\subsubsection[{get\+Object}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ virtual {\bf S\+E\+Render\+Object}$<$T$>$$\ast$ {\bf S\+E\+Render\+Service\+Internals}$<$ T $>$\+::get\+Object (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{o}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_render_service_internals_ab6d62cffb007e4b1786eeedb251d7b3d}
+
+
+Implemented in {\bf S\+E\+Null\+Render\+Service} \doxyref{}{p.}{class_s_e_null_render_service_ad5abb8da31d50b79a6e1ab6b9a3955d8}, and {\bf S\+E\+Open\+G\+L\+Render\+Service} \doxyref{}{p.}{class_s_e_open_g_l_render_service_a2aa68a04c26e37c26335427feca48b16}.
+
+\index{S\+E\+Render\+Service\+Internals@{S\+E\+Render\+Service\+Internals}!set\+Global\+Ambient\+Light@{set\+Global\+Ambient\+Light}}
+\index{set\+Global\+Ambient\+Light@{set\+Global\+Ambient\+Light}!S\+E\+Render\+Service\+Internals@{S\+E\+Render\+Service\+Internals}}
+\subsubsection[{set\+Global\+Ambient\+Light}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ virtual void {\bf S\+E\+Render\+Service\+Internals}$<$ T $>$\+::set\+Global\+Ambient\+Light (
+\begin{DoxyParamCaption}
+\item[{T}]{r, }
+\item[{T}]{g, }
+\item[{T}]{b, }
+\item[{T}]{a}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_render_service_internals_abc9c9ed7584b2e13267e24b4d93fc15f}
+
+
+Implemented in {\bf S\+E\+Null\+Render\+Service} \doxyref{}{p.}{class_s_e_null_render_service_ae7953ed01ef89e7b5980d2d477c229b4}, and {\bf S\+E\+Open\+G\+L\+Render\+Service} \doxyref{}{p.}{class_s_e_open_g_l_render_service_a7c20c6f517491a03cff4e261b8733397}.
+
+\index{S\+E\+Render\+Service\+Internals@{S\+E\+Render\+Service\+Internals}!set\+Global\+Ambient\+Lighti@{set\+Global\+Ambient\+Lighti}}
+\index{set\+Global\+Ambient\+Lighti@{set\+Global\+Ambient\+Lighti}!S\+E\+Render\+Service\+Internals@{S\+E\+Render\+Service\+Internals}}
+\subsubsection[{set\+Global\+Ambient\+Lighti}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ virtual void {\bf S\+E\+Render\+Service\+Internals}$<$ T $>$\+::set\+Global\+Ambient\+Lighti (
+\begin{DoxyParamCaption}
+\item[{int}]{r, }
+\item[{int}]{g, }
+\item[{int}]{b, }
+\item[{int}]{a}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_render_service_internals_a17c2a0cdf2702a7e6350076fa4500e4c}
+
+
+Implemented in {\bf S\+E\+Null\+Render\+Service} \doxyref{}{p.}{class_s_e_null_render_service_aee1ff14b5eb85f89fd4874080048df95}, and {\bf S\+E\+Open\+G\+L\+Render\+Service} \doxyref{}{p.}{class_s_e_open_g_l_render_service_aa8218430a06e9095e4cc6e1cbfa2ae16}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Camera.\+h}\item 
+{\bf S\+E\+Render\+Service.\+h}\end{DoxyCompactItemize}

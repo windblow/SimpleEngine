@@ -1,0 +1,324 @@
+\section{S\+E\+Application$<$ T $>$ Class Template Reference}
+\label{class_s_e_application}\index{S\+E\+Application$<$ T $>$@{S\+E\+Application$<$ T $>$}}
+
+
+{\ttfamily \#include $<$S\+E\+Application.\+h$>$}
+
+
+
+Inheritance diagram for S\+E\+Application$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{class_s_e_application__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for S\+E\+Application$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_e_application__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bf init} (int argc, char $\ast$$\ast$argv)
+\item 
+virtual void {\bf run} ()
+\item 
+virtual void {\bf quit} ()
+\item 
+virtual {\bf $\sim$\+S\+E\+Application} ()
+\item 
+virtual {\bf S\+E\+Render\+Service} $\ast$ {\bf rs} ()
+\item 
+virtual {\bf S\+E\+Window\+Manager} $\ast$ {\bf wm} ()
+\item 
+virtual {\bf S\+E\+Flow\+Controller} $\ast$ {\bf fc} ()
+\item 
+virtual void {\bf display} ()
+\item 
+virtual void {\bf idle} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Application} (std\+::string t)
+\item 
+{\bf S\+E\+Application} (const char $\ast$t)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bf title\+\_\+}
+\item 
+{\bf S\+E\+Scene\+Manager} {\bf sm\+\_\+}
+\item 
+{\bf S\+E\+Render\+Service\+Internals}$<$ T $>$ $\ast$ {\bf rs\+\_\+}
+\item 
+{\bf S\+E\+Window\+Manager} $\ast$ {\bf wm\+\_\+}
+\item 
+{\bf S\+E\+Flow\+Controller} $\ast$ {\bf fc\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$class S\+E\+Application$<$ T $>$}
+
+
+
+Definition at line 18 of file S\+E\+Application.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{S\+E\+Application@{S\+E\+Application}!````~S\+E\+Application@{$\sim$\+S\+E\+Application}}
+\index{````~S\+E\+Application@{$\sim$\+S\+E\+Application}!S\+E\+Application@{S\+E\+Application}}
+\subsubsection[{$\sim$\+S\+E\+Application}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf S\+E\+Application}$<$ T $>$\+::$\sim${\bf S\+E\+Application} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_e_application_a6cead4e6a89d9c0b75683e539410ca14}
+
+
+Definition at line 59 of file S\+E\+Application.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_e_application_a6cead4e6a89d9c0b75683e539410ca14_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+Application@{S\+E\+Application}!S\+E\+Application@{S\+E\+Application}}
+\index{S\+E\+Application@{S\+E\+Application}!S\+E\+Application@{S\+E\+Application}}
+\subsubsection[{S\+E\+Application}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Application}$<$ T $>$\+::{\bf S\+E\+Application} (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_s_e_application_a6a5f4e53420eb146d177a84cdc691655}
+
+
+Definition at line 46 of file S\+E\+Application.\+h.
+
+\index{S\+E\+Application@{S\+E\+Application}!S\+E\+Application@{S\+E\+Application}}
+\index{S\+E\+Application@{S\+E\+Application}!S\+E\+Application@{S\+E\+Application}}
+\subsubsection[{S\+E\+Application}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Application}$<$ T $>$\+::{\bf S\+E\+Application} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_s_e_application_a618938e04202c52914923a2af5e4c65a}
+
+
+Definition at line 50 of file S\+E\+Application.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\index{S\+E\+Application@{S\+E\+Application}!display@{display}}
+\index{display@{display}!S\+E\+Application@{S\+E\+Application}}
+\subsubsection[{display}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ virtual void {\bf S\+E\+Application}$<$ T $>$\+::display (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_e_application_af68fb4de72017976c14e4e81a35f509f}
+
+
+Implements {\bf S\+E\+Application\+Interface} \doxyref{}{p.}{class_s_e_application_interface_a7dbd81ef6669b220b75a190f5ac19d2c}.
+
+
+
+Reimplemented in {\bf S\+E\+Test\+App1} \doxyref{}{p.}{class_s_e_test_app1_aa673ae83a7249cd54756a4a475594c18}, and {\bf S\+E\+Test\+App2} \doxyref{}{p.}{class_s_e_test_app2_a7d4d1ed4ffec940cffaa677638439dd0}.
+
+
+
+Definition at line 34 of file S\+E\+Application.\+h.
+
+\index{S\+E\+Application@{S\+E\+Application}!fc@{fc}}
+\index{fc@{fc}!S\+E\+Application@{S\+E\+Application}}
+\subsubsection[{fc}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ virtual {\bf S\+E\+Flow\+Controller}$\ast$ {\bf S\+E\+Application}$<$ T $>$\+::fc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_e_application_a8b62aedc2f6fee908272cb9b6638d87e}
+
+
+Implements {\bf S\+E\+Application\+Interface} \doxyref{}{p.}{class_s_e_application_interface_aaf13d84e9c716f4fa7131f287f5e823b}.
+
+
+
+Definition at line 32 of file S\+E\+Application.\+h.
+
+\index{S\+E\+Application@{S\+E\+Application}!idle@{idle}}
+\index{idle@{idle}!S\+E\+Application@{S\+E\+Application}}
+\subsubsection[{idle}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ virtual void {\bf S\+E\+Application}$<$ T $>$\+::idle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_e_application_ae10739b2876ad09ee15590ba822e21eb}
+
+
+Reimplemented from {\bf S\+E\+Application\+Interface} \doxyref{}{p.}{class_s_e_application_interface_ace0d1433d2f5b08c9cd582318eabcffc}.
+
+
+
+Reimplemented in {\bf S\+E\+Test\+App1} \doxyref{}{p.}{class_s_e_test_app1_a2a3457e16ee71cba6aa71728ecd98045}, and {\bf S\+E\+Test\+App2} \doxyref{}{p.}{class_s_e_test_app2_a08d31acfd918a2ee16bff9fec0927b6d}.
+
+
+
+Definition at line 35 of file S\+E\+Application.\+h.
+
+\index{S\+E\+Application@{S\+E\+Application}!init@{init}}
+\index{init@{init}!S\+E\+Application@{S\+E\+Application}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf S\+E\+Application}$<$ T $>$\+::init (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_e_application_ae8453fdab08443b4a1c7fc9db1a4436e}
+
+
+Implements {\bf S\+E\+Application\+Interface} \doxyref{}{p.}{class_s_e_application_interface_a6122d2fc9569a97ee0d69145a9a76779}.
+
+
+
+Reimplemented in {\bf S\+E\+Test\+App1} \doxyref{}{p.}{class_s_e_test_app1_ac03290087ff6592a7d368edea13b66c9}, and {\bf S\+E\+Test\+App2} \doxyref{}{p.}{class_s_e_test_app2_a8b0e69df9de394aa9c21855570bb1d1d}.
+
+
+
+Definition at line 66 of file S\+E\+Application.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_e_application_ae8453fdab08443b4a1c7fc9db1a4436e_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+Application@{S\+E\+Application}!quit@{quit}}
+\index{quit@{quit}!S\+E\+Application@{S\+E\+Application}}
+\subsubsection[{quit}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf S\+E\+Application}$<$ T $>$\+::quit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_e_application_a1d6dd2dd21b3e0ec2fb519c18be75456}
+
+
+Implements {\bf S\+E\+Application\+Interface} \doxyref{}{p.}{class_s_e_application_interface_ac1c05e2c7c83d66e6c5dbe52b2bd681b}.
+
+
+
+Reimplemented in {\bf S\+E\+Test\+App1} \doxyref{}{p.}{class_s_e_test_app1_adb78b0efdd9da9dc098d4ffa6828f727}, and {\bf S\+E\+Test\+App2} \doxyref{}{p.}{class_s_e_test_app2_ab11859c0ab08874e228654bde04b30d6}.
+
+
+
+Definition at line 88 of file S\+E\+Application.\+h.
+
+\index{S\+E\+Application@{S\+E\+Application}!rs@{rs}}
+\index{rs@{rs}!S\+E\+Application@{S\+E\+Application}}
+\subsubsection[{rs}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ virtual {\bf S\+E\+Render\+Service}$\ast$ {\bf S\+E\+Application}$<$ T $>$\+::rs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_e_application_accb31e9ba20aba3b9e87fdebe890b112}
+
+
+Implements {\bf S\+E\+Application\+Interface} \doxyref{}{p.}{class_s_e_application_interface_a3f3ad17c66f7e5154c06a1b51c64f79b}.
+
+
+
+Definition at line 30 of file S\+E\+Application.\+h.
+
+\index{S\+E\+Application@{S\+E\+Application}!run@{run}}
+\index{run@{run}!S\+E\+Application@{S\+E\+Application}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf S\+E\+Application}$<$ T $>$\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_e_application_a1cb54d6b2e488ec96ec0bd743f73e68e}
+
+
+Implements {\bf S\+E\+Application\+Interface} \doxyref{}{p.}{class_s_e_application_interface_a80314f1b5d2ee927f0aec52d2939a4e3}.
+
+
+
+Reimplemented in {\bf S\+E\+Test\+App1} \doxyref{}{p.}{class_s_e_test_app1_ab3f47fe7c735bc68d2e18867011d33a2}, and {\bf S\+E\+Test\+App2} \doxyref{}{p.}{class_s_e_test_app2_a721c6c574531fcd0786bb8f39683dd7e}.
+
+
+
+Definition at line 82 of file S\+E\+Application.\+h.
+
+\index{S\+E\+Application@{S\+E\+Application}!wm@{wm}}
+\index{wm@{wm}!S\+E\+Application@{S\+E\+Application}}
+\subsubsection[{wm}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ virtual {\bf S\+E\+Window\+Manager}$\ast$ {\bf S\+E\+Application}$<$ T $>$\+::wm (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_e_application_a06d1f50c567761756a3dcf30e5bddefc}
+
+
+Implements {\bf S\+E\+Application\+Interface} \doxyref{}{p.}{class_s_e_application_interface_a741d9bee928dc78ea56fe6de72137393}.
+
+
+
+Definition at line 31 of file S\+E\+Application.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\index{S\+E\+Application@{S\+E\+Application}!fc\+\_\+@{fc\+\_\+}}
+\index{fc\+\_\+@{fc\+\_\+}!S\+E\+Application@{S\+E\+Application}}
+\subsubsection[{fc\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Flow\+Controller}$\ast$ {\bf S\+E\+Application}$<$ T $>$\+::fc\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_e_application_abb7338d0a49264152215cc8cd1e2409a}
+
+
+Definition at line 44 of file S\+E\+Application.\+h.
+
+\index{S\+E\+Application@{S\+E\+Application}!rs\+\_\+@{rs\+\_\+}}
+\index{rs\+\_\+@{rs\+\_\+}!S\+E\+Application@{S\+E\+Application}}
+\subsubsection[{rs\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Render\+Service\+Internals}$<$T$>$$\ast$ {\bf S\+E\+Application}$<$ T $>$\+::rs\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_e_application_a0943355ca717cb94a7195b65f860e49a}
+
+
+Definition at line 42 of file S\+E\+Application.\+h.
+
+\index{S\+E\+Application@{S\+E\+Application}!sm\+\_\+@{sm\+\_\+}}
+\index{sm\+\_\+@{sm\+\_\+}!S\+E\+Application@{S\+E\+Application}}
+\subsubsection[{sm\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Scene\+Manager} {\bf S\+E\+Application}$<$ T $>$\+::sm\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_e_application_a4ef748623466d9608ed5daa5352e7803}
+
+
+Definition at line 40 of file S\+E\+Application.\+h.
+
+\index{S\+E\+Application@{S\+E\+Application}!title\+\_\+@{title\+\_\+}}
+\index{title\+\_\+@{title\+\_\+}!S\+E\+Application@{S\+E\+Application}}
+\subsubsection[{title\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ std\+::string {\bf S\+E\+Application}$<$ T $>$\+::title\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_e_application_a0a579d8f334cf37f46f91dfe12a4e3d3}
+
+
+Definition at line 38 of file S\+E\+Application.\+h.
+
+\index{S\+E\+Application@{S\+E\+Application}!wm\+\_\+@{wm\+\_\+}}
+\index{wm\+\_\+@{wm\+\_\+}!S\+E\+Application@{S\+E\+Application}}
+\subsubsection[{wm\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Window\+Manager}$\ast$ {\bf S\+E\+Application}$<$ T $>$\+::wm\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_e_application_a3b03cd9ec7c1a749948ce30da85d5f59}
+
+
+Definition at line 43 of file S\+E\+Application.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Application.\+h}\end{DoxyCompactItemize}

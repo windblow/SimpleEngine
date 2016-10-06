@@ -1,0 +1,160 @@
+\section{S\+E\+Component Class Reference}
+\label{class_s_e_component}\index{S\+E\+Component@{S\+E\+Component}}
+
+
+{\ttfamily \#include $<$S\+E\+Component.\+h$>$}
+
+
+
+Inheritance diagram for S\+E\+Component\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{class_s_e_component__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for S\+E\+Component\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{class_s_e_component__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf t\+Component} \{ \\*
+{\bf R\+E\+N\+D\+E\+R\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T}, 
+{\bf T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T}, 
+{\bf P\+H\+Y\+S\+I\+C\+S\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T}, 
+{\bf A\+N\+I\+M\+A\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T}, 
+\\*
+{\bf U\+I\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T}, 
+{\bf A\+U\+D\+I\+O\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T}, 
+{\bf C\+O\+N\+T\+R\+O\+L\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T}, 
+{\bf S\+T\+A\+T\+E\+M\+A\+C\+H\+I\+N\+E\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T}, 
+\\*
+{\bf N\+U\+M\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+S}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bf update} (double dt)=0
+\item 
+virtual {\bf t\+Component} {\bf type} ()=0
+\item 
+{\bf $\sim$\+S\+E\+Component} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Component} ({\bf t\+Component} t)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf t\+Component} {\bf t\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 6 of file S\+E\+Component.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\index{S\+E\+Component@{S\+E\+Component}!t\+Component@{t\+Component}}
+\index{t\+Component@{t\+Component}!S\+E\+Component@{S\+E\+Component}}
+\subsubsection[{t\+Component}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf S\+E\+Component\+::t\+Component}}\label{class_s_e_component_a3df61ea419feacc6873d66be7268b707}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{R\+E\+N\+D\+E\+R\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T@{R\+E\+N\+D\+E\+R\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T}!S\+E\+Component@{S\+E\+Component}}\index{S\+E\+Component@{S\+E\+Component}!R\+E\+N\+D\+E\+R\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T@{R\+E\+N\+D\+E\+R\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T}}\item[{\em 
+R\+E\+N\+D\+E\+R\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\label{class_s_e_component_a3df61ea419feacc6873d66be7268b707afff4298ec16565d8c1cdaac523686744}
+}]\index{T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T@{T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T}!S\+E\+Component@{S\+E\+Component}}\index{S\+E\+Component@{S\+E\+Component}!T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T@{T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T}}\item[{\em 
+T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\label{class_s_e_component_a3df61ea419feacc6873d66be7268b707a430e9ee5374584c70bd9149b596245bb}
+}]\index{P\+H\+Y\+S\+I\+C\+S\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T@{P\+H\+Y\+S\+I\+C\+S\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T}!S\+E\+Component@{S\+E\+Component}}\index{S\+E\+Component@{S\+E\+Component}!P\+H\+Y\+S\+I\+C\+S\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T@{P\+H\+Y\+S\+I\+C\+S\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T}}\item[{\em 
+P\+H\+Y\+S\+I\+C\+S\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\label{class_s_e_component_a3df61ea419feacc6873d66be7268b707a25f92dc2e7f717b4f4c67f9f9dd7d7e3}
+}]\index{A\+N\+I\+M\+A\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T@{A\+N\+I\+M\+A\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T}!S\+E\+Component@{S\+E\+Component}}\index{S\+E\+Component@{S\+E\+Component}!A\+N\+I\+M\+A\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T@{A\+N\+I\+M\+A\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T}}\item[{\em 
+A\+N\+I\+M\+A\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\label{class_s_e_component_a3df61ea419feacc6873d66be7268b707a78a065443416ed1a6e7424523a5dd694}
+}]\index{U\+I\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T@{U\+I\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T}!S\+E\+Component@{S\+E\+Component}}\index{S\+E\+Component@{S\+E\+Component}!U\+I\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T@{U\+I\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T}}\item[{\em 
+U\+I\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\label{class_s_e_component_a3df61ea419feacc6873d66be7268b707a05ce35f6af0a978204606d70ec031e85}
+}]\index{A\+U\+D\+I\+O\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T@{A\+U\+D\+I\+O\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T}!S\+E\+Component@{S\+E\+Component}}\index{S\+E\+Component@{S\+E\+Component}!A\+U\+D\+I\+O\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T@{A\+U\+D\+I\+O\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T}}\item[{\em 
+A\+U\+D\+I\+O\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\label{class_s_e_component_a3df61ea419feacc6873d66be7268b707aad94bb37dccf34790d259abd4ed3c696}
+}]\index{C\+O\+N\+T\+R\+O\+L\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T@{C\+O\+N\+T\+R\+O\+L\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T}!S\+E\+Component@{S\+E\+Component}}\index{S\+E\+Component@{S\+E\+Component}!C\+O\+N\+T\+R\+O\+L\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T@{C\+O\+N\+T\+R\+O\+L\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T}}\item[{\em 
+C\+O\+N\+T\+R\+O\+L\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\label{class_s_e_component_a3df61ea419feacc6873d66be7268b707a3dd7eb1fce765b3405e5c0475e954146}
+}]\index{S\+T\+A\+T\+E\+M\+A\+C\+H\+I\+N\+E\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T@{S\+T\+A\+T\+E\+M\+A\+C\+H\+I\+N\+E\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T}!S\+E\+Component@{S\+E\+Component}}\index{S\+E\+Component@{S\+E\+Component}!S\+T\+A\+T\+E\+M\+A\+C\+H\+I\+N\+E\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T@{S\+T\+A\+T\+E\+M\+A\+C\+H\+I\+N\+E\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T}}\item[{\em 
+S\+T\+A\+T\+E\+M\+A\+C\+H\+I\+N\+E\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\label{class_s_e_component_a3df61ea419feacc6873d66be7268b707a26202fa438a429a489f8917ed9cd673c}
+}]\index{N\+U\+M\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+S@{N\+U\+M\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+S}!S\+E\+Component@{S\+E\+Component}}\index{S\+E\+Component@{S\+E\+Component}!N\+U\+M\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+S@{N\+U\+M\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+S}}\item[{\em 
+N\+U\+M\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+S\label{class_s_e_component_a3df61ea419feacc6873d66be7268b707a7ec53ae3fd9647aeb5ec5effb90d0a92}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 8 of file S\+E\+Component.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{S\+E\+Component@{S\+E\+Component}!````~S\+E\+Component@{$\sim$\+S\+E\+Component}}
+\index{````~S\+E\+Component@{$\sim$\+S\+E\+Component}!S\+E\+Component@{S\+E\+Component}}
+\subsubsection[{$\sim$\+S\+E\+Component}]{\setlength{\rightskip}{0pt plus 5cm}S\+E\+Component\+::$\sim$\+S\+E\+Component (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_component_a30d011852144c4a66f4b80144079399e}
+
+
+Definition at line 24 of file S\+E\+Component.\+h.
+
+\index{S\+E\+Component@{S\+E\+Component}!S\+E\+Component@{S\+E\+Component}}
+\index{S\+E\+Component@{S\+E\+Component}!S\+E\+Component@{S\+E\+Component}}
+\subsubsection[{S\+E\+Component}]{\setlength{\rightskip}{0pt plus 5cm}S\+E\+Component\+::\+S\+E\+Component (
+\begin{DoxyParamCaption}
+\item[{{\bf t\+Component}}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_s_e_component_ab578548797c13a8a94bef3ce8c56847b}
+
+
+Definition at line 26 of file S\+E\+Component.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\index{S\+E\+Component@{S\+E\+Component}!type@{type}}
+\index{type@{type}!S\+E\+Component@{S\+E\+Component}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf t\+Component} S\+E\+Component\+::type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_component_a28d7273f47346f0e2899d4ec2f905e91}
+\index{S\+E\+Component@{S\+E\+Component}!update@{update}}
+\index{update@{update}!S\+E\+Component@{S\+E\+Component}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+E\+Component\+::update (
+\begin{DoxyParamCaption}
+\item[{double}]{dt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_component_a675c7756097ed21aeb7f2c03a2187380}
+
+
+\subsection{Member Data Documentation}
+\index{S\+E\+Component@{S\+E\+Component}!t\+\_\+@{t\+\_\+}}
+\index{t\+\_\+@{t\+\_\+}!S\+E\+Component@{S\+E\+Component}}
+\subsubsection[{t\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\+Component} S\+E\+Component\+::t\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_e_component_ae100a212b5923070a9869e5aff97c453}
+
+
+Definition at line 28 of file S\+E\+Component.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Component.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,232 @@
+\section{S\+E\+Model$<$ T $>$ Class Template Reference}
+\label{class_s_e_model}\index{S\+E\+Model$<$ T $>$@{S\+E\+Model$<$ T $>$}}
+
+
+{\ttfamily \#include $<$S\+E\+Model.\+h$>$}
+
+
+
+Inheritance diagram for S\+E\+Model$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{class_s_e_model__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for S\+E\+Model$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{class_s_e_model__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf $\sim$\+S\+E\+Model} ()
+\item 
+virtual void {\bf draw} ()=0
+\item 
+virtual void {\bf load\+File} (std\+::string filename)=0
+\item 
+virtual void {\bf load\+Mesh} ({\bf S\+E\+Mesh}$<$ T $>$ $\ast$m)=0
+\item 
+virtual void {\bf load\+Skeleton} ({\bf S\+E\+Skeleton}$<$ T $>$ $\ast$s)=0
+\item 
+virtual void {\bf load\+Material} (S\+E\+Material $\ast$m)=0
+\item 
+virtual void {\bf load\+Animation} (S\+E\+Animation $\ast$a)=0
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const bool \& {\bf loaded}
+\item 
+const {\bf S\+E\+Mesh}$<$ T $>$ $\ast$\& {\bf mesh}
+\item 
+const {\bf S\+E\+Skeleton}$<$ T $>$ $\ast$\& {\bf skel}
+\item 
+const S\+E\+Material $\ast$\& {\bf mat}
+\item 
+const S\+E\+Animation $\ast$\& {\bf anim}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Model} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Mesh}$<$ T $>$ $\ast$ {\bf mesh\+\_\+}
+\item 
+{\bf S\+E\+Skeleton}$<$ T $>$ $\ast$ {\bf skel\+\_\+}
+\item 
+S\+E\+Material $\ast$ {\bf mat\+\_\+}
+\item 
+S\+E\+Animation $\ast$ {\bf anim\+\_\+}
+\item 
+bool {\bf loaded\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$class S\+E\+Model$<$ T $>$}
+
+
+
+Definition at line 14 of file S\+E\+Model.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{S\+E\+Model@{S\+E\+Model}!````~S\+E\+Model@{$\sim$\+S\+E\+Model}}
+\index{````~S\+E\+Model@{$\sim$\+S\+E\+Model}!S\+E\+Model@{S\+E\+Model}}
+\subsubsection[{$\sim$\+S\+E\+Model}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf S\+E\+Model}$<$ T $>$\+::$\sim${\bf S\+E\+Model} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_e_model_a483edc43a737f428874d8ca97a75bfaa}
+
+
+Definition at line 3 of file S\+E\+Model.\+cpp.
+
+\index{S\+E\+Model@{S\+E\+Model}!S\+E\+Model@{S\+E\+Model}}
+\index{S\+E\+Model@{S\+E\+Model}!S\+E\+Model@{S\+E\+Model}}
+\subsubsection[{S\+E\+Model}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf S\+E\+Model}$<$ T $>$\+::{\bf S\+E\+Model} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_s_e_model_ac7482904d35288d06e21ff257b47c86c}
+
+
+Definition at line 43 of file S\+E\+Model.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\index{S\+E\+Model@{S\+E\+Model}!draw@{draw}}
+\index{draw@{draw}!S\+E\+Model@{S\+E\+Model}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ virtual void {\bf S\+E\+Model}$<$ T $>$\+::draw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_model_a10e982f116407c0aa5b39761f0edc32c}
+\index{S\+E\+Model@{S\+E\+Model}!load\+Animation@{load\+Animation}}
+\index{load\+Animation@{load\+Animation}!S\+E\+Model@{S\+E\+Model}}
+\subsubsection[{load\+Animation}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ virtual void {\bf S\+E\+Model}$<$ T $>$\+::load\+Animation (
+\begin{DoxyParamCaption}
+\item[{S\+E\+Animation $\ast$}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_model_a58a9b34c94d07c9db17d63e325483388}
+\index{S\+E\+Model@{S\+E\+Model}!load\+File@{load\+File}}
+\index{load\+File@{load\+File}!S\+E\+Model@{S\+E\+Model}}
+\subsubsection[{load\+File}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ virtual void {\bf S\+E\+Model}$<$ T $>$\+::load\+File (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_model_a82083104948dfb8b86db17c2c812be0a}
+\index{S\+E\+Model@{S\+E\+Model}!load\+Material@{load\+Material}}
+\index{load\+Material@{load\+Material}!S\+E\+Model@{S\+E\+Model}}
+\subsubsection[{load\+Material}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ virtual void {\bf S\+E\+Model}$<$ T $>$\+::load\+Material (
+\begin{DoxyParamCaption}
+\item[{S\+E\+Material $\ast$}]{m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_model_accf478e4e76a594e5657e94b10f032e1}
+\index{S\+E\+Model@{S\+E\+Model}!load\+Mesh@{load\+Mesh}}
+\index{load\+Mesh@{load\+Mesh}!S\+E\+Model@{S\+E\+Model}}
+\subsubsection[{load\+Mesh}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ virtual void {\bf S\+E\+Model}$<$ T $>$\+::load\+Mesh (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+Mesh}$<$ T $>$ $\ast$}]{m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_model_aff0976456c1023232c76abd62f70c639}
+\index{S\+E\+Model@{S\+E\+Model}!load\+Skeleton@{load\+Skeleton}}
+\index{load\+Skeleton@{load\+Skeleton}!S\+E\+Model@{S\+E\+Model}}
+\subsubsection[{load\+Skeleton}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ virtual void {\bf S\+E\+Model}$<$ T $>$\+::load\+Skeleton (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+Skeleton}$<$ T $>$ $\ast$}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_model_a1b3935cbb48247471e88a70e2348fe71}
+
+
+\subsection{Member Data Documentation}
+\index{S\+E\+Model@{S\+E\+Model}!anim@{anim}}
+\index{anim@{anim}!S\+E\+Model@{S\+E\+Model}}
+\subsubsection[{anim}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const S\+E\+Animation$\ast$ \& {\bf S\+E\+Model}$<$ T $>$\+::anim}\label{class_s_e_model_a0976da42fab575560442f0e9f995d0ce}
+
+
+Definition at line 21 of file S\+E\+Model.\+h.
+
+\index{S\+E\+Model@{S\+E\+Model}!anim\+\_\+@{anim\+\_\+}}
+\index{anim\+\_\+@{anim\+\_\+}!S\+E\+Model@{S\+E\+Model}}
+\subsubsection[{anim\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ S\+E\+Animation$\ast$ {\bf S\+E\+Model}$<$ T $>$\+::anim\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_e_model_a5355d9e9e40afb0a7d4936a6c6460264}
+
+
+Definition at line 38 of file S\+E\+Model.\+h.
+
+\index{S\+E\+Model@{S\+E\+Model}!loaded@{loaded}}
+\index{loaded@{loaded}!S\+E\+Model@{S\+E\+Model}}
+\subsubsection[{loaded}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const bool\& {\bf S\+E\+Model}$<$ T $>$\+::loaded}\label{class_s_e_model_a5f7789eff450237e1dc2a282a4a9f459}
+
+
+Definition at line 17 of file S\+E\+Model.\+h.
+
+\index{S\+E\+Model@{S\+E\+Model}!loaded\+\_\+@{loaded\+\_\+}}
+\index{loaded\+\_\+@{loaded\+\_\+}!S\+E\+Model@{S\+E\+Model}}
+\subsubsection[{loaded\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ bool {\bf S\+E\+Model}$<$ T $>$\+::loaded\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_e_model_acb2ad45676edb59fa4b5d8b48208ccc0}
+
+
+Definition at line 40 of file S\+E\+Model.\+h.
+
+\index{S\+E\+Model@{S\+E\+Model}!mat@{mat}}
+\index{mat@{mat}!S\+E\+Model@{S\+E\+Model}}
+\subsubsection[{mat}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const S\+E\+Material$\ast$ \& {\bf S\+E\+Model}$<$ T $>$\+::mat}\label{class_s_e_model_a8e28cb3ece5c3488390d490b9244caca}
+
+
+Definition at line 20 of file S\+E\+Model.\+h.
+
+\index{S\+E\+Model@{S\+E\+Model}!mat\+\_\+@{mat\+\_\+}}
+\index{mat\+\_\+@{mat\+\_\+}!S\+E\+Model@{S\+E\+Model}}
+\subsubsection[{mat\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ S\+E\+Material$\ast$ {\bf S\+E\+Model}$<$ T $>$\+::mat\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_e_model_a04f2febf12201e2e1e1a940c3d1ce851}
+
+
+Definition at line 37 of file S\+E\+Model.\+h.
+
+\index{S\+E\+Model@{S\+E\+Model}!mesh@{mesh}}
+\index{mesh@{mesh}!S\+E\+Model@{S\+E\+Model}}
+\subsubsection[{mesh}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const {\bf S\+E\+Mesh}$<$T$>$$\ast$ \& {\bf S\+E\+Model}$<$ T $>$\+::mesh}\label{class_s_e_model_a88cf5150b31b79bde5ffccbf7becce78}
+
+
+Definition at line 18 of file S\+E\+Model.\+h.
+
+\index{S\+E\+Model@{S\+E\+Model}!mesh\+\_\+@{mesh\+\_\+}}
+\index{mesh\+\_\+@{mesh\+\_\+}!S\+E\+Model@{S\+E\+Model}}
+\subsubsection[{mesh\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf S\+E\+Mesh}$<$T$>$$\ast$ {\bf S\+E\+Model}$<$ T $>$\+::mesh\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_e_model_a823fa4c7d6a066d6a79cd3bbedd3573a}
+
+
+Definition at line 35 of file S\+E\+Model.\+h.
+
+\index{S\+E\+Model@{S\+E\+Model}!skel@{skel}}
+\index{skel@{skel}!S\+E\+Model@{S\+E\+Model}}
+\subsubsection[{skel}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const {\bf S\+E\+Skeleton}$<$T$>$$\ast$ \& {\bf S\+E\+Model}$<$ T $>$\+::skel}\label{class_s_e_model_a576214fa28af154208d94a05ce9b631d}
+
+
+Definition at line 19 of file S\+E\+Model.\+h.
+
+\index{S\+E\+Model@{S\+E\+Model}!skel\+\_\+@{skel\+\_\+}}
+\index{skel\+\_\+@{skel\+\_\+}!S\+E\+Model@{S\+E\+Model}}
+\subsubsection[{skel\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf S\+E\+Skeleton}$<$T$>$$\ast$ {\bf S\+E\+Model}$<$ T $>$\+::skel\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_e_model_aa046d796fb89ad7cdaa270b422709b15}
+
+
+Definition at line 36 of file S\+E\+Model.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Model.\+h}\item 
+{\bf S\+E\+Model.\+cpp}\end{DoxyCompactItemize}

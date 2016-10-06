@@ -1,11 +1,10 @@
 #include "../inc/SEGLUTFlowController.h"
 #include "../inc/SimpleEngine.h"
+#include "../inc/SEDebugTools.h"
 
 #include <iostream>
 
-#define DUMPONCE(x) if (dumpOnce) std::cout << x << std::endl
-
-bool dumpOnce;
+USEDUMPFLAG;
 
 SEGLUTFlowController::SEGLUTFlowController()
  : SEFlowController(SEFlowController::GLUT_FC)
@@ -27,11 +26,11 @@ void SEGLUTFlowController::bindCallbacks()
 
 void SEGLUTFlowController::mainLoop()
 {
-    dumpOnce = true;
+
     while (SimpleEngine::app()->isRunning)
     {
         glutMainLoopEvent();
         glutSwapBuffers();
-        dumpOnce=false;
+        DUMPFLAG(false);
     }
 }

@@ -1,0 +1,415 @@
+\section{S\+E\+Window\+Manager Class Reference}
+\label{class_s_e_window_manager}\index{S\+E\+Window\+Manager@{S\+E\+Window\+Manager}}
+
+
+{\ttfamily \#include $<$S\+E\+Window\+Manager.\+h$>$}
+
+
+
+Inheritance diagram for S\+E\+Window\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{class_s_e_window_manager__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf t\+Window\+Manager} \{ \\*
+{\bf G\+L\+E\+W\+\_\+\+W\+M}, 
+{\bf G\+L\+U\+I\+\_\+\+W\+M}, 
+{\bf G\+L\+U\+T\+\_\+\+W\+M}, 
+{\bf N\+U\+L\+L\+\_\+\+W\+M}, 
+\\*
+{\bf N\+U\+M\+\_\+\+W\+M\+S}
+ \}
+\item 
+typedef std\+::map$<$ long, {\bf S\+E\+Window} $\ast$ $>$ {\bf t\+Window\+List}
+\item 
+typedef std\+::map$<$ long, {\bf S\+E\+Window} $\ast$ $>$\+::iterator {\bf t\+Window\+List\+\_\+iterator}
+\item 
+typedef std\+::map$<$ long, {\bf S\+E\+Window} $\ast$ $>$\+::const\+\_\+iterator {\bf t\+Window\+List\+\_\+const\+\_\+iterator}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual long {\bf create\+New\+Window} (int w, int h, std\+::string t=\char`\"{}\char`\"{}, int posx=5, int posy=5)=0
+\item 
+virtual void {\bf reshape\+Active} (int w, int h)
+\item 
+virtual void {\bf redisplay\+Active} ()
+\item 
+virtual void {\bf register\+Display\+Function} (void($\ast$f)(void))=0
+\item 
+virtual void {\bf register\+Reshape\+Function} (void($\ast$f)(int, int))=0
+\item 
+virtual void {\bf register\+Idle\+Function} (void($\ast$f)(void))=0
+\item 
+{\bf t\+Window\+Manager} {\bf get\+Type} () const 
+\item 
+long {\bf get\+Current\+Window\+I\+D} () const 
+\item 
+const {\bf S\+E\+Window} $\ast$ {\bf get\+Current\+Window} () const 
+\item 
+bool {\bf set\+Active} (long id)
+\item 
+bool {\bf is\+Active} (long id) const 
+\item 
+void {\bf destroy\+Window} (int id)
+\item 
+void {\bf destroy\+Window} ({\bf t\+Window\+List\+\_\+iterator} i)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Window\+Manager} ({\bf t\+Window\+Manager} t)
+\item 
+{\bf S\+E\+Window\+Manager} ({\bf t\+Window\+Manager} t, int argc, char $\ast$$\ast$argv)
+\item 
+virtual {\bf $\sim$\+S\+E\+Window\+Manager} ()
+\item 
+void {\bf adjust\+Current\+Id} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf t\+Window\+Manager} {\bf type\+\_\+}
+\item 
+long {\bf current\+Id\+\_\+}
+\item 
+{\bf t\+Window\+List} {\bf w\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf S\+E\+Service\+Locator}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 11 of file S\+E\+Window\+Manager.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\index{S\+E\+Window\+Manager@{S\+E\+Window\+Manager}!t\+Window\+List@{t\+Window\+List}}
+\index{t\+Window\+List@{t\+Window\+List}!S\+E\+Window\+Manager@{S\+E\+Window\+Manager}}
+\subsubsection[{t\+Window\+List}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<$long, {\bf S\+E\+Window}$\ast$$>$ {\bf S\+E\+Window\+Manager\+::t\+Window\+List}}\label{class_s_e_window_manager_a3531207517a87ab6e146317673beb3c7}
+
+
+Definition at line 17 of file S\+E\+Window\+Manager.\+h.
+
+\index{S\+E\+Window\+Manager@{S\+E\+Window\+Manager}!t\+Window\+List\+\_\+const\+\_\+iterator@{t\+Window\+List\+\_\+const\+\_\+iterator}}
+\index{t\+Window\+List\+\_\+const\+\_\+iterator@{t\+Window\+List\+\_\+const\+\_\+iterator}!S\+E\+Window\+Manager@{S\+E\+Window\+Manager}}
+\subsubsection[{t\+Window\+List\+\_\+const\+\_\+iterator}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<$long, {\bf S\+E\+Window}$\ast$$>$\+::const\+\_\+iterator {\bf S\+E\+Window\+Manager\+::t\+Window\+List\+\_\+const\+\_\+iterator}}\label{class_s_e_window_manager_a9445a66a4e3be0533788ddebc303bbe6}
+
+
+Definition at line 19 of file S\+E\+Window\+Manager.\+h.
+
+\index{S\+E\+Window\+Manager@{S\+E\+Window\+Manager}!t\+Window\+List\+\_\+iterator@{t\+Window\+List\+\_\+iterator}}
+\index{t\+Window\+List\+\_\+iterator@{t\+Window\+List\+\_\+iterator}!S\+E\+Window\+Manager@{S\+E\+Window\+Manager}}
+\subsubsection[{t\+Window\+List\+\_\+iterator}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<$long, {\bf S\+E\+Window}$\ast$$>$\+::iterator {\bf S\+E\+Window\+Manager\+::t\+Window\+List\+\_\+iterator}}\label{class_s_e_window_manager_aa82b8d42748d317be03221d308d95760}
+
+
+Definition at line 18 of file S\+E\+Window\+Manager.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\index{S\+E\+Window\+Manager@{S\+E\+Window\+Manager}!t\+Window\+Manager@{t\+Window\+Manager}}
+\index{t\+Window\+Manager@{t\+Window\+Manager}!S\+E\+Window\+Manager@{S\+E\+Window\+Manager}}
+\subsubsection[{t\+Window\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf S\+E\+Window\+Manager\+::t\+Window\+Manager}}\label{class_s_e_window_manager_a37ab829f139fea4fd2cc3c72f5754264}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{G\+L\+E\+W\+\_\+\+W\+M@{G\+L\+E\+W\+\_\+\+W\+M}!S\+E\+Window\+Manager@{S\+E\+Window\+Manager}}\index{S\+E\+Window\+Manager@{S\+E\+Window\+Manager}!G\+L\+E\+W\+\_\+\+W\+M@{G\+L\+E\+W\+\_\+\+W\+M}}\item[{\em 
+G\+L\+E\+W\+\_\+\+W\+M\label{class_s_e_window_manager_a37ab829f139fea4fd2cc3c72f5754264a00587050999d0b09f28e17f8b888f4aa}
+}]\index{G\+L\+U\+I\+\_\+\+W\+M@{G\+L\+U\+I\+\_\+\+W\+M}!S\+E\+Window\+Manager@{S\+E\+Window\+Manager}}\index{S\+E\+Window\+Manager@{S\+E\+Window\+Manager}!G\+L\+U\+I\+\_\+\+W\+M@{G\+L\+U\+I\+\_\+\+W\+M}}\item[{\em 
+G\+L\+U\+I\+\_\+\+W\+M\label{class_s_e_window_manager_a37ab829f139fea4fd2cc3c72f5754264a8d3849c9dce4d44bad13fe953b89f9f1}
+}]\index{G\+L\+U\+T\+\_\+\+W\+M@{G\+L\+U\+T\+\_\+\+W\+M}!S\+E\+Window\+Manager@{S\+E\+Window\+Manager}}\index{S\+E\+Window\+Manager@{S\+E\+Window\+Manager}!G\+L\+U\+T\+\_\+\+W\+M@{G\+L\+U\+T\+\_\+\+W\+M}}\item[{\em 
+G\+L\+U\+T\+\_\+\+W\+M\label{class_s_e_window_manager_a37ab829f139fea4fd2cc3c72f5754264adaef7cbc1963b9f93a59fe0dfd60ee95}
+}]\index{N\+U\+L\+L\+\_\+\+W\+M@{N\+U\+L\+L\+\_\+\+W\+M}!S\+E\+Window\+Manager@{S\+E\+Window\+Manager}}\index{S\+E\+Window\+Manager@{S\+E\+Window\+Manager}!N\+U\+L\+L\+\_\+\+W\+M@{N\+U\+L\+L\+\_\+\+W\+M}}\item[{\em 
+N\+U\+L\+L\+\_\+\+W\+M\label{class_s_e_window_manager_a37ab829f139fea4fd2cc3c72f5754264a65aa3f0b30a2437ff2cfcc61ffe13985}
+}]\index{N\+U\+M\+\_\+\+W\+M\+S@{N\+U\+M\+\_\+\+W\+M\+S}!S\+E\+Window\+Manager@{S\+E\+Window\+Manager}}\index{S\+E\+Window\+Manager@{S\+E\+Window\+Manager}!N\+U\+M\+\_\+\+W\+M\+S@{N\+U\+M\+\_\+\+W\+M\+S}}\item[{\em 
+N\+U\+M\+\_\+\+W\+M\+S\label{class_s_e_window_manager_a37ab829f139fea4fd2cc3c72f5754264a7a3df8b71685121c98b9ed8136248c08}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 16 of file S\+E\+Window\+Manager.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{S\+E\+Window\+Manager@{S\+E\+Window\+Manager}!S\+E\+Window\+Manager@{S\+E\+Window\+Manager}}
+\index{S\+E\+Window\+Manager@{S\+E\+Window\+Manager}!S\+E\+Window\+Manager@{S\+E\+Window\+Manager}}
+\subsubsection[{S\+E\+Window\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}S\+E\+Window\+Manager\+::\+S\+E\+Window\+Manager (
+\begin{DoxyParamCaption}
+\item[{{\bf t\+Window\+Manager}}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_s_e_window_manager_a4a46087290980fedeef23ab7de0eda1a}
+
+
+Definition at line 47 of file S\+E\+Window\+Manager.\+h.
+
+\index{S\+E\+Window\+Manager@{S\+E\+Window\+Manager}!S\+E\+Window\+Manager@{S\+E\+Window\+Manager}}
+\index{S\+E\+Window\+Manager@{S\+E\+Window\+Manager}!S\+E\+Window\+Manager@{S\+E\+Window\+Manager}}
+\subsubsection[{S\+E\+Window\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}S\+E\+Window\+Manager\+::\+S\+E\+Window\+Manager (
+\begin{DoxyParamCaption}
+\item[{{\bf t\+Window\+Manager}}]{t, }
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_s_e_window_manager_ae97ef84463977334aeef8e88bfddcc90}
+
+
+Definition at line 48 of file S\+E\+Window\+Manager.\+h.
+
+\index{S\+E\+Window\+Manager@{S\+E\+Window\+Manager}!````~S\+E\+Window\+Manager@{$\sim$\+S\+E\+Window\+Manager}}
+\index{````~S\+E\+Window\+Manager@{$\sim$\+S\+E\+Window\+Manager}!S\+E\+Window\+Manager@{S\+E\+Window\+Manager}}
+\subsubsection[{$\sim$\+S\+E\+Window\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}virtual S\+E\+Window\+Manager\+::$\sim$\+S\+E\+Window\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_s_e_window_manager_a84078a63108319541f37b116c07d6455}
+
+
+Definition at line 49 of file S\+E\+Window\+Manager.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\index{S\+E\+Window\+Manager@{S\+E\+Window\+Manager}!adjust\+Current\+Id@{adjust\+Current\+Id}}
+\index{adjust\+Current\+Id@{adjust\+Current\+Id}!S\+E\+Window\+Manager@{S\+E\+Window\+Manager}}
+\subsubsection[{adjust\+Current\+Id}]{\setlength{\rightskip}{0pt plus 5cm}void S\+E\+Window\+Manager\+::adjust\+Current\+Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_s_e_window_manager_a6730cf2291049422b58248336e2b4b46}
+
+
+Definition at line 51 of file S\+E\+Window\+Manager.\+h.
+
+\index{S\+E\+Window\+Manager@{S\+E\+Window\+Manager}!create\+New\+Window@{create\+New\+Window}}
+\index{create\+New\+Window@{create\+New\+Window}!S\+E\+Window\+Manager@{S\+E\+Window\+Manager}}
+\subsubsection[{create\+New\+Window}]{\setlength{\rightskip}{0pt plus 5cm}virtual long S\+E\+Window\+Manager\+::create\+New\+Window (
+\begin{DoxyParamCaption}
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{std\+::string}]{t = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{int}]{posx = {\ttfamily 5}, }
+\item[{int}]{posy = {\ttfamily 5}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_window_manager_abfa1eaa96f122ad1715932226986dfdd}
+
+
+Implemented in {\bf S\+E\+Null\+Window\+Manager} \doxyref{}{p.}{class_s_e_null_window_manager_ab0346dd36c3fc927eb75eb7ba7ef4d1b}, and {\bf S\+E\+G\+L\+U\+I\+Window\+Manager} \doxyref{}{p.}{class_s_e_g_l_u_i_window_manager_afd551aecb6a9b737add9d1a2900bee6d}.
+
+\index{S\+E\+Window\+Manager@{S\+E\+Window\+Manager}!destroy\+Window@{destroy\+Window}}
+\index{destroy\+Window@{destroy\+Window}!S\+E\+Window\+Manager@{S\+E\+Window\+Manager}}
+\subsubsection[{destroy\+Window}]{\setlength{\rightskip}{0pt plus 5cm}void S\+E\+Window\+Manager\+::destroy\+Window (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_window_manager_a2882a4e278daa93738e3724d998fd76a}
+
+
+Definition at line 38 of file S\+E\+Window\+Manager.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_e_window_manager_a2882a4e278daa93738e3724d998fd76a_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+Window\+Manager@{S\+E\+Window\+Manager}!destroy\+Window@{destroy\+Window}}
+\index{destroy\+Window@{destroy\+Window}!S\+E\+Window\+Manager@{S\+E\+Window\+Manager}}
+\subsubsection[{destroy\+Window}]{\setlength{\rightskip}{0pt plus 5cm}void S\+E\+Window\+Manager\+::destroy\+Window (
+\begin{DoxyParamCaption}
+\item[{{\bf t\+Window\+List\+\_\+iterator}}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_window_manager_aba68d688a799ac32ebe2c80180e4627e}
+
+
+Definition at line 39 of file S\+E\+Window\+Manager.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_e_window_manager_aba68d688a799ac32ebe2c80180e4627e_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+Window\+Manager@{S\+E\+Window\+Manager}!get\+Current\+Window@{get\+Current\+Window}}
+\index{get\+Current\+Window@{get\+Current\+Window}!S\+E\+Window\+Manager@{S\+E\+Window\+Manager}}
+\subsubsection[{get\+Current\+Window}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf S\+E\+Window}$\ast$ S\+E\+Window\+Manager\+::get\+Current\+Window (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_window_manager_ab2be151f268f6097045a11600aa00790}
+
+
+Definition at line 33 of file S\+E\+Window\+Manager.\+h.
+
+\index{S\+E\+Window\+Manager@{S\+E\+Window\+Manager}!get\+Current\+Window\+I\+D@{get\+Current\+Window\+I\+D}}
+\index{get\+Current\+Window\+I\+D@{get\+Current\+Window\+I\+D}!S\+E\+Window\+Manager@{S\+E\+Window\+Manager}}
+\subsubsection[{get\+Current\+Window\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}long S\+E\+Window\+Manager\+::get\+Current\+Window\+I\+D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_window_manager_a429788e8c635bb198cd9e7b87d08f049}
+
+
+Definition at line 32 of file S\+E\+Window\+Manager.\+h.
+
+\index{S\+E\+Window\+Manager@{S\+E\+Window\+Manager}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!S\+E\+Window\+Manager@{S\+E\+Window\+Manager}}
+\subsubsection[{get\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\+Window\+Manager} S\+E\+Window\+Manager\+::get\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_window_manager_a1686f6dddccfb5fef9a699cd4d71316a}
+
+
+Definition at line 30 of file S\+E\+Window\+Manager.\+h.
+
+\index{S\+E\+Window\+Manager@{S\+E\+Window\+Manager}!is\+Active@{is\+Active}}
+\index{is\+Active@{is\+Active}!S\+E\+Window\+Manager@{S\+E\+Window\+Manager}}
+\subsubsection[{is\+Active}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+E\+Window\+Manager\+::is\+Active (
+\begin{DoxyParamCaption}
+\item[{long}]{id}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_window_manager_a54cf68ebdd627b985f1e421944b5e318}
+
+
+Definition at line 36 of file S\+E\+Window\+Manager.\+h.
+
+\index{S\+E\+Window\+Manager@{S\+E\+Window\+Manager}!redisplay\+Active@{redisplay\+Active}}
+\index{redisplay\+Active@{redisplay\+Active}!S\+E\+Window\+Manager@{S\+E\+Window\+Manager}}
+\subsubsection[{redisplay\+Active}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+E\+Window\+Manager\+::redisplay\+Active (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_e_window_manager_aacfa8b8c81d34d852c82359fda538b68}
+
+
+Reimplemented in {\bf S\+E\+Null\+Window\+Manager} \doxyref{}{p.}{class_s_e_null_window_manager_a08abe2ec61b7bda46d51a6557be0d365}.
+
+
+
+Definition at line 24 of file S\+E\+Window\+Manager.\+h.
+
+\index{S\+E\+Window\+Manager@{S\+E\+Window\+Manager}!register\+Display\+Function@{register\+Display\+Function}}
+\index{register\+Display\+Function@{register\+Display\+Function}!S\+E\+Window\+Manager@{S\+E\+Window\+Manager}}
+\subsubsection[{register\+Display\+Function}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+E\+Window\+Manager\+::register\+Display\+Function (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)(void)}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_window_manager_aa86172a5046bfb5d02d59405bdfef595}
+
+
+Implemented in {\bf S\+E\+Null\+Window\+Manager} \doxyref{}{p.}{class_s_e_null_window_manager_ab59fc2f6b4a0c1a7021da98658b5c7f0}, and {\bf S\+E\+G\+L\+U\+I\+Window\+Manager} \doxyref{}{p.}{class_s_e_g_l_u_i_window_manager_a9ccd055b39f6f87c210870d6ba3ac0e5}.
+
+\index{S\+E\+Window\+Manager@{S\+E\+Window\+Manager}!register\+Idle\+Function@{register\+Idle\+Function}}
+\index{register\+Idle\+Function@{register\+Idle\+Function}!S\+E\+Window\+Manager@{S\+E\+Window\+Manager}}
+\subsubsection[{register\+Idle\+Function}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+E\+Window\+Manager\+::register\+Idle\+Function (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)(void)}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_window_manager_af728b393a7f2f55da92aa4e963d00678}
+
+
+Implemented in {\bf S\+E\+Null\+Window\+Manager} \doxyref{}{p.}{class_s_e_null_window_manager_adfbbf0081277fde780fb1fb4b864d136}, and {\bf S\+E\+G\+L\+U\+I\+Window\+Manager} \doxyref{}{p.}{class_s_e_g_l_u_i_window_manager_a66bd4ecdbeb466935f2f7127c31a45b8}.
+
+\index{S\+E\+Window\+Manager@{S\+E\+Window\+Manager}!register\+Reshape\+Function@{register\+Reshape\+Function}}
+\index{register\+Reshape\+Function@{register\+Reshape\+Function}!S\+E\+Window\+Manager@{S\+E\+Window\+Manager}}
+\subsubsection[{register\+Reshape\+Function}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+E\+Window\+Manager\+::register\+Reshape\+Function (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)(int, int)}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_window_manager_a5dbd6ff65c50beab87bede6b14e0faef}
+
+
+Implemented in {\bf S\+E\+Null\+Window\+Manager} \doxyref{}{p.}{class_s_e_null_window_manager_a51932200043a54fc88809860ae4c4140}, and {\bf S\+E\+G\+L\+U\+I\+Window\+Manager} \doxyref{}{p.}{class_s_e_g_l_u_i_window_manager_a926dd9698ca4f20d8e38e389405aab3a}.
+
+\index{S\+E\+Window\+Manager@{S\+E\+Window\+Manager}!reshape\+Active@{reshape\+Active}}
+\index{reshape\+Active@{reshape\+Active}!S\+E\+Window\+Manager@{S\+E\+Window\+Manager}}
+\subsubsection[{reshape\+Active}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+E\+Window\+Manager\+::reshape\+Active (
+\begin{DoxyParamCaption}
+\item[{int}]{w, }
+\item[{int}]{h}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_e_window_manager_af6a330ce3bc732946d1d0aa506e8faf3}
+
+
+Reimplemented in {\bf S\+E\+Null\+Window\+Manager} \doxyref{}{p.}{class_s_e_null_window_manager_a8c2f63471d9ca864f881de327da8bc7a}.
+
+
+
+Definition at line 23 of file S\+E\+Window\+Manager.\+h.
+
+\index{S\+E\+Window\+Manager@{S\+E\+Window\+Manager}!set\+Active@{set\+Active}}
+\index{set\+Active@{set\+Active}!S\+E\+Window\+Manager@{S\+E\+Window\+Manager}}
+\subsubsection[{set\+Active}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+E\+Window\+Manager\+::set\+Active (
+\begin{DoxyParamCaption}
+\item[{long}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_window_manager_a8e46c677039e644f343b1ac96ee03095}
+
+
+Definition at line 35 of file S\+E\+Window\+Manager.\+h.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\index{S\+E\+Window\+Manager@{S\+E\+Window\+Manager}!S\+E\+Service\+Locator@{S\+E\+Service\+Locator}}
+\index{S\+E\+Service\+Locator@{S\+E\+Service\+Locator}!S\+E\+Window\+Manager@{S\+E\+Window\+Manager}}
+\subsubsection[{S\+E\+Service\+Locator}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf S\+E\+Service\+Locator}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_e_window_manager_ab6e41e6b8528b0fe19953837048fbde6}
+
+
+Definition at line 13 of file S\+E\+Window\+Manager.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\index{S\+E\+Window\+Manager@{S\+E\+Window\+Manager}!current\+Id\+\_\+@{current\+Id\+\_\+}}
+\index{current\+Id\+\_\+@{current\+Id\+\_\+}!S\+E\+Window\+Manager@{S\+E\+Window\+Manager}}
+\subsubsection[{current\+Id\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}long S\+E\+Window\+Manager\+::current\+Id\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_e_window_manager_a7a5854bd97b4a7e388c5fcb04fa174f3}
+
+
+Definition at line 43 of file S\+E\+Window\+Manager.\+h.
+
+\index{S\+E\+Window\+Manager@{S\+E\+Window\+Manager}!type\+\_\+@{type\+\_\+}}
+\index{type\+\_\+@{type\+\_\+}!S\+E\+Window\+Manager@{S\+E\+Window\+Manager}}
+\subsubsection[{type\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\+Window\+Manager} S\+E\+Window\+Manager\+::type\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_e_window_manager_a760d4b0dca7d430d50dc35c0af6917c6}
+
+
+Definition at line 42 of file S\+E\+Window\+Manager.\+h.
+
+\index{S\+E\+Window\+Manager@{S\+E\+Window\+Manager}!w\+\_\+@{w\+\_\+}}
+\index{w\+\_\+@{w\+\_\+}!S\+E\+Window\+Manager@{S\+E\+Window\+Manager}}
+\subsubsection[{w\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\+Window\+List} S\+E\+Window\+Manager\+::w\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_e_window_manager_a500a729159ac9dc256841617821d190d}
+
+
+Definition at line 45 of file S\+E\+Window\+Manager.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Window\+Manager.\+h}\end{DoxyCompactItemize}

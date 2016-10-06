@@ -14,10 +14,8 @@ class SEOpenGLRenderObject : public virtual SERenderObject<GLfloat>
     SEOpenGLRenderObject(SEROType::tRenderObject t) : SERenderObject<GLfloat>(t) {}
     virtual ~SEOpenGLRenderObject() {}
 
-    virtual void            applyTransformation() const;
-    virtual void            applyLighting(const SERenderServiceInternals<GLfloat> &rs) const;
-    virtual void            clearLighting(const SERenderServiceInternals<GLfloat> &rs) const;
-    virtual void            clearTransformation() const;
+    virtual void applyTransformation(const SERenderServiceInternals<GLfloat> &rs) const;
+    virtual void clearTransformation(const SERenderServiceInternals<GLfloat> &rs) const;
 
 };
 

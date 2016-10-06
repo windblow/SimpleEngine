@@ -1,0 +1,822 @@
+\section{S\+E\+Color$<$ T $>$ Class Template Reference}
+\label{class_s_e_color}\index{S\+E\+Color$<$ T $>$@{S\+E\+Color$<$ T $>$}}
+
+
+{\ttfamily \#include $<$S\+E\+Math.\+h$>$}
+
+
+
+Inheritance diagram for S\+E\+Color$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=156pt]{class_s_e_color__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for S\+E\+Color$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{class_s_e_color__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Color} ()
+\item 
+{\bf S\+E\+Color} (const {\bf S\+E\+Color}$<$ T $>$ \&{\bf c})
+\item 
+{\bf S\+E\+Color} (T f)
+\item 
+{\bf S\+E\+Color} (T nr, T ng, T nb)
+\item 
+{\bf S\+E\+Color} (T nr, T ng, T nb, T na)
+\item 
+{\bf S\+E\+Color} (const T $\ast$u)
+\item 
+{\bf S\+E\+Color} (const {\bf S\+E\+Vec3}$<$ T $>$ \&u)
+\item 
+{\bf S\+E\+Color} (const {\bf S\+E\+Vec4}$<$ T $>$ \&u)
+\item 
+{\bf S\+E\+Color} (const {\bf S\+E\+Quaternion}$<$ T $>$ \&q)
+\item 
+{\bf $\sim$\+S\+E\+Color} ()
+\item 
+{\bf S\+E\+Color}$<$ T $>$ \& {\bf operator=} (const {\bf S\+E\+Color}$<$ T $>$ \&in)
+\item 
+{\bf S\+E\+Color}$<$ T $>$ \& {\bf operator=} (const {\bf S\+E\+Vec4}$<$ T $>$ \&in)
+\item 
+{\bf S\+E\+Color}$<$ T $>$ \& {\bf operator=} (const {\bf S\+E\+Vec3}$<$ T $>$ \&in)
+\item 
+{\bf S\+E\+Color}$<$ T $>$ \& {\bf operator=} (const {\bf S\+E\+Quaternion}$<$ T $>$ \&in)
+\item 
+{\bf S\+E\+Color}$<$ T $>$ \& {\bf operator+=} (const {\bf S\+E\+Color}$<$ T $>$ \&u)
+\item 
+{\bf S\+E\+Color}$<$ T $>$ \& {\bf operator+=} (const {\bf S\+E\+Vec4}$<$ T $>$ \&u)
+\item 
+{\bf S\+E\+Color}$<$ T $>$ \& {\bf operator+=} (const {\bf S\+E\+Vec3}$<$ T $>$ \&u)
+\item 
+{\bf S\+E\+Color}$<$ T $>$ \& {\bf operator-\/=} (const {\bf S\+E\+Color}$<$ T $>$ \&u)
+\item 
+{\bf S\+E\+Color}$<$ T $>$ \& {\bf operator-\/=} (const {\bf S\+E\+Vec4}$<$ T $>$ \&u)
+\item 
+{\bf S\+E\+Color}$<$ T $>$ \& {\bf operator-\/=} (const {\bf S\+E\+Vec3}$<$ T $>$ \&u)
+\item 
+{\bf S\+E\+Color}$<$ T $>$ \& {\bf operator$\ast$=} (T k)
+\item 
+{\bf S\+E\+Color}$<$ T $>$ \& {\bf operator/=} (T k)
+\item 
+T \& {\bf operator[$\,$]} (std\+::size\+\_\+t i)
+\item 
+const T {\bf operator[$\,$]} (std\+::size\+\_\+t i) const 
+\item 
+bool {\bf operator==} (const {\bf S\+E\+Color}$<$ T $>$ \&u) const 
+\item 
+bool {\bf operator!=} (const {\bf S\+E\+Color}$<$ T $>$ \&u) const 
+\item 
+{\bf S\+E\+Color}$<$ T $>$ \& {\bf set} (T f)
+\item 
+{\bf S\+E\+Color}$<$ T $>$ \& {\bf set} (T nr, T ng, T nb, T na)
+\item 
+{\bf S\+E\+Color}$<$ T $>$ \& {\bf set} (T nr, T ng, T nb)
+\item 
+{\bf S\+E\+Color}$<$ T $>$ \& {\bf set} (const T $\ast$u)
+\item 
+{\bf S\+E\+Color}$<$ T $>$ \& {\bf set} (const {\bf S\+E\+Vec3}$<$ T $>$ \&u)
+\item 
+{\bf S\+E\+Color}$<$ T $>$ \& {\bf set} (const {\bf S\+E\+Vec4}$<$ T $>$ \&u)
+\item 
+{\bf S\+E\+Color}$<$ T $>$ \& {\bf set} (const {\bf S\+E\+Color}$<$ T $>$ \&u)
+\item 
+{\bf S\+E\+Color}$<$ T $>$ \& {\bf set} (const {\bf S\+E\+Quaternion}$<$ T $>$ \&q)
+\item 
+{\bf S\+E\+Color}$<$ T $>$ \& {\bf set\+Int\+Values} (int nr, int ng, int nb, int na)
+\item 
+{\bf S\+E\+Color}$<$ T $>$ \& {\bf set\+Int\+Values} (int nr, int ng, int nb)
+\item 
+{\bf S\+E\+Color}$<$ T $>$ {\bf mult\+Color} (T f) const 
+\item 
+{\bf S\+E\+Color}$<$ T $>$ \& {\bf mult\+Color} (T f)
+\item 
+{\bf S\+E\+Color}$<$ T $>$ {\bf mult\+Alpha} (T f) const 
+\item 
+{\bf S\+E\+Color}$<$ T $>$ \& {\bf mult\+Alpha} (T f)
+\item 
+void {\bf clamp} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const T \& {\bf r}
+\item 
+const T \& {\bf g}
+\item 
+const T \& {\bf b}
+\item 
+const T \& {\bf a}
+\item 
+const T $\ast$ {\bf c}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Color}$<$ T $>$ {\bf operator+} ({\bf S\+E\+Color}$<$ T $>$ lhs, {\bf S\+E\+Color}$<$ T $>$ const \&rhs)
+\item 
+{\bf S\+E\+Color}$<$ T $>$ {\bf operator+} ({\bf S\+E\+Color}$<$ T $>$ lhs, {\bf S\+E\+Vec4}$<$ T $>$ const \&rhs)
+\item 
+{\bf S\+E\+Color}$<$ T $>$ {\bf operator+} ({\bf S\+E\+Vec4}$<$ T $>$ lhs, {\bf S\+E\+Color}$<$ T $>$ const \&rhs)
+\item 
+{\bf S\+E\+Color}$<$ T $>$ {\bf operator+} ({\bf S\+E\+Color}$<$ T $>$ lhs, {\bf S\+E\+Vec3}$<$ T $>$ const \&rhs)
+\item 
+{\bf S\+E\+Color}$<$ T $>$ {\bf operator+} ({\bf S\+E\+Vec3}$<$ T $>$ const \&lhs, {\bf S\+E\+Color}$<$ T $>$ rhs)
+\item 
+{\bf S\+E\+Color}$<$ T $>$ {\bf operator-\/} ({\bf S\+E\+Color}$<$ T $>$ lhs, {\bf S\+E\+Color}$<$ T $>$ const \&rhs)
+\item 
+{\bf S\+E\+Color}$<$ T $>$ {\bf operator-\/} ({\bf S\+E\+Color}$<$ T $>$ lhs, {\bf S\+E\+Vec4}$<$ T $>$ const \&rhs)
+\item 
+{\bf S\+E\+Color}$<$ T $>$ {\bf operator-\/} ({\bf S\+E\+Color}$<$ T $>$ lhs, {\bf S\+E\+Vec3}$<$ T $>$ const \&rhs)
+\item 
+{\bf S\+E\+Color}$<$ T $>$ {\bf operator$\ast$} ({\bf S\+E\+Color}$<$ T $>$ lhs, T rhs)
+\item 
+{\bf S\+E\+Color}$<$ T $>$ {\bf operator$\ast$} (T lhs, {\bf S\+E\+Color}$<$ T $>$ rhs)
+\item 
+{\bf S\+E\+Color}$<$ T $>$ {\bf operator/} ({\bf S\+E\+Color}$<$ T $>$ lhs, T rhs)
+\item 
+std\+::ostream \& {\bf operator$<$$<$} (std\+::ostream \&os, const {\bf S\+E\+Color}$<$ T $>$ \&u)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$class S\+E\+Color$<$ T $>$}
+
+
+
+Definition at line 41 of file S\+E\+Math.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{S\+E\+Color@{S\+E\+Color}!S\+E\+Color@{S\+E\+Color}}
+\index{S\+E\+Color@{S\+E\+Color}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{S\+E\+Color}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$ T $>$\+::{\bf S\+E\+Color} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_a67574328e6100fea0b7e0a472cff46c0}
+
+
+Definition at line 406 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!S\+E\+Color@{S\+E\+Color}}
+\index{S\+E\+Color@{S\+E\+Color}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{S\+E\+Color}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$ T $>$\+::{\bf S\+E\+Color} (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Color}$<$ T $>$ \&}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_a6d7dd50fdc33856c38e3a9921c0710bb}
+
+
+Definition at line 408 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!S\+E\+Color@{S\+E\+Color}}
+\index{S\+E\+Color@{S\+E\+Color}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{S\+E\+Color}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$ T $>$\+::{\bf S\+E\+Color} (
+\begin{DoxyParamCaption}
+\item[{T}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\label{class_s_e_color_ac2a0947a9fd96105e5a7bde32dae9fbd}
+
+
+Definition at line 410 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!S\+E\+Color@{S\+E\+Color}}
+\index{S\+E\+Color@{S\+E\+Color}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{S\+E\+Color}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$ T $>$\+::{\bf S\+E\+Color} (
+\begin{DoxyParamCaption}
+\item[{T}]{nr, }
+\item[{T}]{ng, }
+\item[{T}]{nb}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_af67c263a2772a9c8503694c5783414d7}
+
+
+Definition at line 411 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!S\+E\+Color@{S\+E\+Color}}
+\index{S\+E\+Color@{S\+E\+Color}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{S\+E\+Color}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$ T $>$\+::{\bf S\+E\+Color} (
+\begin{DoxyParamCaption}
+\item[{T}]{nr, }
+\item[{T}]{ng, }
+\item[{T}]{nb, }
+\item[{T}]{na}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_a69f23390bd1defe79f6076e7f69a3ef0}
+
+
+Definition at line 412 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!S\+E\+Color@{S\+E\+Color}}
+\index{S\+E\+Color@{S\+E\+Color}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{S\+E\+Color}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$ T $>$\+::{\bf S\+E\+Color} (
+\begin{DoxyParamCaption}
+\item[{const T $\ast$}]{u}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\label{class_s_e_color_af3601ae0bea8ad87f542b1d158c0477f}
+
+
+Definition at line 413 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!S\+E\+Color@{S\+E\+Color}}
+\index{S\+E\+Color@{S\+E\+Color}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{S\+E\+Color}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$ T $>$\+::{\bf S\+E\+Color} (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{u}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_a110d246344ed5dd9a4a42001ddc8d7b0}
+
+
+Definition at line 414 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!S\+E\+Color@{S\+E\+Color}}
+\index{S\+E\+Color@{S\+E\+Color}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{S\+E\+Color}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$ T $>$\+::{\bf S\+E\+Color} (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec4}$<$ T $>$ \&}]{u}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_acb80d0229d86d6867ced66021c752847}
+
+
+Definition at line 415 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!S\+E\+Color@{S\+E\+Color}}
+\index{S\+E\+Color@{S\+E\+Color}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{S\+E\+Color}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$ T $>$\+::{\bf S\+E\+Color} (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Quaternion}$<$ T $>$ \&}]{q}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\label{class_s_e_color_a7641268b03286e4c46262e15d99210a0}
+
+
+Definition at line 416 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!````~S\+E\+Color@{$\sim$\+S\+E\+Color}}
+\index{````~S\+E\+Color@{$\sim$\+S\+E\+Color}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{$\sim$\+S\+E\+Color}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$ T $>$\+::$\sim${\bf S\+E\+Color} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_a9265834f0d9de887647fdcdd06c45728}
+
+
+Definition at line 419 of file S\+E\+Math.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\index{S\+E\+Color@{S\+E\+Color}!clamp@{clamp}}
+\index{clamp@{clamp}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{clamp}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf S\+E\+Color}$<$ T $>$\+::clamp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_a38658d53ba81520133bdc80bb0a79676}
+
+
+Definition at line 472 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!mult\+Alpha@{mult\+Alpha}}
+\index{mult\+Alpha@{mult\+Alpha}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{mult\+Alpha}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$T$>$ {\bf S\+E\+Color}$<$ T $>$\+::mult\+Alpha (
+\begin{DoxyParamCaption}
+\item[{T}]{f}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_a2130ac8ced0198474891d1e52a1bebdb}
+
+
+Definition at line 469 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!mult\+Alpha@{mult\+Alpha}}
+\index{mult\+Alpha@{mult\+Alpha}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{mult\+Alpha}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$T$>$\& {\bf S\+E\+Color}$<$ T $>$\+::mult\+Alpha (
+\begin{DoxyParamCaption}
+\item[{T}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_a7a3ed46a273ea53a8a24dfb84e535e30}
+
+
+Definition at line 470 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!mult\+Color@{mult\+Color}}
+\index{mult\+Color@{mult\+Color}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{mult\+Color}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$T$>$ {\bf S\+E\+Color}$<$ T $>$\+::mult\+Color (
+\begin{DoxyParamCaption}
+\item[{T}]{f}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_a4e2818fd3314b30510ef6da1086cb564}
+
+
+Definition at line 467 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!mult\+Color@{mult\+Color}}
+\index{mult\+Color@{mult\+Color}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{mult\+Color}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$T$>$\& {\bf S\+E\+Color}$<$ T $>$\+::mult\+Color (
+\begin{DoxyParamCaption}
+\item[{T}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_ae9b8556b4c9fff431111ff825e5d4e7c}
+
+
+Definition at line 468 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{operator"!=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ bool {\bf S\+E\+Color}$<$ T $>$\+::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Color}$<$ T $>$ \&}]{u}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_ada8719ec26661e78b3cfdfb660e58ac2}
+
+
+Definition at line 451 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{operator$\ast$=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$T$>$\& {\bf S\+E\+Color}$<$ T $>$\+::operator$\ast$= (
+\begin{DoxyParamCaption}
+\item[{T}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_a0bc013ef7810b9740a064e8834ad0083}
+
+
+Definition at line 432 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$T$>$\& {\bf S\+E\+Color}$<$ T $>$\+::operator+= (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Color}$<$ T $>$ \&}]{u}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_a33c8fcd606dfd560bdd69f5882649b54}
+
+
+Definition at line 426 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$T$>$\& {\bf S\+E\+Color}$<$ T $>$\+::operator+= (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec4}$<$ T $>$ \&}]{u}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_aabb844d86ee4c2d8d70db96a2732f0fc}
+
+
+Definition at line 427 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$T$>$\& {\bf S\+E\+Color}$<$ T $>$\+::operator+= (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{u}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_ae3579e6f23e0ce0cd8a63c0871740960}
+
+
+Definition at line 428 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{operator-\/=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$T$>$\& {\bf S\+E\+Color}$<$ T $>$\+::operator-\/= (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Color}$<$ T $>$ \&}]{u}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_a3650f86c50a044878988e52d23294e54}
+
+
+Definition at line 429 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{operator-\/=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$T$>$\& {\bf S\+E\+Color}$<$ T $>$\+::operator-\/= (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec4}$<$ T $>$ \&}]{u}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_a0978f4225129a8e8347d6ff35b03f222}
+
+
+Definition at line 430 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{operator-\/=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$T$>$\& {\bf S\+E\+Color}$<$ T $>$\+::operator-\/= (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{u}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_a68eee610316c5bfcf0fc86a155f381f2}
+
+
+Definition at line 431 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{operator/=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$T$>$\& {\bf S\+E\+Color}$<$ T $>$\+::operator/= (
+\begin{DoxyParamCaption}
+\item[{T}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_a20735100c75c136944f3bec657c70c79}
+
+
+Definition at line 433 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!operator=@{operator=}}
+\index{operator=@{operator=}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$T$>$\& {\bf S\+E\+Color}$<$ T $>$\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Color}$<$ T $>$ \&}]{in}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_ae4ead9bfaf749c622e08690e25c6214b}
+
+
+Definition at line 421 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!operator=@{operator=}}
+\index{operator=@{operator=}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$T$>$\& {\bf S\+E\+Color}$<$ T $>$\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec4}$<$ T $>$ \&}]{in}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_aa9a2bd323c2cc87973d37f26eb977b48}
+
+
+Definition at line 422 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!operator=@{operator=}}
+\index{operator=@{operator=}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$T$>$\& {\bf S\+E\+Color}$<$ T $>$\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{in}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_ad916fdf3f4b69ab7a4063c35a9fcea51}
+
+
+Definition at line 423 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!operator=@{operator=}}
+\index{operator=@{operator=}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$T$>$\& {\bf S\+E\+Color}$<$ T $>$\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Quaternion}$<$ T $>$ \&}]{in}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_aae65a9fe725a0229584ca382902eecfd}
+
+
+Definition at line 424 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!operator==@{operator==}}
+\index{operator==@{operator==}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ bool {\bf S\+E\+Color}$<$ T $>$\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Color}$<$ T $>$ \&}]{u}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_a21b05f45067f56552ac8dfb5388e26c9}
+
+
+Definition at line 450 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!operator[$\,$]@{operator[]}}
+\index{operator[$\,$]@{operator[]}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T\& {\bf S\+E\+Color}$<$ T $>$\+::operator[$\,$] (
+\begin{DoxyParamCaption}
+\item[{std\+::size\+\_\+t}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_a0267fbae2e64e174d65a867e2f11902b}
+
+
+Definition at line 447 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!operator[$\,$]@{operator[]}}
+\index{operator[$\,$]@{operator[]}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ const T {\bf S\+E\+Color}$<$ T $>$\+::operator[$\,$] (
+\begin{DoxyParamCaption}
+\item[{std\+::size\+\_\+t}]{i}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_a5f92036c10db0a73e1daee266df0483a}
+
+
+Definition at line 448 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!set@{set}}
+\index{set@{set}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$T$>$\& {\bf S\+E\+Color}$<$ T $>$\+::set (
+\begin{DoxyParamCaption}
+\item[{T}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_a281bd9c1a2ef27112997010060524262}
+
+
+Definition at line 455 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!set@{set}}
+\index{set@{set}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$T$>$\& {\bf S\+E\+Color}$<$ T $>$\+::set (
+\begin{DoxyParamCaption}
+\item[{T}]{nr, }
+\item[{T}]{ng, }
+\item[{T}]{nb, }
+\item[{T}]{na}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_a771488421c6305fef6dd3f693ad2d06b}
+
+
+Definition at line 456 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!set@{set}}
+\index{set@{set}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$T$>$\& {\bf S\+E\+Color}$<$ T $>$\+::set (
+\begin{DoxyParamCaption}
+\item[{T}]{nr, }
+\item[{T}]{ng, }
+\item[{T}]{nb}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_ab58e4944983145da0d6e5e1b4d808fc4}
+
+
+Definition at line 457 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!set@{set}}
+\index{set@{set}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$T$>$\& {\bf S\+E\+Color}$<$ T $>$\+::set (
+\begin{DoxyParamCaption}
+\item[{const T $\ast$}]{u}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_a86326dadb478cee603279319aee0ed2e}
+
+
+Definition at line 458 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!set@{set}}
+\index{set@{set}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$T$>$\& {\bf S\+E\+Color}$<$ T $>$\+::set (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{u}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_a5ecb57f66a3d328f67c04a1a0c6338fa}
+
+
+Definition at line 459 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!set@{set}}
+\index{set@{set}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$T$>$\& {\bf S\+E\+Color}$<$ T $>$\+::set (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec4}$<$ T $>$ \&}]{u}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_a4e725940b92d114941ad68f4ef75447d}
+
+
+Definition at line 460 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!set@{set}}
+\index{set@{set}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$T$>$\& {\bf S\+E\+Color}$<$ T $>$\+::set (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Color}$<$ T $>$ \&}]{u}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_a89de39cfc7930c92ee059edcbb612dcb}
+
+
+Definition at line 461 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!set@{set}}
+\index{set@{set}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$T$>$\& {\bf S\+E\+Color}$<$ T $>$\+::set (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Quaternion}$<$ T $>$ \&}]{q}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_a704b62425136362bc7f5eaf070b96c80}
+
+
+Definition at line 462 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!set\+Int\+Values@{set\+Int\+Values}}
+\index{set\+Int\+Values@{set\+Int\+Values}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{set\+Int\+Values}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$T$>$\& {\bf S\+E\+Color}$<$ T $>$\+::set\+Int\+Values (
+\begin{DoxyParamCaption}
+\item[{int}]{nr, }
+\item[{int}]{ng, }
+\item[{int}]{nb, }
+\item[{int}]{na}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_a05e7ed6e7311925961fdb15788959c3d}
+
+
+Definition at line 464 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!set\+Int\+Values@{set\+Int\+Values}}
+\index{set\+Int\+Values@{set\+Int\+Values}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{set\+Int\+Values}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$T$>$\& {\bf S\+E\+Color}$<$ T $>$\+::set\+Int\+Values (
+\begin{DoxyParamCaption}
+\item[{int}]{nr, }
+\item[{int}]{ng, }
+\item[{int}]{nb}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_color_a46b296d0be98e7c9bd0337935dff2da6}
+
+
+Definition at line 465 of file S\+E\+Math.\+h.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\index{S\+E\+Color@{S\+E\+Color}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$T$>$ operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+Color}$<$ T $>$}]{lhs, }
+\item[{T}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_e_color_a7f58e3a825f2ef884a5af79379080620}
+
+
+Definition at line 443 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$T$>$ operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{T}]{lhs, }
+\item[{{\bf S\+E\+Color}$<$ T $>$}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_e_color_a96bd0d21e30e69ff97d3fc0b6184126d}
+
+
+Definition at line 444 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!operator+@{operator+}}
+\index{operator+@{operator+}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$T$>$ operator+ (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+Color}$<$ T $>$}]{lhs, }
+\item[{{\bf S\+E\+Color}$<$ T $>$ const \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_e_color_a6f453b0206a4dbf0c7c1f351f99a91c2}
+
+
+Definition at line 435 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!operator+@{operator+}}
+\index{operator+@{operator+}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$T$>$ operator+ (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+Color}$<$ T $>$}]{lhs, }
+\item[{{\bf S\+E\+Vec4}$<$ T $>$ const \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_e_color_ab74a3db5121898bd2ae7f2dbd3c9539a}
+
+
+Definition at line 436 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!operator+@{operator+}}
+\index{operator+@{operator+}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$T$>$ operator+ (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+Vec4}$<$ T $>$}]{lhs, }
+\item[{{\bf S\+E\+Color}$<$ T $>$ const \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_e_color_a9dc0f4d5b6f203710b71b80a0778376f}
+
+
+Definition at line 437 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!operator+@{operator+}}
+\index{operator+@{operator+}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$T$>$ operator+ (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+Color}$<$ T $>$}]{lhs, }
+\item[{{\bf S\+E\+Vec3}$<$ T $>$ const \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_e_color_aa28d616d61fc47fc09384eda4482ee57}
+
+
+Definition at line 438 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!operator+@{operator+}}
+\index{operator+@{operator+}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$T$>$ operator+ (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+Vec3}$<$ T $>$ const \&}]{lhs, }
+\item[{{\bf S\+E\+Color}$<$ T $>$}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_e_color_a3d9cd8697ceb54cff39987447ddaa3c9}
+
+
+Definition at line 439 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$T$>$ operator-\/ (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+Color}$<$ T $>$}]{lhs, }
+\item[{{\bf S\+E\+Color}$<$ T $>$ const \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_e_color_ad4521838bc354cbea4517640debaac06}
+
+
+Definition at line 440 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$T$>$ operator-\/ (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+Color}$<$ T $>$}]{lhs, }
+\item[{{\bf S\+E\+Vec4}$<$ T $>$ const \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_e_color_ae4d194d9a8907dabfc128c96d2bf2387}
+
+
+Definition at line 441 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$T$>$ operator-\/ (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+Color}$<$ T $>$}]{lhs, }
+\item[{{\bf S\+E\+Vec3}$<$ T $>$ const \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_e_color_a1a4c3c11c5a0b63ffd3a0a8ca05f7a9d}
+
+
+Definition at line 442 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!operator/@{operator/}}
+\index{operator/@{operator/}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{operator/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Color}$<$T$>$ operator/ (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+Color}$<$ T $>$}]{lhs, }
+\item[{T}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_e_color_af9f75ac5d275b838079635b9cf11e51d}
+
+
+Definition at line 445 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os, }
+\item[{const {\bf S\+E\+Color}$<$ T $>$ \&}]{u}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_e_color_a58568cb9ec78bd0634662b00f1993d7a}
+
+
+Definition at line 453 of file S\+E\+Math.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\index{S\+E\+Color@{S\+E\+Color}!a@{a}}
+\index{a@{a}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{a}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ const T \& {\bf S\+E\+Color}$<$ T $>$\+::a}\label{class_s_e_color_a56b9d8e56a22775098a8bec54c21f93e}
+
+
+Definition at line 402 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!b@{b}}
+\index{b@{b}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{b}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ const T \& {\bf S\+E\+Color}$<$ T $>$\+::b}\label{class_s_e_color_af087334bc49c13128771a402eda77b7a}
+
+
+Definition at line 402 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!c@{c}}
+\index{c@{c}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{c}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ const T$\ast$ {\bf S\+E\+Color}$<$ T $>$\+::c}\label{class_s_e_color_a1adf2eee31e497a0b63424a000d7588c}
+
+
+Definition at line 403 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!g@{g}}
+\index{g@{g}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{g}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ const T \& {\bf S\+E\+Color}$<$ T $>$\+::g}\label{class_s_e_color_a3dce3c2fb858a72ae9bca692e90fc372}
+
+
+Definition at line 402 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Color@{S\+E\+Color}!r@{r}}
+\index{r@{r}!S\+E\+Color@{S\+E\+Color}}
+\subsubsection[{r}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ const T\& {\bf S\+E\+Color}$<$ T $>$\+::r}\label{class_s_e_color_a1dd483a2cca555347a0c01d5da7470d9}
+
+
+Definition at line 402 of file S\+E\+Math.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Math.\+h}\end{DoxyCompactItemize}

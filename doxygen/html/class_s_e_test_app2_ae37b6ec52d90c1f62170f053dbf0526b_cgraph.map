@@ -1,0 +1,10 @@
+<map id="SETestApp2::key" name="SETestApp2::key">
+<area shape="rect" id="node2" href="$class_s_e_test_app2.html#ab11859c0ab08874e228654bde04b30d6" title="SETestApp2::quit" alt="" coords="219,5,343,32"/>
+<area shape="rect" id="node4" href="$class_s_e_camera.html#af0a5c2597ecfaea3d455b442a0c76df0" title="SECamera::dolly" alt="" coords="221,56,341,83"/>
+<area shape="rect" id="node5" href="$class_s_e_camera.html#a81415f261faf3828543a850740b12138" title="SECamera::truck" alt="" coords="220,107,343,133"/>
+<area shape="rect" id="node6" href="$class_s_e_camera.html#afb4e0340e180d70b2c0ed1074f127c02" title="SECamera::panRightByDegrees" alt="" coords="177,157,385,184"/>
+<area shape="rect" id="node7" href="$class_s_e_camera.html#a17ff63333b782c4e22f47438037ba135" title="SECamera::panLeftByDegrees" alt="" coords="182,208,381,235"/>
+<area shape="rect" id="node8" href="$class_s_e_camera.html#a71a4e10e74dea14268b1f71f4a63d873" title="SECamera::pedestal" alt="" coords="210,259,353,285"/>
+<area shape="rect" id="node9" href="$class_s_e_timer.html#ad5483ed7bc351162f00c649046665c00" title="SETimer::setSpeedFactor" alt="" coords="195,309,367,336"/>
+<area shape="rect" id="node3" href="$class_s_e_application.html#a1d6dd2dd21b3e0ec2fb519c18be75456" title="SEApplication::quit" alt="" coords="433,5,567,32"/>
+</map>

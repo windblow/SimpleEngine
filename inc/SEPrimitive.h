@@ -1,44 +1,58 @@
 #ifndef __SEPRIMITIVE_H__
 #define __SEPRIMITIVE_H__
 
-class SEPrimitive
+struct SEPrimTypes
 {
-  public:
     typedef enum { LINE_PRIM, CUBE_PRIM, SPHERE_PRIM, CONE_PRIM, TORUS_PRIM, TEAPOT_PRIM, NUM_PRIMS } tPrimitive;
     typedef enum { SOLID_ST,  WIRE_ST,   NUM_ST }                                                     tState;
-
-    const   tPrimitive &primType;
-    const   tState     &state;
-
-            void        toggleState()      { int t = static_cast<int>(s_); ++t; t%=static_cast<int>(NUM_ST); s_=static_cast<tState>(t); }
-            void        setState(tState s) { s_=s; }
-
-  protected:
-    SEPrimitive(tPrimitive t)           : t_(t), s_(SOLID_ST), primType(t_), state(s_) {}
-    SEPrimitive(tPrimitive t, tState s) : t_(t), s_(s),        primType(t_), state(s_) {}
-    ~SEPrimitive() {}
-
-  private:
-    tPrimitive  t_;
-    tState      s_;
 };
 
-template <class T> class SESphere : public SEPrimitive
+template <class T> class SEPrimitive
+{
+  public:
+    const SEPrimTypes::tPrimitive &primType;
+    const SEPrimTypes::tState     &state;
+    const SEVec3<T>               &color;
+
+          void toggleState()                   { int t = static_cast<int>(s_); ++t; t%=static_cast<int>(SEPrimTypes::NUM_ST); s_=static_cast<SEPrimTypes::tState>(t); }
+          void setState(SEPrimTypes::tState s) { s_=s; }
+          void setColor(const SEVec3<T> &c)    { c_=c; clampColor(); }
+          void setColor(T r, T g, T b)         { c_.vec(r,g,b); clampColor(); }
+          void setColori(int r, int g, int b)  { c_.vec((T)CLAMP(r,0,255)/255.0, (T)CLAMP(g,0,255)/255.0, (T)CLAMP(b,0,255)/255.0); }
+
+  protected:
+    SEPrimitive(SEPrimTypes::tPrimitive t)                        : primType(t_), state(s_), color(c_), t_(t), c_(1,1,1), s_(SEPrimTypes::SOLID_ST) {}
+    SEPrimitive(SEPrimTypes::tPrimitive t, SEPrimTypes::tState s) : primType(t_), state(s_), color(c_), t_(t), c_(1,1,1), s_(s)                     {}
+    virtual ~SEPrimitive() {}
+
+  private:
+    SEPrimTypes::tPrimitive  t_;
+    SEPrimTypes::tState      s_;
+    SEVec3<T>                c_;
+
+    void  clampColor() { c_.vec(CLAMP(c_.x,0,1), CLAMP(c_.y,0,1), CLAMP(c_.z,0,1)); }
+};
+
+template <class T> class SESphere : public virtual SEPrimitive<T>, public virtual SERenderObject<T>
 {
   public:
     const T   &radius;
     const int &slices;
     const int &stacks;
 
-          void setSlices(int sl) { sl_=sl; }
-          void setStacks(int st) { st_=st; }
+
+          void setSlices(int sl)              { sl_=sl; }
+          void setStacks(int st)              { st_=st; }
+          void setRadius(T r)                 { r_=r; }
+          void setSize(T s)                   { setRadius(s/2); }
+
 
   protected:
-    SESphere()              : SEPrimitive(SPHERE_PRIM),    r_(1), sl_(6), st_(4), radius(r_), slices(sl_), stacks(st_) {}
-    SESphere(tState s)      : SEPrimitive(SPHERE_PRIM, s), r_(1), sl_(6), st_(4), radius(r_), slices(sl_), stacks(st_) {}
-    SESphere(T r)           : SEPrimitive(SPHERE_PRIM),    r_(r), sl_(6), st_(4), radius(r_), slices(sl_), stacks(st_) {}
-    SESphere(T r, tState s) : SEPrimitive(SPHERE_PRIM, s), r_(r), sl_(6), st_(4), radius(r_), slices(sl_), stacks(st_) {}
-    ~SESphere() {}
+    SESphere()                           : SERenderObject<T>(SEROType::PRIMITIVE_RO), SEPrimitive<T>(SEPrimTypes::SPHERE_PRIM),    r_(1), sl_(6), st_(4), radius(r_), slices(sl_), stacks(st_) {}
+    SESphere(SEPrimTypes::tState s)      : SERenderObject<T>(SEROType::PRIMITIVE_RO), SEPrimitive<T>(SEPrimTypes::SPHERE_PRIM, s), r_(1), sl_(6), st_(4), radius(r_), slices(sl_), stacks(st_) {}
+    SESphere(T r)                        : SERenderObject<T>(SEROType::PRIMITIVE_RO), SEPrimitive<T>(SEPrimTypes::SPHERE_PRIM),    r_(r), sl_(6), st_(4), radius(r_), slices(sl_), stacks(st_) {}
+    SESphere(T r, SEPrimTypes::tState s) : SERenderObject<T>(SEROType::PRIMITIVE_RO), SEPrimitive<T>(SEPrimTypes::SPHERE_PRIM, s), r_(r), sl_(6), st_(4), radius(r_), slices(sl_), stacks(st_) {}
+    virtual ~SESphere() {}
 
   private:
           T    r_;
@@ -46,25 +60,25 @@ template <class T> class SESphere : public SEPrimitive
           int  st_;
 };
 
-template <class T> class SECube : public SEPrimitive
+template <class T> class SECube : public virtual SEPrimitive<T>, public virtual SERenderObject<T>
 {
   public:
-    const T    &size;
+    const T  &size;
 
           void setSize(T s) { s_=s; }
 
   protected:
-    SECube()                : SEPrimitive(CUBE_PRIM),     s_(1),  size(s_) {}
-    SECube(tState st)       : SEPrimitive(CUBE_PRIM, st), s_(1),  size(s_) {}
-    SECube(T sz)            : SEPrimitive(CUBE_PRIM),     s_(sz), size(s_) {}
-    SECube(T sz, tState st) : SEPrimitive(CUBE_PRIM, st), s_(sz), size(s_) {}
-    ~SECube() {}
+    SECube()                             : SERenderObject<T>(SEROType::PRIMITIVE_RO), SEPrimitive<T>(SEPrimTypes::CUBE_PRIM),     s_(1),  size(s_) {}
+    SECube(SEPrimTypes::tState st)       : SERenderObject<T>(SEROType::PRIMITIVE_RO), SEPrimitive<T>(SEPrimTypes::CUBE_PRIM, st), s_(1),  size(s_) {}
+    SECube(T sz)                         : SERenderObject<T>(SEROType::PRIMITIVE_RO), SEPrimitive<T>(SEPrimTypes::CUBE_PRIM),     s_(sz), size(s_) {}
+    SECube(T sz, SEPrimTypes::tState st) : SERenderObject<T>(SEROType::PRIMITIVE_RO), SEPrimitive<T>(SEPrimTypes::CUBE_PRIM, st), s_(sz), size(s_) {}
+    virtual ~SECube() {}
 
   private:
           T   s_;
 };
 
-template <class T> class SECone : public SEPrimitive
+template <class T> class SECone : public virtual SEPrimitive<T>, public virtual SERenderObject<T>
 {
   public:
     const T   &base;
@@ -78,11 +92,11 @@ template <class T> class SECone : public SEPrimitive
           void setHeight(T h)    { h_=h; }
 
   protected:
-    SECone()                   : SEPrimitive(CONE_PRIM),    b_(1), h_(1), sl_(4), st_(4), base(b_), height(h_), slices(sl_), stacks(st_) {}
-    SECone(tState s)           : SEPrimitive(CONE_PRIM, s), b_(1), h_(1), sl_(4), st_(4), base(b_), height(h_), slices(sl_), stacks(st_) {}
-    SECone(T b, T h)           : SEPrimitive(CONE_PRIM),    b_(b), h_(h), sl_(4), st_(4), base(b_), height(h_), slices(sl_), stacks(st_) {}
-    SECone(T b, T h, tState s) : SEPrimitive(CONE_PRIM, s), b_(b), h_(h), sl_(4), st_(4), base(b_), height(h_), slices(sl_), stacks(st_) {}
-    ~SECone() {}
+    SECone()                                : SERenderObject<T>(SEROType::PRIMITIVE_RO), SEPrimitive<T>(SEPrimTypes::CONE_PRIM),    b_(1), h_(1), sl_(4), st_(4), base(b_), height(h_), slices(sl_), stacks(st_) {}
+    SECone(SEPrimTypes::tState s)           : SERenderObject<T>(SEROType::PRIMITIVE_RO), SEPrimitive<T>(SEPrimTypes::CONE_PRIM, s), b_(1), h_(1), sl_(4), st_(4), base(b_), height(h_), slices(sl_), stacks(st_) {}
+    SECone(T b, T h)                        : SERenderObject<T>(SEROType::PRIMITIVE_RO), SEPrimitive<T>(SEPrimTypes::CONE_PRIM),    b_(b), h_(h), sl_(4), st_(4), base(b_), height(h_), slices(sl_), stacks(st_) {}
+    SECone(T b, T h, SEPrimTypes::tState s) : SERenderObject<T>(SEROType::PRIMITIVE_RO), SEPrimitive<T>(SEPrimTypes::CONE_PRIM, s), b_(b), h_(h), sl_(4), st_(4), base(b_), height(h_), slices(sl_), stacks(st_) {}
+    virtual ~SECone() {}
 
   private:
           T    b_;
@@ -91,7 +105,7 @@ template <class T> class SECone : public SEPrimitive
           int  st_;
 };
 
-template <class T> class SETorus : public SEPrimitive
+template <class T> class SETorus : public virtual SEPrimitive<T>, public virtual SERenderObject<T>
 {
   public:
     const T   &inner_radius;
@@ -105,11 +119,11 @@ template <class T> class SETorus : public SEPrimitive
           void setRings(int r) { r_=r; }
 
   protected:
-    SETorus()                   : SEPrimitive(TORUS_PRIM),    i_(1), o_(2), s_(4), r_(4), inner_radius(i_), outer_radius(o_), sides(s_), rings(r_) {}
-    SETorus(tState s)           : SEPrimitive(TORUS_PRIM, s), i_(1), o_(2), s_(4), r_(4), inner_radius(i_), outer_radius(o_), sides(s_), rings(r_) {}
-    SETorus(T i, T o)           : SEPrimitive(TORUS_PRIM),    i_(i), o_(o), s_(4), r_(4), inner_radius(i_), outer_radius(o_), sides(s_), rings(r_) {}
-    SETorus(T i, T o, tState s) : SEPrimitive(TORUS_PRIM, s), i_(i), o_(o), s_(4), r_(4), inner_radius(i_), outer_radius(o_), sides(s_), rings(r_) {}
-    ~SETorus() {}
+    SETorus()                                : SERenderObject<T>(SEROType::PRIMITIVE_RO), SEPrimitive<T>(SEPrimTypes::TORUS_PRIM),    i_(1), o_(2), s_(4), r_(4), inner_radius(i_), outer_radius(o_), sides(s_), rings(r_) {}
+    SETorus(SEPrimTypes::tState s)           : SERenderObject<T>(SEROType::PRIMITIVE_RO), SEPrimitive<T>(SEPrimTypes::TORUS_PRIM, s), i_(1), o_(2), s_(4), r_(4), inner_radius(i_), outer_radius(o_), sides(s_), rings(r_) {}
+    SETorus(T i, T o)                        : SERenderObject<T>(SEROType::PRIMITIVE_RO), SEPrimitive<T>(SEPrimTypes::TORUS_PRIM),    i_(i), o_(o), s_(4), r_(4), inner_radius(i_), outer_radius(o_), sides(s_), rings(r_) {}
+    SETorus(T i, T o, SEPrimTypes::tState s) : SERenderObject<T>(SEROType::PRIMITIVE_RO), SEPrimitive<T>(SEPrimTypes::TORUS_PRIM, s), i_(i), o_(o), s_(4), r_(4), inner_radius(i_), outer_radius(o_), sides(s_), rings(r_) {}
+    virtual ~SETorus() {}
 
   private:
           T    i_;
@@ -118,22 +132,22 @@ template <class T> class SETorus : public SEPrimitive
           int  r_;
 };
 
-template <class T> class SETeapot : public SEPrimitive
+template <class T> class SETeapot : public virtual SEPrimitive<T>, public virtual SERenderObject<T>
 {
   public:
-    const T    &size;
+    const T         &size;
 
-          void setSize(T s) { s_=s; }
+          void      setSize(T s) { s_=s; }
 
   protected:
-    SETeapot()                : SEPrimitive(TEAPOT_PRIM),     s_(1),  size(s_) {}
-    SETeapot(tState st)       : SEPrimitive(TEAPOT_PRIM, st), s_(1),  size(s_) {}
-    SETeapot(T sz)            : SEPrimitive(TEAPOT_PRIM),     s_(sz), size(s_) {}
-    SETeapot(T sz, tState st) : SEPrimitive(TEAPOT_PRIM, st), s_(sz), size(s_) {}
-    ~SETeapot() {}
+    SETeapot()                             : SERenderObject<T>(SEROType::PRIMITIVE_RO), SEPrimitive<T>(SEPrimTypes::TEAPOT_PRIM),     s_(1),  size(s_) {}
+    SETeapot(SEPrimTypes::tState st)       : SERenderObject<T>(SEROType::PRIMITIVE_RO), SEPrimitive<T>(SEPrimTypes::TEAPOT_PRIM, st), s_(1),  size(s_) {}
+    SETeapot(T sz)                         : SERenderObject<T>(SEROType::PRIMITIVE_RO), SEPrimitive<T>(SEPrimTypes::TEAPOT_PRIM),     s_(sz), size(s_) {}
+    SETeapot(T sz, SEPrimTypes::tState st) : SERenderObject<T>(SEROType::PRIMITIVE_RO), SEPrimitive<T>(SEPrimTypes::TEAPOT_PRIM, st), s_(sz), size(s_) {}
+    virtual ~SETeapot() {}
 
   private:
-          T   s_;
-};
+          T         s_;
+ };
 
 #endif // __SEPRIMITIVE_H__

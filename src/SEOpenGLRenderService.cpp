@@ -3,25 +3,29 @@
 #include "../inc/SEOpenGLCamera.h"
 #include "../inc/SEOpenGLLight.h"
 #include "../inc/SEOpenGLPrimitive.h"
+#include "../inc/SEDebugTools.h"
 
 #include "../inc/SEMath.h"
 
 #include <stdexcept>
 
-#define DUMPONCE(x) if (dumpOnce) std::cout << x << std::endl
-
-extern bool dumpOnce;
+USEDUMPFLAG;
 
 int SEOpenGLRenderService::startup()
 {
-    // Cria e configura a câmera padrão
-    cc_ = createRO(SEROType::CAMERA_RO, SECameraType::STATIC_CAM);
-    c_[cc_]->setTranslation(0,0,20);
-    c_[cc_]->usePerspectiveProjection();
+    DUMPFLAG(true);
+    DUMPONCE("==========BEGIN_STARTUP_DUMP==========");
 
-    // Cria e configura a luz ambiente
-    int l = createRO(SEROType::LIGHT_RO, SELightTypes::AMBIENT);
-    l_[l]->toggle();
+    // Configurações perenes da máquina de estado do OpenGL
+    configureOpenGL();
+
+    // Cria e configura a câmera padrão
+    int c = createRO(SEROType::CAMERA_RO, SECameraType::STATIC_CAM);
+    c_[c]->setTranslation(0,0,20);
+    c_[c]->usePerspectiveProjection();
+
+    DUMPONCE("===========END_STARTUP_DUMP==========="<<std::endl<<std::endl);
+    //DUMPFLAG(false);
 
     return(0);
 }
@@ -43,12 +47,15 @@ void SEOpenGLRenderService::renderFrame() const
 {
     startFrame();
 
-    setupCamera();
+	setupCamera();
+
+    configureLighting();
+
+    configureTexturing();
 
     for (tROVector::const_iterator it = ro_.begin(); it != ro_.end(); ++it)
     {
-        //std::cout << "Chamando render em objeto id:" << std::distance(ro_.begin(), it) << "; localizado em " << (*it)->translation << std::endl;
-        (*it)->render(*this);
+        if ((*it)!=NULL) (*it)->render(*this);
     }
 
     endFrame();
@@ -73,30 +80,30 @@ int SEOpenGLRenderService::createRO(SEROType::tRenderObject t, int t1, int t2, i
               ix = ro_.size();
               ro_.push_back(c);
               c_[ix]=c;
-              if (cc_ < 0) cc_ = ix;
+              if (currentCamera < 0) setCamera(ix);
             }
             break;
         case SEROType::PRIMITIVE_RO:
             {
                 SEOpenGLRenderObject *p=NULL;
                 try {
-                    SEPrimitive::tPrimitive pt = static_cast<SEPrimitive::tPrimitive>(t1);
+                    SEPrimTypes::tPrimitive pt = static_cast<SEPrimTypes::tPrimitive>(t1);
 
                     switch (pt)
                     {
-                    case SEPrimitive::CONE_PRIM:
+                    case SEPrimTypes::CONE_PRIM:
                         p = new SEOpenGLCone();
                         break;
-                    case SEPrimitive::CUBE_PRIM:
+                    case SEPrimTypes::CUBE_PRIM:
                         p = new SEOpenGLCube();
                         break;
-                    case SEPrimitive::SPHERE_PRIM:
+                    case SEPrimTypes::SPHERE_PRIM:
                         p = new SEOpenGLSphere();
                         break;
-                    case SEPrimitive::TORUS_PRIM:
+                    case SEPrimTypes::TORUS_PRIM:
                         p = new SEOpenGLTorus();
                         break;
-                    case SEPrimitive::TEAPOT_PRIM:
+                    case SEPrimTypes::TEAPOT_PRIM:
                         p = new SEOpenGLTeapot();
                         break;
                     }
@@ -119,14 +126,21 @@ int SEOpenGLRenderService::createRO(SEROType::tRenderObject t, int t1, int t2, i
                   switch (tli)
                   {
                   case SELightTypes::AMBIENT:
-                    l = new SEOpenGLAmbientLight();
-                    break;
+                      l = new SEOpenGLAmbientLight();
+                      break;
                   case SELightTypes::AREA:
+                      break;
                   case SELightTypes::DIRECTIONAL:
+                      l = new SEOpenGLDirectionalLight();
+                      break;
                   case SELightTypes::POINT:
+                      l = new SEOpenGLPointLight();
+                      break;
                   case SELightTypes::SPOT:
+                      l = new SEOpenGLSpotLight();
+                      break;
                   default:
-                    break;
+                      break;
                   }
                   if (l!=NULL)
                   {
@@ -152,8 +166,8 @@ void SEOpenGLRenderService::destroyRO(uint32_t i)
     if (c_.count(i) > 0)
     {
         c_[i]=NULL;
-        if (cc_==i)
-          cc_=-1;
+        if (currentCamera==i)
+          setCamera(-1);
     }
 
     if (l_.count(i) > 0)
@@ -167,22 +181,6 @@ void SEOpenGLRenderService::destroyRO(uint32_t i)
       }
     } catch (const std::out_of_range &oor) {
     }
-}
-
-void SEOpenGLRenderService::setCamera(uint32_t c)
-{
-    cc_=c;
-}
-
-void SEOpenGLRenderService::setupCamera() const
-{
-
-  if (cc_ >= 0)
-  {
-      tCamMap::const_iterator c = c_.find(cc_);
-      (*c).second->setupFrame();
-  }
-
 }
 
 void SEOpenGLRenderService::activateLight(uint32_t l)
@@ -201,32 +199,6 @@ void SEOpenGLRenderService::deactivateLight(uint32_t l)
             l_[l]->toggle();
     } catch (...) {
     }
-}
-
-void SEOpenGLRenderService::enableLighting() const
-{
-    glEnable(GL_LIGHTING);
-    DUMPONCE("glEnable(GL_LIGHTING)");
-
-    for (tLightMap::const_iterator it=l_.begin();it!=l_.end();++it)
-        if ((*it).second->isOn)
-        {
-            (*it).second->enable();
-            (*it).second->configure();
-        }
-
-}
-
-void SEOpenGLRenderService::disableLighting() const
-{
-    for (tLightMap::const_iterator it=l_.begin();it!=l_.end();++it)
-        if ((*it).second->isOn)
-        {
-            (*it).second->disable();
-        }
-
-    glDisable(GL_LIGHTING);
-    DUMPONCE("glDisable(GL_LIGHTING)");
 }
 
 const SERenderObject<GLfloat> * SEOpenGLRenderService::getObject(uint32_t o) const
@@ -286,8 +258,6 @@ SECamera<GLfloat> * SEOpenGLRenderService::getCamera(uint32_t c)
     } catch (...) {
         return NULL;
     }
-
-
 }
 
 SELight<GLfloat> * SEOpenGLRenderService::getLight(uint32_t l)
@@ -301,19 +271,129 @@ SELight<GLfloat> * SEOpenGLRenderService::getLight(uint32_t l)
     } catch (...) {
         return NULL;
     }
+}
 
+void SEOpenGLRenderService::setGlobalAmbientLight(GLfloat r, GLfloat g, GLfloat b, GLfloat a) const
+{
+    DUMPONCE("===SEOpenGLRenderService::setGlobalAmbientLight("<<r<<","<<g<<","<<b<<","<<a<<")===");
+    SEVec4<GLfloat> c(CLAMP(r,0,1), CLAMP(g,0,1), CLAMP(b,0,1), CLAMP(a,0,1));
+    glLightModelfv(GL_LIGHT_MODEL_AMBIENT, c.v);
+    DUMPONCE("glLightModelfv(GL_LIGHT_MODEL_AMBIENT, "<<c<<")");
+}
+
+void SEOpenGLRenderService::setGlobalAmbientLighti(int r, int g, int b, int a) const
+{
+    DUMPONCE("===SEOpenGLRenderService::setGlobalAmbientLighti("<<r<<","<<g<<","<<b<<","<<a<<")===");
+    SEVec4<GLfloat> c(CLAMP(r,0,255), CLAMP(g,0,255), CLAMP(b,0,255), CLAMP(a,0,255));
+    c/=255.0;
+    glLightModelfv(GL_LIGHT_MODEL_AMBIENT, c.v);
+    DUMPONCE("glLightModelfv(GL_LIGHT_MODEL_AMBIENT, "<<c<<")");
+}
+
+void SEOpenGLRenderService::configureLighting() const
+{
+    DUMPONCE("===SEOpenGLRenderService::configureLighting()===");
+
+    if (isLightingEnabled)
+    {
+        glEnable(GL_LIGHTING);
+        DUMPONCE("glEnable(GL_LIGHTING)");
+        glShadeModel(GL_SMOOTH);
+        DUMPONCE("glShadeModel(GL_SMOOTH)");
+
+        for (tLightMap::const_iterator it=l_.begin();it!=l_.end();++it)
+            if ((*it).second->isOn)
+            {
+                (*it).second->enable();
+                (*it).second->configure();
+            }
+    }
+    else
+    {
+        for (tLightMap::const_iterator it=l_.begin();it!=l_.end();++it)
+            if ((*it).second->isOn)
+            {
+                (*it).second->disable();
+            }
+            glDisable(GL_LIGHTING);
+            DUMPONCE("glDisable(GL_LIGHTING)");
+    }
+}
+
+void SEOpenGLRenderService::configureTexturing() const
+{
+    DUMPONCE("===SEOpenGLRenderService::configureTexturing()===");
+    if (isTexturingEnabled)
+    {
+        glEnable(GL_TEXTURE_2D);
+        DUMPONCE("glEnable(GL_TEXTURE_2D)");
+    }
+    else
+    {
+        glDisable(GL_TEXTURE_2D);
+        DUMPONCE("glDisable(GL_TEXTURE_2D)");
+    }
+}
+
+bool SEOpenGLRenderService::objectExists(uint32_t o) const
+{
+    if (o < ro_.size())
+        return false;
+
+    if (ro_[o]!=NULL)
+        return true;
+
+    return false;
+}
+
+bool SEOpenGLRenderService::cameraExists(uint32_t c) const
+{
+    if (c_.find(c)!=c_.end())
+        return true;
+
+    return false;
+}
+
+bool SEOpenGLRenderService::lightExists(uint32_t l)  const
+{
+    if (l_.find(l)!=l_.end())
+        return true;
+
+    return false;
 }
 
 void SEOpenGLRenderService::startFrame() const
 {
-	glClearColor(0.0, 0.0, 0.0, 1.0);
-	DUMPONCE("glClearColor(0.0, 0.0, 0.0, 1.0)");
-	glClearDepth(1.0);
-	DUMPONCE("glClearDepth(1.0)");
+    DUMPONCE("==============BEGIN_FRAME_DUMP==============");
+    DUMPONCE("===SEOpenGLRenderService::startFrame()===");
+
+	glEnable(GL_DEPTH_TEST);
+	DUMPONCE("glEnable(GL_DEPTH_TEST)");
+
 	glClear(GL_DEPTH_BUFFER_BIT|GL_COLOR_BUFFER_BIT);
 	DUMPONCE("glClear(GL_DEPTH_BUFFER_BIT|GL_COLOR_BUFFER_BIT)");
+}
 
-	glHint(GL_LINE_SMOOTH_HINT, GL_NICEST);
+void SEOpenGLRenderService::endFrame() const
+{
+    DUMPONCE("===SEOpenGLRenderService::endFrame()===");
+
+    glFlush();
+    DUMPONCE("glFlush()");
+
+    DUMPONCE("===============END_FRAME_DUMP==============="<<std::endl<<std::endl);
+    DUMPFLAG(false);
+}
+
+void SEOpenGLRenderService::configureOpenGL() const
+{
+    DUMPONCE("===SEOpenGLRenderService::configureOpengl()===");
+	glClearColor(0.0, 0.0, 0.0, 0.0);
+	DUMPONCE("glClearColor(0.0, 0.0, 0.0, 0.0)");
+	glClearDepth(1.0);
+	DUMPONCE("glClearDepth(1.0)");
+
+    glHint(GL_LINE_SMOOTH_HINT, GL_NICEST);
 	DUMPONCE("glHint(GL_LINE_SMOOTH_HINT, GL_NICEST)");
 
 	glDisable(GL_FOG);
@@ -331,13 +411,41 @@ void SEOpenGLRenderService::startFrame() const
 	glDepthMask(GL_TRUE);
 	DUMPONCE("glDepthMask(GL_TRUE)");
 
-	glShadeModel(GL_SMOOTH);
-	DUMPONCE("glShadeModel(GL_SMOOTH)");
 	glPolygonMode(GL_FRONT,GL_FILL);
 	DUMPONCE("glPolygonMode(GL_FRONT,GL_FILL)");
 	glPolygonMode(GL_BACK,GL_FILL);
 	DUMPONCE("glPolygonMode(GL_BACK,GL_FILL)");
 
+	setupTexturing();
+
+	setupLighting();
+}
+
+void SEOpenGLRenderService::setupCamera() const
+{
+
+  tCamMap::const_iterator it = c_.find(currentCamera);
+
+  if (it != c_.end())
+    (*it).second->setupFrame();
+
+}
+
+void SEOpenGLRenderService::setupLighting() const
+{
+    DUMPONCE("===SEOpenGLRenderService::setupLighting()===");
+    glShadeModel(GL_SMOOTH);
+	DUMPONCE("glShadeModel(GL_SMOOTH)");
+	// Desabilita luz ambiente global por padrão
+	const GLfloat al[] = {0.0, 0.0, 0.0, 1.0};
+    glLightModelfv(GL_LIGHT_MODEL_AMBIENT, al);
+    DUMPONCE("glLightModelfv(GL_LIGHT_MODEL_AMBIENT,{0.0, 0.0, 0.0, 1.0})");
+
+}
+
+void SEOpenGLRenderService::setupTexturing() const
+{
+    DUMPONCE("===SEOpenGLRenderService::setupTexturing()===");
     glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
     DUMPONCE("glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE)");
 	glEnable(GL_BLEND);
@@ -348,26 +456,5 @@ void SEOpenGLRenderService::startFrame() const
 	DUMPONCE("glEnable(GL_ALPHA_TEST)");
 	glAlphaFunc(GL_GREATER,0.5);
 	DUMPONCE("glAlphaFunc(GL_GREATER,0.5)");
-
-	glEnable(GL_LIGHTING);
-    DUMPONCE("glEnable(GL_LIGHTING)");
-	glShadeModel(GL_SMOOTH);
-	DUMPONCE("glShadeModel(GL_SMOOTH)");
-
-	glDisable(GL_TEXTURE_2D);
-	DUMPONCE("glDisable(GL_TEXTURE_2D)");
-	DUMPONCE("GL_LIGHT0="<<GL_LIGHT0);
-
-	glEnable(GL_COLOR_MATERIAL);
-	DUMPONCE("glEnable(GL_COLOR_MATERIAL)");
-
-	glClear(GL_DEPTH_BUFFER_BIT|GL_COLOR_BUFFER_BIT);
-	DUMPONCE("glClear(GL_DEPTH_BUFFER_BIT|GL_COLOR_BUFFER_BIT)");
-
 }
 
-void SEOpenGLRenderService::endFrame() const
-{
-    glFlush();
-    DUMPONCE("glFlush()");
-}

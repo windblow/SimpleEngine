@@ -34,6 +34,8 @@ template <class T> class SEApplication : public SEApplicationInterface
 	virtual void display() { if (rs_!=NULL) rs_->renderFrame(); }
 	virtual void idle()    { this->update(); this->display(); }
 
+	virtual void key(unsigned char key, int x, int y);
+
   protected:
     std::string title_;
 
@@ -77,6 +79,10 @@ template <class T> void SEApplication<T>::init(int argc, char **argv)
 
     SimpleEngine::sl()->configFlowController(SEFlowController::GLUT_FC);
     fc_ = SimpleEngine::sl()->getFlowController();
+
+    // Cria a janela e associa os callbacks
+    wm_->createNewWindow(800,600,title_,10,10);
+    fc_->bindCallbacks();
 }
 
 template <class T> void SEApplication<T>::run()
@@ -90,5 +96,14 @@ template <class T> void SEApplication<T>::quit()
      run_=false;
 }
 
+template <class T> void SEApplication<T>::key(unsigned char key, int x, int y)
+{
+    switch(key)
+    {
+    case 27:
+        this->quit();
+        break;
+    }
+}
 
 #endif

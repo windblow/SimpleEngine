@@ -1,0 +1,352 @@
+\section{S\+E\+Light$<$ T $>$ Class Template Reference}
+\label{class_s_e_light}\index{S\+E\+Light$<$ T $>$@{S\+E\+Light$<$ T $>$}}
+
+
+{\ttfamily \#include $<$S\+E\+Light.\+h$>$}
+
+
+
+Inheritance diagram for S\+E\+Light$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_e_light__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for S\+E\+Light$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{class_s_e_light__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bf S\+E\+Light}$<$ T $>$ \& {\bf set\+Color} (T {\bf r}, T {\bf g}, T {\bf b}, T {\bf a})
+\item 
+virtual {\bf S\+E\+Light}$<$ T $>$ \& {\bf set\+Color} (T {\bf r}, T {\bf g}, T {\bf b})
+\item 
+virtual {\bf S\+E\+Light}$<$ T $>$ \& {\bf set\+Color} (const T $\ast$f)
+\item 
+virtual {\bf S\+E\+Light}$<$ T $>$ \& {\bf set\+Color} (const {\bf S\+E\+Color}$<$ T $>$ \&c)
+\item 
+virtual {\bf S\+E\+Light}$<$ T $>$ \& {\bf set\+Color} (const {\bf S\+E\+Vec4}$<$ T $>$ \&c)
+\item 
+virtual {\bf S\+E\+Light}$<$ T $>$ \& {\bf set\+Color} (const {\bf S\+E\+Vec3}$<$ T $>$ \&c)
+\item 
+virtual {\bf S\+E\+Light}$<$ T $>$ \& {\bf set\+Colori} (int {\bf r}, int {\bf g}, int {\bf b}, int {\bf a})
+\item 
+virtual {\bf S\+E\+Light}$<$ T $>$ \& {\bf set\+Colori} (int {\bf r}, int {\bf g}, int {\bf b})
+\item 
+virtual {\bf S\+E\+Light}$<$ T $>$ \& {\bf set\+Intensity} (T i)
+\item 
+virtual {\bf S\+E\+Light}$<$ T $>$ \& {\bf toggle} ()
+\item 
+virtual void {\bf configure} () const =0
+\item 
+virtual void {\bf enable} () const =0
+\item 
+virtual void {\bf disable} () const =0
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const {\bf S\+E\+Light\+Types\+::t\+Light} \& {\bf light\+Type}
+\item 
+const {\bf S\+E\+Color}$<$ T $>$ \& {\bf color}
+\item 
+const T \& {\bf r}
+\item 
+const T \& {\bf g}
+\item 
+const T \& {\bf b}
+\item 
+const T \& {\bf a}
+\item 
+const T \& {\bf intensity}
+\item 
+const bool \& {\bf is\+On}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Light} ({\bf S\+E\+Light\+Types\+::t\+Light} t)
+\item 
+{\bf S\+E\+Light} ({\bf S\+E\+Light\+Types\+::t\+Light} t, T rr, T gg, T bb, T aa)
+\item 
+virtual {\bf $\sim$\+S\+E\+Light} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$class S\+E\+Light$<$ T $>$}
+
+
+
+Definition at line 13 of file S\+E\+Light.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{S\+E\+Light@{S\+E\+Light}!S\+E\+Light@{S\+E\+Light}}
+\index{S\+E\+Light@{S\+E\+Light}!S\+E\+Light@{S\+E\+Light}}
+\subsubsection[{S\+E\+Light}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Light}$<$ T $>$\+::{\bf S\+E\+Light} (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+Light\+Types\+::t\+Light}}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_s_e_light_a85e3a17de5203bc1ddd85849859e2890}
+
+
+Definition at line 43 of file S\+E\+Light.\+h.
+
+\index{S\+E\+Light@{S\+E\+Light}!S\+E\+Light@{S\+E\+Light}}
+\index{S\+E\+Light@{S\+E\+Light}!S\+E\+Light@{S\+E\+Light}}
+\subsubsection[{S\+E\+Light}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Light}$<$ T $>$\+::{\bf S\+E\+Light} (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+Light\+Types\+::t\+Light}}]{t, }
+\item[{T}]{rr, }
+\item[{T}]{gg, }
+\item[{T}]{bb, }
+\item[{T}]{aa}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_s_e_light_a75ee078dd9dbf312c97ae57a9ef4fc3e}
+
+
+Definition at line 44 of file S\+E\+Light.\+h.
+
+\index{S\+E\+Light@{S\+E\+Light}!````~S\+E\+Light@{$\sim$\+S\+E\+Light}}
+\index{````~S\+E\+Light@{$\sim$\+S\+E\+Light}!S\+E\+Light@{S\+E\+Light}}
+\subsubsection[{$\sim$\+S\+E\+Light}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ virtual {\bf S\+E\+Light}$<$ T $>$\+::$\sim${\bf S\+E\+Light} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_s_e_light_ab6b0ffb42573f03708198f1f083cdbee}
+
+
+Definition at line 45 of file S\+E\+Light.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\index{S\+E\+Light@{S\+E\+Light}!configure@{configure}}
+\index{configure@{configure}!S\+E\+Light@{S\+E\+Light}}
+\subsubsection[{configure}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ virtual void {\bf S\+E\+Light}$<$ T $>$\+::configure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_light_a4b76afa3bc5c8199cc7b87aa844c73df}
+
+
+Implemented in {\bf S\+E\+Open\+G\+L\+Directional\+Light} \doxyref{}{p.}{class_s_e_open_g_l_directional_light_a12c0764965d54a42d70bceb3569797f8}, {\bf S\+E\+Open\+G\+L\+Point\+Light} \doxyref{}{p.}{class_s_e_open_g_l_point_light_abf5e5065c48c96ed1255336b0fdc80b2}, {\bf S\+E\+Open\+G\+L\+Spot\+Light} \doxyref{}{p.}{class_s_e_open_g_l_spot_light_ad7d0f55016e2056504aa881f79cbffea}, {\bf S\+E\+Open\+G\+L\+Ambient\+Light} \doxyref{}{p.}{class_s_e_open_g_l_ambient_light_a6e63048ab7e69167acbb2d935313a21e}, and {\bf S\+E\+Open\+G\+L\+Light} \doxyref{}{p.}{class_s_e_open_g_l_light_aa1e7ed21e5da299d82869c89757706eb}.
+
+\index{S\+E\+Light@{S\+E\+Light}!disable@{disable}}
+\index{disable@{disable}!S\+E\+Light@{S\+E\+Light}}
+\subsubsection[{disable}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ virtual void {\bf S\+E\+Light}$<$ T $>$\+::disable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_light_a047d546a066265f69e32b32f687abefb}
+
+
+Implemented in {\bf S\+E\+Open\+G\+L\+Light} \doxyref{}{p.}{class_s_e_open_g_l_light_ad7bd2c2f5a22f7f52c3f54906bcd25c6}.
+
+\index{S\+E\+Light@{S\+E\+Light}!enable@{enable}}
+\index{enable@{enable}!S\+E\+Light@{S\+E\+Light}}
+\subsubsection[{enable}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ virtual void {\bf S\+E\+Light}$<$ T $>$\+::enable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_light_ae8035cbcabf3c3aa893befdb588d1694}
+
+
+Implemented in {\bf S\+E\+Open\+G\+L\+Light} \doxyref{}{p.}{class_s_e_open_g_l_light_af811c2a989cdc70e287042bca118b57d}.
+
+\index{S\+E\+Light@{S\+E\+Light}!set\+Color@{set\+Color}}
+\index{set\+Color@{set\+Color}!S\+E\+Light@{S\+E\+Light}}
+\subsubsection[{set\+Color}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ virtual {\bf S\+E\+Light}$<$T$>$\& {\bf S\+E\+Light}$<$ T $>$\+::set\+Color (
+\begin{DoxyParamCaption}
+\item[{T}]{r, }
+\item[{T}]{g, }
+\item[{T}]{b, }
+\item[{T}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_e_light_a29f68765903a91b46aab47583aa27b65}
+
+
+Definition at line 25 of file S\+E\+Light.\+h.
+
+\index{S\+E\+Light@{S\+E\+Light}!set\+Color@{set\+Color}}
+\index{set\+Color@{set\+Color}!S\+E\+Light@{S\+E\+Light}}
+\subsubsection[{set\+Color}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ virtual {\bf S\+E\+Light}$<$T$>$\& {\bf S\+E\+Light}$<$ T $>$\+::set\+Color (
+\begin{DoxyParamCaption}
+\item[{T}]{r, }
+\item[{T}]{g, }
+\item[{T}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_e_light_a2284538479badfd94237287c7f54ac9f}
+
+
+Definition at line 26 of file S\+E\+Light.\+h.
+
+\index{S\+E\+Light@{S\+E\+Light}!set\+Color@{set\+Color}}
+\index{set\+Color@{set\+Color}!S\+E\+Light@{S\+E\+Light}}
+\subsubsection[{set\+Color}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ virtual {\bf S\+E\+Light}$<$T$>$\& {\bf S\+E\+Light}$<$ T $>$\+::set\+Color (
+\begin{DoxyParamCaption}
+\item[{const T $\ast$}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_e_light_ad030f6a2ee9fd4e9d28971d192ad9941}
+
+
+Definition at line 27 of file S\+E\+Light.\+h.
+
+\index{S\+E\+Light@{S\+E\+Light}!set\+Color@{set\+Color}}
+\index{set\+Color@{set\+Color}!S\+E\+Light@{S\+E\+Light}}
+\subsubsection[{set\+Color}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ virtual {\bf S\+E\+Light}$<$T$>$\& {\bf S\+E\+Light}$<$ T $>$\+::set\+Color (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Color}$<$ T $>$ \&}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_e_light_aac6bc8d65b85179dcb41289f88714cfe}
+
+
+Definition at line 28 of file S\+E\+Light.\+h.
+
+\index{S\+E\+Light@{S\+E\+Light}!set\+Color@{set\+Color}}
+\index{set\+Color@{set\+Color}!S\+E\+Light@{S\+E\+Light}}
+\subsubsection[{set\+Color}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ virtual {\bf S\+E\+Light}$<$T$>$\& {\bf S\+E\+Light}$<$ T $>$\+::set\+Color (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec4}$<$ T $>$ \&}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_e_light_aebc52d3397b96ead7fa9ac4be02aae0c}
+
+
+Definition at line 29 of file S\+E\+Light.\+h.
+
+\index{S\+E\+Light@{S\+E\+Light}!set\+Color@{set\+Color}}
+\index{set\+Color@{set\+Color}!S\+E\+Light@{S\+E\+Light}}
+\subsubsection[{set\+Color}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ virtual {\bf S\+E\+Light}$<$T$>$\& {\bf S\+E\+Light}$<$ T $>$\+::set\+Color (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_e_light_ad2786490499caedc89d1074346328c39}
+
+
+Definition at line 30 of file S\+E\+Light.\+h.
+
+\index{S\+E\+Light@{S\+E\+Light}!set\+Colori@{set\+Colori}}
+\index{set\+Colori@{set\+Colori}!S\+E\+Light@{S\+E\+Light}}
+\subsubsection[{set\+Colori}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ virtual {\bf S\+E\+Light}$<$T$>$\& {\bf S\+E\+Light}$<$ T $>$\+::set\+Colori (
+\begin{DoxyParamCaption}
+\item[{int}]{r, }
+\item[{int}]{g, }
+\item[{int}]{b, }
+\item[{int}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_e_light_a91876c38816127ac9cea90e06cc547ea}
+
+
+Definition at line 31 of file S\+E\+Light.\+h.
+
+\index{S\+E\+Light@{S\+E\+Light}!set\+Colori@{set\+Colori}}
+\index{set\+Colori@{set\+Colori}!S\+E\+Light@{S\+E\+Light}}
+\subsubsection[{set\+Colori}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ virtual {\bf S\+E\+Light}$<$T$>$\& {\bf S\+E\+Light}$<$ T $>$\+::set\+Colori (
+\begin{DoxyParamCaption}
+\item[{int}]{r, }
+\item[{int}]{g, }
+\item[{int}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_e_light_a16c10856e9959f21ff6d678135ae7354}
+
+
+Definition at line 32 of file S\+E\+Light.\+h.
+
+\index{S\+E\+Light@{S\+E\+Light}!set\+Intensity@{set\+Intensity}}
+\index{set\+Intensity@{set\+Intensity}!S\+E\+Light@{S\+E\+Light}}
+\subsubsection[{set\+Intensity}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ virtual {\bf S\+E\+Light}$<$T$>$\& {\bf S\+E\+Light}$<$ T $>$\+::set\+Intensity (
+\begin{DoxyParamCaption}
+\item[{T}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_e_light_adaee28b48653db402c7c86fe7eee9a89}
+
+
+Definition at line 34 of file S\+E\+Light.\+h.
+
+\index{S\+E\+Light@{S\+E\+Light}!toggle@{toggle}}
+\index{toggle@{toggle}!S\+E\+Light@{S\+E\+Light}}
+\subsubsection[{toggle}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ virtual {\bf S\+E\+Light}$<$T$>$\& {\bf S\+E\+Light}$<$ T $>$\+::toggle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_e_light_adbfcee064b559c1207090501e75f7aa6}
+
+
+Definition at line 36 of file S\+E\+Light.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\index{S\+E\+Light@{S\+E\+Light}!a@{a}}
+\index{a@{a}!S\+E\+Light@{S\+E\+Light}}
+\subsubsection[{a}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ const T\& {\bf S\+E\+Light}$<$ T $>$\+::a}\label{class_s_e_light_a2c28673db361c76ea106bc77392f295c}
+
+
+Definition at line 21 of file S\+E\+Light.\+h.
+
+\index{S\+E\+Light@{S\+E\+Light}!b@{b}}
+\index{b@{b}!S\+E\+Light@{S\+E\+Light}}
+\subsubsection[{b}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ const T\& {\bf S\+E\+Light}$<$ T $>$\+::b}\label{class_s_e_light_a24580dac6735af713a1be614e7ab4c09}
+
+
+Definition at line 20 of file S\+E\+Light.\+h.
+
+\index{S\+E\+Light@{S\+E\+Light}!color@{color}}
+\index{color@{color}!S\+E\+Light@{S\+E\+Light}}
+\subsubsection[{color}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ const {\bf S\+E\+Color}$<$T$>$\& {\bf S\+E\+Light}$<$ T $>$\+::color}\label{class_s_e_light_a72d3a75b7180fea89eabed13dcfef775}
+
+
+Definition at line 17 of file S\+E\+Light.\+h.
+
+\index{S\+E\+Light@{S\+E\+Light}!g@{g}}
+\index{g@{g}!S\+E\+Light@{S\+E\+Light}}
+\subsubsection[{g}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ const T\& {\bf S\+E\+Light}$<$ T $>$\+::g}\label{class_s_e_light_ab812b041d5c9dee439b072a0257e2516}
+
+
+Definition at line 19 of file S\+E\+Light.\+h.
+
+\index{S\+E\+Light@{S\+E\+Light}!intensity@{intensity}}
+\index{intensity@{intensity}!S\+E\+Light@{S\+E\+Light}}
+\subsubsection[{intensity}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ const T\& {\bf S\+E\+Light}$<$ T $>$\+::intensity}\label{class_s_e_light_a890435f380c7537ed66732b207283570}
+
+
+Definition at line 22 of file S\+E\+Light.\+h.
+
+\index{S\+E\+Light@{S\+E\+Light}!is\+On@{is\+On}}
+\index{is\+On@{is\+On}!S\+E\+Light@{S\+E\+Light}}
+\subsubsection[{is\+On}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ const bool\& {\bf S\+E\+Light}$<$ T $>$\+::is\+On}\label{class_s_e_light_a840560af521b2dbba3ff7e96f1ee680a}
+
+
+Definition at line 23 of file S\+E\+Light.\+h.
+
+\index{S\+E\+Light@{S\+E\+Light}!light\+Type@{light\+Type}}
+\index{light\+Type@{light\+Type}!S\+E\+Light@{S\+E\+Light}}
+\subsubsection[{light\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ const {\bf S\+E\+Light\+Types\+::t\+Light}\& {\bf S\+E\+Light}$<$ T $>$\+::light\+Type}\label{class_s_e_light_a98499a4ad58761bc1798c908a1509c9c}
+
+
+Definition at line 16 of file S\+E\+Light.\+h.
+
+\index{S\+E\+Light@{S\+E\+Light}!r@{r}}
+\index{r@{r}!S\+E\+Light@{S\+E\+Light}}
+\subsubsection[{r}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ const T\& {\bf S\+E\+Light}$<$ T $>$\+::r}\label{class_s_e_light_af685b4d0a0cf5a9f6a8a6572364a2238}
+
+
+Definition at line 18 of file S\+E\+Light.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Light.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,282 @@
+\section{S\+E\+Open\+G\+L\+Light Class Reference}
+\label{class_s_e_open_g_l_light}\index{S\+E\+Open\+G\+L\+Light@{S\+E\+Open\+G\+L\+Light}}
+
+
+{\ttfamily \#include $<$S\+E\+Open\+G\+L\+Light.\+h$>$}
+
+
+
+Inheritance diagram for S\+E\+Open\+G\+L\+Light\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_e_open_g_l_light__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for S\+E\+Open\+G\+L\+Light\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{class_s_e_open_g_l_light__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ G\+Lenum, bool $>$ {\bf t\+Global\+Ix}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bf render} (const {\bf S\+E\+Render\+Service\+Internals}$<$ G\+Lfloat $>$ \&rs) const 
+\item 
+virtual void {\bf apply\+Material} (const {\bf S\+E\+Render\+Service\+Internals}$<$ G\+Lfloat $>$ \&rs) const 
+\item 
+virtual void {\bf draw} (const {\bf S\+E\+Render\+Service\+Internals}$<$ G\+Lfloat $>$ \&rs) const 
+\item 
+virtual void {\bf clear\+Material} (const {\bf S\+E\+Render\+Service\+Internals}$<$ G\+Lfloat $>$ \&rs) const 
+\item 
+virtual void {\bf configure} () const =0
+\item 
+virtual void {\bf enable} () const 
+\item 
+virtual void {\bf disable} () const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const G\+Lenum \& {\bf gl\+Index}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Open\+G\+L\+Light} ({\bf S\+E\+Light\+Types\+::t\+Light} t)
+\item 
+virtual {\bf $\sim$\+S\+E\+Open\+G\+L\+Light} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static G\+Lenum {\bf get\+Next\+Index} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 15 of file S\+E\+Open\+G\+L\+Light.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\index{S\+E\+Open\+G\+L\+Light@{S\+E\+Open\+G\+L\+Light}!t\+Global\+Ix@{t\+Global\+Ix}}
+\index{t\+Global\+Ix@{t\+Global\+Ix}!S\+E\+Open\+G\+L\+Light@{S\+E\+Open\+G\+L\+Light}}
+\subsubsection[{t\+Global\+Ix}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<$G\+Lenum,bool$>$ {\bf S\+E\+Open\+G\+L\+Light\+::t\+Global\+Ix}}\label{class_s_e_open_g_l_light_a1b0eb6a3cb340040e1301b88430c07e7}
+
+
+Definition at line 18 of file S\+E\+Open\+G\+L\+Light.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{S\+E\+Open\+G\+L\+Light@{S\+E\+Open\+G\+L\+Light}!S\+E\+Open\+G\+L\+Light@{S\+E\+Open\+G\+L\+Light}}
+\index{S\+E\+Open\+G\+L\+Light@{S\+E\+Open\+G\+L\+Light}!S\+E\+Open\+G\+L\+Light@{S\+E\+Open\+G\+L\+Light}}
+\subsubsection[{S\+E\+Open\+G\+L\+Light}]{\setlength{\rightskip}{0pt plus 5cm}S\+E\+Open\+G\+L\+Light\+::\+S\+E\+Open\+G\+L\+Light (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+Light\+Types\+::t\+Light}}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_s_e_open_g_l_light_aa8df8f2b01c2f97a2cd0eab67482fe5e}
+
+
+Definition at line 36 of file S\+E\+Open\+G\+L\+Light.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_e_open_g_l_light_aa8df8f2b01c2f97a2cd0eab67482fe5e_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+Open\+G\+L\+Light@{S\+E\+Open\+G\+L\+Light}!````~S\+E\+Open\+G\+L\+Light@{$\sim$\+S\+E\+Open\+G\+L\+Light}}
+\index{````~S\+E\+Open\+G\+L\+Light@{$\sim$\+S\+E\+Open\+G\+L\+Light}!S\+E\+Open\+G\+L\+Light@{S\+E\+Open\+G\+L\+Light}}
+\subsubsection[{$\sim$\+S\+E\+Open\+G\+L\+Light}]{\setlength{\rightskip}{0pt plus 5cm}virtual S\+E\+Open\+G\+L\+Light\+::$\sim$\+S\+E\+Open\+G\+L\+Light (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_s_e_open_g_l_light_a6be6a244c2d5ad26f1f7a5074d1c7638}
+
+
+Definition at line 37 of file S\+E\+Open\+G\+L\+Light.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_e_open_g_l_light_a6be6a244c2d5ad26f1f7a5074d1c7638_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{S\+E\+Open\+G\+L\+Light@{S\+E\+Open\+G\+L\+Light}!apply\+Material@{apply\+Material}}
+\index{apply\+Material@{apply\+Material}!S\+E\+Open\+G\+L\+Light@{S\+E\+Open\+G\+L\+Light}}
+\subsubsection[{apply\+Material}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+E\+Open\+G\+L\+Light\+::apply\+Material (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Render\+Service\+Internals}$<$ G\+Lfloat $>$ \&}]{rs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_e_open_g_l_light_a651ec91959461ed055c748cf4f2c2e24}
+
+
+Reimplemented from {\bf S\+E\+Render\+Object$<$ G\+Lfloat $>$} \doxyref{}{p.}{class_s_e_render_object_a3b69c5731a523257a36409992900c179}.
+
+
+
+Definition at line 25 of file S\+E\+Open\+G\+L\+Light.\+h.
+
+\index{S\+E\+Open\+G\+L\+Light@{S\+E\+Open\+G\+L\+Light}!clear\+Material@{clear\+Material}}
+\index{clear\+Material@{clear\+Material}!S\+E\+Open\+G\+L\+Light@{S\+E\+Open\+G\+L\+Light}}
+\subsubsection[{clear\+Material}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+E\+Open\+G\+L\+Light\+::clear\+Material (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Render\+Service\+Internals}$<$ G\+Lfloat $>$ \&}]{rs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_e_open_g_l_light_abb038b064d412b38563e26043255df84}
+
+
+Reimplemented from {\bf S\+E\+Render\+Object$<$ G\+Lfloat $>$} \doxyref{}{p.}{class_s_e_render_object_a3a66f1439405aa658ca58a124807f4df}.
+
+
+
+Definition at line 27 of file S\+E\+Open\+G\+L\+Light.\+h.
+
+\index{S\+E\+Open\+G\+L\+Light@{S\+E\+Open\+G\+L\+Light}!configure@{configure}}
+\index{configure@{configure}!S\+E\+Open\+G\+L\+Light@{S\+E\+Open\+G\+L\+Light}}
+\subsubsection[{configure}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+E\+Open\+G\+L\+Light\+::configure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_open_g_l_light_aa1e7ed21e5da299d82869c89757706eb}
+
+
+Implements {\bf S\+E\+Light$<$ G\+Lfloat $>$} \doxyref{}{p.}{class_s_e_light_a4b76afa3bc5c8199cc7b87aa844c73df}.
+
+
+
+Implemented in {\bf S\+E\+Open\+G\+L\+Directional\+Light} \doxyref{}{p.}{class_s_e_open_g_l_directional_light_a12c0764965d54a42d70bceb3569797f8}, {\bf S\+E\+Open\+G\+L\+Point\+Light} \doxyref{}{p.}{class_s_e_open_g_l_point_light_abf5e5065c48c96ed1255336b0fdc80b2}, {\bf S\+E\+Open\+G\+L\+Spot\+Light} \doxyref{}{p.}{class_s_e_open_g_l_spot_light_ad7d0f55016e2056504aa881f79cbffea}, and {\bf S\+E\+Open\+G\+L\+Ambient\+Light} \doxyref{}{p.}{class_s_e_open_g_l_ambient_light_a6e63048ab7e69167acbb2d935313a21e}.
+
+\index{S\+E\+Open\+G\+L\+Light@{S\+E\+Open\+G\+L\+Light}!disable@{disable}}
+\index{disable@{disable}!S\+E\+Open\+G\+L\+Light@{S\+E\+Open\+G\+L\+Light}}
+\subsubsection[{disable}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+E\+Open\+G\+L\+Light\+::disable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_e_open_g_l_light_ad7bd2c2f5a22f7f52c3f54906bcd25c6}
+
+
+Implements {\bf S\+E\+Light$<$ G\+Lfloat $>$} \doxyref{}{p.}{class_s_e_light_a047d546a066265f69e32b32f687abefb}.
+
+
+
+Definition at line 32 of file S\+E\+Open\+G\+L\+Light.\+h.
+
+\index{S\+E\+Open\+G\+L\+Light@{S\+E\+Open\+G\+L\+Light}!draw@{draw}}
+\index{draw@{draw}!S\+E\+Open\+G\+L\+Light@{S\+E\+Open\+G\+L\+Light}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+E\+Open\+G\+L\+Light\+::draw (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Render\+Service\+Internals}$<$ G\+Lfloat $>$ \&}]{rs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_e_open_g_l_light_a77403a85acb84ee2b9ff99fa8e8c8a3a}
+
+
+Implements {\bf S\+E\+Render\+Object$<$ G\+Lfloat $>$} \doxyref{}{p.}{class_s_e_render_object_ada90777323e2bf2eced8a18c8d3d3494}.
+
+
+
+Definition at line 26 of file S\+E\+Open\+G\+L\+Light.\+h.
+
+\index{S\+E\+Open\+G\+L\+Light@{S\+E\+Open\+G\+L\+Light}!enable@{enable}}
+\index{enable@{enable}!S\+E\+Open\+G\+L\+Light@{S\+E\+Open\+G\+L\+Light}}
+\subsubsection[{enable}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+E\+Open\+G\+L\+Light\+::enable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_e_open_g_l_light_af811c2a989cdc70e287042bca118b57d}
+
+
+Implements {\bf S\+E\+Light$<$ G\+Lfloat $>$} \doxyref{}{p.}{class_s_e_light_ae8035cbcabf3c3aa893befdb588d1694}.
+
+
+
+Definition at line 31 of file S\+E\+Open\+G\+L\+Light.\+h.
+
+\index{S\+E\+Open\+G\+L\+Light@{S\+E\+Open\+G\+L\+Light}!get\+Next\+Index@{get\+Next\+Index}}
+\index{get\+Next\+Index@{get\+Next\+Index}!S\+E\+Open\+G\+L\+Light@{S\+E\+Open\+G\+L\+Light}}
+\subsubsection[{get\+Next\+Index}]{\setlength{\rightskip}{0pt plus 5cm}static G\+Lenum S\+E\+Open\+G\+L\+Light\+::get\+Next\+Index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}\label{class_s_e_open_g_l_light_a2130ed584f0eaf7600dd078aa12cc7c5}
+
+
+Definition at line 39 of file S\+E\+Open\+G\+L\+Light.\+h.
+
+\index{S\+E\+Open\+G\+L\+Light@{S\+E\+Open\+G\+L\+Light}!render@{render}}
+\index{render@{render}!S\+E\+Open\+G\+L\+Light@{S\+E\+Open\+G\+L\+Light}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+E\+Open\+G\+L\+Light\+::render (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Render\+Service\+Internals}$<$ G\+Lfloat $>$ \&}]{rs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_e_open_g_l_light_a8bb329f03c565f6ee1618e21159f60e6}
+
+
+Reimplemented from {\bf S\+E\+Render\+Object$<$ G\+Lfloat $>$} \doxyref{}{p.}{class_s_e_render_object_a1b06ec6905e7a98ebce4b8e72d82753c}.
+
+
+
+Reimplemented in {\bf S\+E\+Open\+G\+L\+Directional\+Light} \doxyref{}{p.}{class_s_e_open_g_l_directional_light_a0a53f5bc4c1941570f7c0ea11ceee9f4}, and {\bf S\+E\+Open\+G\+L\+Ambient\+Light} \doxyref{}{p.}{class_s_e_open_g_l_ambient_light_a3908c74a4b8ab48a26ee8bfa5f36d05b}.
+
+
+
+Definition at line 22 of file S\+E\+Open\+G\+L\+Light.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_e_open_g_l_light_a8bb329f03c565f6ee1618e21159f60e6_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{S\+E\+Open\+G\+L\+Light@{S\+E\+Open\+G\+L\+Light}!gl\+Index@{gl\+Index}}
+\index{gl\+Index@{gl\+Index}!S\+E\+Open\+G\+L\+Light@{S\+E\+Open\+G\+L\+Light}}
+\subsubsection[{gl\+Index}]{\setlength{\rightskip}{0pt plus 5cm}const G\+Lenum\& S\+E\+Open\+G\+L\+Light\+::gl\+Index}\label{class_s_e_open_g_l_light_a0253d56f799544bea63cbfaac93b211a}
+
+
+Definition at line 20 of file S\+E\+Open\+G\+L\+Light.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Open\+G\+L\+Light.\+h}\item 
+{\bf S\+E\+Open\+G\+L\+Light.\+cpp}\end{DoxyCompactItemize}

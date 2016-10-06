@@ -1,0 +1,169 @@
+\section{main.\+cpp File Reference}
+\label{src_2main_8cpp}\index{main.\+cpp@{main.\+cpp}}
+{\ttfamily \#include \char`\"{}../inc/\+S\+E\+Math.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$iomanip$>$}\\*
+Include dependency graph for src/main.cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{src_2main_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf S\+E\+\_\+\+P\+R\+E\+C\+I\+S\+I\+O\+N}~float
+\item 
+\#define {\bf N\+U\+M\+\_\+\+L\+O\+O\+P\+S}~1000000
+\item 
+\#define {\bf S\+E\+E\+D}~9999
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf main} (int argc, char $\ast$argv[$\,$])
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{src/main.\+cpp@{src/main.\+cpp}!N\+U\+M\+\_\+\+L\+O\+O\+P\+S@{N\+U\+M\+\_\+\+L\+O\+O\+P\+S}}
+\index{N\+U\+M\+\_\+\+L\+O\+O\+P\+S@{N\+U\+M\+\_\+\+L\+O\+O\+P\+S}!src/main.\+cpp@{src/main.\+cpp}}
+\subsubsection[{N\+U\+M\+\_\+\+L\+O\+O\+P\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+U\+M\+\_\+\+L\+O\+O\+P\+S~1000000}\label{src_2main_8cpp_ae5301d7305b7b25a73685c7019aca33d}
+
+
+Definition at line 8 of file src/main.\+cpp.
+
+\index{src/main.\+cpp@{src/main.\+cpp}!S\+E\+\_\+\+P\+R\+E\+C\+I\+S\+I\+O\+N@{S\+E\+\_\+\+P\+R\+E\+C\+I\+S\+I\+O\+N}}
+\index{S\+E\+\_\+\+P\+R\+E\+C\+I\+S\+I\+O\+N@{S\+E\+\_\+\+P\+R\+E\+C\+I\+S\+I\+O\+N}!src/main.\+cpp@{src/main.\+cpp}}
+\subsubsection[{S\+E\+\_\+\+P\+R\+E\+C\+I\+S\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+E\+\_\+\+P\+R\+E\+C\+I\+S\+I\+O\+N~float}\label{src_2main_8cpp_a17f274aae2053d5378056c375e9df64e}
+
+
+Definition at line 7 of file src/main.\+cpp.
+
+\index{src/main.\+cpp@{src/main.\+cpp}!S\+E\+E\+D@{S\+E\+E\+D}}
+\index{S\+E\+E\+D@{S\+E\+E\+D}!src/main.\+cpp@{src/main.\+cpp}}
+\subsubsection[{S\+E\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+E\+E\+D~9999}\label{src_2main_8cpp_ad350bae49f72ba58d73027f1316e38b8}
+
+
+Definition at line 10 of file src/main.\+cpp.
+
+
+
+\subsection{Function Documentation}
+\index{src/main.\+cpp@{src/main.\+cpp}!main@{main}}
+\index{main@{main}!src/main.\+cpp@{src/main.\+cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv[$\,$]}
+\end{DoxyParamCaption}
+)}\label{src_2main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}
+/ std\+::cout$<$$<$ \char`\"{}\+Iniciando calculo de transposicoes de matrizes ....\char`\"{}; quant=0; tf = clock() + interval; do \{ m[i].transpose(); ++quant; \} while (clock() $<$ tf); std\+::cout$<$$<$ \char`\"{} completou \char`\"{} $<$$<$ quant $<$$<$ \char`\"{} transposicoes em 16.\+66 milissegundos.\char`\"{} $<$$<$ std\+::endl;
+
+/$\ast$$\ast$ / std\+::cout$<$$<$ \char`\"{}\+Iniciando calculo de \char`\"{} $<$$<$ N\+U\+M\+\_\+\+L\+O\+O\+P\+S $<$$<$ \char`\"{} transposicoes de matrizes ....\char`\"{}; cr.\+start(); for (unsigned int i=0;i$<$N\+U\+M\+\_\+\+L\+O\+O\+P\+S;++i) m[i].transpose(); cr.\+stop(); std\+::cout$<$$<$ \char`\"{} completou em \char`\"{} $<$$<$ cr.\+read() $<$$<$ \char`\"{} milissegundos.\char`\"{} $<$$<$ std\+::endl;
+
+std\+::cout$<$$<$ std\+::setiosflags(std\+::ios\+::fixed) $<$$<$ std\+::setprecision(2); /$\ast$$\ast$ / std\+::cout$<$$<$ \char`\"{}\+Gerando array de quaternions....\char`\"{};
+
+for (unsigned int i=0;i$<$N\+U\+M\+\_\+\+L\+O\+O\+P\+S;++i) q[i] = S\+E\+Quaternion$<$\+S\+E\+\_\+\+P\+R\+E\+C\+I\+S\+I\+O\+N$>$(rng.\+next(0.\+0f, 2.\+0f)$\ast$\+S\+E\+Math\+Util$<$\+S\+E\+\_\+\+P\+R\+E\+C\+I\+S\+I\+O\+N$>$\+::\+P\+I, rng.\+next(), rng.\+next(), rng.\+next());
+
+std\+::cout$<$$<$ \char`\"{} pronto!\char`\"{} $<$$<$ std\+::endl; std\+::cout$<$$<$ \char`\"{}\+Gerando array de vetores....\char`\"{};
+
+for (int i=0;i$<$N\+U\+M\+\_\+\+L\+O\+O\+P\+S;++i) v[i] = S\+E\+Vec3$<$\+S\+E\+\_\+\+P\+R\+E\+C\+I\+S\+I\+O\+N$>$(rng.\+next(), rng.\+next(), rng.\+next());
+
+std\+::cout$<$$<$ \char`\"{} pronto!\char`\"{} $<$$<$ std\+::endl; std\+::cout$<$$<$ std\+::endl;
+
+S\+E\+Vec3$<$\+S\+E\+\_\+\+P\+R\+E\+C\+I\+S\+I\+O\+N$>$ va, vb;
+
+std\+::cout$<$$<$ \char`\"{}\+Iniciando calculo de \char`\"{} $<$$<$ numcalcs $<$$<$ \char`\"{} multiplicacoes de quaternion por vetor ....\char`\"{}; equals=inequals=0; cr.\+start(); for (unsigned int i=0;i$<$N\+U\+M\+\_\+\+L\+O\+O\+P\+S;++i) for (unsigned int j=0;j$<$N\+U\+M\+\_\+\+L\+O\+O\+P\+S;++j) \{ std\+::cout $<$$<$ q[i].lmatmult(v[j]) $<$$<$ std\+::endl; va = q[i].lmatmult(v[j]); vb = q[i]$\ast$v[j]; if (va==vb) equals++; else inequals++; \} cr.\+stop(); std\+::cout$<$$<$ \char`\"{} completou em \char`\"{} $<$$<$ cr.\+read() $<$$<$ \char`\"{} milissegundos.\char`\"{} $<$$<$ std\+::endl; std\+::cout$<$$<$ \char`\"{}\+Resultados convergentes\+: \char`\"{} $<$$<$ equals $<$$<$ \char`\"{}; resultados divergentes\+: \char`\"{} $<$$<$ inequals $<$$<$ std\+::endl;
+
+std\+::cout$<$$<$ std\+::endl;
+
+std\+::cout$<$$<$ \char`\"{}\+Iniciando calculo de \char`\"{} $<$$<$ numcalcs $<$$<$ \char`\"{} multiplicacoes de vetor por quaternion ....\char`\"{}; equals=inequals=0; cr.\+start(); for (unsigned int i=0;i$<$N\+U\+M\+\_\+\+L\+O\+O\+P\+S;++i) for (unsigned int j=0;j$<$N\+U\+M\+\_\+\+L\+O\+O\+P\+S;++j) \{ std\+::cout $<$$<$ q[i].quickmult(v[j]) $<$$<$ std\+::endl; va = q[i].rmatmult(v[j]); vb = v[j]$\ast$q[i]; if (va==vb) equals++; else inequals++; \} cr.\+stop(); std\+::cout$<$$<$ \char`\"{} completou em \char`\"{} $<$$<$ cr.\+read() $<$$<$ \char`\"{} milissegundos.\char`\"{} $<$$<$ std\+::endl; std\+::cout$<$$<$ \char`\"{}\+Resultados convergentes\+: \char`\"{} $<$$<$ equals $<$$<$ \char`\"{}; resultados divergentes\+: \char`\"{} $<$$<$ inequals $<$$<$ std\+::endl; /$\ast$ / std\+::cout$<$$<$ \char`\"{}\+Iniciando calculo de \char`\"{} $<$$<$ numcalcs $<$$<$ \char`\"{} multiplicacoes de quaternion por vetor usando operador $\ast$ ....\char`\"{}; cr.\+start(); for (unsigned int i=0;i$<$N\+U\+M\+\_\+\+L\+O\+O\+P\+S;++i) for (unsigned int j=0;j$<$N\+U\+M\+\_\+\+L\+O\+O\+P\+S;++j) std\+::cout $<$$<$ q[i]$\ast$v[j] $<$$<$ std\+::endl; q[i]$\ast$v[j]; cr.\+stop(); std\+::cout$<$$<$ \char`\"{} completou em \char`\"{} $<$$<$ cr.\+read() $<$$<$ \char`\"{} milissegundos.\char`\"{} $<$$<$ std\+::endl;
+
+std\+::cout$<$$<$ std\+::endl;
+
+std\+::cout$<$$<$ \char`\"{}\+Iniciando calculo de \char`\"{} $<$$<$ numcalcs $<$$<$ \char`\"{} multiplicacoes de quaternion por vetor usando lmatmult() ....\char`\"{}; cr.\+start(); for (unsigned int i=0;i$<$N\+U\+M\+\_\+\+L\+O\+O\+P\+S;++i) for (unsigned int j=0;j$<$N\+U\+M\+\_\+\+L\+O\+O\+P\+S;++j) std\+::cout $<$$<$ q[i].lmatmult(v[j]) $<$$<$ std\+::endl; q[i].lmatmult(v[j]); cr.\+stop(); std\+::cout$<$$<$ \char`\"{} completou em \char`\"{} $<$$<$ cr.\+read() $<$$<$ \char`\"{} milissegundos.\char`\"{} $<$$<$ std\+::endl;
+
+std\+::cout$<$$<$ std\+::endl;
+
+std\+::cout$<$$<$ \char`\"{}\+Iniciando calculo de \char`\"{} $<$$<$ numcalcs $<$$<$ \char`\"{} multiplicacoes de quaternion por vetor usando quickmult() ....\char`\"{}; cr.\+start(); for (unsigned int i=0;i$<$N\+U\+M\+\_\+\+L\+O\+O\+P\+S;++i) for (unsigned int j=0;j$<$N\+U\+M\+\_\+\+L\+O\+O\+P\+S;++j) std\+::cout $<$$<$ q[i].quickmult(v[j]) $<$$<$ std\+::endl; q[i].quickmult(v[j]); cr.\+stop(); std\+::cout$<$$<$ \char`\"{} completou em \char`\"{} $<$$<$ cr.\+read() $<$$<$ \char`\"{} milissegundos.\char`\"{} $<$$<$ std\+::endl; /$\ast$ / S\+E\+Vec3d v(0,1,0);
+
+std\+::cout$<$$<$ std\+::setiosflags(std\+::ios\+::fixed) $<$$<$ std\+::setprecision(2) $<$$<$ \char`\"{}\+Posicao inicial do vetor v\+: \char`\"{} $<$$<$ S\+E\+Vec3d(v) $<$$<$ std\+::endl $<$$<$ \char`\"{}$\vert$v$\vert$ = \char`\"{} $<$$<$ S\+E\+Vec3d(v).len() $<$$<$ std\+::endl $<$$<$ std\+::endl;
+
+S\+E\+Quaterniond q = S\+E\+Math\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+Nd;
+
+std\+::cout$<$$<$ std\+::setiosflags(std\+::ios\+::fixed) $<$$<$ std\+::setprecision(2) $<$$<$ \char`\"{}\+Estado inicial do quaternion q\+: \char`\"{} $<$$<$ q $<$$<$ std\+::endl $<$$<$ \char`\"{}\+Angulo=\char`\"{} $<$$<$ q.\+angle() $<$$<$ \char`\"{}; Eixo=\char`\"{} $<$$<$ q.\+axis() $<$$<$ std\+::endl $<$$<$ std\+::endl;
+
+q.\+rotate\+By\+Degrees\+In\+Z(90);
+
+std\+::cout$<$$<$ std\+::setiosflags(std\+::ios\+::fixed) $<$$<$ std\+::setprecision(2) $<$$<$ \char`\"{}\+Estado do quaternion q apos rotacao (90 graus em Z)\+: \char`\"{} $<$$<$ q $<$$<$ std\+::endl $<$$<$ \char`\"{}\+Angulo=\char`\"{} $<$$<$ q.\+angle() $<$$<$ \char`\"{}; Eixo=\char`\"{} $<$$<$ q.\+axis() $<$$<$ std\+::endl $<$$<$ std\+::endl;
+
+std\+::cout$<$$<$ std\+::setiosflags(std\+::ios\+::fixed) $<$$<$ std\+::setprecision(2) $<$$<$ \char`\"{}v $\ast$ q\+: \char`\"{} $<$$<$ std\+::endl $<$$<$ v$\ast$q $<$$<$ std\+::endl $<$$<$ \char`\"{}$\vert$v$\ast$q$\vert$ = \char`\"{} $<$$<$ (v$\ast$q).len() $<$$<$ std\+::endl $<$$<$ std\+::endl; std\+::cout$<$$<$ std\+::setiosflags(std\+::ios\+::fixed) $<$$<$ std\+::setprecision(2) $<$$<$ \char`\"{}q $\ast$ v\+: \char`\"{} $<$$<$ std\+::endl $<$$<$ q$\ast$v $<$$<$ std\+::endl $<$$<$ \char`\"{}$\vert$q$\ast$v$\vert$ = \char`\"{} $<$$<$ (q$\ast$v).len() $<$$<$ std\+::endl $<$$<$ std\+::endl;
+
+q.\+rotate\+By\+Degrees\+In\+X(45);
+
+std\+::cout$<$$<$ std\+::setiosflags(std\+::ios\+::fixed) $<$$<$ std\+::setprecision(2) $<$$<$ \char`\"{}\+Estado do quaternion q apos nova rotacao (45 graus em X)\+: \char`\"{} $<$$<$ q $<$$<$ std\+::endl $<$$<$ \char`\"{}\+Angulo=\char`\"{} $<$$<$ q.\+angle() $<$$<$ \char`\"{}; Eixo=\char`\"{} $<$$<$ q.\+axis() $<$$<$ std\+::endl $<$$<$ std\+::endl;
+
+std\+::cout$<$$<$ std\+::setiosflags(std\+::ios\+::fixed) $<$$<$ std\+::setprecision(2) $<$$<$ \char`\"{}v $\ast$ q\+: \char`\"{} $<$$<$ std\+::endl $<$$<$ v$\ast$q $<$$<$ std\+::endl $<$$<$ \char`\"{}$\vert$v$\ast$q$\vert$ = \char`\"{} $<$$<$ (v$\ast$q).len() $<$$<$ std\+::endl $<$$<$ std\+::endl; std\+::cout$<$$<$ std\+::setiosflags(std\+::ios\+::fixed) $<$$<$ std\+::setprecision(2) $<$$<$ \char`\"{}q $\ast$ v\+: \char`\"{} $<$$<$ std\+::endl $<$$<$ q$\ast$v $<$$<$ std\+::endl $<$$<$ \char`\"{}$\vert$q$\ast$v$\vert$ = \char`\"{} $<$$<$ (q$\ast$v).len() $<$$<$ std\+::endl $<$$<$ std\+::endl;
+
+q.\+rotate\+By\+Degrees\+In\+Z(-\/90);
+
+std\+::cout$<$$<$ std\+::setiosflags(std\+::ios\+::fixed) $<$$<$ std\+::setprecision(2) $<$$<$ \char`\"{}\+Estado do quaternion q apos nova rotacao (-\/90 graus em Z)\+: \char`\"{} $<$$<$ q $<$$<$ std\+::endl $<$$<$ \char`\"{}\+Angulo=\char`\"{} $<$$<$ q.\+angle() $<$$<$ \char`\"{}; Eixo=\char`\"{} $<$$<$ q.\+axis() $<$$<$ std\+::endl $<$$<$ std\+::endl;
+
+std\+::cout$<$$<$ std\+::setiosflags(std\+::ios\+::fixed) $<$$<$ std\+::setprecision(2) $<$$<$ \char`\"{}v $\ast$ q\+: \char`\"{} $<$$<$ std\+::endl $<$$<$ v$\ast$q $<$$<$ std\+::endl $<$$<$ \char`\"{}$\vert$v$\ast$q$\vert$ = \char`\"{} $<$$<$ (v$\ast$q).len() $<$$<$ std\+::endl $<$$<$ std\+::endl; std\+::cout$<$$<$ std\+::setiosflags(std\+::ios\+::fixed) $<$$<$ std\+::setprecision(2) $<$$<$ \char`\"{}q $\ast$ v\+: \char`\"{} $<$$<$ std\+::endl $<$$<$ q$\ast$v $<$$<$ std\+::endl $<$$<$ \char`\"{}$\vert$q$\ast$v$\vert$ = \char`\"{} $<$$<$ (q$\ast$v).len() $<$$<$ std\+::endl $<$$<$ std\+::endl;
+
+q.\+rotate\+By\+Degrees\+In\+X(-\/45);
+
+std\+::cout$<$$<$ std\+::setiosflags(std\+::ios\+::fixed) $<$$<$ std\+::setprecision(2) $<$$<$ \char`\"{}\+Estado do quaternion q apos nova rotacao (-\/45 graus em X)\+: \char`\"{} $<$$<$ q $<$$<$ std\+::endl $<$$<$ \char`\"{}\+Angulo=\char`\"{} $<$$<$ q.\+angle() $<$$<$ \char`\"{}; Eixo=\char`\"{} $<$$<$ q.\+axis() $<$$<$ std\+::endl $<$$<$ std\+::endl;
+
+std\+::cout$<$$<$ std\+::setiosflags(std\+::ios\+::fixed) $<$$<$ std\+::setprecision(2) $<$$<$ \char`\"{}v $\ast$ q\+: \char`\"{} $<$$<$ std\+::endl $<$$<$ v$\ast$q $<$$<$ std\+::endl $<$$<$ \char`\"{}$\vert$v$\ast$q$\vert$ = \char`\"{} $<$$<$ (v$\ast$q).len() $<$$<$ std\+::endl $<$$<$ std\+::endl; std\+::cout$<$$<$ std\+::setiosflags(std\+::ios\+::fixed) $<$$<$ std\+::setprecision(2) $<$$<$ \char`\"{}q $\ast$ v\+: \char`\"{} $<$$<$ std\+::endl $<$$<$ q$\ast$v $<$$<$ std\+::endl $<$$<$ \char`\"{}$\vert$q$\ast$v$\vert$ = \char`\"{} $<$$<$ (q$\ast$v).len() $<$$<$ std\+::endl $<$$<$ std\+::endl; /
+
+S\+E\+Vec3f p(0,1,0); S\+E\+Quaternionf q, q0(S\+E\+Math\+::\+P\+I$\ast$0.25,0,0,1), q1(S\+E\+Math\+::\+P\+I$\ast$-\/0.25,1,0,0); \begin{DoxyVerb}SEQuaternionf q, q0, q1;
+
+q0.grotateByDegreesInZ(45); q0.grotateByDegreesInX(-45);
+
+q1.rotateByDegreesInZ(-45); q1.grotateByDegreesInY(90);
+
+std::cout << std::setiosflags(std::ios::fixed) << std::setprecision(2);
+
+std::cout << std::endl;
+std::cout << "Ponto inicial p=" << p << std::endl;
+std::cout << std::endl;
+std::cout << "Rotacao inicial q0=" << q0 << " (theta=" << q0.angle() << ", eixo=" << q0.axis() << ")" << std::endl;
+std::cout << "Rotacao final q1=" << q1 << " (theta=" << q1.angle() << ", eixo=" << q1.axis() << ")" << std::endl;
+std::cout << std::endl;
+std::cout << "q0*p=" << q0*p /*<< "; p*q0=" << p*q0* / << std::endl;
+std::cout << "q0.quickmult(p)=" << q0.quickmult(p) << std::endl;
+std::cout << std::endl;
+std::cout << "q1*p=" << q1*p /*<< "; p*q0=" << p*q0* / << std::endl;
+std::cout << "q1.quickmult(p)=" << q1.quickmult(p) << std::endl;
+std::cout << std::endl;
+/*
+std::cout << std::endl;
+std::cout << "Ponto inicial p=" << p << std::endl;
+std::cout << std::endl;
+std::cout << "Rotacao inicial q0=" << q0 << " (theta=" << q0.angle() << ", eixo=" << q0.axis() << ")" << std::endl;
+std::cout << "Rotacao final q1=" << q1 << " (theta=" << q1.angle() << ", eixo=" << q1.axis() << ")" << std::endl;
+std::cout << std::endl;
+std::cout << "q0*p=" << q0*p /*<< "; p*q0=" << p*q0* / << std::endl;
+std::cout << std::endl;
+\end{DoxyVerb}
+
+
+Definition at line 13 of file src/main.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{src_2main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}
+
+

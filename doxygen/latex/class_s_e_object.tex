@@ -1,0 +1,312 @@
+\section{S\+E\+Object Class Reference}
+\label{class_s_e_object}\index{S\+E\+Object@{S\+E\+Object}}
+
+
+{\ttfamily \#include $<$S\+E\+Object.\+h$>$}
+
+
+
+Inheritance diagram for S\+E\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{class_s_e_object__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for S\+E\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{class_s_e_object__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ uint32\+\_\+t, {\bf S\+E\+Object} $\ast$ $>$ {\bf t\+Object\+Map}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const {\bf S\+E\+Object} $\ast$ {\bf get\+Const\+Ptr} () const 
+\item 
+{\bf S\+E\+Object} $\ast$ {\bf get\+Ptr} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const {\bf S\+E\+Object\+Name} \& {\bf name}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Object} ()
+\item 
+{\bf S\+E\+Object} (const std\+::string \&n)
+\item 
+{\bf $\sim$\+S\+E\+Object} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void {\bf register\+Object} ({\bf S\+E\+Object} $\ast$o)
+\item 
+static void {\bf unregister\+Object} (const {\bf S\+E\+Object} $\ast$o)
+\item 
+static {\bf S\+E\+Object} $\ast$ {\bf get\+Object\+By\+Name} (const std\+::string \&n)
+\item 
+static {\bf S\+E\+Object} $\ast$ {\bf get\+Object\+By\+Code} (uint32\+\_\+t c)
+\item 
+static bool {\bf object\+Exists} (const std\+::string \&n)
+\item 
+static bool {\bf object\+Exists} (uint32\+\_\+t c)
+\item 
+static int {\bf active\+Object\+Count} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 38 of file S\+E\+Object.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\index{S\+E\+Object@{S\+E\+Object}!t\+Object\+Map@{t\+Object\+Map}}
+\index{t\+Object\+Map@{t\+Object\+Map}!S\+E\+Object@{S\+E\+Object}}
+\subsubsection[{t\+Object\+Map}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<$uint32\+\_\+t, {\bf S\+E\+Object}$\ast$$>$ {\bf S\+E\+Object\+::t\+Object\+Map}}\label{class_s_e_object_a9cf6ec75c73446eeb644fa621f91d788}
+
+
+Definition at line 40 of file S\+E\+Object.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{S\+E\+Object@{S\+E\+Object}!S\+E\+Object@{S\+E\+Object}}
+\index{S\+E\+Object@{S\+E\+Object}!S\+E\+Object@{S\+E\+Object}}
+\subsubsection[{S\+E\+Object}]{\setlength{\rightskip}{0pt plus 5cm}S\+E\+Object\+::\+S\+E\+Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_s_e_object_aecad7fe3009548c616239b5f7c3a223c}
+
+
+Definition at line 48 of file S\+E\+Object.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{class_s_e_object_aecad7fe3009548c616239b5f7c3a223c_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+Object@{S\+E\+Object}!S\+E\+Object@{S\+E\+Object}}
+\index{S\+E\+Object@{S\+E\+Object}!S\+E\+Object@{S\+E\+Object}}
+\subsubsection[{S\+E\+Object}]{\setlength{\rightskip}{0pt plus 5cm}S\+E\+Object\+::\+S\+E\+Object (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_s_e_object_aa5b9701bbed852bb078f601db2cb0e2b}
+
+
+Definition at line 49 of file S\+E\+Object.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{class_s_e_object_aa5b9701bbed852bb078f601db2cb0e2b_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+Object@{S\+E\+Object}!````~S\+E\+Object@{$\sim$\+S\+E\+Object}}
+\index{````~S\+E\+Object@{$\sim$\+S\+E\+Object}!S\+E\+Object@{S\+E\+Object}}
+\subsubsection[{$\sim$\+S\+E\+Object}]{\setlength{\rightskip}{0pt plus 5cm}S\+E\+Object\+::$\sim$\+S\+E\+Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_s_e_object_a1bb460e0950b9a1b7f4034663532585f}
+
+
+Definition at line 50 of file S\+E\+Object.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_e_object_a1bb460e0950b9a1b7f4034663532585f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{S\+E\+Object@{S\+E\+Object}!active\+Object\+Count@{active\+Object\+Count}}
+\index{active\+Object\+Count@{active\+Object\+Count}!S\+E\+Object@{S\+E\+Object}}
+\subsubsection[{active\+Object\+Count}]{\setlength{\rightskip}{0pt plus 5cm}static int S\+E\+Object\+::active\+Object\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}\label{class_s_e_object_ae19e4cf6d6b9cea598310e0f82a9f9ce}
+
+
+Definition at line 61 of file S\+E\+Object.\+h.
+
+\index{S\+E\+Object@{S\+E\+Object}!get\+Const\+Ptr@{get\+Const\+Ptr}}
+\index{get\+Const\+Ptr@{get\+Const\+Ptr}!S\+E\+Object@{S\+E\+Object}}
+\subsubsection[{get\+Const\+Ptr}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf S\+E\+Object}$\ast$ S\+E\+Object\+::get\+Const\+Ptr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_object_ac686040f21f7e563eed2676eb81ff5a6}
+
+
+Definition at line 44 of file S\+E\+Object.\+h.
+
+\index{S\+E\+Object@{S\+E\+Object}!get\+Object\+By\+Code@{get\+Object\+By\+Code}}
+\index{get\+Object\+By\+Code@{get\+Object\+By\+Code}!S\+E\+Object@{S\+E\+Object}}
+\subsubsection[{get\+Object\+By\+Code}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf S\+E\+Object}$\ast$ S\+E\+Object\+::get\+Object\+By\+Code (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}\label{class_s_e_object_a1cb32ecbd984610115f5d47459dedd37}
+
+
+Definition at line 56 of file S\+E\+Object.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_e_object_a1cb32ecbd984610115f5d47459dedd37_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+Object@{S\+E\+Object}!get\+Object\+By\+Name@{get\+Object\+By\+Name}}
+\index{get\+Object\+By\+Name@{get\+Object\+By\+Name}!S\+E\+Object@{S\+E\+Object}}
+\subsubsection[{get\+Object\+By\+Name}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf S\+E\+Object}$\ast$ S\+E\+Object\+::get\+Object\+By\+Name (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}\label{class_s_e_object_a1379559a6daee3cbb2d1f88ec2ee93a6}
+
+
+Definition at line 55 of file S\+E\+Object.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_e_object_a1379559a6daee3cbb2d1f88ec2ee93a6_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+Object@{S\+E\+Object}!get\+Ptr@{get\+Ptr}}
+\index{get\+Ptr@{get\+Ptr}!S\+E\+Object@{S\+E\+Object}}
+\subsubsection[{get\+Ptr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+E\+Object}$\ast$ S\+E\+Object\+::get\+Ptr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_object_abc4b89884006f02ab240c3cf6ae1b07c}
+
+
+Definition at line 45 of file S\+E\+Object.\+h.
+
+\index{S\+E\+Object@{S\+E\+Object}!object\+Exists@{object\+Exists}}
+\index{object\+Exists@{object\+Exists}!S\+E\+Object@{S\+E\+Object}}
+\subsubsection[{object\+Exists}]{\setlength{\rightskip}{0pt plus 5cm}static bool S\+E\+Object\+::object\+Exists (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}\label{class_s_e_object_a27fb79376da572748ad8f1f09c03eab7}
+
+
+Definition at line 58 of file S\+E\+Object.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_e_object_a27fb79376da572748ad8f1f09c03eab7_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+Object@{S\+E\+Object}!object\+Exists@{object\+Exists}}
+\index{object\+Exists@{object\+Exists}!S\+E\+Object@{S\+E\+Object}}
+\subsubsection[{object\+Exists}]{\setlength{\rightskip}{0pt plus 5cm}static bool S\+E\+Object\+::object\+Exists (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}\label{class_s_e_object_ae6153c4026fe3d6f85005595f4a96854}
+
+
+Definition at line 59 of file S\+E\+Object.\+h.
+
+\index{S\+E\+Object@{S\+E\+Object}!register\+Object@{register\+Object}}
+\index{register\+Object@{register\+Object}!S\+E\+Object@{S\+E\+Object}}
+\subsubsection[{register\+Object}]{\setlength{\rightskip}{0pt plus 5cm}static void S\+E\+Object\+::register\+Object (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+Object} $\ast$}]{o}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}\label{class_s_e_object_a944dbaa00c52417345f40b841dfb1754}
+
+
+Definition at line 52 of file S\+E\+Object.\+h.
+
+\index{S\+E\+Object@{S\+E\+Object}!unregister\+Object@{unregister\+Object}}
+\index{unregister\+Object@{unregister\+Object}!S\+E\+Object@{S\+E\+Object}}
+\subsubsection[{unregister\+Object}]{\setlength{\rightskip}{0pt plus 5cm}static void S\+E\+Object\+::unregister\+Object (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Object} $\ast$}]{o}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}\label{class_s_e_object_aa1bf21acd79796b3a61b2d5bfb759dd2}
+
+
+Definition at line 53 of file S\+E\+Object.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\index{S\+E\+Object@{S\+E\+Object}!name@{name}}
+\index{name@{name}!S\+E\+Object@{S\+E\+Object}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf S\+E\+Object\+Name}\& S\+E\+Object\+::name}\label{class_s_e_object_af3d46fab7ac5f69ce23162566cfaa95f}
+
+
+Definition at line 42 of file S\+E\+Object.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Object.\+h}\item 
+{\bf S\+E\+Object.\+cpp}\end{DoxyCompactItemize}

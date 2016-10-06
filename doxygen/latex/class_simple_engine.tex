@@ -1,0 +1,905 @@
+\section{Simple\+Engine Class Reference}
+\label{class_simple_engine}\index{Simple\+Engine@{Simple\+Engine}}
+
+
+{\ttfamily \#include $<$Simple\+Engine.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void {\bf startup} (int {\bf argc}, char $\ast$$\ast${\bf argv})
+\item 
+static void {\bf run\+App} ()
+\item 
+static void {\bf init} ()
+\item 
+static void {\bf quit} ()
+\item 
+static void {\bf reset} ()
+\item 
+static void {\bf quit\+Application} ()
+\item 
+static void {\bf load\+App} ({\bf S\+E\+Application\+Interface} $\ast${\bf app})
+\item 
+static void {\bf unload\+App} ()
+\item 
+static bool {\bf app\+Loaded} ()
+\item 
+static bool {\bf is\+App\+Loaded} ()
+\item 
+static {\bf S\+E\+Configuration\+Loader} $\ast$ {\bf cl} ()
+\item 
+static {\bf S\+E\+Configuration\+Loader} $\ast$ {\bf configuration\+Loader} ()
+\item 
+static {\bf S\+E\+Configuration\+Loader} $\ast$ {\bf get\+Configuration\+Loader} ()
+\item 
+static {\bf S\+E\+Service\+Locator} $\ast$ {\bf sl} ()
+\item 
+static {\bf S\+E\+Service\+Locator} $\ast$ {\bf service\+Locator} ()
+\item 
+static {\bf S\+E\+Service\+Locator} $\ast$ {\bf get\+Service\+Locator} ()
+\item 
+static {\bf S\+E\+Flow\+Controller} $\ast$ {\bf fc} ()
+\item 
+static {\bf S\+E\+Flow\+Controller} $\ast$ {\bf flow\+Controller} ()
+\item 
+static {\bf S\+E\+Flow\+Controller} $\ast$ {\bf get\+Flow\+Controller} ()
+\item 
+static {\bf S\+E\+Application\+Interface} $\ast$ {\bf app} ()
+\item 
+static {\bf S\+E\+Application\+Interface} $\ast$ {\bf application} ()
+\item 
+static {\bf S\+E\+Application\+Interface} $\ast$ {\bf get\+Application} ()
+\item 
+static {\bf S\+E\+Window\+Manager} $\ast$ {\bf wm} ()
+\item 
+static {\bf S\+E\+Window\+Manager} $\ast$ {\bf window\+Manager} ()
+\item 
+static {\bf S\+E\+Window\+Manager} $\ast$ {\bf get\+Window\+Manager} ()
+\item 
+static {\bf S\+E\+Render\+Service} $\ast$ {\bf rs} ()
+\item 
+static {\bf S\+E\+Render\+Service} $\ast$ {\bf render\+Service} ()
+\item 
+static {\bf S\+E\+Render\+Service} $\ast$ {\bf get\+Render\+Service} ()
+\item 
+static void {\bf reshape} (int width, int height)
+\item 
+static void {\bf display} ()
+\item 
+static void {\bf key} (unsigned char key, int x, int y)
+\item 
+static void {\bf press\+Func\+Key} (int {\bf key}, int x1, int y1)
+\item 
+static void {\bf release\+Func\+Key} (int {\bf key}, int x, int y)
+\item 
+static void {\bf mouse\+Motion} (int x, int y)
+\item 
+static void {\bf mouse\+Passive\+Motion} (int x, int y)
+\item 
+static void {\bf mouse\+Button} (int button, int state, int x, int y)
+\item 
+static void {\bf idle} ()
+\item 
+static int {\bf argc} ()
+\item 
+static char $\ast$$\ast$ {\bf argv} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 28 of file Simple\+Engine.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\index{Simple\+Engine@{Simple\+Engine}!app@{app}}
+\index{app@{app}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{app}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf S\+E\+Application\+Interface}$\ast$ Simple\+Engine\+::app (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_simple_engine_afd68cf105863ee439f621aee6bd37124}
+
+
+Definition at line 61 of file Simple\+Engine.\+h.
+
+\index{Simple\+Engine@{Simple\+Engine}!application@{application}}
+\index{application@{application}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{application}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf S\+E\+Application\+Interface}$\ast$ Simple\+Engine\+::application (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_simple_engine_ae06c16a13807ffce7ccab4b0fefa8284}
+
+
+Definition at line 62 of file Simple\+Engine.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{class_simple_engine_ae06c16a13807ffce7ccab4b0fefa8284_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Simple\+Engine@{Simple\+Engine}!app\+Loaded@{app\+Loaded}}
+\index{app\+Loaded@{app\+Loaded}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{app\+Loaded}]{\setlength{\rightskip}{0pt plus 5cm}static bool Simple\+Engine\+::app\+Loaded (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_simple_engine_a7de3fea4d892fee0f684367b674ef6b8}
+
+
+Definition at line 47 of file Simple\+Engine.\+h.
+
+\index{Simple\+Engine@{Simple\+Engine}!argc@{argc}}
+\index{argc@{argc}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{argc}]{\setlength{\rightskip}{0pt plus 5cm}static int Simple\+Engine\+::argc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_simple_engine_ad799023c4ee4a92683e731c8c5d3472a}
+Utilitários 
+
+Definition at line 85 of file Simple\+Engine.\+h.
+
+\index{Simple\+Engine@{Simple\+Engine}!argv@{argv}}
+\index{argv@{argv}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{argv}]{\setlength{\rightskip}{0pt plus 5cm}static char$\ast$$\ast$ Simple\+Engine\+::argv (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_simple_engine_a1b53d3740ccc3f97685d7e8146341684}
+
+
+Definition at line 86 of file Simple\+Engine.\+h.
+
+\index{Simple\+Engine@{Simple\+Engine}!cl@{cl}}
+\index{cl@{cl}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{cl}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf S\+E\+Configuration\+Loader}$\ast$ Simple\+Engine\+::cl (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_simple_engine_af22f819d76421451837767f7d177709e}
+Getters de módulos primários 
+
+Definition at line 51 of file Simple\+Engine.\+h.
+
+\index{Simple\+Engine@{Simple\+Engine}!configuration\+Loader@{configuration\+Loader}}
+\index{configuration\+Loader@{configuration\+Loader}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{configuration\+Loader}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf S\+E\+Configuration\+Loader}$\ast$ Simple\+Engine\+::configuration\+Loader (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_simple_engine_af150efa40d15d17aa350d809f6c52915}
+
+
+Definition at line 52 of file Simple\+Engine.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{class_simple_engine_af150efa40d15d17aa350d809f6c52915_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Simple\+Engine@{Simple\+Engine}!display@{display}}
+\index{display@{display}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{display}]{\setlength{\rightskip}{0pt plus 5cm}static void Simple\+Engine\+::display (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_simple_engine_a31fb5c8e94b9ae0adbd6f2546c1874df}
+
+
+Definition at line 75 of file Simple\+Engine.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simple_engine_a31fb5c8e94b9ae0adbd6f2546c1874df_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Simple\+Engine@{Simple\+Engine}!fc@{fc}}
+\index{fc@{fc}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{fc}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf S\+E\+Flow\+Controller}$\ast$ Simple\+Engine\+::fc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_simple_engine_a2983f7d47280302579cc25b01158c2f6}
+
+
+Definition at line 57 of file Simple\+Engine.\+h.
+
+\index{Simple\+Engine@{Simple\+Engine}!flow\+Controller@{flow\+Controller}}
+\index{flow\+Controller@{flow\+Controller}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{flow\+Controller}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf S\+E\+Flow\+Controller}$\ast$ Simple\+Engine\+::flow\+Controller (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_simple_engine_a30712258844eefbacb4ab83c55745ec7}
+
+
+Definition at line 58 of file Simple\+Engine.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{class_simple_engine_a30712258844eefbacb4ab83c55745ec7_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Simple\+Engine@{Simple\+Engine}!get\+Application@{get\+Application}}
+\index{get\+Application@{get\+Application}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{get\+Application}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf S\+E\+Application\+Interface}$\ast$ Simple\+Engine\+::get\+Application (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_simple_engine_a0e56e8db1cdc2d718cc748e89223a326}
+
+
+Definition at line 63 of file Simple\+Engine.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simple_engine_a0e56e8db1cdc2d718cc748e89223a326_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Simple\+Engine@{Simple\+Engine}!get\+Configuration\+Loader@{get\+Configuration\+Loader}}
+\index{get\+Configuration\+Loader@{get\+Configuration\+Loader}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{get\+Configuration\+Loader}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf S\+E\+Configuration\+Loader}$\ast$ Simple\+Engine\+::get\+Configuration\+Loader (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_simple_engine_a55049778bef553ebf9d799516f0c1360}
+
+
+Definition at line 53 of file Simple\+Engine.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simple_engine_a55049778bef553ebf9d799516f0c1360_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Simple\+Engine@{Simple\+Engine}!get\+Flow\+Controller@{get\+Flow\+Controller}}
+\index{get\+Flow\+Controller@{get\+Flow\+Controller}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{get\+Flow\+Controller}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf S\+E\+Flow\+Controller}$\ast$ Simple\+Engine\+::get\+Flow\+Controller (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_simple_engine_a9da00598c7e2998c89a644c90db35773}
+
+
+Definition at line 59 of file Simple\+Engine.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simple_engine_a9da00598c7e2998c89a644c90db35773_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Simple\+Engine@{Simple\+Engine}!get\+Render\+Service@{get\+Render\+Service}}
+\index{get\+Render\+Service@{get\+Render\+Service}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{get\+Render\+Service}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf S\+E\+Render\+Service}$\ast$ Simple\+Engine\+::get\+Render\+Service (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_simple_engine_a1579f93a6c3c50d974d0d0d0030ca537}
+
+
+Definition at line 71 of file Simple\+Engine.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simple_engine_a1579f93a6c3c50d974d0d0d0030ca537_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Simple\+Engine@{Simple\+Engine}!get\+Service\+Locator@{get\+Service\+Locator}}
+\index{get\+Service\+Locator@{get\+Service\+Locator}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{get\+Service\+Locator}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf S\+E\+Service\+Locator}$\ast$ Simple\+Engine\+::get\+Service\+Locator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_simple_engine_a49149d41106b56f834e4fa86f9178618}
+
+
+Definition at line 56 of file Simple\+Engine.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{class_simple_engine_a49149d41106b56f834e4fa86f9178618_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Simple\+Engine@{Simple\+Engine}!get\+Window\+Manager@{get\+Window\+Manager}}
+\index{get\+Window\+Manager@{get\+Window\+Manager}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{get\+Window\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf S\+E\+Window\+Manager}$\ast$ Simple\+Engine\+::get\+Window\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_simple_engine_adf5ebd987572fef2702a58997329c625}
+
+
+Definition at line 68 of file Simple\+Engine.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simple_engine_adf5ebd987572fef2702a58997329c625_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Simple\+Engine@{Simple\+Engine}!idle@{idle}}
+\index{idle@{idle}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{idle}]{\setlength{\rightskip}{0pt plus 5cm}static void Simple\+Engine\+::idle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_simple_engine_ac5bf2cf36f65e8fd7908a8d74edbb079}
+
+
+Definition at line 82 of file Simple\+Engine.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simple_engine_ac5bf2cf36f65e8fd7908a8d74edbb079_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Simple\+Engine@{Simple\+Engine}!init@{init}}
+\index{init@{init}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void Simple\+Engine\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_simple_engine_a2094e26b9e1654f26cb0ff4baf9ace8c}
+
+
+Definition at line 50 of file Simple\+Engine.\+cpp.
+
+\index{Simple\+Engine@{Simple\+Engine}!is\+App\+Loaded@{is\+App\+Loaded}}
+\index{is\+App\+Loaded@{is\+App\+Loaded}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{is\+App\+Loaded}]{\setlength{\rightskip}{0pt plus 5cm}static bool Simple\+Engine\+::is\+App\+Loaded (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_simple_engine_a12660368d7528dbcd5626378de8e3572}
+
+
+Definition at line 48 of file Simple\+Engine.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simple_engine_a12660368d7528dbcd5626378de8e3572_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Simple\+Engine@{Simple\+Engine}!key@{key}}
+\index{key@{key}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{key}]{\setlength{\rightskip}{0pt plus 5cm}static void Simple\+Engine\+::key (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{key, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_simple_engine_a06212650f45b3a8cbd38185d51d0abfa}
+
+
+Definition at line 76 of file Simple\+Engine.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simple_engine_a06212650f45b3a8cbd38185d51d0abfa_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Simple\+Engine@{Simple\+Engine}!load\+App@{load\+App}}
+\index{load\+App@{load\+App}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{load\+App}]{\setlength{\rightskip}{0pt plus 5cm}void Simple\+Engine\+::load\+App (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+Application\+Interface} $\ast$}]{app}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_simple_engine_a78dc29884605fbc044e37df4c21d287e}
+Carga e descarga de apps 
+
+Definition at line 27 of file Simple\+Engine.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simple_engine_a78dc29884605fbc044e37df4c21d287e_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Simple\+Engine@{Simple\+Engine}!mouse\+Button@{mouse\+Button}}
+\index{mouse\+Button@{mouse\+Button}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{mouse\+Button}]{\setlength{\rightskip}{0pt plus 5cm}static void Simple\+Engine\+::mouse\+Button (
+\begin{DoxyParamCaption}
+\item[{int}]{button, }
+\item[{int}]{state, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_simple_engine_aedf7b53b456ea92a6328b90af3d28886}
+
+
+Definition at line 81 of file Simple\+Engine.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simple_engine_aedf7b53b456ea92a6328b90af3d28886_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Simple\+Engine@{Simple\+Engine}!mouse\+Motion@{mouse\+Motion}}
+\index{mouse\+Motion@{mouse\+Motion}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{mouse\+Motion}]{\setlength{\rightskip}{0pt plus 5cm}static void Simple\+Engine\+::mouse\+Motion (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_simple_engine_aff7cd5cd00e61a84de72923efb04c5d3}
+
+
+Definition at line 79 of file Simple\+Engine.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simple_engine_aff7cd5cd00e61a84de72923efb04c5d3_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Simple\+Engine@{Simple\+Engine}!mouse\+Passive\+Motion@{mouse\+Passive\+Motion}}
+\index{mouse\+Passive\+Motion@{mouse\+Passive\+Motion}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{mouse\+Passive\+Motion}]{\setlength{\rightskip}{0pt plus 5cm}static void Simple\+Engine\+::mouse\+Passive\+Motion (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_simple_engine_a9111e4d761e0dba54a4791726d90abff}
+
+
+Definition at line 80 of file Simple\+Engine.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simple_engine_a9111e4d761e0dba54a4791726d90abff_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Simple\+Engine@{Simple\+Engine}!press\+Func\+Key@{press\+Func\+Key}}
+\index{press\+Func\+Key@{press\+Func\+Key}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{press\+Func\+Key}]{\setlength{\rightskip}{0pt plus 5cm}static void Simple\+Engine\+::press\+Func\+Key (
+\begin{DoxyParamCaption}
+\item[{int}]{key, }
+\item[{int}]{x1, }
+\item[{int}]{y1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_simple_engine_ab6886844ddb552cd2582c2be391e09e7}
+
+
+Definition at line 77 of file Simple\+Engine.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simple_engine_ab6886844ddb552cd2582c2be391e09e7_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Simple\+Engine@{Simple\+Engine}!quit@{quit}}
+\index{quit@{quit}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{quit}]{\setlength{\rightskip}{0pt plus 5cm}void Simple\+Engine\+::quit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_simple_engine_a47ffe1072c4d9352c711150d3f7a7444}
+
+
+Definition at line 56 of file Simple\+Engine.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{class_simple_engine_a47ffe1072c4d9352c711150d3f7a7444_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Simple\+Engine@{Simple\+Engine}!quit\+Application@{quit\+Application}}
+\index{quit\+Application@{quit\+Application}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{quit\+Application}]{\setlength{\rightskip}{0pt plus 5cm}void Simple\+Engine\+::quit\+Application (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_simple_engine_a20fffa4872abbd54a9f2087437c02608}
+
+
+Definition at line 76 of file Simple\+Engine.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simple_engine_a20fffa4872abbd54a9f2087437c02608_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Simple\+Engine@{Simple\+Engine}!release\+Func\+Key@{release\+Func\+Key}}
+\index{release\+Func\+Key@{release\+Func\+Key}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{release\+Func\+Key}]{\setlength{\rightskip}{0pt plus 5cm}static void Simple\+Engine\+::release\+Func\+Key (
+\begin{DoxyParamCaption}
+\item[{int}]{key, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_simple_engine_abaf795a1e415dc9f2451564aa214b02e}
+
+
+Definition at line 78 of file Simple\+Engine.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simple_engine_abaf795a1e415dc9f2451564aa214b02e_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Simple\+Engine@{Simple\+Engine}!render\+Service@{render\+Service}}
+\index{render\+Service@{render\+Service}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{render\+Service}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf S\+E\+Render\+Service}$\ast$ Simple\+Engine\+::render\+Service (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_simple_engine_a4a4bf937a7f7c637fea1abcbd091a753}
+
+
+Definition at line 70 of file Simple\+Engine.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simple_engine_a4a4bf937a7f7c637fea1abcbd091a753_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Simple\+Engine@{Simple\+Engine}!reset@{reset}}
+\index{reset@{reset}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}void Simple\+Engine\+::reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_simple_engine_a8261ef3ad37b18d0e3dea82b4cf347e0}
+
+
+Definition at line 64 of file Simple\+Engine.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simple_engine_a8261ef3ad37b18d0e3dea82b4cf347e0_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Simple\+Engine@{Simple\+Engine}!reshape@{reshape}}
+\index{reshape@{reshape}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{reshape}]{\setlength{\rightskip}{0pt plus 5cm}static void Simple\+Engine\+::reshape (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_simple_engine_a78ed6c1ac421017441d6ae5f273bae9b}
+Funções de callback 
+
+Definition at line 74 of file Simple\+Engine.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simple_engine_a78ed6c1ac421017441d6ae5f273bae9b_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Simple\+Engine@{Simple\+Engine}!rs@{rs}}
+\index{rs@{rs}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{rs}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf S\+E\+Render\+Service}$\ast$ Simple\+Engine\+::rs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_simple_engine_a9e35ff8443a01880f5a0d40bd2fd27b6}
+
+
+Definition at line 69 of file Simple\+Engine.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{class_simple_engine_a9e35ff8443a01880f5a0d40bd2fd27b6_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Simple\+Engine@{Simple\+Engine}!run\+App@{run\+App}}
+\index{run\+App@{run\+App}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{run\+App}]{\setlength{\rightskip}{0pt plus 5cm}void Simple\+Engine\+::run\+App (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_simple_engine_a49087b5b44dd783cc937d66cdf50f540}
+
+
+Definition at line 70 of file Simple\+Engine.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simple_engine_a49087b5b44dd783cc937d66cdf50f540_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Simple\+Engine@{Simple\+Engine}!service\+Locator@{service\+Locator}}
+\index{service\+Locator@{service\+Locator}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{service\+Locator}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf S\+E\+Service\+Locator}$\ast$ Simple\+Engine\+::service\+Locator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_simple_engine_a92876bb0c3696f5e077bd759bfce841b}
+
+
+Definition at line 55 of file Simple\+Engine.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simple_engine_a92876bb0c3696f5e077bd759bfce841b_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Simple\+Engine@{Simple\+Engine}!sl@{sl}}
+\index{sl@{sl}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{sl}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf S\+E\+Service\+Locator}$\ast$ Simple\+Engine\+::sl (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_simple_engine_a728ee7e4500db97b071356640c4c869b}
+
+
+Definition at line 54 of file Simple\+Engine.\+h.
+
+\index{Simple\+Engine@{Simple\+Engine}!startup@{startup}}
+\index{startup@{startup}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{startup}]{\setlength{\rightskip}{0pt plus 5cm}void Simple\+Engine\+::startup (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_simple_engine_afe805fef9a567da5db72e61df72973b3}
+Controles 
+
+Definition at line 19 of file Simple\+Engine.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{class_simple_engine_afe805fef9a567da5db72e61df72973b3_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Simple\+Engine@{Simple\+Engine}!unload\+App@{unload\+App}}
+\index{unload\+App@{unload\+App}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{unload\+App}]{\setlength{\rightskip}{0pt plus 5cm}void Simple\+Engine\+::unload\+App (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_simple_engine_a7ff54e68fd824b273c67b331ffa901fc}
+
+
+Definition at line 39 of file Simple\+Engine.\+cpp.
+
+\index{Simple\+Engine@{Simple\+Engine}!window\+Manager@{window\+Manager}}
+\index{window\+Manager@{window\+Manager}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{window\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf S\+E\+Window\+Manager}$\ast$ Simple\+Engine\+::window\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_simple_engine_a4ef9d8936e516f9aeee9a0e5b9f1d567}
+
+
+Definition at line 67 of file Simple\+Engine.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simple_engine_a4ef9d8936e516f9aeee9a0e5b9f1d567_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Simple\+Engine@{Simple\+Engine}!wm@{wm}}
+\index{wm@{wm}!Simple\+Engine@{Simple\+Engine}}
+\subsubsection[{wm}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf S\+E\+Window\+Manager}$\ast$ Simple\+Engine\+::wm (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_simple_engine_a4df639bc6fff81be483d03f2f0de98b8}
+Getters de módulos da aplicação 
+
+Definition at line 66 of file Simple\+Engine.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_simple_engine_a4df639bc6fff81be483d03f2f0de98b8_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Simple\+Engine.\+h}\item 
+{\bf Simple\+Engine.\+cpp}\end{DoxyCompactItemize}

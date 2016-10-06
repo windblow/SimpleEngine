@@ -1,0 +1,7 @@
+<map id="SEOpenGLSpotLight" name="SEOpenGLSpotLight">
+<area shape="rect" id="node2" href="$class_s_e_spot_light.html" title="SESpotLight\&lt; GLfloat \&gt;" alt="" coords="5,155,165,181"/>
+<area shape="rect" id="node3" href="$class_s_e_light.html" title="SELight\&lt; GLfloat \&gt;" alt="" coords="19,80,152,107"/>
+<area shape="rect" id="node4" href="$class_s_e_open_g_l_light.html" title="SEOpenGLLight" alt="" coords="190,155,306,181"/>
+<area shape="rect" id="node5" href="$class_s_e_open_g_l_render_object.html" title="SEOpenGLRenderObject" alt="" coords="177,80,343,107"/>
+<area shape="rect" id="node6" href="$class_s_e_render_object.html" title="SERenderObject\&lt; GLfloat \&gt;" alt="" coords="168,5,352,32"/>
+</map>

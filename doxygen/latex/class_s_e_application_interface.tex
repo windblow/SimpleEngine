@@ -1,0 +1,377 @@
+\section{S\+E\+Application\+Interface Class Reference}
+\label{class_s_e_application_interface}\index{S\+E\+Application\+Interface@{S\+E\+Application\+Interface}}
+
+
+{\ttfamily \#include $<$S\+E\+Application\+Interface.\+h$>$}
+
+
+
+Inheritance diagram for S\+E\+Application\+Interface\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{class_s_e_application_interface__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bf init} (int argc, char $\ast$$\ast$argv)=0
+\item 
+virtual void {\bf run} ()=0
+\item 
+virtual void {\bf update} ()=0
+\item 
+virtual void {\bf quit} ()=0
+\item 
+virtual void {\bf pause} ()
+\item 
+virtual {\bf S\+E\+Window\+Manager} $\ast$ {\bf wm} ()=0
+\item 
+virtual {\bf S\+E\+Flow\+Controller} $\ast$ {\bf fc} ()=0
+\item 
+virtual {\bf S\+E\+Render\+Service} $\ast$ {\bf rs} ()=0
+\item 
+virtual void {\bf reshape} (int width, int height)
+\item 
+virtual void {\bf display} ()=0
+\item 
+virtual void {\bf key} (unsigned char key, int x, int y)
+\item 
+virtual void {\bf press\+Func\+Key} (int {\bf key}, int x1, int y1)
+\item 
+virtual void {\bf release\+Func\+Key} (int {\bf key}, int x, int y)
+\item 
+virtual void {\bf mouse\+Motion} (int x, int y)
+\item 
+virtual void {\bf mouse\+Passive\+Motion} (int x, int y)
+\item 
+virtual void {\bf mouse\+Button} (int button, int state, int x, int y)
+\item 
+virtual void {\bf idle} ()
+\item 
+{\bf $\sim$\+S\+E\+Application\+Interface} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const bool \& {\bf is\+Running}
+\item 
+const bool \& {\bf is\+Updating}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Application\+Interface} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf run\+\_\+}
+\item 
+bool {\bf update\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 8 of file S\+E\+Application\+Interface.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{S\+E\+Application\+Interface@{S\+E\+Application\+Interface}!````~S\+E\+Application\+Interface@{$\sim$\+S\+E\+Application\+Interface}}
+\index{````~S\+E\+Application\+Interface@{$\sim$\+S\+E\+Application\+Interface}!S\+E\+Application\+Interface@{S\+E\+Application\+Interface}}
+\subsubsection[{$\sim$\+S\+E\+Application\+Interface}]{\setlength{\rightskip}{0pt plus 5cm}S\+E\+Application\+Interface\+::$\sim$\+S\+E\+Application\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_application_interface_a892629f2d5f0b0af0b2a15138beea85e}
+
+
+Definition at line 38 of file S\+E\+Application\+Interface.\+h.
+
+\index{S\+E\+Application\+Interface@{S\+E\+Application\+Interface}!S\+E\+Application\+Interface@{S\+E\+Application\+Interface}}
+\index{S\+E\+Application\+Interface@{S\+E\+Application\+Interface}!S\+E\+Application\+Interface@{S\+E\+Application\+Interface}}
+\subsubsection[{S\+E\+Application\+Interface}]{\setlength{\rightskip}{0pt plus 5cm}S\+E\+Application\+Interface\+::\+S\+E\+Application\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_s_e_application_interface_a6977d0e4fec3c54d9c87d0caf71b9ce4}
+
+
+Definition at line 44 of file S\+E\+Application\+Interface.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\index{S\+E\+Application\+Interface@{S\+E\+Application\+Interface}!display@{display}}
+\index{display@{display}!S\+E\+Application\+Interface@{S\+E\+Application\+Interface}}
+\subsubsection[{display}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+E\+Application\+Interface\+::display (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_application_interface_a7dbd81ef6669b220b75a190f5ac19d2c}
+
+
+Implemented in {\bf S\+E\+Application$<$ T $>$} \doxyref{}{p.}{class_s_e_application_af68fb4de72017976c14e4e81a35f509f}, {\bf S\+E\+Application$<$ G\+Lfloat $>$} \doxyref{}{p.}{class_s_e_application_af68fb4de72017976c14e4e81a35f509f}, {\bf S\+E\+Test\+App1} \doxyref{}{p.}{class_s_e_test_app1_aa673ae83a7249cd54756a4a475594c18}, and {\bf S\+E\+Test\+App2} \doxyref{}{p.}{class_s_e_test_app2_a7d4d1ed4ffec940cffaa677638439dd0}.
+
+\index{S\+E\+Application\+Interface@{S\+E\+Application\+Interface}!fc@{fc}}
+\index{fc@{fc}!S\+E\+Application\+Interface@{S\+E\+Application\+Interface}}
+\subsubsection[{fc}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf S\+E\+Flow\+Controller}$\ast$ S\+E\+Application\+Interface\+::fc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_application_interface_aaf13d84e9c716f4fa7131f287f5e823b}
+
+
+Implemented in {\bf S\+E\+Application$<$ T $>$} \doxyref{}{p.}{class_s_e_application_a8b62aedc2f6fee908272cb9b6638d87e}, and {\bf S\+E\+Application$<$ G\+Lfloat $>$} \doxyref{}{p.}{class_s_e_application_a8b62aedc2f6fee908272cb9b6638d87e}.
+
+\index{S\+E\+Application\+Interface@{S\+E\+Application\+Interface}!idle@{idle}}
+\index{idle@{idle}!S\+E\+Application\+Interface@{S\+E\+Application\+Interface}}
+\subsubsection[{idle}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+E\+Application\+Interface\+::idle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_e_application_interface_ace0d1433d2f5b08c9cd582318eabcffc}
+
+
+Reimplemented in {\bf S\+E\+Test\+App1} \doxyref{}{p.}{class_s_e_test_app1_a2a3457e16ee71cba6aa71728ecd98045}, {\bf S\+E\+Application$<$ T $>$} \doxyref{}{p.}{class_s_e_application_ae10739b2876ad09ee15590ba822e21eb}, {\bf S\+E\+Test\+App2} \doxyref{}{p.}{class_s_e_test_app2_a08d31acfd918a2ee16bff9fec0927b6d}, and {\bf S\+E\+Application$<$ G\+Lfloat $>$} \doxyref{}{p.}{class_s_e_application_ae10739b2876ad09ee15590ba822e21eb}.
+
+
+
+Definition at line 36 of file S\+E\+Application\+Interface.\+h.
+
+\index{S\+E\+Application\+Interface@{S\+E\+Application\+Interface}!init@{init}}
+\index{init@{init}!S\+E\+Application\+Interface@{S\+E\+Application\+Interface}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+E\+Application\+Interface\+::init (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_application_interface_a6122d2fc9569a97ee0d69145a9a76779}
+
+
+Implemented in {\bf S\+E\+Test\+App1} \doxyref{}{p.}{class_s_e_test_app1_ac03290087ff6592a7d368edea13b66c9}, {\bf S\+E\+Application$<$ T $>$} \doxyref{}{p.}{class_s_e_application_ae8453fdab08443b4a1c7fc9db1a4436e}, {\bf S\+E\+Application$<$ G\+Lfloat $>$} \doxyref{}{p.}{class_s_e_application_ae8453fdab08443b4a1c7fc9db1a4436e}, and {\bf S\+E\+Test\+App2} \doxyref{}{p.}{class_s_e_test_app2_a8b0e69df9de394aa9c21855570bb1d1d}.
+
+\index{S\+E\+Application\+Interface@{S\+E\+Application\+Interface}!key@{key}}
+\index{key@{key}!S\+E\+Application\+Interface@{S\+E\+Application\+Interface}}
+\subsubsection[{key}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+E\+Application\+Interface\+::key (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{key, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_e_application_interface_acd5f51c154c4a2c737838ec40041be1b}
+
+
+Reimplemented in {\bf S\+E\+Test\+App1} \doxyref{}{p.}{class_s_e_test_app1_a1ea803fab9cec1d81d681ab97a34a204}, and {\bf S\+E\+Test\+App2} \doxyref{}{p.}{class_s_e_test_app2_ae37b6ec52d90c1f62170f053dbf0526b}.
+
+
+
+Definition at line 30 of file S\+E\+Application\+Interface.\+h.
+
+\index{S\+E\+Application\+Interface@{S\+E\+Application\+Interface}!mouse\+Button@{mouse\+Button}}
+\index{mouse\+Button@{mouse\+Button}!S\+E\+Application\+Interface@{S\+E\+Application\+Interface}}
+\subsubsection[{mouse\+Button}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+E\+Application\+Interface\+::mouse\+Button (
+\begin{DoxyParamCaption}
+\item[{int}]{button, }
+\item[{int}]{state, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_e_application_interface_a5db6174742c37baa211ffe4a27060937}
+
+
+Reimplemented in {\bf S\+E\+Test\+App1} \doxyref{}{p.}{class_s_e_test_app1_a0efd8d821216c211238add35b154fc09}, and {\bf S\+E\+Test\+App2} \doxyref{}{p.}{class_s_e_test_app2_afb3e88e8abf580f65b108c2762b30936}.
+
+
+
+Definition at line 35 of file S\+E\+Application\+Interface.\+h.
+
+\index{S\+E\+Application\+Interface@{S\+E\+Application\+Interface}!mouse\+Motion@{mouse\+Motion}}
+\index{mouse\+Motion@{mouse\+Motion}!S\+E\+Application\+Interface@{S\+E\+Application\+Interface}}
+\subsubsection[{mouse\+Motion}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+E\+Application\+Interface\+::mouse\+Motion (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_e_application_interface_a6abe2c0685be65c24d8fd0465f001cf4}
+
+
+Reimplemented in {\bf S\+E\+Test\+App1} \doxyref{}{p.}{class_s_e_test_app1_a149c2f4b986bbe39b45725ab93a990a6}, and {\bf S\+E\+Test\+App2} \doxyref{}{p.}{class_s_e_test_app2_ab391ca8e2a5db124410d26ed5a86f46d}.
+
+
+
+Definition at line 33 of file S\+E\+Application\+Interface.\+h.
+
+\index{S\+E\+Application\+Interface@{S\+E\+Application\+Interface}!mouse\+Passive\+Motion@{mouse\+Passive\+Motion}}
+\index{mouse\+Passive\+Motion@{mouse\+Passive\+Motion}!S\+E\+Application\+Interface@{S\+E\+Application\+Interface}}
+\subsubsection[{mouse\+Passive\+Motion}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+E\+Application\+Interface\+::mouse\+Passive\+Motion (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_e_application_interface_a316065494e0cbabf84dc6070b44227ae}
+
+
+Reimplemented in {\bf S\+E\+Test\+App1} \doxyref{}{p.}{class_s_e_test_app1_a5c451c8fae948f7f8c712ed4c1b00fe0}, and {\bf S\+E\+Test\+App2} \doxyref{}{p.}{class_s_e_test_app2_a4f91ab6485750c71084ca9898f220ebb}.
+
+
+
+Definition at line 34 of file S\+E\+Application\+Interface.\+h.
+
+\index{S\+E\+Application\+Interface@{S\+E\+Application\+Interface}!pause@{pause}}
+\index{pause@{pause}!S\+E\+Application\+Interface@{S\+E\+Application\+Interface}}
+\subsubsection[{pause}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+E\+Application\+Interface\+::pause (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_e_application_interface_a922a7ff1c71d7a84f9bb8a08a8330172}
+
+
+Definition at line 21 of file S\+E\+Application\+Interface.\+h.
+
+\index{S\+E\+Application\+Interface@{S\+E\+Application\+Interface}!press\+Func\+Key@{press\+Func\+Key}}
+\index{press\+Func\+Key@{press\+Func\+Key}!S\+E\+Application\+Interface@{S\+E\+Application\+Interface}}
+\subsubsection[{press\+Func\+Key}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+E\+Application\+Interface\+::press\+Func\+Key (
+\begin{DoxyParamCaption}
+\item[{int}]{key, }
+\item[{int}]{x1, }
+\item[{int}]{y1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_e_application_interface_a182ca84a624630be02901bf25acaeda1}
+
+
+Reimplemented in {\bf S\+E\+Test\+App1} \doxyref{}{p.}{class_s_e_test_app1_a19ab2fcf8818c492ddc0f5de73f7c1e2}, and {\bf S\+E\+Test\+App2} \doxyref{}{p.}{class_s_e_test_app2_ae96c3b6084feea0d85591d7493f98f1b}.
+
+
+
+Definition at line 31 of file S\+E\+Application\+Interface.\+h.
+
+\index{S\+E\+Application\+Interface@{S\+E\+Application\+Interface}!quit@{quit}}
+\index{quit@{quit}!S\+E\+Application\+Interface@{S\+E\+Application\+Interface}}
+\subsubsection[{quit}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+E\+Application\+Interface\+::quit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_application_interface_ac1c05e2c7c83d66e6c5dbe52b2bd681b}
+
+
+Implemented in {\bf S\+E\+Test\+App1} \doxyref{}{p.}{class_s_e_test_app1_adb78b0efdd9da9dc098d4ffa6828f727}, {\bf S\+E\+Application$<$ T $>$} \doxyref{}{p.}{class_s_e_application_a1d6dd2dd21b3e0ec2fb519c18be75456}, {\bf S\+E\+Application$<$ G\+Lfloat $>$} \doxyref{}{p.}{class_s_e_application_a1d6dd2dd21b3e0ec2fb519c18be75456}, and {\bf S\+E\+Test\+App2} \doxyref{}{p.}{class_s_e_test_app2_ab11859c0ab08874e228654bde04b30d6}.
+
+\index{S\+E\+Application\+Interface@{S\+E\+Application\+Interface}!release\+Func\+Key@{release\+Func\+Key}}
+\index{release\+Func\+Key@{release\+Func\+Key}!S\+E\+Application\+Interface@{S\+E\+Application\+Interface}}
+\subsubsection[{release\+Func\+Key}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+E\+Application\+Interface\+::release\+Func\+Key (
+\begin{DoxyParamCaption}
+\item[{int}]{key, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_e_application_interface_a245cf5d5dcc59e04873a69d8b6212415}
+
+
+Reimplemented in {\bf S\+E\+Test\+App1} \doxyref{}{p.}{class_s_e_test_app1_ae897393d6528b677807f66bbe5b24080}, and {\bf S\+E\+Test\+App2} \doxyref{}{p.}{class_s_e_test_app2_a764c4e683cfebe5390e1ec4e74fb97ec}.
+
+
+
+Definition at line 32 of file S\+E\+Application\+Interface.\+h.
+
+\index{S\+E\+Application\+Interface@{S\+E\+Application\+Interface}!reshape@{reshape}}
+\index{reshape@{reshape}!S\+E\+Application\+Interface@{S\+E\+Application\+Interface}}
+\subsubsection[{reshape}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+E\+Application\+Interface\+::reshape (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_e_application_interface_ad1569a4561e3fec8481b17e24843fb8e}
+
+
+Reimplemented in {\bf S\+E\+Test\+App1} \doxyref{}{p.}{class_s_e_test_app1_a6532c55637b099cf41f7bdfae17b0fde}, and {\bf S\+E\+Test\+App2} \doxyref{}{p.}{class_s_e_test_app2_aca71876ce43d078efd52f5d33f464b50}.
+
+
+
+Definition at line 28 of file S\+E\+Application\+Interface.\+h.
+
+\index{S\+E\+Application\+Interface@{S\+E\+Application\+Interface}!rs@{rs}}
+\index{rs@{rs}!S\+E\+Application\+Interface@{S\+E\+Application\+Interface}}
+\subsubsection[{rs}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf S\+E\+Render\+Service}$\ast$ S\+E\+Application\+Interface\+::rs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_application_interface_a3f3ad17c66f7e5154c06a1b51c64f79b}
+
+
+Implemented in {\bf S\+E\+Application$<$ T $>$} \doxyref{}{p.}{class_s_e_application_accb31e9ba20aba3b9e87fdebe890b112}, and {\bf S\+E\+Application$<$ G\+Lfloat $>$} \doxyref{}{p.}{class_s_e_application_accb31e9ba20aba3b9e87fdebe890b112}.
+
+\index{S\+E\+Application\+Interface@{S\+E\+Application\+Interface}!run@{run}}
+\index{run@{run}!S\+E\+Application\+Interface@{S\+E\+Application\+Interface}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+E\+Application\+Interface\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_application_interface_a80314f1b5d2ee927f0aec52d2939a4e3}
+
+
+Implemented in {\bf S\+E\+Test\+App1} \doxyref{}{p.}{class_s_e_test_app1_ab3f47fe7c735bc68d2e18867011d33a2}, {\bf S\+E\+Application$<$ T $>$} \doxyref{}{p.}{class_s_e_application_a1cb54d6b2e488ec96ec0bd743f73e68e}, {\bf S\+E\+Application$<$ G\+Lfloat $>$} \doxyref{}{p.}{class_s_e_application_a1cb54d6b2e488ec96ec0bd743f73e68e}, and {\bf S\+E\+Test\+App2} \doxyref{}{p.}{class_s_e_test_app2_a721c6c574531fcd0786bb8f39683dd7e}.
+
+\index{S\+E\+Application\+Interface@{S\+E\+Application\+Interface}!update@{update}}
+\index{update@{update}!S\+E\+Application\+Interface@{S\+E\+Application\+Interface}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+E\+Application\+Interface\+::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_application_interface_a39015bc105f533bad135e75f4f906315}
+
+
+Implemented in {\bf S\+E\+Test\+App1} \doxyref{}{p.}{class_s_e_test_app1_a86068ad6339587aff379ad4448feed19}, and {\bf S\+E\+Test\+App2} \doxyref{}{p.}{class_s_e_test_app2_ac7d93b733cdbe5532b6d106263d6027c}.
+
+\index{S\+E\+Application\+Interface@{S\+E\+Application\+Interface}!wm@{wm}}
+\index{wm@{wm}!S\+E\+Application\+Interface@{S\+E\+Application\+Interface}}
+\subsubsection[{wm}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf S\+E\+Window\+Manager}$\ast$ S\+E\+Application\+Interface\+::wm (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_application_interface_a741d9bee928dc78ea56fe6de72137393}
+
+
+Implemented in {\bf S\+E\+Application$<$ T $>$} \doxyref{}{p.}{class_s_e_application_a06d1f50c567761756a3dcf30e5bddefc}, and {\bf S\+E\+Application$<$ G\+Lfloat $>$} \doxyref{}{p.}{class_s_e_application_a06d1f50c567761756a3dcf30e5bddefc}.
+
+
+
+\subsection{Member Data Documentation}
+\index{S\+E\+Application\+Interface@{S\+E\+Application\+Interface}!is\+Running@{is\+Running}}
+\index{is\+Running@{is\+Running}!S\+E\+Application\+Interface@{S\+E\+Application\+Interface}}
+\subsubsection[{is\+Running}]{\setlength{\rightskip}{0pt plus 5cm}const bool\& S\+E\+Application\+Interface\+::is\+Running}\label{class_s_e_application_interface_a0adfae0ab67de7e8369087340c78d82b}
+
+
+Definition at line 11 of file S\+E\+Application\+Interface.\+h.
+
+\index{S\+E\+Application\+Interface@{S\+E\+Application\+Interface}!is\+Updating@{is\+Updating}}
+\index{is\+Updating@{is\+Updating}!S\+E\+Application\+Interface@{S\+E\+Application\+Interface}}
+\subsubsection[{is\+Updating}]{\setlength{\rightskip}{0pt plus 5cm}const bool\& S\+E\+Application\+Interface\+::is\+Updating}\label{class_s_e_application_interface_a193db1a904f3c8d4e7f835a44c8c8ba8}
+
+
+Definition at line 12 of file S\+E\+Application\+Interface.\+h.
+
+\index{S\+E\+Application\+Interface@{S\+E\+Application\+Interface}!run\+\_\+@{run\+\_\+}}
+\index{run\+\_\+@{run\+\_\+}!S\+E\+Application\+Interface@{S\+E\+Application\+Interface}}
+\subsubsection[{run\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+E\+Application\+Interface\+::run\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_e_application_interface_aeb0e393d1549802031da663659196b33}
+
+
+Definition at line 41 of file S\+E\+Application\+Interface.\+h.
+
+\index{S\+E\+Application\+Interface@{S\+E\+Application\+Interface}!update\+\_\+@{update\+\_\+}}
+\index{update\+\_\+@{update\+\_\+}!S\+E\+Application\+Interface@{S\+E\+Application\+Interface}}
+\subsubsection[{update\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+E\+Application\+Interface\+::update\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_e_application_interface_a0d944eb1f60a85bed360c85850da73d2}
+
+
+Definition at line 42 of file S\+E\+Application\+Interface.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Application\+Interface.\+h}\end{DoxyCompactItemize}

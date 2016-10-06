@@ -1,0 +1,229 @@
+\section{json Namespace Reference}
+\label{namespacejson}\index{json@{json}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf Array}
+\item 
+class {\bf Object}
+\item 
+class {\bf Value}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf Value\+Type} \{ \\*
+{\bf N\+U\+L\+L\+Val}, 
+{\bf String\+Val}, 
+{\bf Int\+Val}, 
+{\bf Float\+Val}, 
+\\*
+{\bf Double\+Val}, 
+{\bf Object\+Val}, 
+{\bf Array\+Val}, 
+{\bf Bool\+Val}
+ \}
+\item 
+enum {\bf Stack\+Depth\+Type} \{ {\bf In\+Object}, 
+{\bf In\+Array}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bf Serialize} (const {\bf Value} \&obj)
+\item 
+{\bf Value} {\bf Deserialize} (const std\+::string \&str)
+\item 
+bool {\bf operator==} (const {\bf Object} \&lhs, const {\bf Object} \&rhs)
+\item 
+bool {\bf operator$<$} (const {\bf Object} \&lhs, const {\bf Object} \&rhs)
+\item 
+bool {\bf operator==} (const {\bf Array} \&lhs, const {\bf Array} \&rhs)
+\item 
+bool {\bf operator$<$} (const {\bf Array} \&lhs, const {\bf Array} \&rhs)
+\item 
+bool {\bf operator==} (const {\bf Value} \&lhs, const {\bf Value} \&rhs)
+\item 
+bool {\bf operator$<$} (const {\bf Value} \&lhs, const {\bf Value} \&rhs)
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\index{json@{json}!Stack\+Depth\+Type@{Stack\+Depth\+Type}}
+\index{Stack\+Depth\+Type@{Stack\+Depth\+Type}!json@{json}}
+\subsubsection[{Stack\+Depth\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf json\+::\+Stack\+Depth\+Type}}\label{namespacejson_a7acde098a3df3bffeb34285a8dbcdba3}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{In\+Object@{In\+Object}!json@{json}}\index{json@{json}!In\+Object@{In\+Object}}\item[{\em 
+In\+Object\label{namespacejson_a7acde098a3df3bffeb34285a8dbcdba3a52017f164a019ebc529233a83d371b72}
+}]\index{In\+Array@{In\+Array}!json@{json}}\index{json@{json}!In\+Array@{In\+Array}}\item[{\em 
+In\+Array\label{namespacejson_a7acde098a3df3bffeb34285a8dbcdba3a202050ff49ec50d524c6999781208092}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 26 of file json.\+cpp.
+
+\index{json@{json}!Value\+Type@{Value\+Type}}
+\index{Value\+Type@{Value\+Type}!json@{json}}
+\subsubsection[{Value\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf json\+::\+Value\+Type}}\label{namespacejson_aa92d41a4456e54b99679cb7ba0edc47f}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{N\+U\+L\+L\+Val@{N\+U\+L\+L\+Val}!json@{json}}\index{json@{json}!N\+U\+L\+L\+Val@{N\+U\+L\+L\+Val}}\item[{\em 
+N\+U\+L\+L\+Val\label{namespacejson_aa92d41a4456e54b99679cb7ba0edc47fa79d05ef03bc9067c5149746e2024ff4e}
+}]\index{String\+Val@{String\+Val}!json@{json}}\index{json@{json}!String\+Val@{String\+Val}}\item[{\em 
+String\+Val\label{namespacejson_aa92d41a4456e54b99679cb7ba0edc47fa6c7527eb14431391ce7a9cfc4851279b}
+}]\index{Int\+Val@{Int\+Val}!json@{json}}\index{json@{json}!Int\+Val@{Int\+Val}}\item[{\em 
+Int\+Val\label{namespacejson_aa92d41a4456e54b99679cb7ba0edc47fa26e6ce64d93b8ad54013a6d91d675e0f}
+}]\index{Float\+Val@{Float\+Val}!json@{json}}\index{json@{json}!Float\+Val@{Float\+Val}}\item[{\em 
+Float\+Val\label{namespacejson_aa92d41a4456e54b99679cb7ba0edc47fa61220f16e9110741992bc126ed0413fd}
+}]\index{Double\+Val@{Double\+Val}!json@{json}}\index{json@{json}!Double\+Val@{Double\+Val}}\item[{\em 
+Double\+Val\label{namespacejson_aa92d41a4456e54b99679cb7ba0edc47faddac804c7e9ec48b15acea76dc4f76eb}
+}]\index{Object\+Val@{Object\+Val}!json@{json}}\index{json@{json}!Object\+Val@{Object\+Val}}\item[{\em 
+Object\+Val\label{namespacejson_aa92d41a4456e54b99679cb7ba0edc47fa273b700591a9a4ac9eaeb4aac05e6e65}
+}]\index{Array\+Val@{Array\+Val}!json@{json}}\index{json@{json}!Array\+Val@{Array\+Val}}\item[{\em 
+Array\+Val\label{namespacejson_aa92d41a4456e54b99679cb7ba0edc47fa110e6d32f3b9d8c2fa54eec4e6c317d6}
+}]\index{Bool\+Val@{Bool\+Val}!json@{json}}\index{json@{json}!Bool\+Val@{Bool\+Val}}\item[{\em 
+Bool\+Val\label{namespacejson_aa92d41a4456e54b99679cb7ba0edc47fa8598f3008c25496f7d9e587961eae015}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 245 of file json.\+h.
+
+
+
+\subsection{Function Documentation}
+\index{json@{json}!Deserialize@{Deserialize}}
+\index{Deserialize@{Deserialize}!json@{json}}
+\subsubsection[{Deserialize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Value} json\+::\+Deserialize (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{str}
+\end{DoxyParamCaption}
+)}\label{namespacejson_afea590fe38133c32d6381ba3338ee9bc}
+
+
+Definition at line 1038 of file json.\+cpp.
+
+\index{json@{json}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!json@{json}}
+\subsubsection[{operator$<$}]{\setlength{\rightskip}{0pt plus 5cm}bool json\+::operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Object} \&}]{lhs, }
+\item[{const {\bf Object} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{namespacejson_abb272f82f091c1ecbb4fa6ae3d5b3bcb}
+
+
+Definition at line 497 of file json.\+h.
+
+\index{json@{json}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!json@{json}}
+\subsubsection[{operator$<$}]{\setlength{\rightskip}{0pt plus 5cm}bool json\+::operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Array} \&}]{lhs, }
+\item[{const {\bf Array} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{namespacejson_a179329e9ee0e5ee70162a0af468ce072}
+
+
+Definition at line 507 of file json.\+h.
+
+\index{json@{json}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!json@{json}}
+\subsubsection[{operator$<$}]{\setlength{\rightskip}{0pt plus 5cm}bool json\+::operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Value} \&}]{lhs, }
+\item[{const {\bf Value} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{namespacejson_a820a993ff6009ec4eda8c4eb95ed1454}
+
+
+Definition at line 569 of file json.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{namespacejson_a820a993ff6009ec4eda8c4eb95ed1454_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{json@{json}!operator==@{operator==}}
+\index{operator==@{operator==}!json@{json}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool json\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Object} \&}]{lhs, }
+\item[{const {\bf Object} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{namespacejson_a1789077a8a1388991fe3ff3c3c04ca96}
+
+
+Definition at line 492 of file json.\+h.
+
+\index{json@{json}!operator==@{operator==}}
+\index{operator==@{operator==}!json@{json}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool json\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Array} \&}]{lhs, }
+\item[{const {\bf Array} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{namespacejson_a56bbe8bb376520a5db76f113283ca11e}
+
+
+Definition at line 502 of file json.\+h.
+
+\index{json@{json}!operator==@{operator==}}
+\index{operator==@{operator==}!json@{json}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool json\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Value} \&}]{lhs, }
+\item[{const {\bf Value} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{namespacejson_a7520c61ef1cc27c949ea957df799378c}
+
+
+Definition at line 521 of file json.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{namespacejson_a7520c61ef1cc27c949ea957df799378c_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{json@{json}!Serialize@{Serialize}}
+\index{Serialize@{Serialize}!json@{json}}
+\subsubsection[{Serialize}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string json\+::\+Serialize (
+\begin{DoxyParamCaption}
+\item[{const {\bf Value} \&}]{obj}
+\end{DoxyParamCaption}
+)}\label{namespacejson_a81467b49956c429d0196cadb03dd7fde}
+
+
+Definition at line 544 of file json.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacejson_a81467b49956c429d0196cadb03dd7fde_cgraph}
+\end{center}
+\end{figure}
+
+

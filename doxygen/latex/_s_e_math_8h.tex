@@ -1,0 +1,512 @@
+\section{S\+E\+Math.\+h File Reference}
+\label{_s_e_math_8h}\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include $<$cassert$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$ctime$>$}\\*
+{\ttfamily \#include $<$cstring$>$}\\*
+Include dependency graph for S\+E\+Math.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_s_e_math_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_s_e_math_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf S\+E\+Math\+Util$<$ T $>$}
+\item 
+class {\bf S\+E\+Vec3$<$ T $>$}
+\item 
+class {\bf S\+E\+Vec4$<$ T $>$}
+\item 
+class {\bf S\+E\+Color$<$ T $>$}
+\item 
+class {\bf S\+E\+Quaternion$<$ T $>$}
+\item 
+class {\bf S\+E\+Mat3$<$ T $>$}
+\item 
+class {\bf S\+E\+Mat4$<$ T $>$}
+\item 
+class {\bf S\+E\+Ray$<$ T $>$}
+\item 
+class {\bf S\+E\+Plane$<$ T $>$}
+\item 
+class {\bf S\+E\+Chronometer$<$ T $>$}
+\item 
+class {\bf S\+E\+Timer$<$ T $>$}
+\item 
+class {\bf S\+E\+Random\+Number\+Generator$<$ T $>$}
+\item 
+class {\bf S\+E\+Math\+Util$<$ T $>$}
+\item 
+class {\bf S\+E\+Vec3$<$ T $>$}
+\item 
+class {\bf S\+E\+Vec4$<$ T $>$}
+\item 
+class {\bf S\+E\+Color$<$ T $>$}
+\item 
+class {\bf S\+E\+Quaternion$<$ T $>$}
+\item 
+class {\bf S\+E\+Mat3$<$ T $>$}
+\item 
+class {\bf S\+E\+Mat4$<$ T $>$}
+\item 
+class {\bf S\+E\+Ray$<$ T $>$}
+\item 
+class {\bf S\+E\+Plane$<$ T $>$}
+\item 
+class {\bf S\+E\+Chronometer$<$ T $>$}
+\item 
+class {\bf S\+E\+Timer$<$ T $>$}
+\item 
+class {\bf S\+E\+Random\+Number\+Generator$<$ T $>$}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf V\+E\+C\+D\+O\+T}(v1,  v2)~((v1)[0]$\ast$(v2)[0]+(v1)[1]$\ast$(v2)[1]+(v1)[2]$\ast$(v2)[2])
+\item 
+\#define {\bf C\+L\+A\+M\+P}(x,  a,  b)~(x $<$ a ? a \+: (x $>$ b ? b \+: x))
+\item 
+\#define {\bf P\+I\+\_\+}~3.\+14159265359f
+\item 
+\#define {\bf A\+B\+S}(a)~(a $>$ 0 ? a \+: -\/a)
+\item 
+\#define {\bf M\+I\+N2}(a,  b)~((a$<$b)?a\+:b)
+\item 
+\#define {\bf M\+I\+N3}(a,  b,  c)~{\bf M\+I\+N2}({\bf M\+I\+N2}(a,b),c)
+\item 
+\#define {\bf M\+A\+X2}(a,  b)~((a)$>$(b)?(a)\+:(b))
+\item 
+\#define {\bf M\+A\+X3}(a,  b,  c)~{\bf M\+A\+X2}({\bf M\+A\+X2}(a,b),c)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef {\bf S\+E\+Math\+Util}$<$ int $>$ {\bf S\+E\+Math\+Utili}
+\item 
+typedef {\bf S\+E\+Math\+Util}$<$ float $>$ {\bf S\+E\+Math\+Utilf}
+\item 
+typedef {\bf S\+E\+Math\+Util}$<$ double $>$ {\bf S\+E\+Math\+Utild}
+\item 
+typedef {\bf S\+E\+Vec3}$<$ int $>$ {\bf S\+E\+Vec3i}
+\item 
+typedef {\bf S\+E\+Vec3}$<$ float $>$ {\bf S\+E\+Vec3f}
+\item 
+typedef {\bf S\+E\+Vec3}$<$ double $>$ {\bf S\+E\+Vec3d}
+\item 
+typedef {\bf S\+E\+Vec4}$<$ int $>$ {\bf S\+E\+Vec4i}
+\item 
+typedef {\bf S\+E\+Vec4}$<$ float $>$ {\bf S\+E\+Vec4f}
+\item 
+typedef {\bf S\+E\+Vec4}$<$ double $>$ {\bf S\+E\+Vec4d}
+\item 
+typedef {\bf S\+E\+Color}$<$ int $>$ {\bf S\+E\+Colori}
+\item 
+typedef {\bf S\+E\+Color}$<$ float $>$ {\bf S\+E\+Colorf}
+\item 
+typedef {\bf S\+E\+Color}$<$ double $>$ {\bf S\+E\+Colord}
+\item 
+typedef {\bf S\+E\+Quaternion}$<$ float $>$ {\bf S\+E\+Quaternionf}
+\item 
+typedef {\bf S\+E\+Quaternion}$<$ double $>$ {\bf S\+E\+Quaterniond}
+\item 
+typedef {\bf S\+E\+Mat3}$<$ int $>$ {\bf S\+E\+Mat3i}
+\item 
+typedef {\bf S\+E\+Mat3}$<$ float $>$ {\bf S\+E\+Mat3f}
+\item 
+typedef {\bf S\+E\+Mat3}$<$ double $>$ {\bf S\+E\+Mat3d}
+\item 
+typedef {\bf S\+E\+Mat4}$<$ int $>$ {\bf S\+E\+Mat4i}
+\item 
+typedef {\bf S\+E\+Mat4}$<$ float $>$ {\bf S\+E\+Mat4f}
+\item 
+typedef {\bf S\+E\+Mat4}$<$ double $>$ {\bf S\+E\+Mat4d}
+\item 
+typedef {\bf S\+E\+Ray}$<$ int $>$ {\bf S\+E\+Rayi}
+\item 
+typedef {\bf S\+E\+Ray}$<$ float $>$ {\bf S\+E\+Rayf}
+\item 
+typedef {\bf S\+E\+Ray}$<$ double $>$ {\bf S\+E\+Rayd}
+\item 
+typedef {\bf S\+E\+Plane}$<$ int $>$ {\bf S\+E\+Planei}
+\item 
+typedef {\bf S\+E\+Plane}$<$ float $>$ {\bf S\+E\+Planef}
+\item 
+typedef {\bf S\+E\+Plane}$<$ double $>$ {\bf S\+E\+Planed}
+\item 
+typedef {\bf S\+E\+Chronometer}$<$ int $>$ {\bf S\+E\+Chronometeri}
+\item 
+typedef {\bf S\+E\+Chronometer}$<$ float $>$ {\bf S\+E\+Chronometerf}
+\item 
+typedef {\bf S\+E\+Chronometer}$<$ double $>$ {\bf S\+E\+Chronometerd}
+\item 
+typedef {\bf S\+E\+Timer}$<$ int $>$ {\bf S\+E\+Timeri}
+\item 
+typedef {\bf S\+E\+Timer}$<$ float $>$ {\bf S\+E\+Timerf}
+\item 
+typedef {\bf S\+E\+Timer}$<$ double $>$ {\bf S\+E\+Timerd}
+\item 
+typedef {\bf S\+E\+Random\+Number\+Generator}$<$ int $>$ {\bf S\+E\+Random\+Number\+Generatori}
+\item 
+typedef {\bf S\+E\+Random\+Number\+Generator}$<$ float $>$ {\bf S\+E\+Random\+Number\+Generatorf}
+\item 
+typedef {\bf S\+E\+Random\+Number\+Generator}$<$ double $>$ {\bf S\+E\+Random\+Number\+Generatord}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!A\+B\+S@{A\+B\+S}}
+\index{A\+B\+S@{A\+B\+S}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{A\+B\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+B\+S(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~(a $>$ 0 ? a \+: -\/a)}\label{_s_e_math_8h_ae2f08dc603ae93c402abd918ba4e23e1}
+
+
+Definition at line 25 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!C\+L\+A\+M\+P@{C\+L\+A\+M\+P}}
+\index{C\+L\+A\+M\+P@{C\+L\+A\+M\+P}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{C\+L\+A\+M\+P}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+L\+A\+M\+P(
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~(x $<$ a ? a \+: (x $>$ b ? b \+: x))}\label{_s_e_math_8h_a14ae939828dc08f7d526cda68c1800c4}
+
+
+Definition at line 19 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!M\+A\+X2@{M\+A\+X2}}
+\index{M\+A\+X2@{M\+A\+X2}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{M\+A\+X2}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X2(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~((a)$>$(b)?(a)\+:(b))}\label{_s_e_math_8h_aaa54f7e1a36379ac652ae049c94bcca1}
+
+
+Definition at line 33 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!M\+A\+X3@{M\+A\+X3}}
+\index{M\+A\+X3@{M\+A\+X3}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{M\+A\+X3}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X3(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~{\bf M\+A\+X2}({\bf M\+A\+X2}(a,b),c)}\label{_s_e_math_8h_a37c6d7fcb9c177c308ef38e1d51d35e3}
+
+
+Definition at line 35 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!M\+I\+N2@{M\+I\+N2}}
+\index{M\+I\+N2@{M\+I\+N2}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{M\+I\+N2}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+I\+N2(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~((a$<$b)?a\+:b)}\label{_s_e_math_8h_ab8d41f015e7fa2f04b4446cfc7acc647}
+
+
+Definition at line 28 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!M\+I\+N3@{M\+I\+N3}}
+\index{M\+I\+N3@{M\+I\+N3}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{M\+I\+N3}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+I\+N3(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~{\bf M\+I\+N2}({\bf M\+I\+N2}(a,b),c)}\label{_s_e_math_8h_a4887ceeae88266064841cbbc11ef8b53}
+
+
+Definition at line 30 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!P\+I\+\_\+@{P\+I\+\_\+}}
+\index{P\+I\+\_\+@{P\+I\+\_\+}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{P\+I\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+I\+\_\+~3.\+14159265359f}\label{_s_e_math_8h_a564ffe67519ca25bde88566eac3c698a}
+
+
+Definition at line 22 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!V\+E\+C\+D\+O\+T@{V\+E\+C\+D\+O\+T}}
+\index{V\+E\+C\+D\+O\+T@{V\+E\+C\+D\+O\+T}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{V\+E\+C\+D\+O\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+E\+C\+D\+O\+T(
+\begin{DoxyParamCaption}
+\item[{}]{v1, }
+\item[{}]{v2}
+\end{DoxyParamCaption}
+)~((v1)[0]$\ast$(v2)[0]+(v1)[1]$\ast$(v2)[1]+(v1)[2]$\ast$(v2)[2])}\label{_s_e_math_8h_ae3712c47044f8ef80e8f015f45dc8df6}
+Macros que definem comparações entre tipos genéricos 
+
+Definition at line 16 of file S\+E\+Math.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!S\+E\+Chronometerd@{S\+E\+Chronometerd}}
+\index{S\+E\+Chronometerd@{S\+E\+Chronometerd}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{S\+E\+Chronometerd}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf S\+E\+Chronometer}$<$double$>$ {\bf S\+E\+Chronometerd}}\label{_s_e_math_8h_a38f7e943eceb62334119dea32535c3f8}
+
+
+Definition at line 89 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!S\+E\+Chronometerf@{S\+E\+Chronometerf}}
+\index{S\+E\+Chronometerf@{S\+E\+Chronometerf}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{S\+E\+Chronometerf}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf S\+E\+Chronometer}$<$float$>$ {\bf S\+E\+Chronometerf}}\label{_s_e_math_8h_a1ef7d10233c0ed7c026af1bf59b38e8d}
+
+
+Definition at line 88 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!S\+E\+Chronometeri@{S\+E\+Chronometeri}}
+\index{S\+E\+Chronometeri@{S\+E\+Chronometeri}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{S\+E\+Chronometeri}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf S\+E\+Chronometer}$<$int$>$ {\bf S\+E\+Chronometeri}}\label{_s_e_math_8h_a2fd6011f84907b3f569950973b0b4543}
+
+
+Definition at line 87 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!S\+E\+Colord@{S\+E\+Colord}}
+\index{S\+E\+Colord@{S\+E\+Colord}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{S\+E\+Colord}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf S\+E\+Color}$<$double$>$ {\bf S\+E\+Colord}}\label{_s_e_math_8h_ae23e8ec1f0f52c1c70d464e73af275c4}
+
+
+Definition at line 66 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!S\+E\+Colorf@{S\+E\+Colorf}}
+\index{S\+E\+Colorf@{S\+E\+Colorf}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{S\+E\+Colorf}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf S\+E\+Color}$<$float$>$ {\bf S\+E\+Colorf}}\label{_s_e_math_8h_a5171e1d70b6567363808daca4d5792b4}
+
+
+Definition at line 65 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!S\+E\+Colori@{S\+E\+Colori}}
+\index{S\+E\+Colori@{S\+E\+Colori}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{S\+E\+Colori}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf S\+E\+Color}$<$int$>$ {\bf S\+E\+Colori}}\label{_s_e_math_8h_a27c006530544c7efc7f7e213c576c54c}
+
+
+Definition at line 64 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!S\+E\+Mat3d@{S\+E\+Mat3d}}
+\index{S\+E\+Mat3d@{S\+E\+Mat3d}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{S\+E\+Mat3d}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf S\+E\+Mat3}$<$double$>$ {\bf S\+E\+Mat3d}}\label{_s_e_math_8h_aa3bc18df772b8f9a7d9024949190d068}
+
+
+Definition at line 73 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!S\+E\+Mat3f@{S\+E\+Mat3f}}
+\index{S\+E\+Mat3f@{S\+E\+Mat3f}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{S\+E\+Mat3f}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf S\+E\+Mat3}$<$float$>$ {\bf S\+E\+Mat3f}}\label{_s_e_math_8h_af94f15f405c7f8f73affcbd9a1979139}
+
+
+Definition at line 72 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!S\+E\+Mat3i@{S\+E\+Mat3i}}
+\index{S\+E\+Mat3i@{S\+E\+Mat3i}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{S\+E\+Mat3i}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf S\+E\+Mat3}$<$int$>$ {\bf S\+E\+Mat3i}}\label{_s_e_math_8h_a368620209eee829a06290cdbc76fa572}
+
+
+Definition at line 71 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!S\+E\+Mat4d@{S\+E\+Mat4d}}
+\index{S\+E\+Mat4d@{S\+E\+Mat4d}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{S\+E\+Mat4d}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf S\+E\+Mat4}$<$double$>$ {\bf S\+E\+Mat4d}}\label{_s_e_math_8h_a7099a55d1000113a10e07dce51b6fb86}
+
+
+Definition at line 77 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!S\+E\+Mat4f@{S\+E\+Mat4f}}
+\index{S\+E\+Mat4f@{S\+E\+Mat4f}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{S\+E\+Mat4f}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf S\+E\+Mat4}$<$float$>$ {\bf S\+E\+Mat4f}}\label{_s_e_math_8h_acf21fef05fc3d1c6fc48a9e9cb6d15bf}
+
+
+Definition at line 76 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!S\+E\+Mat4i@{S\+E\+Mat4i}}
+\index{S\+E\+Mat4i@{S\+E\+Mat4i}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{S\+E\+Mat4i}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf S\+E\+Mat4}$<$int$>$ {\bf S\+E\+Mat4i}}\label{_s_e_math_8h_adfafb3c6fe2835231ffd2913c3701f6e}
+
+
+Definition at line 75 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!S\+E\+Math\+Utild@{S\+E\+Math\+Utild}}
+\index{S\+E\+Math\+Utild@{S\+E\+Math\+Utild}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{S\+E\+Math\+Utild}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf S\+E\+Math\+Util}$<$double$>$ {\bf S\+E\+Math\+Utild}}\label{_s_e_math_8h_ab25980dfe21616f4faf4491e459b92dd}
+
+
+Definition at line 54 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!S\+E\+Math\+Utilf@{S\+E\+Math\+Utilf}}
+\index{S\+E\+Math\+Utilf@{S\+E\+Math\+Utilf}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{S\+E\+Math\+Utilf}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf S\+E\+Math\+Util}$<$float$>$ {\bf S\+E\+Math\+Utilf}}\label{_s_e_math_8h_a76b514b6454d727770a33e5478683738}
+
+
+Definition at line 53 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!S\+E\+Math\+Utili@{S\+E\+Math\+Utili}}
+\index{S\+E\+Math\+Utili@{S\+E\+Math\+Utili}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{S\+E\+Math\+Utili}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf S\+E\+Math\+Util}$<$int$>$ {\bf S\+E\+Math\+Utili}}\label{_s_e_math_8h_a3e71416b7bd972f320235d55d49fc5fa}
+Type definitions 
+
+Definition at line 49 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!S\+E\+Planed@{S\+E\+Planed}}
+\index{S\+E\+Planed@{S\+E\+Planed}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{S\+E\+Planed}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf S\+E\+Plane}$<$double$>$ {\bf S\+E\+Planed}}\label{_s_e_math_8h_a73670f0c6980dce14cfe5a5154b27acc}
+
+
+Definition at line 85 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!S\+E\+Planef@{S\+E\+Planef}}
+\index{S\+E\+Planef@{S\+E\+Planef}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{S\+E\+Planef}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf S\+E\+Plane}$<$float$>$ {\bf S\+E\+Planef}}\label{_s_e_math_8h_a289c96a308b714ac7895548e2a0ff4a2}
+
+
+Definition at line 84 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!S\+E\+Planei@{S\+E\+Planei}}
+\index{S\+E\+Planei@{S\+E\+Planei}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{S\+E\+Planei}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf S\+E\+Plane}$<$int$>$ {\bf S\+E\+Planei}}\label{_s_e_math_8h_a3473611dac8ce0d47fa8be1894a9393a}
+
+
+Definition at line 83 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!S\+E\+Quaterniond@{S\+E\+Quaterniond}}
+\index{S\+E\+Quaterniond@{S\+E\+Quaterniond}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{S\+E\+Quaterniond}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf S\+E\+Quaternion}$<$double$>$ {\bf S\+E\+Quaterniond}}\label{_s_e_math_8h_ab930ef5a5ddaef61bbf27938e8295410}
+
+
+Definition at line 69 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!S\+E\+Quaternionf@{S\+E\+Quaternionf}}
+\index{S\+E\+Quaternionf@{S\+E\+Quaternionf}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{S\+E\+Quaternionf}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf S\+E\+Quaternion}$<$float$>$ {\bf S\+E\+Quaternionf}}\label{_s_e_math_8h_a2f90f63c1bf92e27a84c1427bcddef74}
+
+
+Definition at line 68 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!S\+E\+Random\+Number\+Generatord@{S\+E\+Random\+Number\+Generatord}}
+\index{S\+E\+Random\+Number\+Generatord@{S\+E\+Random\+Number\+Generatord}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{S\+E\+Random\+Number\+Generatord}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf S\+E\+Random\+Number\+Generator}$<$double$>$ {\bf S\+E\+Random\+Number\+Generatord}}\label{_s_e_math_8h_a2933b68709b412801c1a9e7a8ca84742}
+
+
+Definition at line 97 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!S\+E\+Random\+Number\+Generatorf@{S\+E\+Random\+Number\+Generatorf}}
+\index{S\+E\+Random\+Number\+Generatorf@{S\+E\+Random\+Number\+Generatorf}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{S\+E\+Random\+Number\+Generatorf}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf S\+E\+Random\+Number\+Generator}$<$float$>$ {\bf S\+E\+Random\+Number\+Generatorf}}\label{_s_e_math_8h_afd813c7773154d2786477757051ce1c7}
+
+
+Definition at line 96 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!S\+E\+Random\+Number\+Generatori@{S\+E\+Random\+Number\+Generatori}}
+\index{S\+E\+Random\+Number\+Generatori@{S\+E\+Random\+Number\+Generatori}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{S\+E\+Random\+Number\+Generatori}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf S\+E\+Random\+Number\+Generator}$<$int$>$ {\bf S\+E\+Random\+Number\+Generatori}}\label{_s_e_math_8h_aa0955e221008515680a69b578b3fb44b}
+
+
+Definition at line 95 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!S\+E\+Rayd@{S\+E\+Rayd}}
+\index{S\+E\+Rayd@{S\+E\+Rayd}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{S\+E\+Rayd}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf S\+E\+Ray}$<$double$>$ {\bf S\+E\+Rayd}}\label{_s_e_math_8h_a069f63e96e04ef9f93678e24b671b3b5}
+
+
+Definition at line 81 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!S\+E\+Rayf@{S\+E\+Rayf}}
+\index{S\+E\+Rayf@{S\+E\+Rayf}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{S\+E\+Rayf}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf S\+E\+Ray}$<$float$>$ {\bf S\+E\+Rayf}}\label{_s_e_math_8h_aeb1bab60e8f09266c5c0bd9f54c87322}
+
+
+Definition at line 80 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!S\+E\+Rayi@{S\+E\+Rayi}}
+\index{S\+E\+Rayi@{S\+E\+Rayi}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{S\+E\+Rayi}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf S\+E\+Ray}$<$int$>$ {\bf S\+E\+Rayi}}\label{_s_e_math_8h_a7deb6813ae6c6c6f8b81cc8dad501b8b}
+
+
+Definition at line 79 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!S\+E\+Timerd@{S\+E\+Timerd}}
+\index{S\+E\+Timerd@{S\+E\+Timerd}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{S\+E\+Timerd}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf S\+E\+Timer}$<$double$>$ {\bf S\+E\+Timerd}}\label{_s_e_math_8h_a9f8093a6d83ad80a591d739882454c83}
+
+
+Definition at line 93 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!S\+E\+Timerf@{S\+E\+Timerf}}
+\index{S\+E\+Timerf@{S\+E\+Timerf}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{S\+E\+Timerf}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf S\+E\+Timer}$<$float$>$ {\bf S\+E\+Timerf}}\label{_s_e_math_8h_a568c9fe6f88b216f63861706fa26949f}
+
+
+Definition at line 92 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!S\+E\+Timeri@{S\+E\+Timeri}}
+\index{S\+E\+Timeri@{S\+E\+Timeri}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{S\+E\+Timeri}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf S\+E\+Timer}$<$int$>$ {\bf S\+E\+Timeri}}\label{_s_e_math_8h_abdb48bfcb24bb3c8abd71bde9d2245c2}
+
+
+Definition at line 91 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!S\+E\+Vec3d@{S\+E\+Vec3d}}
+\index{S\+E\+Vec3d@{S\+E\+Vec3d}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{S\+E\+Vec3d}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf S\+E\+Vec3}$<$double$>$ {\bf S\+E\+Vec3d}}\label{_s_e_math_8h_ac5f41f474be1ad894e5c5dec05dda161}
+
+
+Definition at line 58 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!S\+E\+Vec3f@{S\+E\+Vec3f}}
+\index{S\+E\+Vec3f@{S\+E\+Vec3f}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{S\+E\+Vec3f}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf S\+E\+Vec3}$<$float$>$ {\bf S\+E\+Vec3f}}\label{_s_e_math_8h_ab8ab3516af135abb52989fc63094b039}
+
+
+Definition at line 57 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!S\+E\+Vec3i@{S\+E\+Vec3i}}
+\index{S\+E\+Vec3i@{S\+E\+Vec3i}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{S\+E\+Vec3i}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf S\+E\+Vec3}$<$int$>$ {\bf S\+E\+Vec3i}}\label{_s_e_math_8h_af7a4109341eb7d62aaec58eb8c7eb2af}
+
+
+Definition at line 56 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!S\+E\+Vec4d@{S\+E\+Vec4d}}
+\index{S\+E\+Vec4d@{S\+E\+Vec4d}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{S\+E\+Vec4d}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf S\+E\+Vec4}$<$double$>$ {\bf S\+E\+Vec4d}}\label{_s_e_math_8h_aa2a1894ea7b47386f4c453a5ea771da4}
+
+
+Definition at line 62 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!S\+E\+Vec4f@{S\+E\+Vec4f}}
+\index{S\+E\+Vec4f@{S\+E\+Vec4f}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{S\+E\+Vec4f}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf S\+E\+Vec4}$<$float$>$ {\bf S\+E\+Vec4f}}\label{_s_e_math_8h_a069f17d7968b49a3ce4487f688e0eff0}
+
+
+Definition at line 61 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math.\+h@{S\+E\+Math.\+h}!S\+E\+Vec4i@{S\+E\+Vec4i}}
+\index{S\+E\+Vec4i@{S\+E\+Vec4i}!S\+E\+Math.\+h@{S\+E\+Math.\+h}}
+\subsubsection[{S\+E\+Vec4i}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf S\+E\+Vec4}$<$int$>$ {\bf S\+E\+Vec4i}}\label{_s_e_math_8h_af070f43178ddeacff008b09f1e91ab6e}
+
+
+Definition at line 60 of file S\+E\+Math.\+h.
+

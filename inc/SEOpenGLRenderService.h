@@ -21,8 +21,6 @@ class SEOpenGLRenderService : public SERenderServiceInternals<GLfloat>
   friend class SEServiceLocator;
 
   public:
-    const   int      &currentCamera;
-
     typedef typename std::vector<SEOpenGLRenderObject*>            tROVector;
     typedef typename std::vector<SEOpenGLRenderObject*>::iterator  tROVectorIt;
 
@@ -40,35 +38,45 @@ class SEOpenGLRenderService : public SERenderServiceInternals<GLfloat>
     virtual int      createRO(SEROType::tRenderObject t, int t1=-1, int t2=-1, int t3=-1);
     virtual void     destroyRO(uint32_t i);
 
-    virtual void     setCamera(uint32_t c);
     virtual void     activateLight(uint32_t l);
     virtual void     deactivateLight(uint32_t l);
 
-    virtual void     enableLighting() const;
-    virtual void     disableLighting() const;
+    virtual const    SERenderObject<GLfloat> *getObject(uint32_t o) const;
+    virtual const    SECamera<GLfloat>       *getCamera(uint32_t c) const;
+    virtual const    SELight<GLfloat>        *getLight(uint32_t l)  const;
 
-    virtual const SERenderObject<GLfloat> *getObject(uint32_t o) const;
-    virtual const SECamera<GLfloat>       *getCamera(uint32_t c) const;
-    virtual const SELight<GLfloat>        *getLight(uint32_t l) const;
+    virtual          SERenderObject<GLfloat> *getObject(uint32_t o);
+    virtual          SECamera<GLfloat>       *getCamera(uint32_t c);
+    virtual          SELight<GLfloat>        *getLight(uint32_t l);
 
-    virtual SERenderObject<GLfloat> *getObject(uint32_t o);
-    virtual SECamera<GLfloat>       *getCamera(uint32_t c);
-    virtual SELight<GLfloat>        *getLight(uint32_t l);
+    virtual          void                     setGlobalAmbientLight(GLfloat r, GLfloat g, GLfloat b, GLfloat a) const;
+    virtual          void                     setGlobalAmbientLighti(int r, int g, int b, int a) const;
 
   protected:
-    SEOpenGLRenderService() : SERenderServiceInternals<GLfloat>(OPENGL_RS), ro_(), c_(), l_(), cc_(-1), currentCamera(cc_) { startup(); }
+    SEOpenGLRenderService() : SERenderServiceInternals<GLfloat>(OPENGL_RS), ro_(), c_(), l_() { startup(); }
     virtual ~SEOpenGLRenderService() { shutdown(); }
 
-  private:
-            void         startFrame() const;
-            void         setupCamera() const;
-            void         endFrame() const;
+    virtual void configureLighting()      const;
 
+    virtual void configureTexturing()     const;
+
+    virtual bool objectExists(uint32_t o) const;
+    virtual bool cameraExists(uint32_t c) const;
+    virtual bool lightExists(uint32_t l)  const;
+
+  private:
             tROVector ro_;
             tCamMap   c_;
             tLightMap l_;
 
-            int       cc_;
+            void      startFrame() const;
+            void      endFrame() const;
+
+            void      configureOpenGL() const;
+
+            void      setupCamera() const;
+            void      setupLighting() const;
+            void      setupTexturing() const;
 };
 
 #endif

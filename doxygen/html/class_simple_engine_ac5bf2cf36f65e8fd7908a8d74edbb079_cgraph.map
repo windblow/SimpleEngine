@@ -1,0 +1,8 @@
+<map id="SimpleEngine::idle" name="SimpleEngine::idle">
+<area shape="rect" id="node2" href="$class_simple_engine.html#afd68cf105863ee439f621aee6bd37124" title="SimpleEngine::app" alt="" coords="217,5,347,32"/>
+<area shape="rect" id="node3" href="$class_s_e_application_interface.html#ace0d1433d2f5b08c9cd582318eabcffc" title="SEApplicationInterface\l::idle" alt="" coords="205,57,359,98"/>
+<area shape="rect" id="node4" href="$class_simple_engine.html#a4df639bc6fff81be483d03f2f0de98b8" title="SimpleEngine::wm" alt="" coords="217,123,347,149"/>
+<area shape="rect" id="node7" href="$class_s_e_window_manager.html#aacfa8b8c81d34d852c82359fda538b68" title="SEWindowManager::redisplay\lActive" alt="" coords="184,174,380,215"/>
+<area shape="rect" id="node5" href="$class_simple_engine.html#a7de3fea4d892fee0f684367b674ef6b8" title="SimpleEngine::appLoaded" alt="" coords="432,97,605,124"/>
+<area shape="rect" id="node6" href="$class_s_e_application_interface.html#a741d9bee928dc78ea56fe6de72137393" title="SEApplicationInterface::wm" alt="" coords="428,148,609,175"/>
+</map>

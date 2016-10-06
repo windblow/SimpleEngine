@@ -1,0 +1,10 @@
+<map id="SEOpenGLSpotLight" name="SEOpenGLSpotLight">
+<area shape="rect" id="node2" href="$class_s_e_spot_light.html" title="SESpotLight\&lt; GLfloat \&gt;" alt="" coords="5,260,165,287"/>
+<area shape="rect" id="node3" href="$class_s_e_light.html" title="SELight\&lt; GLfloat \&gt;" alt="" coords="95,184,228,211"/>
+<area shape="rect" id="node6" href="$class_s_e_open_g_l_light.html" title="SEOpenGLLight" alt="" coords="190,260,306,287"/>
+<area shape="rect" id="node4" href="$class_s_e_color.html" title="SEColor\&lt; GLfloat \&gt;" alt="" coords="94,95,229,121"/>
+<area shape="rect" id="node5" href="$class_s_e_vec4.html" title="SEVec4\&lt; GLfloat \&gt;" alt="" coords="94,5,229,32"/>
+<area shape="rect" id="node8" href="$class_s_e_render_object.html" title="SERenderObject\&lt; GLfloat \&gt;" alt="" coords="253,95,437,121"/>
+<area shape="rect" id="node7" href="$class_s_e_open_g_l_render_object.html" title="SEOpenGLRenderObject" alt="" coords="255,184,422,211"/>
+<area shape="rect" id="node9" href="$class_s_e_quaternion.html" title="SEQuaternion\&lt; GLfloat \&gt;" alt="" coords="261,5,429,32"/>
+</map>

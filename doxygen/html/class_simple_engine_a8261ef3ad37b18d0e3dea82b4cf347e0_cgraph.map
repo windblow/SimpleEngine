@@ -1,0 +1,5 @@
+<map id="SimpleEngine::reset" name="SimpleEngine::reset">
+<area shape="rect" id="node2" href="$class_simple_engine.html#a47ffe1072c4d9352c711150d3f7a7444" title="SimpleEngine::quit" alt="" coords="192,5,323,32"/>
+<area shape="rect" id="node4" href="$class_simple_engine.html#a2094e26b9e1654f26cb0ff4baf9ace8c" title="SimpleEngine::init" alt="" coords="194,56,321,83"/>
+<area shape="rect" id="node3" href="$class_simple_engine.html#a7ff54e68fd824b273c67b331ffa901fc" title="SimpleEngine::unloadApp" alt="" coords="371,5,541,32"/>
+</map>

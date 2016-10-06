@@ -1,0 +1,506 @@
+\section{S\+E\+Math\+Util$<$ T $>$ Class Template Reference}
+\label{class_s_e_math_util}\index{S\+E\+Math\+Util$<$ T $>$@{S\+E\+Math\+Util$<$ T $>$}}
+
+
+{\ttfamily \#include $<$S\+E\+Math.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool {\bf I\+S\+Z\+E\+R\+O} (const T \&a)
+\item 
+static void {\bf S\+W\+A\+P} (T \&a, T \&b)
+\item 
+static T {\bf D\+E\+T3x3} (T m0, T m1, T m2, T m3, T m4, T m5, T m6, T m7, T m8)
+\item 
+static T {\bf to\+Radians} (const T \&a)
+\item 
+static T {\bf rad} (const T \&a)
+\item 
+static {\bf S\+E\+Vec3}$<$ T $>$ {\bf to\+Radians} (const {\bf S\+E\+Vec3}$<$ T $>$ \&e)
+\item 
+static {\bf S\+E\+Vec3}$<$ T $>$ {\bf rad} (const {\bf S\+E\+Vec3}$<$ T $>$ \&e)
+\item 
+static T {\bf to\+Euler\+Angle} (const T \&r)
+\item 
+static T {\bf ang} (const T \&r)
+\item 
+static {\bf S\+E\+Vec3}$<$ T $>$ {\bf to\+Euler\+Angle} (const {\bf S\+E\+Vec3}$<$ T $>$ \&r)
+\item 
+static {\bf S\+E\+Vec3}$<$ T $>$ {\bf ang} (const {\bf S\+E\+Vec3}$<$ T $>$ \&r)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const T {\bf S\+M\+A\+L\+L} = (T)1.\+0e-\/4f
+\item 
+static const T {\bf B\+I\+G} = (T)1.\+0e+10f
+\begin{DoxyCompactList}\small\item\em limite mínimo para detecção de underflow \end{DoxyCompactList}\item 
+static const T {\bf T\+W\+O\+P\+I} = (T)6.\+28318530718f
+\begin{DoxyCompactList}\small\item\em limite máximo para detecção de overflow \end{DoxyCompactList}\item 
+static const T {\bf P\+I} = (T)3.\+14159265359f
+\item 
+static const T {\bf E\+P\+S\+I\+L\+O\+N} = (T)0.\+001f
+\item 
+static const T {\bf P\+I\+O\+V\+E\+R2} = (T)1.\+57079632679f
+\item 
+static const T {\bf P\+I\+O\+V\+E\+R4} = (T)0.\+78539816340f
+\item 
+static const T {\bf P\+I\+O\+V\+E\+R180} = (T)1.\+74532925199433\+E-\/002f
+\item 
+static const T {\bf P\+I\+U\+N\+D\+E\+R180} = (T)5.\+72957795130823\+E+001f
+\item 
+static const T {\bf C\+O\+S45} = (T)0.\+7071067811865475244f
+\item 
+static const T {\bf S\+Q\+R\+T3} = (T)1.\+7320508075688772935f
+\item 
+static const T {\bf I\+N\+V\+S\+Q\+R\+T3} = (T)0.\+5773502691896257645f
+\item 
+static const {\bf S\+E\+Vec3}$<$ T $>$ {\bf U\+N\+I\+T\+\_\+\+X\+\_\+3} = {\bf S\+E\+Vec3}$<$T$>$(1,0,0)
+\item 
+static const {\bf S\+E\+Vec3}$<$ T $>$ {\bf U\+N\+I\+T\+\_\+\+Y\+\_\+3} = {\bf S\+E\+Vec3}$<$T$>$(0,1,0)
+\item 
+static const {\bf S\+E\+Vec3}$<$ T $>$ {\bf U\+N\+I\+T\+\_\+\+Z\+\_\+3} = {\bf S\+E\+Vec3}$<$T$>$(0,0,1)
+\item 
+static const {\bf S\+E\+Vec4}$<$ T $>$ {\bf U\+N\+I\+T\+\_\+\+X\+\_\+4} = {\bf S\+E\+Vec4}$<$T$>$(1,0,0,0)
+\item 
+static const {\bf S\+E\+Vec4}$<$ T $>$ {\bf U\+N\+I\+T\+\_\+\+Y\+\_\+4} = {\bf S\+E\+Vec4}$<$T$>$(0,1,0,0)
+\item 
+static const {\bf S\+E\+Vec4}$<$ T $>$ {\bf U\+N\+I\+T\+\_\+\+Z\+\_\+4} = {\bf S\+E\+Vec4}$<$T$>$(0,0,1,0)
+\item 
+static const {\bf S\+E\+Vec4}$<$ T $>$ {\bf U\+N\+I\+T\+\_\+\+W\+\_\+4} = {\bf S\+E\+Vec4}$<$T$>$(0,0,0,1)
+\item 
+static const {\bf S\+E\+Quaternion}$<$ T $>$ {\bf I\+D\+E\+N\+T\+I\+T\+Y\+\_\+\+Q\+U\+A\+T} = {\bf S\+E\+Quaternion}$<$T$>$()
+\item 
+static const {\bf S\+E\+Quaternion}$<$ T $>$ {\bf R90\+X} = {\bf S\+E\+Quaternion}$<$T$>$({\bf P\+I\+O\+V\+E\+R4},1,0,0)
+\item 
+static const {\bf S\+E\+Quaternion}$<$ T $>$ {\bf R90\+Y} = {\bf S\+E\+Quaternion}$<$T$>$({\bf P\+I\+O\+V\+E\+R4},0,1,0)
+\item 
+static const {\bf S\+E\+Quaternion}$<$ T $>$ {\bf R90\+Z} = {\bf S\+E\+Quaternion}$<$T$>$({\bf P\+I\+O\+V\+E\+R4},0,0,1)
+\item 
+static const {\bf S\+E\+Quaternion}$<$ T $>$ {\bf R180\+X} = {\bf S\+E\+Quaternion}$<$T$>$({\bf P\+I\+O\+V\+E\+R2},1,0,0)
+\item 
+static const {\bf S\+E\+Quaternion}$<$ T $>$ {\bf R180\+Y} = {\bf S\+E\+Quaternion}$<$T$>$({\bf P\+I\+O\+V\+E\+R2},0,1,0)
+\item 
+static const {\bf S\+E\+Quaternion}$<$ T $>$ {\bf R180\+Z} = {\bf S\+E\+Quaternion}$<$T$>$({\bf P\+I\+O\+V\+E\+R2},0,0,1)
+\item 
+static const {\bf S\+E\+Mat3}$<$ T $>$ {\bf I\+D\+E\+N\+T\+I\+T\+Y\+\_\+3}
+\item 
+static const {\bf S\+E\+Mat4}$<$ T $>$ {\bf I\+D\+E\+N\+T\+I\+T\+Y\+\_\+4}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$class S\+E\+Math\+Util$<$ T $>$}
+
+Forward declarations 
+
+Definition at line 38 of file S\+E\+Math.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!ang@{ang}}
+\index{ang@{ang}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{ang}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ static T {\bf S\+E\+Math\+Util}$<$ T $>$\+::ang (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_s_e_math_util_afd6788016920d1de3bdc23e66a14a36e}
+
+
+Definition at line 161 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!ang@{ang}}
+\index{ang@{ang}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{ang}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ static {\bf S\+E\+Vec3}$<$T$>$ {\bf S\+E\+Math\+Util}$<$ T $>$\+::ang (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_s_e_math_util_a4e016096124439fdf3cc7a98a5897840}
+
+
+Definition at line 163 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!D\+E\+T3x3@{D\+E\+T3x3}}
+\index{D\+E\+T3x3@{D\+E\+T3x3}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{D\+E\+T3x3}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ static T {\bf S\+E\+Math\+Util}$<$ T $>$\+::D\+E\+T3x3 (
+\begin{DoxyParamCaption}
+\item[{T}]{m0, }
+\item[{T}]{m1, }
+\item[{T}]{m2, }
+\item[{T}]{m3, }
+\item[{T}]{m4, }
+\item[{T}]{m5, }
+\item[{T}]{m6, }
+\item[{T}]{m7, }
+\item[{T}]{m8}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_s_e_math_util_aaa5a236711abe99c494268194e6983df}
+
+
+Definition at line 151 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!I\+S\+Z\+E\+R\+O@{I\+S\+Z\+E\+R\+O}}
+\index{I\+S\+Z\+E\+R\+O@{I\+S\+Z\+E\+R\+O}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{I\+S\+Z\+E\+R\+O}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ static bool {\bf S\+E\+Math\+Util}$<$ T $>$\+::I\+S\+Z\+E\+R\+O (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_s_e_math_util_a19b4935b31fa68db9ff18992ea27e4c7}
+
+
+Definition at line 145 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!rad@{rad}}
+\index{rad@{rad}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{rad}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ static T {\bf S\+E\+Math\+Util}$<$ T $>$\+::rad (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_s_e_math_util_af45312eddb9daa4bcd8fa1f8b6c563b7}
+
+
+Definition at line 157 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!rad@{rad}}
+\index{rad@{rad}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{rad}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ static {\bf S\+E\+Vec3}$<$T$>$ {\bf S\+E\+Math\+Util}$<$ T $>$\+::rad (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_s_e_math_util_a0fa972e883a5aa2d93266ea597a42236}
+
+
+Definition at line 159 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!S\+W\+A\+P@{S\+W\+A\+P}}
+\index{S\+W\+A\+P@{S\+W\+A\+P}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{S\+W\+A\+P}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ static void {\bf S\+E\+Math\+Util}$<$ T $>$\+::S\+W\+A\+P (
+\begin{DoxyParamCaption}
+\item[{T \&}]{a, }
+\item[{T \&}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_s_e_math_util_ad492227208f676846c94ec4f7949162b}
+
+
+Definition at line 148 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!to\+Euler\+Angle@{to\+Euler\+Angle}}
+\index{to\+Euler\+Angle@{to\+Euler\+Angle}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{to\+Euler\+Angle}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ static T {\bf S\+E\+Math\+Util}$<$ T $>$\+::to\+Euler\+Angle (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_s_e_math_util_a522a50c4e19a8bf7e6d67bf30f954008}
+
+
+Definition at line 160 of file S\+E\+Math.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{class_s_e_math_util_a522a50c4e19a8bf7e6d67bf30f954008_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!to\+Euler\+Angle@{to\+Euler\+Angle}}
+\index{to\+Euler\+Angle@{to\+Euler\+Angle}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{to\+Euler\+Angle}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ static {\bf S\+E\+Vec3}$<$T$>$ {\bf S\+E\+Math\+Util}$<$ T $>$\+::to\+Euler\+Angle (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_s_e_math_util_ac57891f47b50319eaf5a71762a90083e}
+
+
+Definition at line 162 of file S\+E\+Math.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{class_s_e_math_util_ac57891f47b50319eaf5a71762a90083e_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!to\+Radians@{to\+Radians}}
+\index{to\+Radians@{to\+Radians}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{to\+Radians}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ static T {\bf S\+E\+Math\+Util}$<$ T $>$\+::to\+Radians (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_s_e_math_util_a87161e431595586f5239402d336a856b}
+
+
+Definition at line 156 of file S\+E\+Math.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{class_s_e_math_util_a87161e431595586f5239402d336a856b_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!to\+Radians@{to\+Radians}}
+\index{to\+Radians@{to\+Radians}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{to\+Radians}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ static {\bf S\+E\+Vec3}$<$T$>$ {\bf S\+E\+Math\+Util}$<$ T $>$\+::to\+Radians (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_s_e_math_util_a6bfd9fb911d8915d4fec9163ea311c64}
+
+
+Definition at line 158 of file S\+E\+Math.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{class_s_e_math_util_a6bfd9fb911d8915d4fec9163ea311c64_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!B\+I\+G@{B\+I\+G}}
+\index{B\+I\+G@{B\+I\+G}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{B\+I\+G}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const T {\bf S\+E\+Math\+Util}$<$ T $>$\+::B\+I\+G = (T)1.\+0e+10f\hspace{0.3cm}{\ttfamily [static]}}\label{class_s_e_math_util_aa7a5e311c438e1f759d7c241327c00a2}
+
+
+limite mínimo para detecção de underflow 
+
+
+
+Definition at line 110 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!C\+O\+S45@{C\+O\+S45}}
+\index{C\+O\+S45@{C\+O\+S45}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{C\+O\+S45}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const T {\bf S\+E\+Math\+Util}$<$ T $>$\+::C\+O\+S45 = (T)0.\+7071067811865475244f\hspace{0.3cm}{\ttfamily [static]}}\label{class_s_e_math_util_a74ff513d8e1e2f1849f6686504cb7100}
+
+
+Definition at line 119 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!E\+P\+S\+I\+L\+O\+N@{E\+P\+S\+I\+L\+O\+N}}
+\index{E\+P\+S\+I\+L\+O\+N@{E\+P\+S\+I\+L\+O\+N}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{E\+P\+S\+I\+L\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const T {\bf S\+E\+Math\+Util}$<$ T $>$\+::E\+P\+S\+I\+L\+O\+N = (T)0.\+001f\hspace{0.3cm}{\ttfamily [static]}}\label{class_s_e_math_util_af1c74bc177bc82142cee596fbbf48ecc}
+
+
+Definition at line 114 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!I\+D\+E\+N\+T\+I\+T\+Y\+\_\+3@{I\+D\+E\+N\+T\+I\+T\+Y\+\_\+3}}
+\index{I\+D\+E\+N\+T\+I\+T\+Y\+\_\+3@{I\+D\+E\+N\+T\+I\+T\+Y\+\_\+3}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{I\+D\+E\+N\+T\+I\+T\+Y\+\_\+3}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const {\bf S\+E\+Mat3}$<$ T $>$ {\bf S\+E\+Math\+Util}$<$ T $>$\+::I\+D\+E\+N\+T\+I\+T\+Y\+\_\+3\hspace{0.3cm}{\ttfamily [static]}}\label{class_s_e_math_util_a64ae1a33eb682d3fc78dc47946fe91e1}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= SEMat3<T> (1, 0, 0,
+                                                                                   0, 1, 0,
+                                                                                   0, 0, 1)
+\end{DoxyCode}
+
+
+Definition at line 140 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!I\+D\+E\+N\+T\+I\+T\+Y\+\_\+4@{I\+D\+E\+N\+T\+I\+T\+Y\+\_\+4}}
+\index{I\+D\+E\+N\+T\+I\+T\+Y\+\_\+4@{I\+D\+E\+N\+T\+I\+T\+Y\+\_\+4}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{I\+D\+E\+N\+T\+I\+T\+Y\+\_\+4}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const {\bf S\+E\+Mat4}$<$ T $>$ {\bf S\+E\+Math\+Util}$<$ T $>$\+::I\+D\+E\+N\+T\+I\+T\+Y\+\_\+4\hspace{0.3cm}{\ttfamily [static]}}\label{class_s_e_math_util_a7c42478fefeab190d5ad2d8b6a51a508}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= SEMat4<T> (1, 0, 0, 0,
+                                                                                   0, 1, 0, 0,
+                                                                                   0, 0, 1, 0,
+                                                                                   0, 0, 0, 1)
+\end{DoxyCode}
+
+
+Definition at line 142 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!I\+D\+E\+N\+T\+I\+T\+Y\+\_\+\+Q\+U\+A\+T@{I\+D\+E\+N\+T\+I\+T\+Y\+\_\+\+Q\+U\+A\+T}}
+\index{I\+D\+E\+N\+T\+I\+T\+Y\+\_\+\+Q\+U\+A\+T@{I\+D\+E\+N\+T\+I\+T\+Y\+\_\+\+Q\+U\+A\+T}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{I\+D\+E\+N\+T\+I\+T\+Y\+\_\+\+Q\+U\+A\+T}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const {\bf S\+E\+Quaternion}$<$ T $>$ {\bf S\+E\+Math\+Util}$<$ T $>$\+::I\+D\+E\+N\+T\+I\+T\+Y\+\_\+\+Q\+U\+A\+T = {\bf S\+E\+Quaternion}$<$T$>$()\hspace{0.3cm}{\ttfamily [static]}}\label{class_s_e_math_util_ae35ee36c3c5543670b7acf96a814a149}
+
+
+Definition at line 132 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!I\+N\+V\+S\+Q\+R\+T3@{I\+N\+V\+S\+Q\+R\+T3}}
+\index{I\+N\+V\+S\+Q\+R\+T3@{I\+N\+V\+S\+Q\+R\+T3}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{I\+N\+V\+S\+Q\+R\+T3}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const T {\bf S\+E\+Math\+Util}$<$ T $>$\+::I\+N\+V\+S\+Q\+R\+T3 = (T)0.\+5773502691896257645f\hspace{0.3cm}{\ttfamily [static]}}\label{class_s_e_math_util_a52e1ae936b7947572f4d80702721384d}
+
+
+Definition at line 121 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!P\+I@{P\+I}}
+\index{P\+I@{P\+I}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{P\+I}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const T {\bf S\+E\+Math\+Util}$<$ T $>$\+::P\+I = (T)3.\+14159265359f\hspace{0.3cm}{\ttfamily [static]}}\label{class_s_e_math_util_aada992af3723e55915991c8bf1cead82}
+
+
+Definition at line 113 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!P\+I\+O\+V\+E\+R180@{P\+I\+O\+V\+E\+R180}}
+\index{P\+I\+O\+V\+E\+R180@{P\+I\+O\+V\+E\+R180}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{P\+I\+O\+V\+E\+R180}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const T {\bf S\+E\+Math\+Util}$<$ T $>$\+::P\+I\+O\+V\+E\+R180 = (T)1.\+74532925199433\+E-\/002f\hspace{0.3cm}{\ttfamily [static]}}\label{class_s_e_math_util_a9ed91fe4742a2cf538e5e23b0917d20a}
+
+
+Definition at line 117 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!P\+I\+O\+V\+E\+R2@{P\+I\+O\+V\+E\+R2}}
+\index{P\+I\+O\+V\+E\+R2@{P\+I\+O\+V\+E\+R2}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{P\+I\+O\+V\+E\+R2}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const T {\bf S\+E\+Math\+Util}$<$ T $>$\+::P\+I\+O\+V\+E\+R2 = (T)1.\+57079632679f\hspace{0.3cm}{\ttfamily [static]}}\label{class_s_e_math_util_a57445419ca05bbb4619aba5878522ae1}
+
+
+Definition at line 115 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!P\+I\+O\+V\+E\+R4@{P\+I\+O\+V\+E\+R4}}
+\index{P\+I\+O\+V\+E\+R4@{P\+I\+O\+V\+E\+R4}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{P\+I\+O\+V\+E\+R4}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const T {\bf S\+E\+Math\+Util}$<$ T $>$\+::P\+I\+O\+V\+E\+R4 = (T)0.\+78539816340f\hspace{0.3cm}{\ttfamily [static]}}\label{class_s_e_math_util_acc38105ac17b3ec7553b48cb28f75c3f}
+
+
+Definition at line 116 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!P\+I\+U\+N\+D\+E\+R180@{P\+I\+U\+N\+D\+E\+R180}}
+\index{P\+I\+U\+N\+D\+E\+R180@{P\+I\+U\+N\+D\+E\+R180}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{P\+I\+U\+N\+D\+E\+R180}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const T {\bf S\+E\+Math\+Util}$<$ T $>$\+::P\+I\+U\+N\+D\+E\+R180 = (T)5.\+72957795130823\+E+001f\hspace{0.3cm}{\ttfamily [static]}}\label{class_s_e_math_util_a4ff6955175873566f5e672f6a0a46e53}
+
+
+Definition at line 118 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!R180\+X@{R180\+X}}
+\index{R180\+X@{R180\+X}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{R180\+X}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const {\bf S\+E\+Quaternion}$<$ T $>$ {\bf S\+E\+Math\+Util}$<$ T $>$\+::R180\+X = {\bf S\+E\+Quaternion}$<$T$>$({\bf P\+I\+O\+V\+E\+R2},1,0,0)\hspace{0.3cm}{\ttfamily [static]}}\label{class_s_e_math_util_ae6386ce56338d337e0b9cd7eb8c48a0b}
+
+
+Definition at line 132 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!R180\+Y@{R180\+Y}}
+\index{R180\+Y@{R180\+Y}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{R180\+Y}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const {\bf S\+E\+Quaternion}$<$ T $>$ {\bf S\+E\+Math\+Util}$<$ T $>$\+::R180\+Y = {\bf S\+E\+Quaternion}$<$T$>$({\bf P\+I\+O\+V\+E\+R2},0,1,0)\hspace{0.3cm}{\ttfamily [static]}}\label{class_s_e_math_util_add264599500d797aa638873fd88094ff}
+
+
+Definition at line 132 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!R180\+Z@{R180\+Z}}
+\index{R180\+Z@{R180\+Z}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{R180\+Z}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const {\bf S\+E\+Quaternion}$<$ T $>$ {\bf S\+E\+Math\+Util}$<$ T $>$\+::R180\+Z = {\bf S\+E\+Quaternion}$<$T$>$({\bf P\+I\+O\+V\+E\+R2},0,0,1)\hspace{0.3cm}{\ttfamily [static]}}\label{class_s_e_math_util_a270347275a8f42c517e9770daff1416f}
+
+
+Definition at line 132 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!R90\+X@{R90\+X}}
+\index{R90\+X@{R90\+X}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{R90\+X}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const {\bf S\+E\+Quaternion}$<$ T $>$ {\bf S\+E\+Math\+Util}$<$ T $>$\+::R90\+X = {\bf S\+E\+Quaternion}$<$T$>$({\bf P\+I\+O\+V\+E\+R4},1,0,0)\hspace{0.3cm}{\ttfamily [static]}}\label{class_s_e_math_util_aabcce8fc75e6f2ff3ab344e38662c133}
+
+
+Definition at line 132 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!R90\+Y@{R90\+Y}}
+\index{R90\+Y@{R90\+Y}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{R90\+Y}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const {\bf S\+E\+Quaternion}$<$ T $>$ {\bf S\+E\+Math\+Util}$<$ T $>$\+::R90\+Y = {\bf S\+E\+Quaternion}$<$T$>$({\bf P\+I\+O\+V\+E\+R4},0,1,0)\hspace{0.3cm}{\ttfamily [static]}}\label{class_s_e_math_util_ae23edf1f1e5d87d9e3cf9266dc5a3442}
+
+
+Definition at line 132 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!R90\+Z@{R90\+Z}}
+\index{R90\+Z@{R90\+Z}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{R90\+Z}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const {\bf S\+E\+Quaternion}$<$ T $>$ {\bf S\+E\+Math\+Util}$<$ T $>$\+::R90\+Z = {\bf S\+E\+Quaternion}$<$T$>$({\bf P\+I\+O\+V\+E\+R4},0,0,1)\hspace{0.3cm}{\ttfamily [static]}}\label{class_s_e_math_util_ad0328c2294e6d0f27479759bef88cb1c}
+
+
+Definition at line 132 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!S\+M\+A\+L\+L@{S\+M\+A\+L\+L}}
+\index{S\+M\+A\+L\+L@{S\+M\+A\+L\+L}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{S\+M\+A\+L\+L}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const T {\bf S\+E\+Math\+Util}$<$ T $>$\+::S\+M\+A\+L\+L = (T)1.\+0e-\/4f\hspace{0.3cm}{\ttfamily [static]}}\label{class_s_e_math_util_a1a47816f4f8b63eaa4a69dd5f74ba6ae}
+
+
+Definition at line 109 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!S\+Q\+R\+T3@{S\+Q\+R\+T3}}
+\index{S\+Q\+R\+T3@{S\+Q\+R\+T3}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{S\+Q\+R\+T3}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const T {\bf S\+E\+Math\+Util}$<$ T $>$\+::S\+Q\+R\+T3 = (T)1.\+7320508075688772935f\hspace{0.3cm}{\ttfamily [static]}}\label{class_s_e_math_util_a23b6f846252a02196a99df2aa263e74e}
+
+
+Definition at line 120 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!T\+W\+O\+P\+I@{T\+W\+O\+P\+I}}
+\index{T\+W\+O\+P\+I@{T\+W\+O\+P\+I}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{T\+W\+O\+P\+I}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const T {\bf S\+E\+Math\+Util}$<$ T $>$\+::T\+W\+O\+P\+I = (T)6.\+28318530718f\hspace{0.3cm}{\ttfamily [static]}}\label{class_s_e_math_util_ad5ebf3e1757f9dc877d402cdf8945bb6}
+
+
+limite máximo para detecção de overflow 
+
+
+
+Definition at line 112 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!U\+N\+I\+T\+\_\+\+W\+\_\+4@{U\+N\+I\+T\+\_\+\+W\+\_\+4}}
+\index{U\+N\+I\+T\+\_\+\+W\+\_\+4@{U\+N\+I\+T\+\_\+\+W\+\_\+4}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{U\+N\+I\+T\+\_\+\+W\+\_\+4}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const {\bf S\+E\+Vec4}$<$ T $>$ {\bf S\+E\+Math\+Util}$<$ T $>$\+::U\+N\+I\+T\+\_\+\+W\+\_\+4 = {\bf S\+E\+Vec4}$<$T$>$(0,0,0,1)\hspace{0.3cm}{\ttfamily [static]}}\label{class_s_e_math_util_afd0796027d36cbcc3a001a98ded3ebed}
+
+
+Definition at line 127 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!U\+N\+I\+T\+\_\+\+X\+\_\+3@{U\+N\+I\+T\+\_\+\+X\+\_\+3}}
+\index{U\+N\+I\+T\+\_\+\+X\+\_\+3@{U\+N\+I\+T\+\_\+\+X\+\_\+3}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{U\+N\+I\+T\+\_\+\+X\+\_\+3}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const {\bf S\+E\+Vec3}$<$ T $>$ {\bf S\+E\+Math\+Util}$<$ T $>$\+::U\+N\+I\+T\+\_\+\+X\+\_\+3 = {\bf S\+E\+Vec3}$<$T$>$(1,0,0)\hspace{0.3cm}{\ttfamily [static]}}\label{class_s_e_math_util_a4d62716ccd24bcae97974eee203cef55}
+
+
+Definition at line 123 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!U\+N\+I\+T\+\_\+\+X\+\_\+4@{U\+N\+I\+T\+\_\+\+X\+\_\+4}}
+\index{U\+N\+I\+T\+\_\+\+X\+\_\+4@{U\+N\+I\+T\+\_\+\+X\+\_\+4}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{U\+N\+I\+T\+\_\+\+X\+\_\+4}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const {\bf S\+E\+Vec4}$<$ T $>$ {\bf S\+E\+Math\+Util}$<$ T $>$\+::U\+N\+I\+T\+\_\+\+X\+\_\+4 = {\bf S\+E\+Vec4}$<$T$>$(1,0,0,0)\hspace{0.3cm}{\ttfamily [static]}}\label{class_s_e_math_util_a882cf8896ad6f1cfc9653355ba3b88d8}
+
+
+Definition at line 127 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!U\+N\+I\+T\+\_\+\+Y\+\_\+3@{U\+N\+I\+T\+\_\+\+Y\+\_\+3}}
+\index{U\+N\+I\+T\+\_\+\+Y\+\_\+3@{U\+N\+I\+T\+\_\+\+Y\+\_\+3}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{U\+N\+I\+T\+\_\+\+Y\+\_\+3}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const {\bf S\+E\+Vec3}$<$ T $>$ {\bf S\+E\+Math\+Util}$<$ T $>$\+::U\+N\+I\+T\+\_\+\+Y\+\_\+3 = {\bf S\+E\+Vec3}$<$T$>$(0,1,0)\hspace{0.3cm}{\ttfamily [static]}}\label{class_s_e_math_util_a3aa48cef8de481c31ca36c7de0e4cfe9}
+
+
+Definition at line 123 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!U\+N\+I\+T\+\_\+\+Y\+\_\+4@{U\+N\+I\+T\+\_\+\+Y\+\_\+4}}
+\index{U\+N\+I\+T\+\_\+\+Y\+\_\+4@{U\+N\+I\+T\+\_\+\+Y\+\_\+4}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{U\+N\+I\+T\+\_\+\+Y\+\_\+4}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const {\bf S\+E\+Vec4}$<$ T $>$ {\bf S\+E\+Math\+Util}$<$ T $>$\+::U\+N\+I\+T\+\_\+\+Y\+\_\+4 = {\bf S\+E\+Vec4}$<$T$>$(0,1,0,0)\hspace{0.3cm}{\ttfamily [static]}}\label{class_s_e_math_util_abac064809220f06345edc215b479f59a}
+
+
+Definition at line 127 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!U\+N\+I\+T\+\_\+\+Z\+\_\+3@{U\+N\+I\+T\+\_\+\+Z\+\_\+3}}
+\index{U\+N\+I\+T\+\_\+\+Z\+\_\+3@{U\+N\+I\+T\+\_\+\+Z\+\_\+3}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{U\+N\+I\+T\+\_\+\+Z\+\_\+3}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const {\bf S\+E\+Vec3}$<$ T $>$ {\bf S\+E\+Math\+Util}$<$ T $>$\+::U\+N\+I\+T\+\_\+\+Z\+\_\+3 = {\bf S\+E\+Vec3}$<$T$>$(0,0,1)\hspace{0.3cm}{\ttfamily [static]}}\label{class_s_e_math_util_a4b1caf39aa163113dbea4b5b1af0208e}
+
+
+Definition at line 123 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Math\+Util@{S\+E\+Math\+Util}!U\+N\+I\+T\+\_\+\+Z\+\_\+4@{U\+N\+I\+T\+\_\+\+Z\+\_\+4}}
+\index{U\+N\+I\+T\+\_\+\+Z\+\_\+4@{U\+N\+I\+T\+\_\+\+Z\+\_\+4}!S\+E\+Math\+Util@{S\+E\+Math\+Util}}
+\subsubsection[{U\+N\+I\+T\+\_\+\+Z\+\_\+4}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const {\bf S\+E\+Vec4}$<$ T $>$ {\bf S\+E\+Math\+Util}$<$ T $>$\+::U\+N\+I\+T\+\_\+\+Z\+\_\+4 = {\bf S\+E\+Vec4}$<$T$>$(0,0,1,0)\hspace{0.3cm}{\ttfamily [static]}}\label{class_s_e_math_util_a81cbbf7fbc5b58557cdc888ca31f95fc}
+
+
+Definition at line 127 of file S\+E\+Math.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Math.\+h}\item 
+{\bf S\+E\+Math.\+cpp}\end{DoxyCompactItemize}

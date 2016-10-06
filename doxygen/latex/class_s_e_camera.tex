@@ -1,0 +1,533 @@
+\section{S\+E\+Camera$<$ T $>$ Class Template Reference}
+\label{class_s_e_camera}\index{S\+E\+Camera$<$ T $>$@{S\+E\+Camera$<$ T $>$}}
+
+
+{\ttfamily \#include $<$S\+E\+Camera.\+h$>$}
+
+
+
+Inheritance diagram for S\+E\+Camera$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{class_s_e_camera__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for S\+E\+Camera$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{class_s_e_camera__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf use\+Ortho\+Projection} ()
+\item 
+void {\bf use\+Perspective\+Projection} ()
+\item 
+{\bf S\+E\+Camera}$<$ T $>$ \& {\bf translate\+Relative\+By} (T x, T y, T z)
+\item 
+{\bf S\+E\+Camera}$<$ T $>$ \& {\bf translate\+Relative\+By} (const {\bf S\+E\+Vec3}$<$ T $>$ \&t)
+\item 
+{\bf S\+E\+Camera}$<$ T $>$ \& {\bf translate\+Relative\+By} (const {\bf S\+E\+Vec4}$<$ T $>$ \&t)
+\item 
+{\bf S\+E\+Camera}$<$ T $>$ \& {\bf pan} (T r)
+\item 
+{\bf S\+E\+Camera}$<$ T $>$ \& {\bf pan\+Left} (T r)
+\item 
+{\bf S\+E\+Camera}$<$ T $>$ \& {\bf pan\+Right} (T r)
+\item 
+{\bf S\+E\+Camera}$<$ T $>$ \& {\bf pan\+By\+Degrees} (T d)
+\item 
+{\bf S\+E\+Camera}$<$ T $>$ \& {\bf pan\+Left\+By\+Degrees} (T d)
+\item 
+{\bf S\+E\+Camera}$<$ T $>$ \& {\bf pan\+Right\+By\+Degrees} (T d)
+\item 
+{\bf S\+E\+Camera}$<$ T $>$ \& {\bf tilt} (T r)
+\item 
+{\bf S\+E\+Camera}$<$ T $>$ \& {\bf tilt\+Up} (T r)
+\item 
+{\bf S\+E\+Camera}$<$ T $>$ \& {\bf tilt\+Down} (T r)
+\item 
+{\bf S\+E\+Camera}$<$ T $>$ \& {\bf tilt\+By\+Degrees} (T d)
+\item 
+{\bf S\+E\+Camera}$<$ T $>$ \& {\bf tilt\+Up\+By\+Degrees} (T d)
+\item 
+{\bf S\+E\+Camera}$<$ T $>$ \& {\bf tilt\+Down\+By\+Degrees} (T d)
+\item 
+{\bf S\+E\+Camera}$<$ T $>$ \& {\bf zoom} (T z)
+\item 
+{\bf S\+E\+Camera}$<$ T $>$ \& {\bf zoom\+In} (T z)
+\item 
+{\bf S\+E\+Camera}$<$ T $>$ \& {\bf zoom\+Out} (T z)
+\item 
+{\bf S\+E\+Camera}$<$ T $>$ \& {\bf pedestal} (T d)
+\item 
+{\bf S\+E\+Camera}$<$ T $>$ \& {\bf pedestal\+Up} (T d)
+\item 
+{\bf S\+E\+Camera}$<$ T $>$ \& {\bf pedestal\+Down} (T d)
+\item 
+{\bf S\+E\+Camera}$<$ T $>$ \& {\bf dolly} (T d)
+\item 
+{\bf S\+E\+Camera}$<$ T $>$ \& {\bf dolly\+Front} (T d)
+\item 
+{\bf S\+E\+Camera}$<$ T $>$ \& {\bf dolly\+Back} (T d)
+\item 
+{\bf S\+E\+Camera}$<$ T $>$ \& {\bf truck} (T d)
+\item 
+{\bf S\+E\+Camera}$<$ T $>$ \& {\bf truck\+Right} (T d)
+\item 
+{\bf S\+E\+Camera}$<$ T $>$ \& {\bf truck\+Left} (T d)
+\item 
+virtual void {\bf render} (const {\bf S\+E\+Render\+Service\+Internals}$<$ T $>$ \&rs) const 
+\item 
+virtual void {\bf setup\+Frame} () const =0
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const {\bf S\+E\+Mat4}$<$ T $>$ \& {\bf projection}
+\item 
+const {\bf S\+E\+Frustum\+Type\+::t\+Frustum} \& {\bf frustum\+Type}
+\item 
+const {\bf S\+E\+Camera\+Type\+::t\+Camera} \& {\bf cam\+Type}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Camera} ()
+\item 
+{\bf S\+E\+Camera} ({\bf S\+E\+Camera\+Type\+::t\+Camera} t)
+\item 
+virtual {\bf $\sim$\+S\+E\+Camera} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$class S\+E\+Camera$<$ T $>$}
+
+
+
+Definition at line 18 of file S\+E\+Camera.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{S\+E\+Camera@{S\+E\+Camera}!S\+E\+Camera@{S\+E\+Camera}}
+\index{S\+E\+Camera@{S\+E\+Camera}!S\+E\+Camera@{S\+E\+Camera}}
+\subsubsection[{S\+E\+Camera}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Camera}$<$ T $>$\+::{\bf S\+E\+Camera} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_s_e_camera_adf5bcad8576b8bbf0ce07aa0239d8dd8}
+
+
+Definition at line 69 of file S\+E\+Camera.\+h.
+
+\index{S\+E\+Camera@{S\+E\+Camera}!S\+E\+Camera@{S\+E\+Camera}}
+\index{S\+E\+Camera@{S\+E\+Camera}!S\+E\+Camera@{S\+E\+Camera}}
+\subsubsection[{S\+E\+Camera}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Camera}$<$ T $>$\+::{\bf S\+E\+Camera} (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+Camera\+Type\+::t\+Camera}}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_s_e_camera_a84ec1e8592318ffc13b09f834c328ef6}
+
+
+Definition at line 72 of file S\+E\+Camera.\+h.
+
+\index{S\+E\+Camera@{S\+E\+Camera}!````~S\+E\+Camera@{$\sim$\+S\+E\+Camera}}
+\index{````~S\+E\+Camera@{$\sim$\+S\+E\+Camera}!S\+E\+Camera@{S\+E\+Camera}}
+\subsubsection[{$\sim$\+S\+E\+Camera}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ virtual {\bf S\+E\+Camera}$<$ T $>$\+::$\sim${\bf S\+E\+Camera} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_s_e_camera_ac4da47c6fe3ba9504ce3ae0856ce33dd}
+
+
+Definition at line 75 of file S\+E\+Camera.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\index{S\+E\+Camera@{S\+E\+Camera}!dolly@{dolly}}
+\index{dolly@{dolly}!S\+E\+Camera@{S\+E\+Camera}}
+\subsubsection[{dolly}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Camera}$<$T$>$\& {\bf S\+E\+Camera}$<$ T $>$\+::dolly (
+\begin{DoxyParamCaption}
+\item[{T}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_camera_af0a5c2597ecfaea3d455b442a0c76df0}
+
+
+Definition at line 56 of file S\+E\+Camera.\+h.
+
+\index{S\+E\+Camera@{S\+E\+Camera}!dolly\+Back@{dolly\+Back}}
+\index{dolly\+Back@{dolly\+Back}!S\+E\+Camera@{S\+E\+Camera}}
+\subsubsection[{dolly\+Back}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Camera}$<$T$>$\& {\bf S\+E\+Camera}$<$ T $>$\+::dolly\+Back (
+\begin{DoxyParamCaption}
+\item[{T}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_camera_a33edd2911059fe6e3f75d347117340e6}
+
+
+Definition at line 58 of file S\+E\+Camera.\+h.
+
+\index{S\+E\+Camera@{S\+E\+Camera}!dolly\+Front@{dolly\+Front}}
+\index{dolly\+Front@{dolly\+Front}!S\+E\+Camera@{S\+E\+Camera}}
+\subsubsection[{dolly\+Front}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Camera}$<$T$>$\& {\bf S\+E\+Camera}$<$ T $>$\+::dolly\+Front (
+\begin{DoxyParamCaption}
+\item[{T}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_camera_a7c57cd3b990b002b166be69e38adb7aa}
+
+
+Definition at line 57 of file S\+E\+Camera.\+h.
+
+\index{S\+E\+Camera@{S\+E\+Camera}!pan@{pan}}
+\index{pan@{pan}!S\+E\+Camera@{S\+E\+Camera}}
+\subsubsection[{pan}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Camera}$<$T$>$\& {\bf S\+E\+Camera}$<$ T $>$\+::pan (
+\begin{DoxyParamCaption}
+\item[{T}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_camera_ae2a93cf5c38256be12d176df9a4f2733}
+
+
+Definition at line 32 of file S\+E\+Camera.\+h.
+
+\index{S\+E\+Camera@{S\+E\+Camera}!pan\+By\+Degrees@{pan\+By\+Degrees}}
+\index{pan\+By\+Degrees@{pan\+By\+Degrees}!S\+E\+Camera@{S\+E\+Camera}}
+\subsubsection[{pan\+By\+Degrees}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Camera}$<$T$>$\& {\bf S\+E\+Camera}$<$ T $>$\+::pan\+By\+Degrees (
+\begin{DoxyParamCaption}
+\item[{T}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_camera_a7e9371f0cb4b46278baba153d0f48d69}
+
+
+Definition at line 36 of file S\+E\+Camera.\+h.
+
+\index{S\+E\+Camera@{S\+E\+Camera}!pan\+Left@{pan\+Left}}
+\index{pan\+Left@{pan\+Left}!S\+E\+Camera@{S\+E\+Camera}}
+\subsubsection[{pan\+Left}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Camera}$<$T$>$\& {\bf S\+E\+Camera}$<$ T $>$\+::pan\+Left (
+\begin{DoxyParamCaption}
+\item[{T}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_camera_af079c33268269b2ea822811fc26b61d8}
+
+
+Definition at line 33 of file S\+E\+Camera.\+h.
+
+\index{S\+E\+Camera@{S\+E\+Camera}!pan\+Left\+By\+Degrees@{pan\+Left\+By\+Degrees}}
+\index{pan\+Left\+By\+Degrees@{pan\+Left\+By\+Degrees}!S\+E\+Camera@{S\+E\+Camera}}
+\subsubsection[{pan\+Left\+By\+Degrees}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Camera}$<$T$>$\& {\bf S\+E\+Camera}$<$ T $>$\+::pan\+Left\+By\+Degrees (
+\begin{DoxyParamCaption}
+\item[{T}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_camera_a17ff63333b782c4e22f47438037ba135}
+
+
+Definition at line 37 of file S\+E\+Camera.\+h.
+
+\index{S\+E\+Camera@{S\+E\+Camera}!pan\+Right@{pan\+Right}}
+\index{pan\+Right@{pan\+Right}!S\+E\+Camera@{S\+E\+Camera}}
+\subsubsection[{pan\+Right}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Camera}$<$T$>$\& {\bf S\+E\+Camera}$<$ T $>$\+::pan\+Right (
+\begin{DoxyParamCaption}
+\item[{T}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_camera_a46d72242a9e69d5d2ee199a7ccee89d6}
+
+
+Definition at line 34 of file S\+E\+Camera.\+h.
+
+\index{S\+E\+Camera@{S\+E\+Camera}!pan\+Right\+By\+Degrees@{pan\+Right\+By\+Degrees}}
+\index{pan\+Right\+By\+Degrees@{pan\+Right\+By\+Degrees}!S\+E\+Camera@{S\+E\+Camera}}
+\subsubsection[{pan\+Right\+By\+Degrees}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Camera}$<$T$>$\& {\bf S\+E\+Camera}$<$ T $>$\+::pan\+Right\+By\+Degrees (
+\begin{DoxyParamCaption}
+\item[{T}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_camera_afb4e0340e180d70b2c0ed1074f127c02}
+
+
+Definition at line 38 of file S\+E\+Camera.\+h.
+
+\index{S\+E\+Camera@{S\+E\+Camera}!pedestal@{pedestal}}
+\index{pedestal@{pedestal}!S\+E\+Camera@{S\+E\+Camera}}
+\subsubsection[{pedestal}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Camera}$<$T$>$\& {\bf S\+E\+Camera}$<$ T $>$\+::pedestal (
+\begin{DoxyParamCaption}
+\item[{T}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_camera_a71a4e10e74dea14268b1f71f4a63d873}
+
+
+Definition at line 52 of file S\+E\+Camera.\+h.
+
+\index{S\+E\+Camera@{S\+E\+Camera}!pedestal\+Down@{pedestal\+Down}}
+\index{pedestal\+Down@{pedestal\+Down}!S\+E\+Camera@{S\+E\+Camera}}
+\subsubsection[{pedestal\+Down}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Camera}$<$T$>$\& {\bf S\+E\+Camera}$<$ T $>$\+::pedestal\+Down (
+\begin{DoxyParamCaption}
+\item[{T}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_camera_a70c4df3e7a8aa22d3876496a2c86bb94}
+
+
+Definition at line 54 of file S\+E\+Camera.\+h.
+
+\index{S\+E\+Camera@{S\+E\+Camera}!pedestal\+Up@{pedestal\+Up}}
+\index{pedestal\+Up@{pedestal\+Up}!S\+E\+Camera@{S\+E\+Camera}}
+\subsubsection[{pedestal\+Up}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Camera}$<$T$>$\& {\bf S\+E\+Camera}$<$ T $>$\+::pedestal\+Up (
+\begin{DoxyParamCaption}
+\item[{T}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_camera_ae60d089b7d74c4576ea84ad4524f9d46}
+
+
+Definition at line 53 of file S\+E\+Camera.\+h.
+
+\index{S\+E\+Camera@{S\+E\+Camera}!render@{render}}
+\index{render@{render}!S\+E\+Camera@{S\+E\+Camera}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ virtual void {\bf S\+E\+Camera}$<$ T $>$\+::render (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Render\+Service\+Internals}$<$ T $>$ \&}]{rs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_e_camera_a123079b771f3d33719f3978ea0c28e37}
+
+
+Reimplemented from {\bf S\+E\+Render\+Object$<$ T $>$} \doxyref{}{p.}{class_s_e_render_object_a1b06ec6905e7a98ebce4b8e72d82753c}.
+
+
+
+Definition at line 64 of file S\+E\+Camera.\+h.
+
+\index{S\+E\+Camera@{S\+E\+Camera}!setup\+Frame@{setup\+Frame}}
+\index{setup\+Frame@{setup\+Frame}!S\+E\+Camera@{S\+E\+Camera}}
+\subsubsection[{setup\+Frame}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ virtual void {\bf S\+E\+Camera}$<$ T $>$\+::setup\+Frame (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_e_camera_a0c7f974b68ab4539606335d3711d4119}
+
+
+Implemented in {\bf S\+E\+Open\+G\+L\+Camera} \doxyref{}{p.}{class_s_e_open_g_l_camera_a57a43f4e3f13fd2221c035c95b1134a5}.
+
+\index{S\+E\+Camera@{S\+E\+Camera}!tilt@{tilt}}
+\index{tilt@{tilt}!S\+E\+Camera@{S\+E\+Camera}}
+\subsubsection[{tilt}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Camera}$<$T$>$\& {\bf S\+E\+Camera}$<$ T $>$\+::tilt (
+\begin{DoxyParamCaption}
+\item[{T}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_camera_a0d79f28e0ee97886edf6e1b610642726}
+
+
+Definition at line 40 of file S\+E\+Camera.\+h.
+
+\index{S\+E\+Camera@{S\+E\+Camera}!tilt\+By\+Degrees@{tilt\+By\+Degrees}}
+\index{tilt\+By\+Degrees@{tilt\+By\+Degrees}!S\+E\+Camera@{S\+E\+Camera}}
+\subsubsection[{tilt\+By\+Degrees}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Camera}$<$T$>$\& {\bf S\+E\+Camera}$<$ T $>$\+::tilt\+By\+Degrees (
+\begin{DoxyParamCaption}
+\item[{T}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_camera_a9e59da58a03159a411ecd824ac329cff}
+
+
+Definition at line 44 of file S\+E\+Camera.\+h.
+
+\index{S\+E\+Camera@{S\+E\+Camera}!tilt\+Down@{tilt\+Down}}
+\index{tilt\+Down@{tilt\+Down}!S\+E\+Camera@{S\+E\+Camera}}
+\subsubsection[{tilt\+Down}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Camera}$<$T$>$\& {\bf S\+E\+Camera}$<$ T $>$\+::tilt\+Down (
+\begin{DoxyParamCaption}
+\item[{T}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_camera_a3437a9f6decf17e96271540fb751ff6c}
+
+
+Definition at line 42 of file S\+E\+Camera.\+h.
+
+\index{S\+E\+Camera@{S\+E\+Camera}!tilt\+Down\+By\+Degrees@{tilt\+Down\+By\+Degrees}}
+\index{tilt\+Down\+By\+Degrees@{tilt\+Down\+By\+Degrees}!S\+E\+Camera@{S\+E\+Camera}}
+\subsubsection[{tilt\+Down\+By\+Degrees}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Camera}$<$T$>$\& {\bf S\+E\+Camera}$<$ T $>$\+::tilt\+Down\+By\+Degrees (
+\begin{DoxyParamCaption}
+\item[{T}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_camera_a5574590e84c1929dcccdbfa0a86563a3}
+
+
+Definition at line 46 of file S\+E\+Camera.\+h.
+
+\index{S\+E\+Camera@{S\+E\+Camera}!tilt\+Up@{tilt\+Up}}
+\index{tilt\+Up@{tilt\+Up}!S\+E\+Camera@{S\+E\+Camera}}
+\subsubsection[{tilt\+Up}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Camera}$<$T$>$\& {\bf S\+E\+Camera}$<$ T $>$\+::tilt\+Up (
+\begin{DoxyParamCaption}
+\item[{T}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_camera_afea54602000f2e6686dfcfe80a608a1e}
+
+
+Definition at line 41 of file S\+E\+Camera.\+h.
+
+\index{S\+E\+Camera@{S\+E\+Camera}!tilt\+Up\+By\+Degrees@{tilt\+Up\+By\+Degrees}}
+\index{tilt\+Up\+By\+Degrees@{tilt\+Up\+By\+Degrees}!S\+E\+Camera@{S\+E\+Camera}}
+\subsubsection[{tilt\+Up\+By\+Degrees}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Camera}$<$T$>$\& {\bf S\+E\+Camera}$<$ T $>$\+::tilt\+Up\+By\+Degrees (
+\begin{DoxyParamCaption}
+\item[{T}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_camera_ad65a11254088fbd8e92bf98240456d9b}
+
+
+Definition at line 45 of file S\+E\+Camera.\+h.
+
+\index{S\+E\+Camera@{S\+E\+Camera}!translate\+Relative\+By@{translate\+Relative\+By}}
+\index{translate\+Relative\+By@{translate\+Relative\+By}!S\+E\+Camera@{S\+E\+Camera}}
+\subsubsection[{translate\+Relative\+By}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Camera}$<$T$>$\& {\bf S\+E\+Camera}$<$ T $>$\+::translate\+Relative\+By (
+\begin{DoxyParamCaption}
+\item[{T}]{x, }
+\item[{T}]{y, }
+\item[{T}]{z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_camera_adc05c447f7fac39693395eaa38443724}
+
+
+Definition at line 28 of file S\+E\+Camera.\+h.
+
+\index{S\+E\+Camera@{S\+E\+Camera}!translate\+Relative\+By@{translate\+Relative\+By}}
+\index{translate\+Relative\+By@{translate\+Relative\+By}!S\+E\+Camera@{S\+E\+Camera}}
+\subsubsection[{translate\+Relative\+By}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Camera}$<$T$>$\& {\bf S\+E\+Camera}$<$ T $>$\+::translate\+Relative\+By (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_camera_a55b279e301492ed96cf69940ac6c646f}
+
+
+Definition at line 29 of file S\+E\+Camera.\+h.
+
+\index{S\+E\+Camera@{S\+E\+Camera}!translate\+Relative\+By@{translate\+Relative\+By}}
+\index{translate\+Relative\+By@{translate\+Relative\+By}!S\+E\+Camera@{S\+E\+Camera}}
+\subsubsection[{translate\+Relative\+By}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Camera}$<$T$>$\& {\bf S\+E\+Camera}$<$ T $>$\+::translate\+Relative\+By (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec4}$<$ T $>$ \&}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_camera_a617d325cca358ccf17f452f714070cbc}
+
+
+Definition at line 30 of file S\+E\+Camera.\+h.
+
+\index{S\+E\+Camera@{S\+E\+Camera}!truck@{truck}}
+\index{truck@{truck}!S\+E\+Camera@{S\+E\+Camera}}
+\subsubsection[{truck}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Camera}$<$T$>$\& {\bf S\+E\+Camera}$<$ T $>$\+::truck (
+\begin{DoxyParamCaption}
+\item[{T}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_camera_a81415f261faf3828543a850740b12138}
+
+
+Definition at line 60 of file S\+E\+Camera.\+h.
+
+\index{S\+E\+Camera@{S\+E\+Camera}!truck\+Left@{truck\+Left}}
+\index{truck\+Left@{truck\+Left}!S\+E\+Camera@{S\+E\+Camera}}
+\subsubsection[{truck\+Left}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Camera}$<$T$>$\& {\bf S\+E\+Camera}$<$ T $>$\+::truck\+Left (
+\begin{DoxyParamCaption}
+\item[{T}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_camera_af68354f73d08ea2b163efdcfe647559e}
+
+
+Definition at line 62 of file S\+E\+Camera.\+h.
+
+\index{S\+E\+Camera@{S\+E\+Camera}!truck\+Right@{truck\+Right}}
+\index{truck\+Right@{truck\+Right}!S\+E\+Camera@{S\+E\+Camera}}
+\subsubsection[{truck\+Right}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Camera}$<$T$>$\& {\bf S\+E\+Camera}$<$ T $>$\+::truck\+Right (
+\begin{DoxyParamCaption}
+\item[{T}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_camera_a9189eb287379ab3b1992b0cbe9639051}
+
+
+Definition at line 61 of file S\+E\+Camera.\+h.
+
+\index{S\+E\+Camera@{S\+E\+Camera}!use\+Ortho\+Projection@{use\+Ortho\+Projection}}
+\index{use\+Ortho\+Projection@{use\+Ortho\+Projection}!S\+E\+Camera@{S\+E\+Camera}}
+\subsubsection[{use\+Ortho\+Projection}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf S\+E\+Camera}$<$ T $>$\+::use\+Ortho\+Projection (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_camera_aaebea4fbfae9a871aa4bda0dc96a5196}
+
+
+Definition at line 25 of file S\+E\+Camera.\+h.
+
+\index{S\+E\+Camera@{S\+E\+Camera}!use\+Perspective\+Projection@{use\+Perspective\+Projection}}
+\index{use\+Perspective\+Projection@{use\+Perspective\+Projection}!S\+E\+Camera@{S\+E\+Camera}}
+\subsubsection[{use\+Perspective\+Projection}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf S\+E\+Camera}$<$ T $>$\+::use\+Perspective\+Projection (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_camera_a847b4f245e824522fbd7a241b257372d}
+
+
+Definition at line 26 of file S\+E\+Camera.\+h.
+
+\index{S\+E\+Camera@{S\+E\+Camera}!zoom@{zoom}}
+\index{zoom@{zoom}!S\+E\+Camera@{S\+E\+Camera}}
+\subsubsection[{zoom}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Camera}$<$T$>$\& {\bf S\+E\+Camera}$<$ T $>$\+::zoom (
+\begin{DoxyParamCaption}
+\item[{T}]{z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_camera_ad9e1e3ca9c13fd2592b66733287e7218}
+
+
+Definition at line 48 of file S\+E\+Camera.\+h.
+
+\index{S\+E\+Camera@{S\+E\+Camera}!zoom\+In@{zoom\+In}}
+\index{zoom\+In@{zoom\+In}!S\+E\+Camera@{S\+E\+Camera}}
+\subsubsection[{zoom\+In}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Camera}$<$T$>$\& {\bf S\+E\+Camera}$<$ T $>$\+::zoom\+In (
+\begin{DoxyParamCaption}
+\item[{T}]{z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_camera_abc697be1b628b78c985908ed0238001f}
+
+
+Definition at line 49 of file S\+E\+Camera.\+h.
+
+\index{S\+E\+Camera@{S\+E\+Camera}!zoom\+Out@{zoom\+Out}}
+\index{zoom\+Out@{zoom\+Out}!S\+E\+Camera@{S\+E\+Camera}}
+\subsubsection[{zoom\+Out}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Camera}$<$T$>$\& {\bf S\+E\+Camera}$<$ T $>$\+::zoom\+Out (
+\begin{DoxyParamCaption}
+\item[{T}]{z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_camera_a5710abc3c3a09850c1e41576daf41013}
+
+
+Definition at line 50 of file S\+E\+Camera.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\index{S\+E\+Camera@{S\+E\+Camera}!cam\+Type@{cam\+Type}}
+\index{cam\+Type@{cam\+Type}!S\+E\+Camera@{S\+E\+Camera}}
+\subsubsection[{cam\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ const {\bf S\+E\+Camera\+Type\+::t\+Camera}\& {\bf S\+E\+Camera}$<$ T $>$\+::cam\+Type}\label{class_s_e_camera_a60c7bdd0250aa51e0e72e24b37a1a28d}
+
+
+Definition at line 23 of file S\+E\+Camera.\+h.
+
+\index{S\+E\+Camera@{S\+E\+Camera}!frustum\+Type@{frustum\+Type}}
+\index{frustum\+Type@{frustum\+Type}!S\+E\+Camera@{S\+E\+Camera}}
+\subsubsection[{frustum\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ const {\bf S\+E\+Frustum\+Type\+::t\+Frustum}\& {\bf S\+E\+Camera}$<$ T $>$\+::frustum\+Type}\label{class_s_e_camera_a707e3e1bf1d79a7fe7170cf48d2753cf}
+
+
+Definition at line 22 of file S\+E\+Camera.\+h.
+
+\index{S\+E\+Camera@{S\+E\+Camera}!projection@{projection}}
+\index{projection@{projection}!S\+E\+Camera@{S\+E\+Camera}}
+\subsubsection[{projection}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ const {\bf S\+E\+Mat4}$<$T$>$\& {\bf S\+E\+Camera}$<$ T $>$\+::projection}\label{class_s_e_camera_a24b3c5742e363acc871ee217b41ac010}
+
+
+Definition at line 21 of file S\+E\+Camera.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Camera.\+h}\end{DoxyCompactItemize}

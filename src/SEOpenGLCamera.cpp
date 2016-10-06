@@ -1,13 +1,13 @@
 #include "../inc/SEOpenGLCamera.h"
+#include "../inc/SEDebugTools.h"
 
 #include <iostream>
 
-#define DUMPONCE(x) if (dumpOnce) std::cout << x << std::endl
-
-extern bool dumpOnce;
+USEDUMPFLAG;
 
 void SEOpenGLCamera::setupFrame() const
 {
+     DUMPONCE("===SEOpenGLCamera::setupFrame()===");
      glMatrixMode(GL_PROJECTION);
      DUMPONCE("glMatrixMode(GL_PROJECTION)");
      glLoadMatrixf(projection.transposed().m);

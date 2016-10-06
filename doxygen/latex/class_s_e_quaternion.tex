@@ -1,0 +1,2090 @@
+\section{S\+E\+Quaternion$<$ T $>$ Class Template Reference}
+\label{class_s_e_quaternion}\index{S\+E\+Quaternion$<$ T $>$@{S\+E\+Quaternion$<$ T $>$}}
+
+
+{\ttfamily \#include $<$S\+E\+Math.\+h$>$}
+
+
+
+Collaboration diagram for S\+E\+Quaternion$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{class_s_e_quaternion__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Quaternion} ()
+\item 
+{\bf S\+E\+Quaternion} (const {\bf S\+E\+Quaternion}$<$ T $>$ \&c)
+\item 
+{\bf S\+E\+Quaternion} (const T \&euler\+\_\+x, const T \&euler\+\_\+y, const T \&euler\+\_\+z)
+\item 
+{\bf S\+E\+Quaternion} (const T $\ast$e)
+\item 
+{\bf S\+E\+Quaternion} (const {\bf S\+E\+Vec3}$<$ T $>$ \&e)
+\item 
+{\bf S\+E\+Quaternion} (const T \&{\bf angle}, const T \&axis\+\_\+x, const T \&axis\+\_\+y, const T \&axis\+\_\+z)
+\item 
+{\bf S\+E\+Quaternion} (const T \&{\bf angle}, const {\bf S\+E\+Vec3}$<$ T $>$ \&{\bf axis})
+\item 
+{\bf S\+E\+Quaternion} (const {\bf S\+E\+Mat4}$<$ T $>$ \&m)
+\item 
+{\bf S\+E\+Quaternion} (const {\bf S\+E\+Vec3}$<$ T $>$ \&v0, const {\bf S\+E\+Vec3}$<$ T $>$ \&v1)
+\item 
+{\bf $\sim$\+S\+E\+Quaternion} ()
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf null} ()
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf operator=} (const {\bf S\+E\+Quaternion}$<$ T $>$ \&in)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf operator=} (const {\bf S\+E\+Vec3}$<$ T $>$ \&e)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ {\bf operator-\/} () const 
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf operator+=} (const {\bf S\+E\+Quaternion}$<$ T $>$ \&v)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf operator+=} (const {\bf S\+E\+Vec3}$<$ T $>$ \&e)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf operator-\/=} (const {\bf S\+E\+Quaternion}$<$ T $>$ \&v)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf operator-\/=} (const {\bf S\+E\+Vec3}$<$ T $>$ \&e)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf operator$\ast$=} (const T \&a)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf operator/=} (const T \&a)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf operator$\ast$=} (const {\bf S\+E\+Quaternion}$<$ T $>$ \&q)
+\item 
+T \& {\bf operator[$\,$]} (std\+::size\+\_\+t i)
+\item 
+T {\bf operator[$\,$]} (std\+::size\+\_\+t i) const 
+\item 
+bool {\bf operator==} (const {\bf S\+E\+Quaternion}$<$ T $>$ \&v) const 
+\item 
+bool {\bf operator!=} (const {\bf S\+E\+Quaternion}$<$ T $>$ \&v) const 
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf vec} (const {\bf S\+E\+Quaternion}$<$ T $>$ \&q)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf vec} (const {\bf S\+E\+Mat4}$<$ T $>$ \&m)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf vec} (const {\bf S\+E\+Vec3}$<$ T $>$ \&v)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf vec} (const T \&euler\+\_\+x, const T \&euler\+\_\+y, const T \&euler\+\_\+z)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf vec} (const T \&{\bf angle}, const T \&axis\+\_\+x, const T \&axis\+\_\+y, const T \&axis\+\_\+z)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf vec} (const T \&{\bf angle}, {\bf S\+E\+Vec3}$<$ T $>$ {\bf axis})
+\item 
+T {\bf dot} (const {\bf S\+E\+Quaternion}$<$ T $>$ \&q) const 
+\item 
+T {\bf angdif} (const {\bf S\+E\+Quaternion}$<$ T $>$ \&q) const 
+\item 
+T {\bf angular\+Difference} (const {\bf S\+E\+Quaternion}$<$ T $>$ \&q) const 
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ {\bf exp} () const 
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ {\bf log} () const 
+\item 
+T {\bf norm2} () const 
+\item 
+T {\bf len2} () const 
+\item 
+T {\bf norm} () const 
+\item 
+T {\bf len} () const 
+\item 
+T {\bf angle} () const 
+\item 
+T {\bf anglerad} () const 
+\item 
+T {\bf rotation\+Angle} () const 
+\item 
+T {\bf rotation\+Angle\+In\+Radians} () const 
+\item 
+T {\bf get\+Rotation\+Angle} () const 
+\item 
+T {\bf get\+Rotation\+Angle\+In\+Radians} () const 
+\item 
+{\bf S\+E\+Vec3}$<$ T $>$ {\bf axis} () const 
+\item 
+{\bf S\+E\+Vec3}$<$ T $>$ {\bf rotation\+Axis} () const 
+\item 
+{\bf S\+E\+Vec3}$<$ T $>$ {\bf get\+Rotation\+Axis} () const 
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ {\bf normal} () const 
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ {\bf inverse} () const 
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ {\bf conjugate} () const 
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf negate} ()
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf negate} (const {\bf S\+E\+Quaternion}$<$ T $>$ \&q)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf invert} ()
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf invert} (const {\bf S\+E\+Quaternion}$<$ T $>$ \&q)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf normalize} ()
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf normalise} ()
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf normalize} (const {\bf S\+E\+Quaternion}$<$ T $>$ \&q)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf normalise} (const {\bf S\+E\+Quaternion}$<$ T $>$ \&q)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotation\+From\+To} (const {\bf S\+E\+Vec3}$<$ T $>$ \&v0, const {\bf S\+E\+Vec3}$<$ T $>$ \&v1)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotto} (const {\bf S\+E\+Vec3}$<$ T $>$ \&v0, const {\bf S\+E\+Vec3}$<$ T $>$ \&v1)
+\item 
+{\bf S\+E\+Mat3}$<$ T $>$ {\bf to\+Matrix3} () const 
+\item 
+{\bf S\+E\+Mat3}$<$ T $>$ {\bf to\+Rotation\+Matrix} () const 
+\item 
+{\bf S\+E\+Mat3}$<$ T $>$ {\bf mat3} () const 
+\item 
+{\bf S\+E\+Mat4}$<$ T $>$ {\bf to\+Matrix} () const 
+\item 
+{\bf S\+E\+Mat4}$<$ T $>$ {\bf to\+Matrix4} () const 
+\item 
+{\bf S\+E\+Mat4}$<$ T $>$ {\bf to\+Transform\+Matrix} () const 
+\item 
+{\bf S\+E\+Mat4}$<$ T $>$ {\bf mat4} () const 
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotate\+Globally\+By\+Degrees} (const T \&{\bf angle}, const T \&axis\+X, const T \&axis\+Y, const T \&axis\+Z)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotate\+Globally\+By\+Degrees} (const T \&{\bf angle}, const {\bf S\+E\+Vec3}$<$ T $>$ \&{\bf axis})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotate\+Globally} (const T \&{\bf angle}, const T \&axis\+X, const T \&axis\+Y, const T \&axis\+Z)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotate\+Globally} (const T \&{\bf angle}, const {\bf S\+E\+Vec3}$<$ T $>$ \&{\bf axis})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotate\+Globally} (const {\bf S\+E\+Quaternion}$<$ T $>$ q)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf grotate\+By\+Degrees} (const T \&{\bf angle}, const T \&axis\+X, const T \&axis\+Y, const T \&axis\+Z)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf grotate\+By\+Degrees} (const T \&{\bf angle}, const {\bf S\+E\+Vec3}$<$ T $>$ \&{\bf axis})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf grotate} (const T \&{\bf angle}, const T \&axis\+X, const T \&axis\+Y, const T \&axis\+Z)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf grotate} (const T \&{\bf angle}, const {\bf S\+E\+Vec3}$<$ T $>$ \&{\bf axis})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf grotate} (const {\bf S\+E\+Quaternion}$<$ T $>$ q)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotate\+Locally\+By\+Degrees} (const T \&{\bf angle}, const T \&axis\+X, const T \&axis\+Y, const T \&axis\+Z)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotate\+Locally\+By\+Degrees} (const T \&{\bf angle}, const {\bf S\+E\+Vec3}$<$ T $>$ \&{\bf axis})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotate\+Locally} (const T \&{\bf angle}, const T \&axis\+X, const T \&axis\+Y, const T \&axis\+Z)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotate\+Locally} (const T \&{\bf angle}, const {\bf S\+E\+Vec3}$<$ T $>$ \&{\bf axis})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotate\+Locally} (const {\bf S\+E\+Quaternion}$<$ T $>$ q)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotate\+By\+Degrees} (const T \&{\bf angle}, const T \&axis\+X, const T \&axis\+Y, const T \&axis\+Z)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotate\+By\+Degrees} (const T \&{\bf angle}, const {\bf S\+E\+Vec3}$<$ T $>$ \&{\bf axis})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotate} (const T \&{\bf angle}, const T \&axis\+X, const T \&axis\+Y, const T \&axis\+Z)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotate} (const T \&{\bf angle}, const {\bf S\+E\+Vec3}$<$ T $>$ \&{\bf axis})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotate} (const {\bf S\+E\+Quaternion}$<$ T $>$ q)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotate\+Globally\+By\+Degrees\+In\+X} (const T \&{\bf angle})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotate\+Globally\+By\+Degrees\+In\+Y} (const T \&{\bf angle})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotate\+Globally\+By\+Degrees\+In\+Z} (const T \&{\bf angle})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf grotate\+By\+Degrees\+In\+X} (const T \&{\bf angle})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf grotate\+By\+Degrees\+In\+Y} (const T \&{\bf angle})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf grotate\+By\+Degrees\+In\+Z} (const T \&{\bf angle})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotate\+Globally\+In\+X} (const T \&{\bf angle})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotate\+Globally\+In\+Y} (const T \&{\bf angle})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotate\+Globally\+In\+Z} (const T \&{\bf angle})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf grotate\+In\+X} (const T \&{\bf angle})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf grotate\+In\+Y} (const T \&{\bf angle})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf grotate\+In\+Z} (const T \&{\bf angle})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf grotatex} (const T \&{\bf angle})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf grotatey} (const T \&{\bf angle})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf grotatez} (const T \&{\bf angle})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotate\+Locally\+By\+Degrees\+In\+X} (const T \&{\bf angle})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotate\+Locally\+By\+Degrees\+In\+Y} (const T \&{\bf angle})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotate\+Locally\+By\+Degrees\+In\+Z} (const T \&{\bf angle})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotate\+By\+Degrees\+In\+X} (const T \&{\bf angle})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotate\+By\+Degrees\+In\+Y} (const T \&{\bf angle})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotate\+By\+Degrees\+In\+Z} (const T \&{\bf angle})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotate\+Locally\+In\+X} (const T \&{\bf angle})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotate\+Locally\+In\+Y} (const T \&{\bf angle})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotate\+Locally\+In\+Z} (const T \&{\bf angle})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotate\+In\+X} (const T \&{\bf angle})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotate\+In\+Y} (const T \&{\bf angle})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotate\+In\+Z} (const T \&{\bf angle})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotatex} (const T \&{\bf angle})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotatey} (const T \&{\bf angle})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ \& {\bf rotatez} (const T \&{\bf angle})
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ {\bf lerp} (const {\bf S\+E\+Quaternion}$<$ T $>$ \&q0, const {\bf S\+E\+Quaternion}$<$ T $>$ \&q1, T t)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ {\bf slerp} (const {\bf S\+E\+Quaternion}$<$ T $>$ \&q0, const {\bf S\+E\+Quaternion}$<$ T $>$ \&q1, T t)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ {\bf nlerp} (const {\bf S\+E\+Quaternion}$<$ T $>$ \&q0, const {\bf S\+E\+Quaternion}$<$ T $>$ \&q1, T t)
+\item 
+{\bf S\+E\+Vec3}$<$ T $>$ {\bf left\+Multiply\+As\+Matrix} (const {\bf S\+E\+Vec3}$<$ T $>$ \&ve) const 
+\item 
+{\bf S\+E\+Vec3}$<$ T $>$ {\bf lmatmult} (const {\bf S\+E\+Vec3}$<$ T $>$ \&ve) const 
+\item 
+{\bf S\+E\+Vec3}$<$ T $>$ {\bf right\+Multiply\+As\+Matrix} (const {\bf S\+E\+Vec3}$<$ T $>$ \&ve) const 
+\item 
+{\bf S\+E\+Vec3}$<$ T $>$ {\bf rmatmult} (const {\bf S\+E\+Vec3}$<$ T $>$ \&ve) const 
+\item 
+{\bf S\+E\+Vec4}$<$ T $>$ {\bf left\+Multiply\+As\+Matrix} (const {\bf S\+E\+Vec4}$<$ T $>$ \&ve) const 
+\item 
+{\bf S\+E\+Vec4}$<$ T $>$ {\bf lmatmult} (const {\bf S\+E\+Vec4}$<$ T $>$ \&ve) const 
+\item 
+{\bf S\+E\+Vec4}$<$ T $>$ {\bf right\+Multiply\+As\+Matrix} (const {\bf S\+E\+Vec4}$<$ T $>$ \&ve) const 
+\item 
+{\bf S\+E\+Vec4}$<$ T $>$ {\bf rmatmult} (const {\bf S\+E\+Vec4}$<$ T $>$ \&ve) const 
+\item 
+{\bf S\+E\+Vec3}$<$ T $>$ {\bf quick\+Multiply} (const {\bf S\+E\+Vec3}$<$ T $>$ \&ve) const 
+\item 
+{\bf S\+E\+Vec3}$<$ T $>$ {\bf quickmult} (const {\bf S\+E\+Vec3}$<$ T $>$ \&ve) const 
+\item 
+{\bf S\+E\+Vec3}$<$ T $>$ {\bf quick\+Vector\+Multiply} (const {\bf S\+E\+Vec3}$<$ T $>$ \&ve) const 
+\item 
+{\bf S\+E\+Vec3}$<$ T $>$ {\bf quickvmult} (const {\bf S\+E\+Vec3}$<$ T $>$ \&ve) const 
+\item 
+{\bf S\+E\+Vec4}$<$ T $>$ {\bf quick\+Multiply} (const {\bf S\+E\+Vec4}$<$ T $>$ \&ve) const 
+\item 
+{\bf S\+E\+Vec4}$<$ T $>$ {\bf quickmult} (const {\bf S\+E\+Vec4}$<$ T $>$ \&ve) const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+T {\bf x}
+\item 
+T {\bf y}
+\item 
+T {\bf z}
+\item 
+T {\bf w}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ {\bf operator+} ({\bf S\+E\+Quaternion}$<$ T $>$ lhs, {\bf S\+E\+Quaternion}$<$ T $>$ const \&rhs)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ {\bf operator+} ({\bf S\+E\+Quaternion}$<$ T $>$ lhs, {\bf S\+E\+Vec3}$<$ T $>$ const \&rhs)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ {\bf operator+} ({\bf S\+E\+Vec3}$<$ T $>$ const \&lhs, {\bf S\+E\+Quaternion}$<$ T $>$ rhs)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ {\bf operator-\/} ({\bf S\+E\+Quaternion}$<$ T $>$ lhs, {\bf S\+E\+Quaternion}$<$ T $>$ const \&rhs)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ {\bf operator-\/} ({\bf S\+E\+Quaternion}$<$ T $>$ lhs, {\bf S\+E\+Vec3}$<$ T $>$ const \&rhs)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ {\bf operator-\/} ({\bf S\+E\+Vec3}$<$ T $>$ const \&lhs, {\bf S\+E\+Quaternion}$<$ T $>$ rhs)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ {\bf operator$\ast$} ({\bf S\+E\+Quaternion}$<$ T $>$ lhs, T const \&rhs)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ {\bf operator$\ast$} (T const \&lhs, {\bf S\+E\+Quaternion}$<$ T $>$ rhs)
+\item 
+{\bf S\+E\+Vec3}$<$ T $>$ {\bf operator$\ast$} ({\bf S\+E\+Quaternion}$<$ T $>$ const \&lhs, {\bf S\+E\+Vec3}$<$ T $>$ const \&rhs)
+\item 
+{\bf S\+E\+Vec4}$<$ T $>$ {\bf operator$\ast$} ({\bf S\+E\+Quaternion}$<$ T $>$ const \&lhs, {\bf S\+E\+Vec4}$<$ T $>$ const \&rhs)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ {\bf operator$\ast$} ({\bf S\+E\+Quaternion}$<$ T $>$ lhs, {\bf S\+E\+Quaternion}$<$ T $>$ const \&rhs)
+\item 
+{\bf S\+E\+Quaternion}$<$ T $>$ {\bf operator/} ({\bf S\+E\+Quaternion}$<$ T $>$ lhs, T const \&rhs)
+\item 
+std\+::ostream \& {\bf operator$<$$<$} (std\+::ostream \&os, const {\bf S\+E\+Quaternion}$<$ T $>$ \&v)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$class S\+E\+Quaternion$<$ T $>$}
+
+
+
+Definition at line 42 of file S\+E\+Math.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{S\+E\+Quaternion}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::{\bf S\+E\+Quaternion} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_ae21ff2db53048cb63ed0ddb208dca158}
+
+
+Definition at line 485 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{S\+E\+Quaternion}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::{\bf S\+E\+Quaternion} (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Quaternion}$<$ T $>$ \&}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_acafece377b89cf224810cf0bdd6ae745}
+
+
+Definition at line 487 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{S\+E\+Quaternion}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::{\bf S\+E\+Quaternion} (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{euler\+\_\+x, }
+\item[{const T \&}]{euler\+\_\+y, }
+\item[{const T \&}]{euler\+\_\+z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_ac93b0ef7e681bbcc35d0c14c2422940a}
+
+
+Definition at line 490 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{S\+E\+Quaternion}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::{\bf S\+E\+Quaternion} (
+\begin{DoxyParamCaption}
+\item[{const T $\ast$}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_ab36f3c0d17b86754bd140070ddddb94a}
+
+
+Definition at line 491 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{S\+E\+Quaternion}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::{\bf S\+E\+Quaternion} (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\label{class_s_e_quaternion_a1b571d586471e5963e1f85c056d67a2c}
+
+
+Definition at line 492 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{S\+E\+Quaternion}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::{\bf S\+E\+Quaternion} (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle, }
+\item[{const T \&}]{axis\+\_\+x, }
+\item[{const T \&}]{axis\+\_\+y, }
+\item[{const T \&}]{axis\+\_\+z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_afcabc7bb9a8200722af8cdd068ea2d61}
+
+
+Definition at line 494 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{S\+E\+Quaternion}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::{\bf S\+E\+Quaternion} (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle, }
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{axis}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a3080fb7832eb7dac54622ac9412142eb}
+
+
+Definition at line 495 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{S\+E\+Quaternion}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::{\bf S\+E\+Quaternion} (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Mat4}$<$ T $>$ \&}]{m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\label{class_s_e_quaternion_aa4090babab827c60203db1068c9b86bf}
+
+
+Definition at line 497 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{S\+E\+Quaternion}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::{\bf S\+E\+Quaternion} (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{v0, }
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{v1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_ae1958f914d37fd5b99223c1dddf311cf}
+
+
+Definition at line 499 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!````~S\+E\+Quaternion@{$\sim$\+S\+E\+Quaternion}}
+\index{````~S\+E\+Quaternion@{$\sim$\+S\+E\+Quaternion}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{$\sim$\+S\+E\+Quaternion}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::$\sim${\bf S\+E\+Quaternion} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_ac800140b2265ad3779ef113aa2d41017}
+
+
+Definition at line 502 of file S\+E\+Math.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!angdif@{angdif}}
+\index{angdif@{angdif}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{angdif}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf S\+E\+Quaternion}$<$ T $>$\+::angdif (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Quaternion}$<$ T $>$ \&}]{q}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a6ca87f63382e7115a6403bfa365e1c35}
+
+
+Definition at line 567 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!angle@{angle}}
+\index{angle@{angle}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{angle}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf S\+E\+Quaternion}$<$ T $>$\+::angle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a05ca6fc7c5fdbb1fb8942ed98df810f1}
+
+
+Definition at line 586 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!anglerad@{anglerad}}
+\index{anglerad@{anglerad}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{anglerad}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf S\+E\+Quaternion}$<$ T $>$\+::anglerad (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a170565a6ce09d57cf5b08c7a952e8d1c}
+
+
+Definition at line 587 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!angular\+Difference@{angular\+Difference}}
+\index{angular\+Difference@{angular\+Difference}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{angular\+Difference}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf S\+E\+Quaternion}$<$ T $>$\+::angular\+Difference (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Quaternion}$<$ T $>$ \&}]{q}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a699693ff06fd837637868c4f57eec45f}
+
+
+Definition at line 568 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!axis@{axis}}
+\index{axis@{axis}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{axis}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Vec3}$<$T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::axis (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_acd151c63f182f9a118bc1c8226123087}
+
+
+Definition at line 593 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!conjugate@{conjugate}}
+\index{conjugate@{conjugate}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{conjugate}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::conjugate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_acf05cabbbe8aae1f33945b8123f045ee}
+
+
+Definition at line 599 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!dot@{dot}}
+\index{dot@{dot}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{dot}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf S\+E\+Quaternion}$<$ T $>$\+::dot (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Quaternion}$<$ T $>$ \&}]{q}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a0bed025e68edd8a55a2b4b02d86c444a}
+
+
+Definition at line 565 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!exp@{exp}}
+\index{exp@{exp}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{exp}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::exp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_aba605664e3f6a563f97aef415f74165a}
+
+
+Definition at line 570 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!get\+Rotation\+Angle@{get\+Rotation\+Angle}}
+\index{get\+Rotation\+Angle@{get\+Rotation\+Angle}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{get\+Rotation\+Angle}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf S\+E\+Quaternion}$<$ T $>$\+::get\+Rotation\+Angle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_adaad09ac5ad90534e67c7df281b82fa7}
+
+
+Definition at line 590 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!get\+Rotation\+Angle\+In\+Radians@{get\+Rotation\+Angle\+In\+Radians}}
+\index{get\+Rotation\+Angle\+In\+Radians@{get\+Rotation\+Angle\+In\+Radians}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{get\+Rotation\+Angle\+In\+Radians}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf S\+E\+Quaternion}$<$ T $>$\+::get\+Rotation\+Angle\+In\+Radians (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a06b9c8c6a5ccd8448d00b8dc2eb07d54}
+
+
+Definition at line 591 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!get\+Rotation\+Axis@{get\+Rotation\+Axis}}
+\index{get\+Rotation\+Axis@{get\+Rotation\+Axis}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{get\+Rotation\+Axis}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Vec3}$<$T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::get\+Rotation\+Axis (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_aec26a52bd9bb5cf33770586a35050110}
+
+
+Definition at line 595 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!grotate@{grotate}}
+\index{grotate@{grotate}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{grotate}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::grotate (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle, }
+\item[{const T \&}]{axis\+X, }
+\item[{const T \&}]{axis\+Y, }
+\item[{const T \&}]{axis\+Z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a1bd0acbd9bedaed00d44551997cc647e}
+
+
+Definition at line 655 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!grotate@{grotate}}
+\index{grotate@{grotate}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{grotate}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::grotate (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle, }
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{axis}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a63f43707d4daf6a5023d9a3e6f0cf4e7}
+
+
+Definition at line 656 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!grotate@{grotate}}
+\index{grotate@{grotate}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{grotate}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::grotate (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Quaternion}$<$ T $>$}]{q}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a386af10efa12996120311d414e7905c6}
+
+
+Definition at line 658 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!grotate\+By\+Degrees@{grotate\+By\+Degrees}}
+\index{grotate\+By\+Degrees@{grotate\+By\+Degrees}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{grotate\+By\+Degrees}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::grotate\+By\+Degrees (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle, }
+\item[{const T \&}]{axis\+X, }
+\item[{const T \&}]{axis\+Y, }
+\item[{const T \&}]{axis\+Z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a289a9a57d3163a05f85f168015828bc7}
+
+
+Definition at line 653 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!grotate\+By\+Degrees@{grotate\+By\+Degrees}}
+\index{grotate\+By\+Degrees@{grotate\+By\+Degrees}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{grotate\+By\+Degrees}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::grotate\+By\+Degrees (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle, }
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{axis}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_aac0719ac5fa0bab9ae415566a59f237d}
+
+
+Definition at line 654 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!grotate\+By\+Degrees\+In\+X@{grotate\+By\+Degrees\+In\+X}}
+\index{grotate\+By\+Degrees\+In\+X@{grotate\+By\+Degrees\+In\+X}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{grotate\+By\+Degrees\+In\+X}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::grotate\+By\+Degrees\+In\+X (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_ad16863de2cda78439d4ca9ba1c405600}
+
+
+Definition at line 683 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!grotate\+By\+Degrees\+In\+Y@{grotate\+By\+Degrees\+In\+Y}}
+\index{grotate\+By\+Degrees\+In\+Y@{grotate\+By\+Degrees\+In\+Y}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{grotate\+By\+Degrees\+In\+Y}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::grotate\+By\+Degrees\+In\+Y (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a37d5c447a69b0c398b099bba290f9dce}
+
+
+Definition at line 684 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!grotate\+By\+Degrees\+In\+Z@{grotate\+By\+Degrees\+In\+Z}}
+\index{grotate\+By\+Degrees\+In\+Z@{grotate\+By\+Degrees\+In\+Z}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{grotate\+By\+Degrees\+In\+Z}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::grotate\+By\+Degrees\+In\+Z (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_ada543883e8f8507bb490ae218b14d61e}
+
+
+Definition at line 685 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!grotate\+In\+X@{grotate\+In\+X}}
+\index{grotate\+In\+X@{grotate\+In\+X}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{grotate\+In\+X}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::grotate\+In\+X (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_ab1ad666a9b07f4a370686f01ea201d22}
+
+
+Definition at line 690 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!grotate\+In\+Y@{grotate\+In\+Y}}
+\index{grotate\+In\+Y@{grotate\+In\+Y}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{grotate\+In\+Y}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::grotate\+In\+Y (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_aa408801ac511d40a98b9a309500027e5}
+
+
+Definition at line 691 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!grotate\+In\+Z@{grotate\+In\+Z}}
+\index{grotate\+In\+Z@{grotate\+In\+Z}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{grotate\+In\+Z}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::grotate\+In\+Z (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a7f9443e18d9687073c4ff19eba4fc232}
+
+
+Definition at line 692 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!grotatex@{grotatex}}
+\index{grotatex@{grotatex}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{grotatex}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::grotatex (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a95cae9f1fd58c6844315075eb9b322ee}
+
+
+Definition at line 693 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!grotatey@{grotatey}}
+\index{grotatey@{grotatey}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{grotatey}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::grotatey (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a943b1d354d5b959be7d8f3003fe16ead}
+
+
+Definition at line 694 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!grotatez@{grotatez}}
+\index{grotatez@{grotatez}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{grotatez}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::grotatez (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a5c0d4e53e6eb009fc6a914083cb84d0d}
+
+
+Definition at line 695 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!inverse@{inverse}}
+\index{inverse@{inverse}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{inverse}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::inverse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a9536fab828455ed4cc9b857082750c63}
+
+
+Definition at line 598 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!invert@{invert}}
+\index{invert@{invert}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{invert}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::invert (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a5b1e3a59fce15f41b8a65789198934e2}
+
+
+Definition at line 603 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!invert@{invert}}
+\index{invert@{invert}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{invert}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::invert (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Quaternion}$<$ T $>$ \&}]{q}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a8b7d036ba5172bd175bf4ab736fad686}
+
+
+Definition at line 604 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!left\+Multiply\+As\+Matrix@{left\+Multiply\+As\+Matrix}}
+\index{left\+Multiply\+As\+Matrix@{left\+Multiply\+As\+Matrix}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{left\+Multiply\+As\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Vec3}$<$T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::left\+Multiply\+As\+Matrix (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{ve}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_ac1deb563064c2e5c9f92fc25a9b56545}
+
+
+Definition at line 735 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!left\+Multiply\+As\+Matrix@{left\+Multiply\+As\+Matrix}}
+\index{left\+Multiply\+As\+Matrix@{left\+Multiply\+As\+Matrix}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{left\+Multiply\+As\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Vec4}$<$T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::left\+Multiply\+As\+Matrix (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec4}$<$ T $>$ \&}]{ve}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_ab0767c8a36827550ce2676be76f41fe3}
+
+
+Definition at line 740 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!len@{len}}
+\index{len@{len}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{len}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf S\+E\+Quaternion}$<$ T $>$\+::len (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_aab89f024f29dbfc169bf9a698d7facbd}
+
+
+Definition at line 584 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!len2@{len2}}
+\index{len2@{len2}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{len2}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf S\+E\+Quaternion}$<$ T $>$\+::len2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_aaf3504b46d5c868641fc75946507ddf9}
+
+
+Definition at line 582 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!lerp@{lerp}}
+\index{lerp@{lerp}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{lerp}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::lerp (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Quaternion}$<$ T $>$ \&}]{q0, }
+\item[{const {\bf S\+E\+Quaternion}$<$ T $>$ \&}]{q1, }
+\item[{T}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a95cb2cc647ed64d3fcb1c4f63e97ad35}
+
+
+Definition at line 714 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!lmatmult@{lmatmult}}
+\index{lmatmult@{lmatmult}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{lmatmult}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Vec3}$<$T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::lmatmult (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{ve}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a766545f90367ea9bad7422040376055d}
+
+
+Definition at line 736 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!lmatmult@{lmatmult}}
+\index{lmatmult@{lmatmult}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{lmatmult}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Vec4}$<$T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::lmatmult (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec4}$<$ T $>$ \&}]{ve}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a8894bed9109d45d27fe8a9cdcd3285f5}
+
+
+Definition at line 741 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!log@{log}}
+\index{log@{log}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{log}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::log (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_ac821d765bdae9bb96f35bef0b15c5097}
+
+
+Definition at line 574 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!mat3@{mat3}}
+\index{mat3@{mat3}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{mat3}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Mat3}$<$T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::mat3 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a2709f145bf0f4d795c989f7931b62a23}
+
+
+Definition at line 628 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!mat4@{mat4}}
+\index{mat4@{mat4}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{mat4}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Mat4}$<$T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::mat4 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a61b3ef2cacd17179666f07bb767daff4}
+
+
+Definition at line 639 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!negate@{negate}}
+\index{negate@{negate}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{negate}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::negate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a229eea25847e9f533b4732b7a3d44b64}
+
+
+Definition at line 601 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!negate@{negate}}
+\index{negate@{negate}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{negate}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::negate (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Quaternion}$<$ T $>$ \&}]{q}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_acb64a84c24a27717a698595381b31e7a}
+
+
+Definition at line 602 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!nlerp@{nlerp}}
+\index{nlerp@{nlerp}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{nlerp}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::nlerp (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Quaternion}$<$ T $>$ \&}]{q0, }
+\item[{const {\bf S\+E\+Quaternion}$<$ T $>$ \&}]{q1, }
+\item[{T}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a85789c17fda0349ea4e2c9f97bf5d516}
+
+
+Definition at line 727 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!norm@{norm}}
+\index{norm@{norm}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{norm}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf S\+E\+Quaternion}$<$ T $>$\+::norm (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a7e75b11781621c2fe10a6d12fa9dd30c}
+
+
+Definition at line 583 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!norm2@{norm2}}
+\index{norm2@{norm2}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{norm2}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf S\+E\+Quaternion}$<$ T $>$\+::norm2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_abb7e50ddfd53fb1eb60f27da0ed1cdf1}
+
+
+Definition at line 581 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!normal@{normal}}
+\index{normal@{normal}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{normal}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::normal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_aec503c38391aefe64480f0f161ac7a60}
+
+
+Definition at line 597 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!normalise@{normalise}}
+\index{normalise@{normalise}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{normalise}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::normalise (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_aa7ff159cc95e142169ed633da7884fa1}
+
+
+Definition at line 606 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!normalise@{normalise}}
+\index{normalise@{normalise}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{normalise}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::normalise (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Quaternion}$<$ T $>$ \&}]{q}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a43ddbfec1c57b32c30fb9c55af1e6e06}
+
+
+Definition at line 608 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!normalize@{normalize}}
+\index{normalize@{normalize}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{normalize}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::normalize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a02bbee662ebe77bb68a6bd8041348814}
+
+
+Definition at line 605 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!normalize@{normalize}}
+\index{normalize@{normalize}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{normalize}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::normalize (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Quaternion}$<$ T $>$ \&}]{q}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a9f8f01bc400682b9d7eaeda31726d3ad}
+
+
+Definition at line 607 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!null@{null}}
+\index{null@{null}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{null}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::null (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_ac59f474ad754e798da219c17f73a8f5a}
+
+
+Definition at line 504 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{operator"!=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ bool {\bf S\+E\+Quaternion}$<$ T $>$\+::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Quaternion}$<$ T $>$ \&}]{v}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a5bb941790825d5fb67ca7ae96db81a20}
+
+
+Definition at line 540 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{operator$\ast$=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::operator$\ast$= (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_aecc5896e325adee7c93148cc34ba4f26}
+
+
+Definition at line 513 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{operator$\ast$=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::operator$\ast$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Quaternion}$<$ T $>$ \&}]{q}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a1f5c0adee4de614b01f6fca9380cd87a}
+
+
+Definition at line 516 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::operator+= (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Quaternion}$<$ T $>$ \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_aae8b0dead502bd44ea40504151523680}
+
+
+Definition at line 509 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::operator+= (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_aa14605db7b3effebde5a1e7499a95e07}
+
+
+Definition at line 510 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::operator-\/ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a7086d32f19bc6bc08a757f06d14b0514}
+
+
+Definition at line 507 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{operator-\/=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::operator-\/= (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Quaternion}$<$ T $>$ \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a25218763b6ffe56d5172b1c71b463388}
+
+
+Definition at line 511 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{operator-\/=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::operator-\/= (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_abc6611bc143da4dee9925a7dc5270fa1}
+
+
+Definition at line 512 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{operator/=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::operator/= (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a4eda05e909fc11263988da7680b42377}
+
+
+Definition at line 514 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!operator=@{operator=}}
+\index{operator=@{operator=}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Quaternion}$<$ T $>$ \&}]{in}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_abf3a6e91358bc138ff1b6d56639376a2}
+
+
+Definition at line 505 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!operator=@{operator=}}
+\index{operator=@{operator=}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_aac4816d09ea023fe3dd94e7791759b9c}
+
+
+Definition at line 506 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!operator==@{operator==}}
+\index{operator==@{operator==}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ bool {\bf S\+E\+Quaternion}$<$ T $>$\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Quaternion}$<$ T $>$ \&}]{v}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_aae225b37e317a683129d9593cc200358}
+
+
+Definition at line 539 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!operator[$\,$]@{operator[]}}
+\index{operator[$\,$]@{operator[]}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T\& {\bf S\+E\+Quaternion}$<$ T $>$\+::operator[$\,$] (
+\begin{DoxyParamCaption}
+\item[{std\+::size\+\_\+t}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a8672235626dad8a9fa0672d697d933ed}
+
+
+Definition at line 536 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!operator[$\,$]@{operator[]}}
+\index{operator[$\,$]@{operator[]}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf S\+E\+Quaternion}$<$ T $>$\+::operator[$\,$] (
+\begin{DoxyParamCaption}
+\item[{std\+::size\+\_\+t}]{i}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a7732d327293045f97f99f15795e2a296}
+
+
+Definition at line 537 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!quickmult@{quickmult}}
+\index{quickmult@{quickmult}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{quickmult}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Vec3}$<$T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::quickmult (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{ve}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a26c8e9c42bf503a43cc40bf2eae1bec6}
+
+
+Definition at line 746 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!quickmult@{quickmult}}
+\index{quickmult@{quickmult}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{quickmult}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Vec4}$<$T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::quickmult (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec4}$<$ T $>$ \&}]{ve}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_ab8373733d47b34fe0634a9fb123e17c0}
+
+
+Definition at line 766 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!quick\+Multiply@{quick\+Multiply}}
+\index{quick\+Multiply@{quick\+Multiply}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{quick\+Multiply}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Vec3}$<$T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::quick\+Multiply (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{ve}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a56189b3d6ce7454f2cb2b2d32315a248}
+
+
+Definition at line 745 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!quick\+Multiply@{quick\+Multiply}}
+\index{quick\+Multiply@{quick\+Multiply}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{quick\+Multiply}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Vec4}$<$T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::quick\+Multiply (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec4}$<$ T $>$ \&}]{ve}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a582ced391c573cfa1d21036af6d89aa6}
+
+
+Definition at line 765 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!quick\+Vector\+Multiply@{quick\+Vector\+Multiply}}
+\index{quick\+Vector\+Multiply@{quick\+Vector\+Multiply}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{quick\+Vector\+Multiply}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Vec3}$<$T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::quick\+Vector\+Multiply (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{ve}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a0f9517efb99b237a777a05b3821a6485}
+
+
+Definition at line 755 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!quickvmult@{quickvmult}}
+\index{quickvmult@{quickvmult}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{quickvmult}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Vec3}$<$T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::quickvmult (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{ve}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_ad2e4e0503926aa4102553a46e06d128f}
+
+
+Definition at line 756 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!right\+Multiply\+As\+Matrix@{right\+Multiply\+As\+Matrix}}
+\index{right\+Multiply\+As\+Matrix@{right\+Multiply\+As\+Matrix}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{right\+Multiply\+As\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Vec3}$<$T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::right\+Multiply\+As\+Matrix (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{ve}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a11c12bf6b83bd9eeda6f0b510192bc6a}
+
+
+Definition at line 737 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!right\+Multiply\+As\+Matrix@{right\+Multiply\+As\+Matrix}}
+\index{right\+Multiply\+As\+Matrix@{right\+Multiply\+As\+Matrix}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{right\+Multiply\+As\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Vec4}$<$T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::right\+Multiply\+As\+Matrix (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec4}$<$ T $>$ \&}]{ve}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a50f363b021434071b0c44e3dbba4da37}
+
+
+Definition at line 742 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rmatmult@{rmatmult}}
+\index{rmatmult@{rmatmult}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rmatmult}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Vec3}$<$T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::rmatmult (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{ve}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a78d1869b3643ebcd34a60eb216647b40}
+
+
+Definition at line 738 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rmatmult@{rmatmult}}
+\index{rmatmult@{rmatmult}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rmatmult}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Vec4}$<$T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::rmatmult (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec4}$<$ T $>$ \&}]{ve}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a3960ed051d6324ae7ae9c944fab124a8}
+
+
+Definition at line 743 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotate@{rotate}}
+\index{rotate@{rotate}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotate}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotate (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle, }
+\item[{const T \&}]{axis\+X, }
+\item[{const T \&}]{axis\+Y, }
+\item[{const T \&}]{axis\+Z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a160caf28576d8f82f1bcad41cec791a6}
+
+
+Definition at line 670 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotate@{rotate}}
+\index{rotate@{rotate}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotate}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotate (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle, }
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{axis}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_ab93bdd44242f294205c51c0261228690}
+
+
+Definition at line 671 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotate@{rotate}}
+\index{rotate@{rotate}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotate}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotate (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Quaternion}$<$ T $>$}]{q}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_ab5aa1fede7e0c4cc2f83a37742b5c561}
+
+
+Definition at line 673 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotate\+By\+Degrees@{rotate\+By\+Degrees}}
+\index{rotate\+By\+Degrees@{rotate\+By\+Degrees}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotate\+By\+Degrees}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotate\+By\+Degrees (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle, }
+\item[{const T \&}]{axis\+X, }
+\item[{const T \&}]{axis\+Y, }
+\item[{const T \&}]{axis\+Z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a87c618bba02b4869908c7435391d0d77}
+
+
+Definition at line 668 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotate\+By\+Degrees@{rotate\+By\+Degrees}}
+\index{rotate\+By\+Degrees@{rotate\+By\+Degrees}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotate\+By\+Degrees}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotate\+By\+Degrees (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle, }
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{axis}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_af49ea3e21a275dfe139fb73f23eb6f56}
+
+
+Definition at line 669 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotate\+By\+Degrees\+In\+X@{rotate\+By\+Degrees\+In\+X}}
+\index{rotate\+By\+Degrees\+In\+X@{rotate\+By\+Degrees\+In\+X}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotate\+By\+Degrees\+In\+X}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotate\+By\+Degrees\+In\+X (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a5c671dafce63f5f574064365d9c1c9ec}
+
+
+Definition at line 700 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotate\+By\+Degrees\+In\+Y@{rotate\+By\+Degrees\+In\+Y}}
+\index{rotate\+By\+Degrees\+In\+Y@{rotate\+By\+Degrees\+In\+Y}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotate\+By\+Degrees\+In\+Y}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotate\+By\+Degrees\+In\+Y (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a1a4354fe92b83b0d245d7d2d329bda0b}
+
+
+Definition at line 701 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotate\+By\+Degrees\+In\+Z@{rotate\+By\+Degrees\+In\+Z}}
+\index{rotate\+By\+Degrees\+In\+Z@{rotate\+By\+Degrees\+In\+Z}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotate\+By\+Degrees\+In\+Z}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotate\+By\+Degrees\+In\+Z (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_af067a3d9d46bd5c748291b3213eb0ae7}
+
+
+Definition at line 702 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotate\+Globally@{rotate\+Globally}}
+\index{rotate\+Globally@{rotate\+Globally}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotate\+Globally}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotate\+Globally (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle, }
+\item[{const T \&}]{axis\+X, }
+\item[{const T \&}]{axis\+Y, }
+\item[{const T \&}]{axis\+Z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a3eb9142036a1918482c1a26b5ff14240}
+
+
+Definition at line 650 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotate\+Globally@{rotate\+Globally}}
+\index{rotate\+Globally@{rotate\+Globally}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotate\+Globally}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotate\+Globally (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle, }
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{axis}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_ab187d5b713e5ba1eb91984d5f921f320}
+
+
+Definition at line 651 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotate\+Globally@{rotate\+Globally}}
+\index{rotate\+Globally@{rotate\+Globally}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotate\+Globally}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotate\+Globally (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Quaternion}$<$ T $>$}]{q}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_ad5ca56398e1db5b3d4ef21705e982eaa}
+
+
+Definition at line 652 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotate\+Globally\+By\+Degrees@{rotate\+Globally\+By\+Degrees}}
+\index{rotate\+Globally\+By\+Degrees@{rotate\+Globally\+By\+Degrees}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotate\+Globally\+By\+Degrees}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotate\+Globally\+By\+Degrees (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle, }
+\item[{const T \&}]{axis\+X, }
+\item[{const T \&}]{axis\+Y, }
+\item[{const T \&}]{axis\+Z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a531e5a2fde8db7322457d19d6ed12f16}
+
+
+Definition at line 648 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotate\+Globally\+By\+Degrees@{rotate\+Globally\+By\+Degrees}}
+\index{rotate\+Globally\+By\+Degrees@{rotate\+Globally\+By\+Degrees}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotate\+Globally\+By\+Degrees}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotate\+Globally\+By\+Degrees (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle, }
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{axis}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_acb0971301794366a6d76c0c9724ee5be}
+
+
+Definition at line 649 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotate\+Globally\+By\+Degrees\+In\+X@{rotate\+Globally\+By\+Degrees\+In\+X}}
+\index{rotate\+Globally\+By\+Degrees\+In\+X@{rotate\+Globally\+By\+Degrees\+In\+X}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotate\+Globally\+By\+Degrees\+In\+X}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotate\+Globally\+By\+Degrees\+In\+X (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_ade39644c64b3377bcc6363d5e839df52}
+
+
+Definition at line 680 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotate\+Globally\+By\+Degrees\+In\+Y@{rotate\+Globally\+By\+Degrees\+In\+Y}}
+\index{rotate\+Globally\+By\+Degrees\+In\+Y@{rotate\+Globally\+By\+Degrees\+In\+Y}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotate\+Globally\+By\+Degrees\+In\+Y}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotate\+Globally\+By\+Degrees\+In\+Y (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a96ad3e542e4940173d2c56ac7f713848}
+
+
+Definition at line 681 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotate\+Globally\+By\+Degrees\+In\+Z@{rotate\+Globally\+By\+Degrees\+In\+Z}}
+\index{rotate\+Globally\+By\+Degrees\+In\+Z@{rotate\+Globally\+By\+Degrees\+In\+Z}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotate\+Globally\+By\+Degrees\+In\+Z}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotate\+Globally\+By\+Degrees\+In\+Z (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_affc08bef9dc83a19f54764813c54ab2d}
+
+
+Definition at line 682 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotate\+Globally\+In\+X@{rotate\+Globally\+In\+X}}
+\index{rotate\+Globally\+In\+X@{rotate\+Globally\+In\+X}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotate\+Globally\+In\+X}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotate\+Globally\+In\+X (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_ac50ddcae25b677cc94aea2a932dc7a88}
+
+
+Definition at line 687 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotate\+Globally\+In\+Y@{rotate\+Globally\+In\+Y}}
+\index{rotate\+Globally\+In\+Y@{rotate\+Globally\+In\+Y}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotate\+Globally\+In\+Y}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotate\+Globally\+In\+Y (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_ac4930e0f988f30721ba4b670f57d99a5}
+
+
+Definition at line 688 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotate\+Globally\+In\+Z@{rotate\+Globally\+In\+Z}}
+\index{rotate\+Globally\+In\+Z@{rotate\+Globally\+In\+Z}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotate\+Globally\+In\+Z}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotate\+Globally\+In\+Z (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a1fcad5163d9fdfa2066ddb65d7a7d9ff}
+
+
+Definition at line 689 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotate\+In\+X@{rotate\+In\+X}}
+\index{rotate\+In\+X@{rotate\+In\+X}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotate\+In\+X}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotate\+In\+X (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_ab765d0d83d6d04903fe3a2b047073824}
+
+
+Definition at line 707 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotate\+In\+Y@{rotate\+In\+Y}}
+\index{rotate\+In\+Y@{rotate\+In\+Y}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotate\+In\+Y}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotate\+In\+Y (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_aaa80de9ac4514a143b888f19a2580fdf}
+
+
+Definition at line 708 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotate\+In\+Z@{rotate\+In\+Z}}
+\index{rotate\+In\+Z@{rotate\+In\+Z}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotate\+In\+Z}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotate\+In\+Z (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_ab0c3b2d9c99176fc0847168591e83e5a}
+
+
+Definition at line 709 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotate\+Locally@{rotate\+Locally}}
+\index{rotate\+Locally@{rotate\+Locally}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotate\+Locally}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotate\+Locally (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle, }
+\item[{const T \&}]{axis\+X, }
+\item[{const T \&}]{axis\+Y, }
+\item[{const T \&}]{axis\+Z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_aee0454469f2a8bb32af4af6233817c53}
+
+
+Definition at line 665 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotate\+Locally@{rotate\+Locally}}
+\index{rotate\+Locally@{rotate\+Locally}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotate\+Locally}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotate\+Locally (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle, }
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{axis}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_abd0d1056d42be3cc3125c271ce5f97ce}
+
+
+Definition at line 666 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotate\+Locally@{rotate\+Locally}}
+\index{rotate\+Locally@{rotate\+Locally}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotate\+Locally}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotate\+Locally (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Quaternion}$<$ T $>$}]{q}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a35baeb8995ddf7d227eebfc1b082cb82}
+
+
+Definition at line 667 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotate\+Locally\+By\+Degrees@{rotate\+Locally\+By\+Degrees}}
+\index{rotate\+Locally\+By\+Degrees@{rotate\+Locally\+By\+Degrees}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotate\+Locally\+By\+Degrees}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotate\+Locally\+By\+Degrees (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle, }
+\item[{const T \&}]{axis\+X, }
+\item[{const T \&}]{axis\+Y, }
+\item[{const T \&}]{axis\+Z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_af83a54af39d9c4d04efef1dcb4277d3c}
+
+
+Definition at line 663 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotate\+Locally\+By\+Degrees@{rotate\+Locally\+By\+Degrees}}
+\index{rotate\+Locally\+By\+Degrees@{rotate\+Locally\+By\+Degrees}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotate\+Locally\+By\+Degrees}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotate\+Locally\+By\+Degrees (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle, }
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{axis}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_aba1f08c72e7d149913a54d37a3e6fcac}
+
+
+Definition at line 664 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotate\+Locally\+By\+Degrees\+In\+X@{rotate\+Locally\+By\+Degrees\+In\+X}}
+\index{rotate\+Locally\+By\+Degrees\+In\+X@{rotate\+Locally\+By\+Degrees\+In\+X}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotate\+Locally\+By\+Degrees\+In\+X}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotate\+Locally\+By\+Degrees\+In\+X (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_ae676b17735df480344b862875b6ef146}
+
+
+Definition at line 697 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotate\+Locally\+By\+Degrees\+In\+Y@{rotate\+Locally\+By\+Degrees\+In\+Y}}
+\index{rotate\+Locally\+By\+Degrees\+In\+Y@{rotate\+Locally\+By\+Degrees\+In\+Y}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotate\+Locally\+By\+Degrees\+In\+Y}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotate\+Locally\+By\+Degrees\+In\+Y (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_aad23cd847732c663f33ae62a298595f6}
+
+
+Definition at line 698 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotate\+Locally\+By\+Degrees\+In\+Z@{rotate\+Locally\+By\+Degrees\+In\+Z}}
+\index{rotate\+Locally\+By\+Degrees\+In\+Z@{rotate\+Locally\+By\+Degrees\+In\+Z}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotate\+Locally\+By\+Degrees\+In\+Z}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotate\+Locally\+By\+Degrees\+In\+Z (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a5c85a974710449ac74c986202fbc14d3}
+
+
+Definition at line 699 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotate\+Locally\+In\+X@{rotate\+Locally\+In\+X}}
+\index{rotate\+Locally\+In\+X@{rotate\+Locally\+In\+X}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotate\+Locally\+In\+X}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotate\+Locally\+In\+X (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_aa8d7418b2a0f703db8a35b52d00256b4}
+
+
+Definition at line 704 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotate\+Locally\+In\+Y@{rotate\+Locally\+In\+Y}}
+\index{rotate\+Locally\+In\+Y@{rotate\+Locally\+In\+Y}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotate\+Locally\+In\+Y}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotate\+Locally\+In\+Y (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a4f43e68df2596fccea6d0601b56047fe}
+
+
+Definition at line 705 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotate\+Locally\+In\+Z@{rotate\+Locally\+In\+Z}}
+\index{rotate\+Locally\+In\+Z@{rotate\+Locally\+In\+Z}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotate\+Locally\+In\+Z}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotate\+Locally\+In\+Z (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a1b8de15187d6061a656a9ccf85091494}
+
+
+Definition at line 706 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotatex@{rotatex}}
+\index{rotatex@{rotatex}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotatex}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotatex (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_ad1c418794104df9b556de50eafe2ec50}
+
+
+Definition at line 710 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotatey@{rotatey}}
+\index{rotatey@{rotatey}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotatey}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotatey (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a9d28279b9b1050248375d83d9c8136e2}
+
+
+Definition at line 711 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotatez@{rotatez}}
+\index{rotatez@{rotatez}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotatez}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotatez (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_ac579928c9d9ecc454b1cdeb96a3ec9b5}
+
+
+Definition at line 712 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotation\+Angle@{rotation\+Angle}}
+\index{rotation\+Angle@{rotation\+Angle}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotation\+Angle}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf S\+E\+Quaternion}$<$ T $>$\+::rotation\+Angle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_ad8531bb1280cafdfbb17ca63c489c61b}
+
+
+Definition at line 588 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotation\+Angle\+In\+Radians@{rotation\+Angle\+In\+Radians}}
+\index{rotation\+Angle\+In\+Radians@{rotation\+Angle\+In\+Radians}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotation\+Angle\+In\+Radians}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf S\+E\+Quaternion}$<$ T $>$\+::rotation\+Angle\+In\+Radians (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a449ac6038dfaf9892eb66ab6212d1d58}
+
+
+Definition at line 589 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotation\+Axis@{rotation\+Axis}}
+\index{rotation\+Axis@{rotation\+Axis}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotation\+Axis}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Vec3}$<$T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::rotation\+Axis (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a52d50593854cd0dd0eca6cd6ba3758b7}
+
+
+Definition at line 594 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotation\+From\+To@{rotation\+From\+To}}
+\index{rotation\+From\+To@{rotation\+From\+To}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotation\+From\+To}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotation\+From\+To (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{v0, }
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{v1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a4873d9213abe8bb463557fea35cab5bd}
+
+
+Definition at line 610 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!rotto@{rotto}}
+\index{rotto@{rotto}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{rotto}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::rotto (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{v0, }
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{v1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_ad9000c463b7de3a7229768ecae5a0a37}
+
+
+Definition at line 611 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!slerp@{slerp}}
+\index{slerp@{slerp}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{slerp}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::slerp (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Quaternion}$<$ T $>$ \&}]{q0, }
+\item[{const {\bf S\+E\+Quaternion}$<$ T $>$ \&}]{q1, }
+\item[{T}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a73c5c4b2080ea325f01234038b080de5}
+
+
+Definition at line 717 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!to\+Matrix@{to\+Matrix}}
+\index{to\+Matrix@{to\+Matrix}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{to\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Mat4}$<$T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::to\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a3f3f9e67b8b10692bcaad07dc5c1e6b8}
+
+
+Definition at line 636 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!to\+Matrix3@{to\+Matrix3}}
+\index{to\+Matrix3@{to\+Matrix3}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{to\+Matrix3}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Mat3}$<$T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::to\+Matrix3 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a31605418e35377ad8514e9b4d233e697}
+
+
+Definition at line 626 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!to\+Matrix4@{to\+Matrix4}}
+\index{to\+Matrix4@{to\+Matrix4}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{to\+Matrix4}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Mat4}$<$T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::to\+Matrix4 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a99ce1d21b6bd9c9ca61ba82b0deb8fca}
+
+
+Definition at line 637 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!to\+Rotation\+Matrix@{to\+Rotation\+Matrix}}
+\index{to\+Rotation\+Matrix@{to\+Rotation\+Matrix}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{to\+Rotation\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Mat3}$<$T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::to\+Rotation\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a66f0bf84c3c80dac31e6cd319e28d237}
+
+
+Definition at line 627 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!to\+Transform\+Matrix@{to\+Transform\+Matrix}}
+\index{to\+Transform\+Matrix@{to\+Transform\+Matrix}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{to\+Transform\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Mat4}$<$T$>$ {\bf S\+E\+Quaternion}$<$ T $>$\+::to\+Transform\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_ab30c6d83bfe5806454a98797f39d4d6d}
+
+
+Definition at line 638 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!vec@{vec}}
+\index{vec@{vec}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{vec}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::vec (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Quaternion}$<$ T $>$ \&}]{q}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a7d70efddeab8dd2aa4a01ad99c44db7f}
+
+
+Definition at line 544 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!vec@{vec}}
+\index{vec@{vec}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{vec}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::vec (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Mat4}$<$ T $>$ \&}]{m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a795f3ad44e56f970e8aa18a4295cec30}
+
+
+Definition at line 546 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!vec@{vec}}
+\index{vec@{vec}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{vec}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::vec (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_acc3e080e446a4d24fb97d7d1c8a0da68}
+
+
+Definition at line 548 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!vec@{vec}}
+\index{vec@{vec}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{vec}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::vec (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{euler\+\_\+x, }
+\item[{const T \&}]{euler\+\_\+y, }
+\item[{const T \&}]{euler\+\_\+z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a151876cc485b2bc10a6d93264ec34c43}
+
+
+Definition at line 549 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!vec@{vec}}
+\index{vec@{vec}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{vec}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::vec (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle, }
+\item[{const T \&}]{axis\+\_\+x, }
+\item[{const T \&}]{axis\+\_\+y, }
+\item[{const T \&}]{axis\+\_\+z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a3ffbbd36cf904dce58c278bbf6262352}
+
+
+Definition at line 560 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!vec@{vec}}
+\index{vec@{vec}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{vec}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$\& {\bf S\+E\+Quaternion}$<$ T $>$\+::vec (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{angle, }
+\item[{{\bf S\+E\+Vec3}$<$ T $>$}]{axis}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_quaternion_a4e4a71a85ded8138c1ca580d6b451474}
+
+
+Definition at line 561 of file S\+E\+Math.\+h.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$ operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+Quaternion}$<$ T $>$}]{lhs, }
+\item[{T const \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_e_quaternion_a6c3d2a5343f20dee40119b343267e5ac}
+
+
+Definition at line 529 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$ operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{T const \&}]{lhs, }
+\item[{{\bf S\+E\+Quaternion}$<$ T $>$}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_e_quaternion_a6f6c71bfaffb9e56c72c0dd192d79309}
+
+
+Definition at line 530 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Vec3}$<$T$>$ operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+Quaternion}$<$ T $>$ const \&}]{lhs, }
+\item[{{\bf S\+E\+Vec3}$<$ T $>$ const \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_e_quaternion_aa474ce7036e4f9972e39f956ef0b72f6}
+
+
+Definition at line 531 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Vec4}$<$T$>$ operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+Quaternion}$<$ T $>$ const \&}]{lhs, }
+\item[{{\bf S\+E\+Vec4}$<$ T $>$ const \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_e_quaternion_a7fc131497005cf62211faeef159d0bbd}
+
+
+Definition at line 532 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$ operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+Quaternion}$<$ T $>$}]{lhs, }
+\item[{{\bf S\+E\+Quaternion}$<$ T $>$ const \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_e_quaternion_a3a12b66154cf3ad8fd40ce810177b36c}
+
+
+Definition at line 533 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!operator+@{operator+}}
+\index{operator+@{operator+}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$ operator+ (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+Quaternion}$<$ T $>$}]{lhs, }
+\item[{{\bf S\+E\+Quaternion}$<$ T $>$ const \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_e_quaternion_a8d53c2dd5169d776c7dac9ddbac79100}
+
+
+Definition at line 523 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!operator+@{operator+}}
+\index{operator+@{operator+}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$ operator+ (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+Quaternion}$<$ T $>$}]{lhs, }
+\item[{{\bf S\+E\+Vec3}$<$ T $>$ const \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_e_quaternion_ac0199adceacc758d9205ee9ba430065a}
+
+
+Definition at line 524 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!operator+@{operator+}}
+\index{operator+@{operator+}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$ operator+ (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+Vec3}$<$ T $>$ const \&}]{lhs, }
+\item[{{\bf S\+E\+Quaternion}$<$ T $>$}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_e_quaternion_ace797788507806cb0de16b468c4002a7}
+
+
+Definition at line 525 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$ operator-\/ (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+Quaternion}$<$ T $>$}]{lhs, }
+\item[{{\bf S\+E\+Quaternion}$<$ T $>$ const \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_e_quaternion_aa1ce58fb38ab4a9017f64a66e8e76676}
+
+
+Definition at line 526 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$ operator-\/ (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+Quaternion}$<$ T $>$}]{lhs, }
+\item[{{\bf S\+E\+Vec3}$<$ T $>$ const \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_e_quaternion_a866aa7740c92577f182f3fb6767293dd}
+
+
+Definition at line 527 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$ operator-\/ (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+Vec3}$<$ T $>$ const \&}]{lhs, }
+\item[{{\bf S\+E\+Quaternion}$<$ T $>$}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_e_quaternion_a5bf52f29b52096387e95a11429703a45}
+
+
+Definition at line 528 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!operator/@{operator/}}
+\index{operator/@{operator/}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{operator/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Quaternion}$<$T$>$ operator/ (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+Quaternion}$<$ T $>$}]{lhs, }
+\item[{T const \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_e_quaternion_ae2ea04c251b5f1b8c77f0c0472f84aa6}
+
+
+Definition at line 534 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os, }
+\item[{const {\bf S\+E\+Quaternion}$<$ T $>$ \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_e_quaternion_ab58c797bc0a4aeaf742f3571fcf2f560}
+
+
+Definition at line 542 of file S\+E\+Math.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!w@{w}}
+\index{w@{w}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{w}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf S\+E\+Quaternion}$<$ T $>$\+::w}\label{class_s_e_quaternion_aee64949d631db8b98e125fa98700cfe0}
+
+
+Definition at line 482 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!x@{x}}
+\index{x@{x}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{x}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf S\+E\+Quaternion}$<$ T $>$\+::x}\label{class_s_e_quaternion_a967d7d215860f5c7d231f908b93d8fe0}
+
+
+Definition at line 482 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!y@{y}}
+\index{y@{y}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{y}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf S\+E\+Quaternion}$<$ T $>$\+::y}\label{class_s_e_quaternion_af4bc0861bf1711b30eaa6eedf041400d}
+
+
+Definition at line 482 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Quaternion@{S\+E\+Quaternion}!z@{z}}
+\index{z@{z}!S\+E\+Quaternion@{S\+E\+Quaternion}}
+\subsubsection[{z}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf S\+E\+Quaternion}$<$ T $>$\+::z}\label{class_s_e_quaternion_acb8d90e4cbe708d9c0b2eabacc602470}
+
+
+Definition at line 482 of file S\+E\+Math.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Math.\+h}\end{DoxyCompactItemize}

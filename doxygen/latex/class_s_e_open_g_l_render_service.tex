@@ -1,0 +1,574 @@
+\section{S\+E\+Open\+G\+L\+Render\+Service Class Reference}
+\label{class_s_e_open_g_l_render_service}\index{S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}}
+
+
+{\ttfamily \#include $<$S\+E\+Open\+G\+L\+Render\+Service.\+h$>$}
+
+
+
+Inheritance diagram for S\+E\+Open\+G\+L\+Render\+Service\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{class_s_e_open_g_l_render_service__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for S\+E\+Open\+G\+L\+Render\+Service\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{class_s_e_open_g_l_render_service__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ {\bf S\+E\+Open\+G\+L\+Render\+Object} $\ast$ $>$ {\bf t\+R\+O\+Vector}
+\item 
+typedef std\+::vector$<$ {\bf S\+E\+Open\+G\+L\+Render\+Object} $\ast$ $>$\+::iterator {\bf t\+R\+O\+Vector\+It}
+\item 
+typedef std\+::map$<$ uint32\+\_\+t, {\bf S\+E\+Open\+G\+L\+Camera} $\ast$ $>$ {\bf t\+Cam\+Map}
+\item 
+typedef std\+::map$<$ uint32\+\_\+t, {\bf S\+E\+Open\+G\+L\+Camera} $\ast$ $>$\+::iterator {\bf t\+Cam\+Map\+It}
+\item 
+typedef std\+::map$<$ uint32\+\_\+t, {\bf S\+E\+Open\+G\+L\+Light} $\ast$ $>$ {\bf t\+Light\+Map}
+\item 
+typedef std\+::map$<$ uint32\+\_\+t, {\bf S\+E\+Open\+G\+L\+Light} $\ast$ $>$\+::iterator {\bf t\+Light\+Map\+It}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual int {\bf startup} ()
+\item 
+virtual int {\bf shutdown} ()
+\item 
+virtual void {\bf render\+Frame} () const 
+\item 
+virtual int {\bf create\+R\+O} ({\bf S\+E\+R\+O\+Type\+::t\+Render\+Object} t, int t1=-\/1, int t2=-\/1, int t3=-\/1)
+\item 
+virtual void {\bf destroy\+R\+O} (uint32\+\_\+t i)
+\item 
+virtual void {\bf activate\+Light} (uint32\+\_\+t l)
+\item 
+virtual void {\bf deactivate\+Light} (uint32\+\_\+t l)
+\item 
+virtual const {\bf S\+E\+Render\+Object}$<$ G\+Lfloat $>$ $\ast$ {\bf get\+Object} (uint32\+\_\+t o) const 
+\item 
+virtual const {\bf S\+E\+Camera}$<$ G\+Lfloat $>$ $\ast$ {\bf get\+Camera} (uint32\+\_\+t c) const 
+\item 
+virtual const {\bf S\+E\+Light}$<$ G\+Lfloat $>$ $\ast$ {\bf get\+Light} (uint32\+\_\+t l) const 
+\item 
+virtual {\bf S\+E\+Render\+Object}$<$ G\+Lfloat $>$ $\ast$ {\bf get\+Object} (uint32\+\_\+t o)
+\item 
+virtual {\bf S\+E\+Camera}$<$ G\+Lfloat $>$ $\ast$ {\bf get\+Camera} (uint32\+\_\+t c)
+\item 
+virtual {\bf S\+E\+Light}$<$ G\+Lfloat $>$ $\ast$ {\bf get\+Light} (uint32\+\_\+t l)
+\item 
+virtual void {\bf set\+Global\+Ambient\+Light} (G\+Lfloat r, G\+Lfloat g, G\+Lfloat b, G\+Lfloat a) const 
+\item 
+virtual void {\bf set\+Global\+Ambient\+Lighti} (int r, int g, int b, int a) const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Open\+G\+L\+Render\+Service} ()
+\item 
+virtual {\bf $\sim$\+S\+E\+Open\+G\+L\+Render\+Service} ()
+\item 
+virtual void {\bf configure\+Lighting} () const 
+\item 
+virtual void {\bf configure\+Texturing} () const 
+\item 
+virtual bool {\bf object\+Exists} (uint32\+\_\+t o) const 
+\item 
+virtual bool {\bf camera\+Exists} (uint32\+\_\+t c) const 
+\item 
+virtual bool {\bf light\+Exists} (uint32\+\_\+t l) const 
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf S\+E\+Service\+Locator}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 19 of file S\+E\+Open\+G\+L\+Render\+Service.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\index{S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}!t\+Cam\+Map@{t\+Cam\+Map}}
+\index{t\+Cam\+Map@{t\+Cam\+Map}!S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}}
+\subsubsection[{t\+Cam\+Map}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<$uint32\+\_\+t, {\bf S\+E\+Open\+G\+L\+Camera}$\ast$$>$ {\bf S\+E\+Open\+G\+L\+Render\+Service\+::t\+Cam\+Map}}\label{class_s_e_open_g_l_render_service_a6c7435bd58fcd51fdcbd6078847543f6}
+
+
+Definition at line 27 of file S\+E\+Open\+G\+L\+Render\+Service.\+h.
+
+\index{S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}!t\+Cam\+Map\+It@{t\+Cam\+Map\+It}}
+\index{t\+Cam\+Map\+It@{t\+Cam\+Map\+It}!S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}}
+\subsubsection[{t\+Cam\+Map\+It}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<$uint32\+\_\+t, {\bf S\+E\+Open\+G\+L\+Camera}$\ast$$>$\+::iterator {\bf S\+E\+Open\+G\+L\+Render\+Service\+::t\+Cam\+Map\+It}}\label{class_s_e_open_g_l_render_service_abe004d2acf94bba7a75b2076a4c0f7a2}
+
+
+Definition at line 28 of file S\+E\+Open\+G\+L\+Render\+Service.\+h.
+
+\index{S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}!t\+Light\+Map@{t\+Light\+Map}}
+\index{t\+Light\+Map@{t\+Light\+Map}!S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}}
+\subsubsection[{t\+Light\+Map}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<$uint32\+\_\+t, {\bf S\+E\+Open\+G\+L\+Light}$\ast$$>$ {\bf S\+E\+Open\+G\+L\+Render\+Service\+::t\+Light\+Map}}\label{class_s_e_open_g_l_render_service_abbeeb58fc76488d94dc7387660ab17d6}
+
+
+Definition at line 30 of file S\+E\+Open\+G\+L\+Render\+Service.\+h.
+
+\index{S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}!t\+Light\+Map\+It@{t\+Light\+Map\+It}}
+\index{t\+Light\+Map\+It@{t\+Light\+Map\+It}!S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}}
+\subsubsection[{t\+Light\+Map\+It}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<$uint32\+\_\+t, {\bf S\+E\+Open\+G\+L\+Light}$\ast$$>$\+::iterator {\bf S\+E\+Open\+G\+L\+Render\+Service\+::t\+Light\+Map\+It}}\label{class_s_e_open_g_l_render_service_a523c0ececce04db3a90d9ad1ee62be74}
+
+
+Definition at line 31 of file S\+E\+Open\+G\+L\+Render\+Service.\+h.
+
+\index{S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}!t\+R\+O\+Vector@{t\+R\+O\+Vector}}
+\index{t\+R\+O\+Vector@{t\+R\+O\+Vector}!S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}}
+\subsubsection[{t\+R\+O\+Vector}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::vector$<${\bf S\+E\+Open\+G\+L\+Render\+Object}$\ast$$>$ {\bf S\+E\+Open\+G\+L\+Render\+Service\+::t\+R\+O\+Vector}}\label{class_s_e_open_g_l_render_service_a07d905863017ff1abfe6dd80e608f9e4}
+
+
+Definition at line 24 of file S\+E\+Open\+G\+L\+Render\+Service.\+h.
+
+\index{S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}!t\+R\+O\+Vector\+It@{t\+R\+O\+Vector\+It}}
+\index{t\+R\+O\+Vector\+It@{t\+R\+O\+Vector\+It}!S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}}
+\subsubsection[{t\+R\+O\+Vector\+It}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::vector$<${\bf S\+E\+Open\+G\+L\+Render\+Object}$\ast$$>$\+::iterator {\bf S\+E\+Open\+G\+L\+Render\+Service\+::t\+R\+O\+Vector\+It}}\label{class_s_e_open_g_l_render_service_af48321d63e730c24a52755d15434261a}
+
+
+Definition at line 25 of file S\+E\+Open\+G\+L\+Render\+Service.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}!S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}}
+\index{S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}!S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}}
+\subsubsection[{S\+E\+Open\+G\+L\+Render\+Service}]{\setlength{\rightskip}{0pt plus 5cm}S\+E\+Open\+G\+L\+Render\+Service\+::\+S\+E\+Open\+G\+L\+Render\+Service (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_s_e_open_g_l_render_service_a58ca2721c22a0ecefabc10e4915dcb36}
+
+
+Definition at line 56 of file S\+E\+Open\+G\+L\+Render\+Service.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_e_open_g_l_render_service_a58ca2721c22a0ecefabc10e4915dcb36_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}!````~S\+E\+Open\+G\+L\+Render\+Service@{$\sim$\+S\+E\+Open\+G\+L\+Render\+Service}}
+\index{````~S\+E\+Open\+G\+L\+Render\+Service@{$\sim$\+S\+E\+Open\+G\+L\+Render\+Service}!S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}}
+\subsubsection[{$\sim$\+S\+E\+Open\+G\+L\+Render\+Service}]{\setlength{\rightskip}{0pt plus 5cm}virtual S\+E\+Open\+G\+L\+Render\+Service\+::$\sim$\+S\+E\+Open\+G\+L\+Render\+Service (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_s_e_open_g_l_render_service_acc8d3a8c40fe0fa17ae326e9c76043f3}
+
+
+Definition at line 57 of file S\+E\+Open\+G\+L\+Render\+Service.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_e_open_g_l_render_service_acc8d3a8c40fe0fa17ae326e9c76043f3_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}!activate\+Light@{activate\+Light}}
+\index{activate\+Light@{activate\+Light}!S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}}
+\subsubsection[{activate\+Light}]{\setlength{\rightskip}{0pt plus 5cm}void S\+E\+Open\+G\+L\+Render\+Service\+::activate\+Light (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{l}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_e_open_g_l_render_service_a6891f70b266a7b38eaebbef9511455d4}
+
+
+Implements {\bf S\+E\+Render\+Service} \doxyref{}{p.}{class_s_e_render_service_aa3c24b4b558597ec74fda99a0b2b1893}.
+
+
+
+Definition at line 186 of file S\+E\+Open\+G\+L\+Render\+Service.\+cpp.
+
+\index{S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}!camera\+Exists@{camera\+Exists}}
+\index{camera\+Exists@{camera\+Exists}!S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}}
+\subsubsection[{camera\+Exists}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+E\+Open\+G\+L\+Render\+Service\+::camera\+Exists (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{c}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_s_e_open_g_l_render_service_a15a8640f37c053ff4d82ae45a6cb0c6d}
+
+
+Implements {\bf S\+E\+Render\+Service} \doxyref{}{p.}{class_s_e_render_service_ac533ff9ad646a0706a59a90b75f0be2c}.
+
+
+
+Definition at line 349 of file S\+E\+Open\+G\+L\+Render\+Service.\+cpp.
+
+\index{S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}!configure\+Lighting@{configure\+Lighting}}
+\index{configure\+Lighting@{configure\+Lighting}!S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}}
+\subsubsection[{configure\+Lighting}]{\setlength{\rightskip}{0pt plus 5cm}void S\+E\+Open\+G\+L\+Render\+Service\+::configure\+Lighting (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_s_e_open_g_l_render_service_a23cf478df7957360a543d7deab75d6c0}
+
+
+Implements {\bf S\+E\+Render\+Service} \doxyref{}{p.}{class_s_e_render_service_a4490b31065058954354c73480ec5d91e}.
+
+
+
+Definition at line 293 of file S\+E\+Open\+G\+L\+Render\+Service.\+cpp.
+
+\index{S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}!configure\+Texturing@{configure\+Texturing}}
+\index{configure\+Texturing@{configure\+Texturing}!S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}}
+\subsubsection[{configure\+Texturing}]{\setlength{\rightskip}{0pt plus 5cm}void S\+E\+Open\+G\+L\+Render\+Service\+::configure\+Texturing (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_s_e_open_g_l_render_service_aecce754f5c1649456a0f703837f58f79}
+
+
+Implements {\bf S\+E\+Render\+Service} \doxyref{}{p.}{class_s_e_render_service_a5bf244ad9b9768724ca924b43adf941f}.
+
+
+
+Definition at line 323 of file S\+E\+Open\+G\+L\+Render\+Service.\+cpp.
+
+\index{S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}!create\+R\+O@{create\+R\+O}}
+\index{create\+R\+O@{create\+R\+O}!S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}}
+\subsubsection[{create\+R\+O}]{\setlength{\rightskip}{0pt plus 5cm}int S\+E\+Open\+G\+L\+Render\+Service\+::create\+R\+O (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+R\+O\+Type\+::t\+Render\+Object}}]{t, }
+\item[{int}]{t1 = {\ttfamily -\/1}, }
+\item[{int}]{t2 = {\ttfamily -\/1}, }
+\item[{int}]{t3 = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_e_open_g_l_render_service_a53a5997ce346921fa9ea97c6fb4454f9}
+
+
+Implements {\bf S\+E\+Render\+Service} \doxyref{}{p.}{class_s_e_render_service_a6b6778dbe1bef96c1cfd83fa4428d950}.
+
+
+
+Definition at line 65 of file S\+E\+Open\+G\+L\+Render\+Service.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_e_open_g_l_render_service_a53a5997ce346921fa9ea97c6fb4454f9_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}!deactivate\+Light@{deactivate\+Light}}
+\index{deactivate\+Light@{deactivate\+Light}!S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}}
+\subsubsection[{deactivate\+Light}]{\setlength{\rightskip}{0pt plus 5cm}void S\+E\+Open\+G\+L\+Render\+Service\+::deactivate\+Light (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{l}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_e_open_g_l_render_service_a6c04b0a9fb695a86d2e2c31e9cde70fe}
+
+
+Implements {\bf S\+E\+Render\+Service} \doxyref{}{p.}{class_s_e_render_service_a56f5818c28ffe84c922ef535c643a2a7}.
+
+
+
+Definition at line 195 of file S\+E\+Open\+G\+L\+Render\+Service.\+cpp.
+
+\index{S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}!destroy\+R\+O@{destroy\+R\+O}}
+\index{destroy\+R\+O@{destroy\+R\+O}!S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}}
+\subsubsection[{destroy\+R\+O}]{\setlength{\rightskip}{0pt plus 5cm}void S\+E\+Open\+G\+L\+Render\+Service\+::destroy\+R\+O (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_e_open_g_l_render_service_a0edce491f84b4be00fec6b21b6133c02}
+
+
+Implements {\bf S\+E\+Render\+Service} \doxyref{}{p.}{class_s_e_render_service_a3a384b86920d9c91724ec529bf96a835}.
+
+
+
+Definition at line 163 of file S\+E\+Open\+G\+L\+Render\+Service.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_e_open_g_l_render_service_a0edce491f84b4be00fec6b21b6133c02_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}!get\+Camera@{get\+Camera}}
+\index{get\+Camera@{get\+Camera}!S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}}
+\subsubsection[{get\+Camera}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf S\+E\+Camera}$<$ G\+Lfloat $>$ $\ast$ S\+E\+Open\+G\+L\+Render\+Service\+::get\+Camera (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{c}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_e_open_g_l_render_service_ab03ba469de9643cb06e1bdd3d34aedc7}
+
+
+Implements {\bf S\+E\+Render\+Service\+Internals$<$ G\+Lfloat $>$} \doxyref{}{p.}{class_s_e_render_service_internals_a492f565a6b70ec90f29e5c61e3c41c99}.
+
+
+
+Definition at line 213 of file S\+E\+Open\+G\+L\+Render\+Service.\+cpp.
+
+\index{S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}!get\+Camera@{get\+Camera}}
+\index{get\+Camera@{get\+Camera}!S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}}
+\subsubsection[{get\+Camera}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+E\+Camera}$<$ G\+Lfloat $>$ $\ast$ S\+E\+Open\+G\+L\+Render\+Service\+::get\+Camera (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_e_open_g_l_render_service_aa24d88cb1c57b16703f712d8f563ab4c}
+
+
+Implements {\bf S\+E\+Render\+Service\+Internals$<$ G\+Lfloat $>$} \doxyref{}{p.}{class_s_e_render_service_internals_a2c3dc0e9bfa936b88df6fe0840b0ee52}.
+
+
+
+Definition at line 250 of file S\+E\+Open\+G\+L\+Render\+Service.\+cpp.
+
+\index{S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}!get\+Light@{get\+Light}}
+\index{get\+Light@{get\+Light}!S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}}
+\subsubsection[{get\+Light}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf S\+E\+Light}$<$ G\+Lfloat $>$ $\ast$ S\+E\+Open\+G\+L\+Render\+Service\+::get\+Light (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{l}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_e_open_g_l_render_service_a764a8a2046a45191b662914ee4f12555}
+
+
+Implements {\bf S\+E\+Render\+Service\+Internals$<$ G\+Lfloat $>$} \doxyref{}{p.}{class_s_e_render_service_internals_a0020d3cddd573e7a4585cb67d86ab603}.
+
+
+
+Definition at line 227 of file S\+E\+Open\+G\+L\+Render\+Service.\+cpp.
+
+\index{S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}!get\+Light@{get\+Light}}
+\index{get\+Light@{get\+Light}!S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}}
+\subsubsection[{get\+Light}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+E\+Light}$<$ G\+Lfloat $>$ $\ast$ S\+E\+Open\+G\+L\+Render\+Service\+::get\+Light (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{l}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_e_open_g_l_render_service_a98e8fac21db385ab7a70848da8a4404b}
+
+
+Implements {\bf S\+E\+Render\+Service\+Internals$<$ G\+Lfloat $>$} \doxyref{}{p.}{class_s_e_render_service_internals_a76f1f37331215dce7fd699897a9d9117}.
+
+
+
+Definition at line 263 of file S\+E\+Open\+G\+L\+Render\+Service.\+cpp.
+
+\index{S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}!get\+Object@{get\+Object}}
+\index{get\+Object@{get\+Object}!S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}}
+\subsubsection[{get\+Object}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf S\+E\+Render\+Object}$<$ G\+Lfloat $>$ $\ast$ S\+E\+Open\+G\+L\+Render\+Service\+::get\+Object (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{o}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_e_open_g_l_render_service_a9a25c1cae8d35cd864000a5f40418fef}
+
+
+Implements {\bf S\+E\+Render\+Service\+Internals$<$ G\+Lfloat $>$} \doxyref{}{p.}{class_s_e_render_service_internals_ab020f013a5bf9f3e613d5b1f5ba6664d}.
+
+
+
+Definition at line 204 of file S\+E\+Open\+G\+L\+Render\+Service.\+cpp.
+
+\index{S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}!get\+Object@{get\+Object}}
+\index{get\+Object@{get\+Object}!S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}}
+\subsubsection[{get\+Object}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+E\+Render\+Object}$<$ G\+Lfloat $>$ $\ast$ S\+E\+Open\+G\+L\+Render\+Service\+::get\+Object (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{o}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_e_open_g_l_render_service_a2aa68a04c26e37c26335427feca48b16}
+
+
+Implements {\bf S\+E\+Render\+Service\+Internals$<$ G\+Lfloat $>$} \doxyref{}{p.}{class_s_e_render_service_internals_ab6d62cffb007e4b1786eeedb251d7b3d}.
+
+
+
+Definition at line 241 of file S\+E\+Open\+G\+L\+Render\+Service.\+cpp.
+
+\index{S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}!light\+Exists@{light\+Exists}}
+\index{light\+Exists@{light\+Exists}!S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}}
+\subsubsection[{light\+Exists}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+E\+Open\+G\+L\+Render\+Service\+::light\+Exists (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{l}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_s_e_open_g_l_render_service_a790806786f390b0d34036b5452043769}
+
+
+Implements {\bf S\+E\+Render\+Service} \doxyref{}{p.}{class_s_e_render_service_aed1bfc33a90cc67f99de7d80ec71f615}.
+
+
+
+Definition at line 357 of file S\+E\+Open\+G\+L\+Render\+Service.\+cpp.
+
+\index{S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}!object\+Exists@{object\+Exists}}
+\index{object\+Exists@{object\+Exists}!S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}}
+\subsubsection[{object\+Exists}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+E\+Open\+G\+L\+Render\+Service\+::object\+Exists (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{o}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_s_e_open_g_l_render_service_a485a5e1c69111278d237a4922f9883c0}
+
+
+Implements {\bf S\+E\+Render\+Service} \doxyref{}{p.}{class_s_e_render_service_a09b71c6337938ccadbe647cfa67a067e}.
+
+
+
+Definition at line 338 of file S\+E\+Open\+G\+L\+Render\+Service.\+cpp.
+
+\index{S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}!render\+Frame@{render\+Frame}}
+\index{render\+Frame@{render\+Frame}!S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}}
+\subsubsection[{render\+Frame}]{\setlength{\rightskip}{0pt plus 5cm}void S\+E\+Open\+G\+L\+Render\+Service\+::render\+Frame (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_e_open_g_l_render_service_a4b6422635635a3d2ca284f3f69f103a3}
+
+
+Implements {\bf S\+E\+Render\+Service} \doxyref{}{p.}{class_s_e_render_service_aa2edb7215d65bc9cc60012a164f21928}.
+
+
+
+Definition at line 46 of file S\+E\+Open\+G\+L\+Render\+Service.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_e_open_g_l_render_service_a4b6422635635a3d2ca284f3f69f103a3_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}!set\+Global\+Ambient\+Light@{set\+Global\+Ambient\+Light}}
+\index{set\+Global\+Ambient\+Light@{set\+Global\+Ambient\+Light}!S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}}
+\subsubsection[{set\+Global\+Ambient\+Light}]{\setlength{\rightskip}{0pt plus 5cm}void S\+E\+Open\+G\+L\+Render\+Service\+::set\+Global\+Ambient\+Light (
+\begin{DoxyParamCaption}
+\item[{G\+Lfloat}]{r, }
+\item[{G\+Lfloat}]{g, }
+\item[{G\+Lfloat}]{b, }
+\item[{G\+Lfloat}]{a}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_e_open_g_l_render_service_a7c20c6f517491a03cff4e261b8733397}
+
+
+Implements {\bf S\+E\+Render\+Service\+Internals$<$ G\+Lfloat $>$} \doxyref{}{p.}{class_s_e_render_service_internals_abc9c9ed7584b2e13267e24b4d93fc15f}.
+
+
+
+Definition at line 276 of file S\+E\+Open\+G\+L\+Render\+Service.\+cpp.
+
+\index{S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}!set\+Global\+Ambient\+Lighti@{set\+Global\+Ambient\+Lighti}}
+\index{set\+Global\+Ambient\+Lighti@{set\+Global\+Ambient\+Lighti}!S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}}
+\subsubsection[{set\+Global\+Ambient\+Lighti}]{\setlength{\rightskip}{0pt plus 5cm}void S\+E\+Open\+G\+L\+Render\+Service\+::set\+Global\+Ambient\+Lighti (
+\begin{DoxyParamCaption}
+\item[{int}]{r, }
+\item[{int}]{g, }
+\item[{int}]{b, }
+\item[{int}]{a}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_e_open_g_l_render_service_aa8218430a06e9095e4cc6e1cbfa2ae16}
+
+
+Implements {\bf S\+E\+Render\+Service\+Internals$<$ G\+Lfloat $>$} \doxyref{}{p.}{class_s_e_render_service_internals_a17c2a0cdf2702a7e6350076fa4500e4c}.
+
+
+
+Definition at line 284 of file S\+E\+Open\+G\+L\+Render\+Service.\+cpp.
+
+\index{S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}!shutdown@{shutdown}}
+\index{shutdown@{shutdown}!S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}}
+\subsubsection[{shutdown}]{\setlength{\rightskip}{0pt plus 5cm}int S\+E\+Open\+G\+L\+Render\+Service\+::shutdown (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_e_open_g_l_render_service_a08adf8d6f261ce42c952c96c875380cc}
+
+
+Implements {\bf S\+E\+Render\+Service} \doxyref{}{p.}{class_s_e_render_service_a36d1d4f635d69ead703a18f36867ae47}.
+
+
+
+Definition at line 33 of file S\+E\+Open\+G\+L\+Render\+Service.\+cpp.
+
+\index{S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}!startup@{startup}}
+\index{startup@{startup}!S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}}
+\subsubsection[{startup}]{\setlength{\rightskip}{0pt plus 5cm}int S\+E\+Open\+G\+L\+Render\+Service\+::startup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_e_open_g_l_render_service_ae8498e482f117d15f095ffa87d876357}
+
+
+Implements {\bf S\+E\+Render\+Service} \doxyref{}{p.}{class_s_e_render_service_aa4017da07044290803b32c26b8b0ac76}.
+
+
+
+Definition at line 14 of file S\+E\+Open\+G\+L\+Render\+Service.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_e_open_g_l_render_service_ae8498e482f117d15f095ffa87d876357_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Friends And Related Function Documentation}
+\index{S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}!S\+E\+Service\+Locator@{S\+E\+Service\+Locator}}
+\index{S\+E\+Service\+Locator@{S\+E\+Service\+Locator}!S\+E\+Open\+G\+L\+Render\+Service@{S\+E\+Open\+G\+L\+Render\+Service}}
+\subsubsection[{S\+E\+Service\+Locator}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf S\+E\+Service\+Locator}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_e_open_g_l_render_service_ab6e41e6b8528b0fe19953837048fbde6}
+
+
+Definition at line 21 of file S\+E\+Open\+G\+L\+Render\+Service.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Open\+G\+L\+Render\+Service.\+h}\item 
+{\bf S\+E\+Open\+G\+L\+Render\+Service.\+cpp}\end{DoxyCompactItemize}

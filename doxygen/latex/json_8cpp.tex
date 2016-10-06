@@ -1,0 +1,105 @@
+\section{json.\+cpp File Reference}
+\label{json_8cpp}\index{json.\+cpp@{json.\+cpp}}
+{\ttfamily \#include \char`\"{}../inc/json.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$cstdio$>$}\\*
+{\ttfamily \#include $<$climits$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$functional$>$}\\*
+{\ttfamily \#include $<$cctype$>$}\\*
+{\ttfamily \#include $<$stack$>$}\\*
+{\ttfamily \#include $<$cerrno$>$}\\*
+Include dependency graph for json.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{json_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ {\bf json}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf \+\_\+stricmp}~strcasecmp
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf json\+::\+Stack\+Depth\+Type} \{ {\bf json\+::\+In\+Object}, 
+{\bf json\+::\+In\+Array}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bf Serialize\+Array} (const {\bf Array} \&a)
+\item 
+std\+::string {\bf Serialize\+Value} (const {\bf Value} \&v)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{json.\+cpp@{json.\+cpp}!\+\_\+stricmp@{\+\_\+stricmp}}
+\index{\+\_\+stricmp@{\+\_\+stricmp}!json.\+cpp@{json.\+cpp}}
+\subsubsection[{\+\_\+stricmp}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+stricmp~strcasecmp}\label{json_8cpp_a3a35e08b2dedf0975d11794eb8de4805}
+
+
+Definition at line 15 of file json.\+cpp.
+
+
+
+\subsection{Function Documentation}
+\index{json.\+cpp@{json.\+cpp}!Serialize\+Array@{Serialize\+Array}}
+\index{Serialize\+Array@{Serialize\+Array}!json.\+cpp@{json.\+cpp}}
+\subsubsection[{Serialize\+Array}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Serialize\+Array (
+\begin{DoxyParamCaption}
+\item[{const {\bf Array} \&}]{a}
+\end{DoxyParamCaption}
+)}\label{json_8cpp_a659495eb7c5afecd73f0f5878d6b5f0e}
+
+
+Definition at line 524 of file json.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{json_8cpp_a659495eb7c5afecd73f0f5878d6b5f0e_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{json.\+cpp@{json.\+cpp}!Serialize\+Value@{Serialize\+Value}}
+\index{Serialize\+Value@{Serialize\+Value}!json.\+cpp@{json.\+cpp}}
+\subsubsection[{Serialize\+Value}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Serialize\+Value (
+\begin{DoxyParamCaption}
+\item[{const {\bf Value} \&}]{v}
+\end{DoxyParamCaption}
+)}\label{json_8cpp_a3eea4582e7d5968bfa28bb3f30ed289c}
+
+
+Definition at line 503 of file json.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{json_8cpp_a3eea4582e7d5968bfa28bb3f30ed289c_cgraph}
+\end{center}
+\end{figure}
+
+

@@ -1,0 +1,5 @@
+<map id="SimpleEngine::startup" name="SimpleEngine::startup">
+<area shape="rect" id="node2" href="$class_simple_engine.html#ad799023c4ee4a92683e731c8c5d3472a" title="SimpleEngine::argc" alt="" coords="204,5,339,32"/>
+<area shape="rect" id="node3" href="$class_simple_engine.html#a1b53d3740ccc3f97685d7e8146341684" title="SimpleEngine::argv" alt="" coords="205,56,338,83"/>
+<area shape="rect" id="node4" href="$class_simple_engine.html#a2094e26b9e1654f26cb0ff4baf9ace8c" title="SimpleEngine::init" alt="" coords="208,107,335,133"/>
+</map>

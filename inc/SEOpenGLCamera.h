@@ -13,7 +13,7 @@ class SEOpenGLCamera : public SECamera<GLfloat>, public SEOpenGLRenderObject
 
     virtual void setupFrame() const;
 
-    virtual void draw() const {}
+    virtual void draw(const SERenderServiceInternals<GLfloat> &rs) const {}
 };
 
 #endif // __SEOPENGLCAMERA_H__

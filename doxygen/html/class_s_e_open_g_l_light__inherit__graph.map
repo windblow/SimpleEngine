@@ -1,0 +1,9 @@
+<map id="SEOpenGLLight" name="SEOpenGLLight">
+<area shape="rect" id="node5" href="$class_s_e_open_g_l_ambient_light.html" title="SEOpenGLAmbientLight" alt="" coords="5,229,169,256"/>
+<area shape="rect" id="node6" href="$class_s_e_open_g_l_directional_light.html" title="SEOpenGLDirectionalLight" alt="" coords="193,229,371,256"/>
+<area shape="rect" id="node7" href="$class_s_e_open_g_l_point_light.html" title="SEOpenGLPointLight" alt="" coords="395,229,542,256"/>
+<area shape="rect" id="node8" href="$class_s_e_open_g_l_spot_light.html" title="SEOpenGLSpotLight" alt="" coords="567,229,709,256"/>
+<area shape="rect" id="node2" href="$class_s_e_light.html" title="SELight\&lt; GLfloat \&gt;" alt="" coords="222,80,355,107"/>
+<area shape="rect" id="node3" href="$class_s_e_open_g_l_render_object.html" title="SEOpenGLRenderObject" alt="" coords="380,80,547,107"/>
+<area shape="rect" id="node4" href="$class_s_e_render_object.html" title="SERenderObject\&lt; GLfloat \&gt;" alt="" coords="371,5,555,32"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_s_e_object.html" title="SEObject" alt="" coords="5,31,84,57"/>
+<area shape="rect" id="node2" href="$class_s_e_component.html" title="SEComponent" alt="" coords="132,5,239,32"/>
+<area shape="rect" id="node4" href="$class_s_e_entity.html" title="SEEntity" alt="" coords="148,56,223,83"/>
+<area shape="rect" id="node3" href="$class_s_e_render_component.html" title="SERenderComponent" alt="" coords="287,5,433,32"/>
+</map>

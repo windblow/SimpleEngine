@@ -1,0 +1,7 @@
+<map id="SEPrimitive&lt; T &gt;" name="SEPrimitive&lt; T &gt;">
+<area shape="rect" id="node2" href="$class_s_e_cone.html" title="SECone\&lt; T \&gt;" alt="" coords="5,80,107,107"/>
+<area shape="rect" id="node3" href="$class_s_e_cube.html" title="SECube\&lt; T \&gt;" alt="" coords="131,80,232,107"/>
+<area shape="rect" id="node4" href="$class_s_e_sphere.html" title="SESphere\&lt; T \&gt;" alt="" coords="256,80,368,107"/>
+<area shape="rect" id="node5" href="$class_s_e_teapot.html" title="SETeapot\&lt; T \&gt;" alt="" coords="393,80,503,107"/>
+<area shape="rect" id="node6" href="$class_s_e_torus.html" title="SETorus\&lt; T \&gt;" alt="" coords="527,80,630,107"/>
+</map>

@@ -1,0 +1,366 @@
+\section{S\+E\+Ray$<$ T $>$ Class Template Reference}
+\label{class_s_e_ray}\index{S\+E\+Ray$<$ T $>$@{S\+E\+Ray$<$ T $>$}}
+
+
+{\ttfamily \#include $<$S\+E\+Math.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Ray} ()
+\item 
+{\bf S\+E\+Ray} (const {\bf S\+E\+Vec3}$<$ T $>$ \&dir)
+\item 
+{\bf S\+E\+Ray} (const {\bf S\+E\+Vec3}$<$ T $>$ \&org, const {\bf S\+E\+Vec3}$<$ T $>$ \&dir)
+\item 
+{\bf S\+E\+Ray} (const {\bf S\+E\+Ray}$<$ T $>$ \&r)
+\item 
+{\bf S\+E\+Ray} (T x, T y, T z, T r, T s, T t)
+\item 
+{\bf $\sim$\+S\+E\+Ray} ()
+\item 
+{\bf S\+E\+Ray}$<$ T $>$ \& {\bf set\+Origin} (T x, T y, T z)
+\item 
+{\bf S\+E\+Ray}$<$ T $>$ \& {\bf set\+Origin} (const {\bf S\+E\+Vec3}$<$ T $>$ \&org)
+\item 
+{\bf S\+E\+Ray}$<$ T $>$ \& {\bf set\+Origin} (const {\bf S\+E\+Vec4}$<$ T $>$ \&org)
+\item 
+{\bf S\+E\+Ray}$<$ T $>$ \& {\bf set\+Direction} (T x, T y, T z)
+\item 
+{\bf S\+E\+Ray}$<$ T $>$ \& {\bf set\+Direction} (const {\bf S\+E\+Vec3}$<$ T $>$ \&dir)
+\item 
+{\bf S\+E\+Ray}$<$ T $>$ \& {\bf set\+Direction} (const {\bf S\+E\+Vec4}$<$ T $>$ \&dir)
+\item 
+bool {\bf intersect\+With} (const {\bf S\+E\+Plane}$<$ T $>$ \&p, T \&l, {\bf S\+E\+Vec3}$<$ T $>$ \&pt) const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const {\bf S\+E\+Vec3}$<$ T $>$ \& {\bf o}
+\item 
+const {\bf S\+E\+Vec3}$<$ T $>$ \& {\bf d}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$class S\+E\+Ray$<$ T $>$}
+
+
+
+Definition at line 45 of file S\+E\+Math.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{S\+E\+Ray@{S\+E\+Ray}!S\+E\+Ray@{S\+E\+Ray}}
+\index{S\+E\+Ray@{S\+E\+Ray}!S\+E\+Ray@{S\+E\+Ray}}
+\subsubsection[{S\+E\+Ray}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Ray}$<$ T $>$\+::{\bf S\+E\+Ray} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_ray_a66c64b931c345c0ae30880d717b1f941}
+
+
+Definition at line 1182 of file S\+E\+Math.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_e_ray_a66c64b931c345c0ae30880d717b1f941_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+Ray@{S\+E\+Ray}!S\+E\+Ray@{S\+E\+Ray}}
+\index{S\+E\+Ray@{S\+E\+Ray}!S\+E\+Ray@{S\+E\+Ray}}
+\subsubsection[{S\+E\+Ray}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Ray}$<$ T $>$\+::{\bf S\+E\+Ray} (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{dir}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_ray_a1c4ee85883cb015dc5a678de67a8c364}
+
+
+Definition at line 1183 of file S\+E\+Math.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_e_ray_a1c4ee85883cb015dc5a678de67a8c364_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+Ray@{S\+E\+Ray}!S\+E\+Ray@{S\+E\+Ray}}
+\index{S\+E\+Ray@{S\+E\+Ray}!S\+E\+Ray@{S\+E\+Ray}}
+\subsubsection[{S\+E\+Ray}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Ray}$<$ T $>$\+::{\bf S\+E\+Ray} (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{org, }
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{dir}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_ray_a55a7017d2e6b909cfd2802859834f084}
+
+
+Definition at line 1184 of file S\+E\+Math.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_e_ray_a55a7017d2e6b909cfd2802859834f084_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+Ray@{S\+E\+Ray}!S\+E\+Ray@{S\+E\+Ray}}
+\index{S\+E\+Ray@{S\+E\+Ray}!S\+E\+Ray@{S\+E\+Ray}}
+\subsubsection[{S\+E\+Ray}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Ray}$<$ T $>$\+::{\bf S\+E\+Ray} (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Ray}$<$ T $>$ \&}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_ray_a62657d97b9dff1c116abb93d73be8ef7}
+
+
+Definition at line 1185 of file S\+E\+Math.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_e_ray_a62657d97b9dff1c116abb93d73be8ef7_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+Ray@{S\+E\+Ray}!S\+E\+Ray@{S\+E\+Ray}}
+\index{S\+E\+Ray@{S\+E\+Ray}!S\+E\+Ray@{S\+E\+Ray}}
+\subsubsection[{S\+E\+Ray}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Ray}$<$ T $>$\+::{\bf S\+E\+Ray} (
+\begin{DoxyParamCaption}
+\item[{T}]{x, }
+\item[{T}]{y, }
+\item[{T}]{z, }
+\item[{T}]{r, }
+\item[{T}]{s, }
+\item[{T}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_ray_a401527379279996f1b764ea6c5ecc1b2}
+
+
+Definition at line 1186 of file S\+E\+Math.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_e_ray_a401527379279996f1b764ea6c5ecc1b2_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+Ray@{S\+E\+Ray}!````~S\+E\+Ray@{$\sim$\+S\+E\+Ray}}
+\index{````~S\+E\+Ray@{$\sim$\+S\+E\+Ray}!S\+E\+Ray@{S\+E\+Ray}}
+\subsubsection[{$\sim$\+S\+E\+Ray}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Ray}$<$ T $>$\+::$\sim${\bf S\+E\+Ray} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_ray_a637f1d8964cb357cb309c99b732e0e7c}
+
+
+Definition at line 1188 of file S\+E\+Math.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\index{S\+E\+Ray@{S\+E\+Ray}!intersect\+With@{intersect\+With}}
+\index{intersect\+With@{intersect\+With}!S\+E\+Ray@{S\+E\+Ray}}
+\subsubsection[{intersect\+With}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ bool {\bf S\+E\+Ray}$<$ T $>$\+::intersect\+With (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Plane}$<$ T $>$ \&}]{p, }
+\item[{T \&}]{l, }
+\item[{{\bf S\+E\+Vec3}$<$ T $>$ \&}]{pt}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_ray_a5b2bf9736dfdf7f764c1f5315963af1c}
+
+
+Definition at line 1198 of file S\+E\+Math.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_e_ray_a5b2bf9736dfdf7f764c1f5315963af1c_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+Ray@{S\+E\+Ray}!set\+Direction@{set\+Direction}}
+\index{set\+Direction@{set\+Direction}!S\+E\+Ray@{S\+E\+Ray}}
+\subsubsection[{set\+Direction}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Ray}$<$T$>$\& {\bf S\+E\+Ray}$<$ T $>$\+::set\+Direction (
+\begin{DoxyParamCaption}
+\item[{T}]{x, }
+\item[{T}]{y, }
+\item[{T}]{z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_ray_a70d6cd12c158c3e9904fe0f8e03ac34d}
+
+
+Definition at line 1194 of file S\+E\+Math.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{class_s_e_ray_a70d6cd12c158c3e9904fe0f8e03ac34d_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+Ray@{S\+E\+Ray}!set\+Direction@{set\+Direction}}
+\index{set\+Direction@{set\+Direction}!S\+E\+Ray@{S\+E\+Ray}}
+\subsubsection[{set\+Direction}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Ray}$<$T$>$\& {\bf S\+E\+Ray}$<$ T $>$\+::set\+Direction (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{dir}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_ray_ad96e72b4d866a1bb432af94057c24bb3}
+
+
+Definition at line 1195 of file S\+E\+Math.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{class_s_e_ray_ad96e72b4d866a1bb432af94057c24bb3_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+Ray@{S\+E\+Ray}!set\+Direction@{set\+Direction}}
+\index{set\+Direction@{set\+Direction}!S\+E\+Ray@{S\+E\+Ray}}
+\subsubsection[{set\+Direction}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Ray}$<$T$>$\& {\bf S\+E\+Ray}$<$ T $>$\+::set\+Direction (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec4}$<$ T $>$ \&}]{dir}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_ray_aade8176a0f1c70820391fa5c8110eb9f}
+
+
+Definition at line 1196 of file S\+E\+Math.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{class_s_e_ray_aade8176a0f1c70820391fa5c8110eb9f_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+Ray@{S\+E\+Ray}!set\+Origin@{set\+Origin}}
+\index{set\+Origin@{set\+Origin}!S\+E\+Ray@{S\+E\+Ray}}
+\subsubsection[{set\+Origin}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Ray}$<$T$>$\& {\bf S\+E\+Ray}$<$ T $>$\+::set\+Origin (
+\begin{DoxyParamCaption}
+\item[{T}]{x, }
+\item[{T}]{y, }
+\item[{T}]{z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_ray_ad137d0ff2d13e9d35df6cc7e782c6469}
+
+
+Definition at line 1190 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Ray@{S\+E\+Ray}!set\+Origin@{set\+Origin}}
+\index{set\+Origin@{set\+Origin}!S\+E\+Ray@{S\+E\+Ray}}
+\subsubsection[{set\+Origin}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Ray}$<$T$>$\& {\bf S\+E\+Ray}$<$ T $>$\+::set\+Origin (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec3}$<$ T $>$ \&}]{org}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_ray_ab1a4ca9b80904cd1e8cbf44ece54dde9}
+
+
+Definition at line 1191 of file S\+E\+Math.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{class_s_e_ray_ab1a4ca9b80904cd1e8cbf44ece54dde9_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+Ray@{S\+E\+Ray}!set\+Origin@{set\+Origin}}
+\index{set\+Origin@{set\+Origin}!S\+E\+Ray@{S\+E\+Ray}}
+\subsubsection[{set\+Origin}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf S\+E\+Ray}$<$T$>$\& {\bf S\+E\+Ray}$<$ T $>$\+::set\+Origin (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E\+Vec4}$<$ T $>$ \&}]{org}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_ray_ad0a356b34280121af4ac70ea1130642a}
+
+
+Definition at line 1192 of file S\+E\+Math.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{class_s_e_ray_ad0a356b34280121af4ac70ea1130642a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{S\+E\+Ray@{S\+E\+Ray}!d@{d}}
+\index{d@{d}!S\+E\+Ray@{S\+E\+Ray}}
+\subsubsection[{d}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ const {\bf S\+E\+Vec3}$<$T$>$ \& {\bf S\+E\+Ray}$<$ T $>$\+::d}\label{class_s_e_ray_a9a2402fe7f6ec7baba23b64245f45fe6}
+
+
+Definition at line 1179 of file S\+E\+Math.\+h.
+
+\index{S\+E\+Ray@{S\+E\+Ray}!o@{o}}
+\index{o@{o}!S\+E\+Ray@{S\+E\+Ray}}
+\subsubsection[{o}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ const {\bf S\+E\+Vec3}$<$T$>$\& {\bf S\+E\+Ray}$<$ T $>$\+::o}\label{class_s_e_ray_aa9bba8a99bf3df13670fad12075f9d2f}
+
+
+Definition at line 1179 of file S\+E\+Math.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Math.\+h}\end{DoxyCompactItemize}

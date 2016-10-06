@@ -31,7 +31,9 @@
 				<Option use_console_runner="0" />
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
+					<Add option="-Og" />
 					<Add option="-g" />
+					<Add option="-DSEDEBUG" />
 				</Compiler>
 				<Linker>
 					<Add library="sed" />
@@ -40,14 +42,14 @@
 			</Target>
 		</Build>
 		<Compiler>
-			<Add directory='&quot;E:/D/Meus Documentos/Projetos/SimpleEngine/inc&quot;' />
+			<Add directory="inc" />
 		</Compiler>
 		<Linker>
 			<Add library="glui" />
 			<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\freeglut.lib" />
 			<Add library="glu32" />
 			<Add library="opengl32" />
-			<Add directory='&quot;E:/D/Meus Documentos/Projetos/SimpleEngine/bin&quot;' />
+			<Add directory="bin" />
 		</Linker>
 		<Unit filename="SETestApp1/SETestApp1.cpp" />
 		<Unit filename="SETestApp1/SETestApp1.hpp" />

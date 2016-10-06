@@ -1,0 +1,227 @@
+\section{S\+E\+Configuration\+Loader Class Reference}
+\label{class_s_e_configuration_loader}\index{S\+E\+Configuration\+Loader@{S\+E\+Configuration\+Loader}}
+
+
+{\ttfamily \#include $<$S\+E\+Configuration\+Loader.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union {\bf S\+E\+Config\+Key}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ const std\+::string, {\bf S\+E\+Config\+Key} $>$ {\bf t\+Keymap}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Configuration\+Loader} ()
+\item 
+{\bf S\+E\+Configuration\+Loader} (const char $\ast$f)
+\item 
+{\bf $\sim$\+S\+E\+Configuration\+Loader} ()
+\item 
+void {\bf load} (const char $\ast$f)
+\item 
+void {\bf load\+Defaults} ()
+\item 
+int {\bf get\+Keyi} (std\+::string s)
+\item 
+float {\bf get\+Keyf} (std\+::string s)
+\item 
+double {\bf get\+Keyd} (std\+::string s)
+\item 
+bool {\bf get\+Keyb} (std\+::string s)
+\item 
+const char $\ast$ {\bf get\+Keyc} (std\+::string s)
+\item 
+std\+::string {\bf get\+Keys} (std\+::string s)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 7 of file S\+E\+Configuration\+Loader.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\index{S\+E\+Configuration\+Loader@{S\+E\+Configuration\+Loader}!t\+Keymap@{t\+Keymap}}
+\index{t\+Keymap@{t\+Keymap}!S\+E\+Configuration\+Loader@{S\+E\+Configuration\+Loader}}
+\subsubsection[{t\+Keymap}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<$const std\+::string, {\bf S\+E\+Config\+Key}$>$ {\bf S\+E\+Configuration\+Loader\+::t\+Keymap}}\label{class_s_e_configuration_loader_af5be633226adf026a6b5a0c8b9c9eee7}
+
+
+Definition at line 21 of file S\+E\+Configuration\+Loader.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{S\+E\+Configuration\+Loader@{S\+E\+Configuration\+Loader}!S\+E\+Configuration\+Loader@{S\+E\+Configuration\+Loader}}
+\index{S\+E\+Configuration\+Loader@{S\+E\+Configuration\+Loader}!S\+E\+Configuration\+Loader@{S\+E\+Configuration\+Loader}}
+\subsubsection[{S\+E\+Configuration\+Loader}]{\setlength{\rightskip}{0pt plus 5cm}S\+E\+Configuration\+Loader\+::\+S\+E\+Configuration\+Loader (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_configuration_loader_a9595ec16ed456166f12c222c5b416b91}
+
+
+Definition at line 28 of file S\+E\+Configuration\+Loader.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_e_configuration_loader_a9595ec16ed456166f12c222c5b416b91_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+Configuration\+Loader@{S\+E\+Configuration\+Loader}!S\+E\+Configuration\+Loader@{S\+E\+Configuration\+Loader}}
+\index{S\+E\+Configuration\+Loader@{S\+E\+Configuration\+Loader}!S\+E\+Configuration\+Loader@{S\+E\+Configuration\+Loader}}
+\subsubsection[{S\+E\+Configuration\+Loader}]{\setlength{\rightskip}{0pt plus 5cm}S\+E\+Configuration\+Loader\+::\+S\+E\+Configuration\+Loader (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_configuration_loader_a3bbbe0a39d3d09d77e5605fece80693d}
+
+
+Definition at line 29 of file S\+E\+Configuration\+Loader.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_e_configuration_loader_a3bbbe0a39d3d09d77e5605fece80693d_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+Configuration\+Loader@{S\+E\+Configuration\+Loader}!````~S\+E\+Configuration\+Loader@{$\sim$\+S\+E\+Configuration\+Loader}}
+\index{````~S\+E\+Configuration\+Loader@{$\sim$\+S\+E\+Configuration\+Loader}!S\+E\+Configuration\+Loader@{S\+E\+Configuration\+Loader}}
+\subsubsection[{$\sim$\+S\+E\+Configuration\+Loader}]{\setlength{\rightskip}{0pt plus 5cm}S\+E\+Configuration\+Loader\+::$\sim$\+S\+E\+Configuration\+Loader (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_configuration_loader_a21d9070872b6d086fddc1cf19700f203}
+
+
+Definition at line 30 of file S\+E\+Configuration\+Loader.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\index{S\+E\+Configuration\+Loader@{S\+E\+Configuration\+Loader}!get\+Keyb@{get\+Keyb}}
+\index{get\+Keyb@{get\+Keyb}!S\+E\+Configuration\+Loader@{S\+E\+Configuration\+Loader}}
+\subsubsection[{get\+Keyb}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+E\+Configuration\+Loader\+::get\+Keyb (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_configuration_loader_aa157af98bba8e31dd53586e9585ff80a}
+
+
+Definition at line 38 of file S\+E\+Configuration\+Loader.\+h.
+
+\index{S\+E\+Configuration\+Loader@{S\+E\+Configuration\+Loader}!get\+Keyc@{get\+Keyc}}
+\index{get\+Keyc@{get\+Keyc}!S\+E\+Configuration\+Loader@{S\+E\+Configuration\+Loader}}
+\subsubsection[{get\+Keyc}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ S\+E\+Configuration\+Loader\+::get\+Keyc (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_configuration_loader_a622c37165b5599702345042da335246d}
+
+
+Definition at line 39 of file S\+E\+Configuration\+Loader.\+h.
+
+\index{S\+E\+Configuration\+Loader@{S\+E\+Configuration\+Loader}!get\+Keyd@{get\+Keyd}}
+\index{get\+Keyd@{get\+Keyd}!S\+E\+Configuration\+Loader@{S\+E\+Configuration\+Loader}}
+\subsubsection[{get\+Keyd}]{\setlength{\rightskip}{0pt plus 5cm}double S\+E\+Configuration\+Loader\+::get\+Keyd (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_configuration_loader_a40e4daf97e031981a2a38dd94c1ff3e7}
+
+
+Definition at line 37 of file S\+E\+Configuration\+Loader.\+h.
+
+\index{S\+E\+Configuration\+Loader@{S\+E\+Configuration\+Loader}!get\+Keyf@{get\+Keyf}}
+\index{get\+Keyf@{get\+Keyf}!S\+E\+Configuration\+Loader@{S\+E\+Configuration\+Loader}}
+\subsubsection[{get\+Keyf}]{\setlength{\rightskip}{0pt plus 5cm}float S\+E\+Configuration\+Loader\+::get\+Keyf (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_configuration_loader_a01c7a531d58a9555aa0cdab32b7ae229}
+
+
+Definition at line 36 of file S\+E\+Configuration\+Loader.\+h.
+
+\index{S\+E\+Configuration\+Loader@{S\+E\+Configuration\+Loader}!get\+Keyi@{get\+Keyi}}
+\index{get\+Keyi@{get\+Keyi}!S\+E\+Configuration\+Loader@{S\+E\+Configuration\+Loader}}
+\subsubsection[{get\+Keyi}]{\setlength{\rightskip}{0pt plus 5cm}int S\+E\+Configuration\+Loader\+::get\+Keyi (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_configuration_loader_a74815def251ae7db28763a562ff820c3}
+
+
+Definition at line 35 of file S\+E\+Configuration\+Loader.\+h.
+
+\index{S\+E\+Configuration\+Loader@{S\+E\+Configuration\+Loader}!get\+Keys@{get\+Keys}}
+\index{get\+Keys@{get\+Keys}!S\+E\+Configuration\+Loader@{S\+E\+Configuration\+Loader}}
+\subsubsection[{get\+Keys}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string S\+E\+Configuration\+Loader\+::get\+Keys (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_configuration_loader_a77371959f3b87be3ef65668e64351d63}
+
+
+Definition at line 40 of file S\+E\+Configuration\+Loader.\+h.
+
+\index{S\+E\+Configuration\+Loader@{S\+E\+Configuration\+Loader}!load@{load}}
+\index{load@{load}!S\+E\+Configuration\+Loader@{S\+E\+Configuration\+Loader}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}void S\+E\+Configuration\+Loader\+::load (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{f}
+\end{DoxyParamCaption}
+)}\label{class_s_e_configuration_loader_a78863f73bf309faf2a8b9054e61c7efe}
+
+
+Definition at line 6 of file S\+E\+Configuration\+Loader.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{class_s_e_configuration_loader_a78863f73bf309faf2a8b9054e61c7efe_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+Configuration\+Loader@{S\+E\+Configuration\+Loader}!load\+Defaults@{load\+Defaults}}
+\index{load\+Defaults@{load\+Defaults}!S\+E\+Configuration\+Loader@{S\+E\+Configuration\+Loader}}
+\subsubsection[{load\+Defaults}]{\setlength{\rightskip}{0pt plus 5cm}void S\+E\+Configuration\+Loader\+::load\+Defaults (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_e_configuration_loader_ad2dcb8cb7d6f36eff70013a4ee9db216}
+
+
+Definition at line 51 of file S\+E\+Configuration\+Loader.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Configuration\+Loader.\+h}\item 
+{\bf S\+E\+Configuration\+Loader.\+cpp}\end{DoxyCompactItemize}

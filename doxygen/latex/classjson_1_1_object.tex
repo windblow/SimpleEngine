@@ -1,0 +1,415 @@
+\section{json\+:\+:Object Class Reference}
+\label{classjson_1_1_object}\index{json\+::\+Object@{json\+::\+Object}}
+
+
+{\ttfamily \#include $<$json.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ std\+::string, {\bf Value} $>$ {\bf Value\+Map}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Object} ()
+\item 
+{\bf Object} (const {\bf Object} \&obj)
+\item 
+{\bf Object} \& {\bf operator=} (const {\bf Object} \&obj)
+\item 
+{\bf Value} \& {\bf operator[$\,$]} (const std\+::string \&key)
+\item 
+const {\bf Value} \& {\bf operator[$\,$]} (const std\+::string \&key) const 
+\item 
+{\bf Value} \& {\bf operator[$\,$]} (const char $\ast$key)
+\item 
+const {\bf Value} \& {\bf operator[$\,$]} (const char $\ast$key) const 
+\item 
+Value\+Map\+::const\+\_\+iterator {\bf begin} () const 
+\item 
+Value\+Map\+::const\+\_\+iterator {\bf end} () const 
+\item 
+Value\+Map\+::iterator {\bf begin} ()
+\item 
+Value\+Map\+::iterator {\bf end} ()
+\item 
+Value\+Map\+::iterator {\bf find} (const std\+::string \&key)
+\item 
+Value\+Map\+::const\+\_\+iterator {\bf find} (const std\+::string \&key) const 
+\item 
+bool {\bf Has\+Key} (const std\+::string \&key) const 
+\item 
+int {\bf Has\+Keys} (const std\+::vector$<$ std\+::string $>$ \&keys) const 
+\item 
+int {\bf Has\+Keys} (const char $\ast$keys[$\,$], int key\+\_\+count) const 
+\item 
+void {\bf Clear} ()
+\item 
+size\+\_\+t {\bf size} () const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Value\+Map} {\bf m\+Values}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf operator==} (const {\bf Object} \&lhs, const {\bf Object} \&rhs)
+\item 
+bool {\bf operator!=} (const {\bf Object} \&lhs, const {\bf Object} \&rhs)
+\item 
+bool {\bf operator$<$} (const {\bf Object} \&lhs, const {\bf Object} \&rhs)
+\item 
+bool {\bf operator$>$} (const {\bf Object} \&lhs, const {\bf Object} \&rhs)
+\item 
+bool {\bf operator$<$=} (const {\bf Object} \&lhs, const {\bf Object} \&rhs)
+\item 
+bool {\bf operator$>$=} (const {\bf Object} \&lhs, const {\bf Object} \&rhs)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 261 of file json.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\index{json\+::\+Object@{json\+::\+Object}!Value\+Map@{Value\+Map}}
+\index{Value\+Map@{Value\+Map}!json\+::\+Object@{json\+::\+Object}}
+\subsubsection[{Value\+Map}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<$std\+::string, {\bf Value}$>$ {\bf json\+::\+Object\+::\+Value\+Map}}\label{classjson_1_1_object_aa4954dea50da7a887b6d9200408b0558}
+
+
+Definition at line 268 of file json.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{json\+::\+Object@{json\+::\+Object}!Object@{Object}}
+\index{Object@{Object}!json\+::\+Object@{json\+::\+Object}}
+\subsubsection[{Object}]{\setlength{\rightskip}{0pt plus 5cm}Object\+::\+Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classjson_1_1_object_a40860402e64d8008fb42329df7097cdb}
+
+
+Definition at line 396 of file json.\+cpp.
+
+\index{json\+::\+Object@{json\+::\+Object}!Object@{Object}}
+\index{Object@{Object}!json\+::\+Object@{json\+::\+Object}}
+\subsubsection[{Object}]{\setlength{\rightskip}{0pt plus 5cm}Object\+::\+Object (
+\begin{DoxyParamCaption}
+\item[{const {\bf Object} \&}]{obj}
+\end{DoxyParamCaption}
+)}\label{classjson_1_1_object_a323f6dc88a65b7366b8b911f7ff24c21}
+
+
+Definition at line 400 of file json.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{json\+::\+Object@{json\+::\+Object}!begin@{begin}}
+\index{begin@{begin}!json\+::\+Object@{json\+::\+Object}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}Object\+::\+Value\+Map\+::const\+\_\+iterator Object\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classjson_1_1_object_ae3135f6bc45ae944b272b819ec6880c9}
+
+
+Definition at line 438 of file json.\+cpp.
+
+\index{json\+::\+Object@{json\+::\+Object}!begin@{begin}}
+\index{begin@{begin}!json\+::\+Object@{json\+::\+Object}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}Object\+::\+Value\+Map\+::iterator Object\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classjson_1_1_object_ad4d61ef1cbea5189b669d468596128fb}
+
+
+Definition at line 448 of file json.\+cpp.
+
+\index{json\+::\+Object@{json\+::\+Object}!Clear@{Clear}}
+\index{Clear@{Clear}!json\+::\+Object@{json\+::\+Object}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}void Object\+::\+Clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classjson_1_1_object_a5b25442efcce1e5768e3790b36accd1a}
+
+
+Definition at line 493 of file json.\+cpp.
+
+\index{json\+::\+Object@{json\+::\+Object}!end@{end}}
+\index{end@{end}!json\+::\+Object@{json\+::\+Object}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}Object\+::\+Value\+Map\+::const\+\_\+iterator Object\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classjson_1_1_object_a7a6cfa53a6b0cf2c4713bb74bcd1a3cc}
+
+
+Definition at line 443 of file json.\+cpp.
+
+\index{json\+::\+Object@{json\+::\+Object}!end@{end}}
+\index{end@{end}!json\+::\+Object@{json\+::\+Object}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}Object\+::\+Value\+Map\+::iterator Object\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classjson_1_1_object_a5002fe14bf3af8f44aacfaf963010e50}
+
+
+Definition at line 453 of file json.\+cpp.
+
+\index{json\+::\+Object@{json\+::\+Object}!find@{find}}
+\index{find@{find}!json\+::\+Object@{json\+::\+Object}}
+\subsubsection[{find}]{\setlength{\rightskip}{0pt plus 5cm}Object\+::\+Value\+Map\+::iterator Object\+::find (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{key}
+\end{DoxyParamCaption}
+)}\label{classjson_1_1_object_a2a54f30c42a154665d45209de2c10080}
+
+
+Definition at line 458 of file json.\+cpp.
+
+\index{json\+::\+Object@{json\+::\+Object}!find@{find}}
+\index{find@{find}!json\+::\+Object@{json\+::\+Object}}
+\subsubsection[{find}]{\setlength{\rightskip}{0pt plus 5cm}Object\+::\+Value\+Map\+::const\+\_\+iterator Object\+::find (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{key}
+\end{DoxyParamCaption}
+) const}\label{classjson_1_1_object_a37c490364fe7a0b5bbc2c9c7ca8bf5fd}
+
+
+Definition at line 463 of file json.\+cpp.
+
+\index{json\+::\+Object@{json\+::\+Object}!Has\+Key@{Has\+Key}}
+\index{Has\+Key@{Has\+Key}!json\+::\+Object@{json\+::\+Object}}
+\subsubsection[{Has\+Key}]{\setlength{\rightskip}{0pt plus 5cm}bool Object\+::\+Has\+Key (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{key}
+\end{DoxyParamCaption}
+) const}\label{classjson_1_1_object_a57b1aee66ef297a4c408e3447d54a6ef}
+
+
+Definition at line 468 of file json.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{classjson_1_1_object_a57b1aee66ef297a4c408e3447d54a6ef_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{json\+::\+Object@{json\+::\+Object}!Has\+Keys@{Has\+Keys}}
+\index{Has\+Keys@{Has\+Keys}!json\+::\+Object@{json\+::\+Object}}
+\subsubsection[{Has\+Keys}]{\setlength{\rightskip}{0pt plus 5cm}int Object\+::\+Has\+Keys (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{keys}
+\end{DoxyParamCaption}
+) const}\label{classjson_1_1_object_ad8935f41c775e463ebd111b25a33e7ac}
+
+
+Definition at line 473 of file json.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classjson_1_1_object_ad8935f41c775e463ebd111b25a33e7ac_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{json\+::\+Object@{json\+::\+Object}!Has\+Keys@{Has\+Keys}}
+\index{Has\+Keys@{Has\+Keys}!json\+::\+Object@{json\+::\+Object}}
+\subsubsection[{Has\+Keys}]{\setlength{\rightskip}{0pt plus 5cm}int json\+::\+Object\+::\+Has\+Keys (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{keys[$\,$], }
+\item[{int}]{key\+\_\+count}
+\end{DoxyParamCaption}
+) const}\label{classjson_1_1_object_a9a9176f51ee4d9925c95ac380a88220f}
+\index{json\+::\+Object@{json\+::\+Object}!operator=@{operator=}}
+\index{operator=@{operator=}!json\+::\+Object@{json\+::\+Object}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object} \& Object\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Object} \&}]{obj}
+\end{DoxyParamCaption}
+)}\label{classjson_1_1_object_a21e49376c85da99a0e38ea546978f1e4}
+
+
+Definition at line 405 of file json.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classjson_1_1_object_a21e49376c85da99a0e38ea546978f1e4_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{json\+::\+Object@{json\+::\+Object}!operator[$\,$]@{operator[]}}
+\index{operator[$\,$]@{operator[]}!json\+::\+Object@{json\+::\+Object}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Value} \& Object\+::operator[$\,$] (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{key}
+\end{DoxyParamCaption}
+)}\label{classjson_1_1_object_a56547ff2d63afd90b40627f38f0918ba}
+
+
+Definition at line 416 of file json.\+cpp.
+
+\index{json\+::\+Object@{json\+::\+Object}!operator[$\,$]@{operator[]}}
+\index{operator[$\,$]@{operator[]}!json\+::\+Object@{json\+::\+Object}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Value} \& Object\+::operator[$\,$] (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{key}
+\end{DoxyParamCaption}
+) const}\label{classjson_1_1_object_ad7664c3133c35588f8bed83d4fa4b668}
+
+
+Definition at line 421 of file json.\+cpp.
+
+\index{json\+::\+Object@{json\+::\+Object}!operator[$\,$]@{operator[]}}
+\index{operator[$\,$]@{operator[]}!json\+::\+Object@{json\+::\+Object}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Value} \& Object\+::operator[$\,$] (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{key}
+\end{DoxyParamCaption}
+)}\label{classjson_1_1_object_a4e4e29c681471a2da71a6dfc28de06ea}
+
+
+Definition at line 427 of file json.\+cpp.
+
+\index{json\+::\+Object@{json\+::\+Object}!operator[$\,$]@{operator[]}}
+\index{operator[$\,$]@{operator[]}!json\+::\+Object@{json\+::\+Object}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Value} \& Object\+::operator[$\,$] (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{key}
+\end{DoxyParamCaption}
+) const}\label{classjson_1_1_object_a23e6bb31047863c62d15f24d47930124}
+
+
+Definition at line 432 of file json.\+cpp.
+
+\index{json\+::\+Object@{json\+::\+Object}!size@{size}}
+\index{size@{size}!json\+::\+Object@{json\+::\+Object}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t json\+::\+Object\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classjson_1_1_object_ae5d4a190deef5a99b8d2685c97900030}
+
+
+Definition at line 319 of file json.\+h.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\index{json\+::\+Object@{json\+::\+Object}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!json\+::\+Object@{json\+::\+Object}}
+\subsubsection[{operator"!=}]{\setlength{\rightskip}{0pt plus 5cm}bool operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Object} \&}]{lhs, }
+\item[{const {\bf Object} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{classjson_1_1_object_a44bd7c57009ffb99eb252af4cc060e5e}
+
+
+Definition at line 282 of file json.\+h.
+
+\index{json\+::\+Object@{json\+::\+Object}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!json\+::\+Object@{json\+::\+Object}}
+\subsubsection[{operator$<$}]{\setlength{\rightskip}{0pt plus 5cm}bool operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Object} \&}]{lhs, }
+\item[{const {\bf Object} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{classjson_1_1_object_a652d6161403f67f951870946eda8503b}
+
+
+Definition at line 497 of file json.\+h.
+
+\index{json\+::\+Object@{json\+::\+Object}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!json\+::\+Object@{json\+::\+Object}}
+\subsubsection[{operator$<$=}]{\setlength{\rightskip}{0pt plus 5cm}bool operator$<$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Object} \&}]{lhs, }
+\item[{const {\bf Object} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{classjson_1_1_object_a14a11dad5529b1b640771ae26498af83}
+
+
+Definition at line 285 of file json.\+h.
+
+\index{json\+::\+Object@{json\+::\+Object}!operator==@{operator==}}
+\index{operator==@{operator==}!json\+::\+Object@{json\+::\+Object}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Object} \&}]{lhs, }
+\item[{const {\bf Object} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{classjson_1_1_object_a5bf79317593848055dc650d41215bda1}
+
+
+Definition at line 492 of file json.\+h.
+
+\index{json\+::\+Object@{json\+::\+Object}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!json\+::\+Object@{json\+::\+Object}}
+\subsubsection[{operator$>$}]{\setlength{\rightskip}{0pt plus 5cm}bool operator$>$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Object} \&}]{lhs, }
+\item[{const {\bf Object} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{classjson_1_1_object_a819f5485c06a00010c6d68833f2fd903}
+
+
+Definition at line 284 of file json.\+h.
+
+\index{json\+::\+Object@{json\+::\+Object}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!json\+::\+Object@{json\+::\+Object}}
+\subsubsection[{operator$>$=}]{\setlength{\rightskip}{0pt plus 5cm}bool operator$>$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Object} \&}]{lhs, }
+\item[{const {\bf Object} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{classjson_1_1_object_a34be1225ba90528635030725d46a4977}
+
+
+Definition at line 286 of file json.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\index{json\+::\+Object@{json\+::\+Object}!m\+Values@{m\+Values}}
+\index{m\+Values@{m\+Values}!json\+::\+Object@{json\+::\+Object}}
+\subsubsection[{m\+Values}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Value\+Map} json\+::\+Object\+::m\+Values\hspace{0.3cm}{\ttfamily [protected]}}\label{classjson_1_1_object_abd590583e6aec8e4e3635d38f809c60b}
+
+
+Definition at line 272 of file json.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+{\bf json.\+h}\item 
+{\bf json.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,4 @@
+<map id="SEWindowManager" name="SEWindowManager">
+<area shape="rect" id="node2" href="$class_s_e_g_l_u_i_window_manager.html" title="SEGLUIWindowManager" alt="" coords="5,80,171,107"/>
+<area shape="rect" id="node3" href="$class_s_e_null_window_manager.html" title="SENullWindowManager" alt="" coords="195,80,354,107"/>
+</map>

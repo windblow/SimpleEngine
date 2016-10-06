@@ -1,0 +1,5 @@
+<map id="SEObject" name="SEObject">
+<area shape="rect" id="node2" href="$class_s_e_component.html" title="SEComponent" alt="" coords="25,80,132,107"/>
+<area shape="rect" id="node4" href="$class_s_e_entity.html" title="SEEntity" alt="" coords="156,80,231,107"/>
+<area shape="rect" id="node3" href="$class_s_e_render_component.html" title="SERenderComponent" alt="" coords="5,155,152,181"/>
+</map>

@@ -1,0 +1,305 @@
+\section{S\+E\+Render\+Component Class Reference}
+\label{class_s_e_render_component}\index{S\+E\+Render\+Component@{S\+E\+Render\+Component}}
+
+
+{\ttfamily \#include $<$S\+E\+Render\+Component.\+h$>$}
+
+
+
+Inheritance diagram for S\+E\+Render\+Component\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{class_s_e_render_component__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for S\+E\+Render\+Component\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{class_s_e_render_component__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::list$<$ {\bf S\+E\+Render\+Component} $\ast$ $>$ {\bf t\+R\+C\+List}
+\item 
+typedef std\+::list$<$ {\bf S\+E\+Render\+Component} $\ast$ $>$\+::iterator {\bf t\+R\+C\+List\+I}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf $\sim$\+S\+E\+Render\+Component} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Render\+Component} ()
+\item 
+{\bf S\+E\+Render\+Component} ({\bf S\+E\+Render\+Component} $\ast$p)
+\item 
+virtual void {\bf push\+To\+Render\+Service} ({\bf S\+E\+Render\+Service} $\ast$rs)
+\item 
+virtual void {\bf push\+To\+Render\+Service} ()
+\item 
+virtual void {\bf pop\+From\+Render\+Service} ({\bf S\+E\+Render\+Service} $\ast$rs)
+\item 
+virtual void {\bf pop\+From\+Render\+Service} ()
+\item 
+void {\bf set\+Parent} ({\bf S\+E\+Render\+Component} $\ast$p)
+\item 
+void {\bf attach\+Child} ({\bf S\+E\+Render\+Component} $\ast$c)
+\item 
+void {\bf detach\+Child} ({\bf S\+E\+Render\+Component} $\ast$c)
+\item 
+void {\bf detach\+From\+Parent} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf S\+E\+Render\+Service}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 12 of file S\+E\+Render\+Component.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\index{S\+E\+Render\+Component@{S\+E\+Render\+Component}!t\+R\+C\+List@{t\+R\+C\+List}}
+\index{t\+R\+C\+List@{t\+R\+C\+List}!S\+E\+Render\+Component@{S\+E\+Render\+Component}}
+\subsubsection[{t\+R\+C\+List}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::list$<${\bf S\+E\+Render\+Component}$\ast$$>$ {\bf S\+E\+Render\+Component\+::t\+R\+C\+List}}\label{class_s_e_render_component_af848915bfb3304815653b52cb2308a83}
+
+
+Definition at line 16 of file S\+E\+Render\+Component.\+h.
+
+\index{S\+E\+Render\+Component@{S\+E\+Render\+Component}!t\+R\+C\+List\+I@{t\+R\+C\+List\+I}}
+\index{t\+R\+C\+List\+I@{t\+R\+C\+List\+I}!S\+E\+Render\+Component@{S\+E\+Render\+Component}}
+\subsubsection[{t\+R\+C\+List\+I}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::list$<${\bf S\+E\+Render\+Component}$\ast$$>$\+::iterator {\bf S\+E\+Render\+Component\+::t\+R\+C\+List\+I}}\label{class_s_e_render_component_a2a56844c5e9c094553ced401736f75c7}
+
+
+Definition at line 17 of file S\+E\+Render\+Component.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{S\+E\+Render\+Component@{S\+E\+Render\+Component}!````~S\+E\+Render\+Component@{$\sim$\+S\+E\+Render\+Component}}
+\index{````~S\+E\+Render\+Component@{$\sim$\+S\+E\+Render\+Component}!S\+E\+Render\+Component@{S\+E\+Render\+Component}}
+\subsubsection[{$\sim$\+S\+E\+Render\+Component}]{\setlength{\rightskip}{0pt plus 5cm}S\+E\+Render\+Component\+::$\sim$\+S\+E\+Render\+Component (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_e_render_component_a6227f68141d44d6a9bcf94519428d2bf}
+
+
+Definition at line 19 of file S\+E\+Render\+Component.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_e_render_component_a6227f68141d44d6a9bcf94519428d2bf_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+Render\+Component@{S\+E\+Render\+Component}!S\+E\+Render\+Component@{S\+E\+Render\+Component}}
+\index{S\+E\+Render\+Component@{S\+E\+Render\+Component}!S\+E\+Render\+Component@{S\+E\+Render\+Component}}
+\subsubsection[{S\+E\+Render\+Component}]{\setlength{\rightskip}{0pt plus 5cm}S\+E\+Render\+Component\+::\+S\+E\+Render\+Component (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_s_e_render_component_a8bb984f01fdf3b4576c9e686b43d18b9}
+
+
+Definition at line 22 of file S\+E\+Render\+Component.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_e_render_component_a8bb984f01fdf3b4576c9e686b43d18b9_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+Render\+Component@{S\+E\+Render\+Component}!S\+E\+Render\+Component@{S\+E\+Render\+Component}}
+\index{S\+E\+Render\+Component@{S\+E\+Render\+Component}!S\+E\+Render\+Component@{S\+E\+Render\+Component}}
+\subsubsection[{S\+E\+Render\+Component}]{\setlength{\rightskip}{0pt plus 5cm}S\+E\+Render\+Component\+::\+S\+E\+Render\+Component (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+Render\+Component} $\ast$}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_s_e_render_component_a08b3f1a72ff13dd6b21e4fd32712098a}
+
+
+Definition at line 23 of file S\+E\+Render\+Component.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_e_render_component_a08b3f1a72ff13dd6b21e4fd32712098a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{S\+E\+Render\+Component@{S\+E\+Render\+Component}!attach\+Child@{attach\+Child}}
+\index{attach\+Child@{attach\+Child}!S\+E\+Render\+Component@{S\+E\+Render\+Component}}
+\subsubsection[{attach\+Child}]{\setlength{\rightskip}{0pt plus 5cm}void S\+E\+Render\+Component\+::attach\+Child (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+Render\+Component} $\ast$}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_s_e_render_component_a12b0cdeab6182a8c0e93b439baec6372}
+
+
+Definition at line 32 of file S\+E\+Render\+Component.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{class_s_e_render_component_a12b0cdeab6182a8c0e93b439baec6372_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+Render\+Component@{S\+E\+Render\+Component}!detach\+Child@{detach\+Child}}
+\index{detach\+Child@{detach\+Child}!S\+E\+Render\+Component@{S\+E\+Render\+Component}}
+\subsubsection[{detach\+Child}]{\setlength{\rightskip}{0pt plus 5cm}void S\+E\+Render\+Component\+::detach\+Child (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+Render\+Component} $\ast$}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_s_e_render_component_addaea945323b12e66cc61142ac265405}
+
+
+Definition at line 34 of file S\+E\+Render\+Component.\+h.
+
+\index{S\+E\+Render\+Component@{S\+E\+Render\+Component}!detach\+From\+Parent@{detach\+From\+Parent}}
+\index{detach\+From\+Parent@{detach\+From\+Parent}!S\+E\+Render\+Component@{S\+E\+Render\+Component}}
+\subsubsection[{detach\+From\+Parent}]{\setlength{\rightskip}{0pt plus 5cm}void S\+E\+Render\+Component\+::detach\+From\+Parent (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_s_e_render_component_adc77db946b447ca07efd88e9c8b7005d}
+
+
+Definition at line 35 of file S\+E\+Render\+Component.\+h.
+
+\index{S\+E\+Render\+Component@{S\+E\+Render\+Component}!pop\+From\+Render\+Service@{pop\+From\+Render\+Service}}
+\index{pop\+From\+Render\+Service@{pop\+From\+Render\+Service}!S\+E\+Render\+Component@{S\+E\+Render\+Component}}
+\subsubsection[{pop\+From\+Render\+Service}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+E\+Render\+Component\+::pop\+From\+Render\+Service (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+Render\+Service} $\ast$}]{rs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_s_e_render_component_a3dd01b1ed44e2ddc13e1ce279cb186ac}
+
+
+Definition at line 28 of file S\+E\+Render\+Component.\+h.
+
+\index{S\+E\+Render\+Component@{S\+E\+Render\+Component}!pop\+From\+Render\+Service@{pop\+From\+Render\+Service}}
+\index{pop\+From\+Render\+Service@{pop\+From\+Render\+Service}!S\+E\+Render\+Component@{S\+E\+Render\+Component}}
+\subsubsection[{pop\+From\+Render\+Service}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+E\+Render\+Component\+::pop\+From\+Render\+Service (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_s_e_render_component_ac06c7e5880ab166d3e81ffb2079931f9}
+
+
+Definition at line 29 of file S\+E\+Render\+Component.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_e_render_component_ac06c7e5880ab166d3e81ffb2079931f9_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+Render\+Component@{S\+E\+Render\+Component}!push\+To\+Render\+Service@{push\+To\+Render\+Service}}
+\index{push\+To\+Render\+Service@{push\+To\+Render\+Service}!S\+E\+Render\+Component@{S\+E\+Render\+Component}}
+\subsubsection[{push\+To\+Render\+Service}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+E\+Render\+Component\+::push\+To\+Render\+Service (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+Render\+Service} $\ast$}]{rs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_s_e_render_component_ac2f9eaa6cc4122b8c97a9444e4885459}
+
+
+Definition at line 25 of file S\+E\+Render\+Component.\+h.
+
+\index{S\+E\+Render\+Component@{S\+E\+Render\+Component}!push\+To\+Render\+Service@{push\+To\+Render\+Service}}
+\index{push\+To\+Render\+Service@{push\+To\+Render\+Service}!S\+E\+Render\+Component@{S\+E\+Render\+Component}}
+\subsubsection[{push\+To\+Render\+Service}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+E\+Render\+Component\+::push\+To\+Render\+Service (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_s_e_render_component_a798cc4fe80f9081da2afc14c051d9bb5}
+
+
+Definition at line 26 of file S\+E\+Render\+Component.\+h.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_e_render_component_a798cc4fe80f9081da2afc14c051d9bb5_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+E\+Render\+Component@{S\+E\+Render\+Component}!set\+Parent@{set\+Parent}}
+\index{set\+Parent@{set\+Parent}!S\+E\+Render\+Component@{S\+E\+Render\+Component}}
+\subsubsection[{set\+Parent}]{\setlength{\rightskip}{0pt plus 5cm}void S\+E\+Render\+Component\+::set\+Parent (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+Render\+Component} $\ast$}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_s_e_render_component_ad6e68c5ba0bf84c4fb285f4e2748abf8}
+
+
+Definition at line 31 of file S\+E\+Render\+Component.\+h.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\index{S\+E\+Render\+Component@{S\+E\+Render\+Component}!S\+E\+Render\+Service@{S\+E\+Render\+Service}}
+\index{S\+E\+Render\+Service@{S\+E\+Render\+Service}!S\+E\+Render\+Component@{S\+E\+Render\+Component}}
+\subsubsection[{S\+E\+Render\+Service}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf S\+E\+Render\+Service}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_e_render_component_a6c2050a104b6a2a26e36efd047633275}
+
+
+Definition at line 13 of file S\+E\+Render\+Component.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+E\+Render\+Component.\+h}\end{DoxyCompactItemize}

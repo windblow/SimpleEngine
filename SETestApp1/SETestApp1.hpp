@@ -1,18 +1,14 @@
 #ifndef __SETESTAPP1_H__
 #define __SETESTAPP1_H__
 
-#include <GL/gl.h>
+#include <se.h>
 
-#include <SimpleEngine.h>
-#include <SEApplication.h>
-#include <SEMath.h>
 
-template <class T> class SETeapot;
 
 class SETestApp1 : public SEApplication<GLfloat>
 {
   public:
-            SETestApp1() : SEApplication<GLfloat>("SETestApp1"), speedFactor(500) {}
+            SETestApp1();
     virtual ~SETestApp1() {}
 
     virtual void init(int argc, char **argv);
@@ -34,10 +30,32 @@ class SETestApp1 : public SEApplication<GLfloat>
 	virtual void idle() {}
 
   private:
-    uint32_t objId;
-    SETeapot<GLfloat> *teapot;
+    int                objId;
+    uint32_t           ccId;
+    int                l1Id;
+    int                l2Id;
+//    uint32_t           sphereId;
+//    uint32_t           cubeId;
+//    uint32_t           coneId;
+//    uint32_t           torusId;
+//    uint32_t           teapotId;
+    SECamera<GLfloat>* c_;
+    SEOpenGLPrimitive* prim;
+    SEOpenGLDirectionalLight* l1;
+    SEOpenGLSpotLight* l2;
     SETimer<GLfloat>   t_;
     GLfloat            speedFactor;
+    GLfloat            objSize;
+    SEVec3<GLfloat>    rotAxis;
+    bool               isWireOn;
+
+    void               switchToSphere();
+    void               switchToCube();
+    void               switchToCone();
+    void               switchToTorus();
+    void               switchToTeapot();
+
+    void               destroyCurrentObj();
 };
 
 #endif // __SETESTAPP1_H__

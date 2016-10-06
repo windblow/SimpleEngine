@@ -7,6 +7,7 @@
 #include <string>
 #include <cstdlib>
 #include <ctime>
+#include <cstring>
 //#include <random>
 //#include <chrono>
 
@@ -37,6 +38,7 @@
 template <class T> class SEMathUtil;
 template <class T> class SEVec3;
 template <class T> class SEVec4;
+template <class T> class SEColor;
 template <class T> class SEQuaternion;
 template <class T> class SEMat3;
 template <class T> class SEMat4;
@@ -58,6 +60,10 @@ typedef SEVec3<double>                  SEVec3d;
 typedef SEVec4<int>                     SEVec4i;
 typedef SEVec4<float>                   SEVec4f;
 typedef SEVec4<double>                  SEVec4d;
+
+typedef SEColor<int>                    SEColori;
+typedef SEColor<float>                  SEColorf;
+typedef SEColor<double>                 SEColord;
 
 typedef SEQuaternion<float>             SEQuaternionf;
 typedef SEQuaternion<double>            SEQuaterniond;
@@ -167,22 +173,23 @@ template <class T> class SEMathUtil
 template <class T> class SEVec3
 {
   public:
-             T             x, y, z;
+             T             v[3];
+             T             &x, &y, &z;
 
     // default constructor
-                           SEVec3()                                       : x(0),    y(0),    z(0)    {}
+                           SEVec3()                                       : x(v[0]), y(v[1]), z(v[2]) { null(); }
     // copy constructor
-                           SEVec3(const SEVec3<T> &c)                     : x(c.x),  y(c.y),  z(c.z)  {}
+                           SEVec3(const SEVec3<T> &c)                     : x(v[0]), y(v[1]), z(v[2]) { vec(c); }
 
-    explicit               SEVec3(T f)                                    : x(f),    y(f),    z(f)    {}
-                           SEVec3(T nx, T ny)                             : x(nx),   y(ny),   z(1)    {}
-                           SEVec3(T nx, T ny, T nz)                       : x(nx),   y(ny),   z(nz)   {}
-    explicit               SEVec3(const T *v)                             : x(v[0]), y(v[1]), z(v[2]) {}
-    explicit               SEVec3(const SEVec4<T> &v)                     : x(v.x),  y(v.y),  z(v.z)  {}
+    explicit               SEVec3(T f)                                    : x(v[0]), y(v[1]), z(v[2]) { vec(f); }
+                           SEVec3(T nx, T ny)                             : x(v[0]), y(v[1]), z(v[2]) { vec(nx,ny); }
+                           SEVec3(T nx, T ny, T nz)                       : x(v[0]), y(v[1]), z(v[2]) { vec(nx,ny,nz); }
+    explicit               SEVec3(const T *w)                             : x(v[0]), y(v[1]), z(v[2]) { vec(w); }
+    explicit               SEVec3(const SEVec4<T> &w)                     : x(v[0]), y(v[1]), z(v[2]) { vec(w); }
     // constrói a partir do eixo de rotação do quaternion
-    explicit               SEVec3(const SEQuaternion<T> &q)               { vec(q.axis()); }
+    explicit               SEVec3(const SEQuaternion<T> &q)               : x(v[0]), y(v[1]), z(v[2]) { vec(q); }
     // constrói a patir do cross-product entre v1 e v2
-                           SEVec3(const SEVec3<T> &u, const SEVec3<T> &v) : x(u.y*v.z-u.z*v.y), y(u.z*v.x-u.x*v.z), z(u.x*v.y-u.y*v.x) {}
+                           SEVec3(const SEVec3<T> &u, const SEVec3<T> &w) : x(v[0]), y(v[1]), z(v[2]) { vec(u.y*w.z-u.z*w.y, u.z*w.x-u.x*w.z, u.x*w.y-u.y*w.x); }
 
     // destructor
                           ~SEVec3() {}
@@ -192,14 +199,14 @@ template <class T> class SEVec3
              SEVec3<T>    &operator =(const SEVec3<T> &in)             { if (this!=(&in)) { return vec(in); } return(*this); }
              SEVec3<T>    &operator =(const SEVec4<T> &in)             { return vec(in); }
              SEVec3<T>    &operator =(const SEQuaternion<T> &in)       { return vec(in); }
-             SEVec3<T>    &operator =(const T &v)                      { return vec(v); }
+             SEVec3<T>    &operator =(T w)                             { return vec(w); }
              SEVec3<T>     operator -()                          const { return SEVec3<T>(-x,-y,-z); }
 
-             SEVec3<T>    &operator +=(const SEVec3<T> &v)             { x+=v.x; y+=v.y; z+=v.z; return(*this); }
-             SEVec3<T>    &operator -=(const SEVec3<T> &v)             { x-=v.x; y-=v.y; z-=v.z; return(*this); }
-             SEVec3<T>    &operator *=(const T &a)                     { x*=a; y*=a; z*=a; return(*this); }
-             SEVec3<T>    &operator *=(const SEVec3<T> &v)             { return cross(v); }
-             SEVec3<T>    &operator /=(const T &a)                     { T inv_a = (T)1.0/a; x*=inv_a; y*=inv_a; z*=inv_a; return(*this); }
+             SEVec3<T>    &operator +=(const SEVec3<T> &w)             { x+=w.x; y+=w.y; z+=w.z; return(*this); }
+             SEVec3<T>    &operator -=(const SEVec3<T> &w)             { x-=w.x; y-=w.y; z-=w.z; return(*this); }
+             SEVec3<T>    &operator *=(T a)                            { x*=a; y*=a; z*=a; return(*this); }
+             SEVec3<T>    &operator *=(const SEVec3<T> &w)             { return cross(w); }
+             SEVec3<T>    &operator /=(T a)                            { T inv_a = (T)1.0/a; x*=inv_a; y*=inv_a; z*=inv_a; return(*this); }
     // multiplicacao por quaternion
              SEVec3<T>    &operator *=(const SEQuaternion<T> &q)       { return (*this)=q.quickmult(*this); } //return (*this)*=q.mat3(); }
     // multiplicacao por matriz
@@ -209,36 +216,36 @@ template <class T> class SEVec3
 
     friend   SEVec3<T>     operator +(SEVec3<T>              lhs, SEVec3<T>       const &rhs) { return lhs += rhs; }
     friend   SEVec3<T>     operator -(SEVec3<T>              lhs, SEVec3<T>       const &rhs) { return lhs -= rhs; }
-    friend   SEVec3<T>     operator *(SEVec3<T>              lhs, T               const &rhs) { return lhs *= rhs; }
-    friend   SEVec3<T>     operator *(T               const &lhs, SEVec3<T>              rhs) { return rhs *= lhs; }
+    friend   SEVec3<T>     operator *(SEVec3<T>              lhs, T                      rhs) { return lhs *= rhs; }
+    friend   SEVec3<T>     operator *(T                      lhs, SEVec3<T>              rhs) { return rhs *= lhs; }
     friend   SEVec3<T>     operator *(SEVec3<T>              lhs, SEVec3<T>       const &rhs) { return lhs *= rhs; }
     friend   SEVec3<T>     operator *(SEVec3<T>              lhs, SEQuaternion<T> const &rhs) { return lhs *= rhs; }
     friend   SEVec3<T>     operator *(SEVec3<T>              lhs, SEMat3<T>       const &rhs) { return lhs *= rhs; }
-    friend   SEVec3<T>     operator /(SEVec3<T>              lhs, T               const &rhs) { return lhs /= rhs; }
+    friend   SEVec3<T>     operator /(SEVec3<T>              lhs, T                      rhs) { return lhs /= rhs; }
 
-             T            &operator [](std::size_t i)                          { return (&x)[i]; }
-             T             operator [](std::size_t i)                    const { return (&x)[i]; }
+             T            &operator [](std::size_t i)                          { return v[i]; }
+    const    T             operator [](std::size_t i)                    const { return v[i]; }
 
-             bool          operator ==(const SEVec3<T> &v)               const { if (SEMathUtil<T>::ISZERO(ABS(x)-ABS(v.x)) && SEMathUtil<T>::ISZERO(ABS(y)-ABS(v.y)) && SEMathUtil<T>::ISZERO(ABS(z)-ABS(v.z))) return true; return false; }
-             bool          operator !=(const SEVec3<T> &v)               const { return (!(*this)==v); }
+             bool          operator ==(const SEVec3<T> &w)               const { if (SEMathUtil<T>::ISZERO(ABS(x)-ABS(w.x)) && SEMathUtil<T>::ISZERO(ABS(y)-ABS(w.y)) && SEMathUtil<T>::ISZERO(ABS(z)-ABS(w.z))) return true; return false; }
+             bool          operator !=(const SEVec3<T> &w)               const { return (!(*this)==w); }
 
-    friend   std::ostream &operator <<(std::ostream &os, const SEVec3<T> &v)   { os<<"("<<v.x<<", "<<v.y<<", "<<v.z<<")"; return os; }
+    friend   std::ostream &operator <<(std::ostream &os, const SEVec3<T> &w)   { os<<"("<<w.x<<", "<<w.y<<", "<<w.z<<")"; return os; }
 
-             SEVec3<T>    &vec(const T &f)                                     { x=y=z=f; return(*this); }
-             SEVec3<T>    &vec(const T &nx, const T &ny, const T &nz)          { x=nx; y=ny; z=nz; return(*this); }
-             SEVec3<T>    &vec(const T &nx, const T &ny)                       { x=nx; y=ny; z=1; return(*this); } // Coloca valor z=1 por padrão nas conversões de vetores de 2 posições para satisfazer o sistema de coordenadas homogêneas
-             SEVec3<T>    &vec(const T *v)                                     { x=v[0]; y=v[1]; z=v[2]; return(*this); }
-             SEVec3<T>    &vec(const SEVec3<T> &v)                             { x=v.x;y=v.y;z=v.z; return(*this); }
-             SEVec3<T>    &vec(const SEVec4<T> &v)                             { x=v.x;y=v.y;z=v.z; return(*this); } // trunca o vetor de 4 posições e assume seus 3 valores principais
+             SEVec3<T>    &vec(T f)                                            { x=y=z=f; return(*this); }
+             SEVec3<T>    &vec(T nx, T ny, T nz)                               { x=nx; y=ny; z=nz; return(*this); }
+             SEVec3<T>    &vec(T nx, T ny)                                     { x=nx; y=ny; z=1; return(*this); } // Coloca valor z=1 por padrão nas conversões de vetores de 2 posições para satisfazer o sistema de coordenadas homogêneas
+             SEVec3<T>    &vec(const T *w)                                     { std::memcpy(v,w,3*sizeof(T)); return(*this); }
+             SEVec3<T>    &vec(const SEVec3<T> &w)                             { std::memcpy(v,w.v,3*sizeof(T)); return(*this); }
+             SEVec3<T>    &vec(const SEVec4<T> &w)                             { std::memcpy(v,w.v,3*sizeof(T)); return(*this); } // trunca o vetor de 4 posições e assume seus 3 valores principais
              SEVec3<T>    &vec(const SEQuaternion<T> &q)                       { return (*this)=q.axis(); } // inicializa o vetor com o eixo do quaternion passado como parâmetro
 
              T             dot(const SEVec3<T> &a)                       const { return (x*a.x + y*a.y + z*a.z); }
-             T             angdif(const SEVec3<T> &v)                    const { return (T)arccos(dot(v)/(len()*v.len())); } // angulo entre o vetor informado e este vetor
-             T             angularDifference(const SEVec3<T> &v)         const { return angdif(v); }
+             T             angdif(const SEVec3<T> &w)                    const { return (T)arccos(dot(v)/(len()*w.len())); } // angulo entre o vetor informado e este vetor
+             T             angularDifference(const SEVec3<T> &w)         const { return angdif(w); }
 
-             SEVec3<T>     cross(const SEVec3<T> &v)                     const { return SEVec3<T>(y*v.z-z*v.y, z*v.x-x*v.z, x*v.y-y*v.x); }
-             SEVec3<T>    &cross(const SEVec3<T> &u, const SEVec3<T> &v)       { x=u.y*v.z-u.z*v.y; y=u.z*v.x-u.x*v.z; z=u.x*v.y-u.y*v.x; return(*this); }
-             SEVec3<T>    &cross(const SEVec3<T> &v)                           { return cross((*this),v); }
+             SEVec3<T>     cross(const SEVec3<T> &w)                     const { return SEVec3<T>(y*w.z-z*w.y, z*w.x-x*w.z, x*w.y-y*w.x); }
+             SEVec3<T>    &cross(const SEVec3<T> &u, const SEVec3<T> &w)       { x=u.y*w.z-u.z*w.y; y=u.z*w.x-u.x*w.z; z=u.x*w.y-u.y*w.x; return(*this); }
+             SEVec3<T>    &cross(const SEVec3<T> &w)                           { return cross((*this),w); }
 
              T             len2()                                        const { return (x*x + y*y + z*z); } // Quadrado do comprimento do vetor (0,0,0)->(x,y,z)
              T             len()                                         const { return (T)(sqrt(len2())); } // Comprimento do vetor (0,0,0)->(x,y,z)
@@ -247,14 +254,14 @@ template <class T> class SEVec3
              SEVec3<T>     inverse()                                     const { return -(*this); } // retorna o vetor inverso
 
              SEVec3<T>    &negate()                                            { x=-x;y=-y;z=-z; return(*this); } // Inverte o vetor de (0,0,0)->(x,y,z) para (x,y,z)->(0,0,0)
-             SEVec3<T>    &negate(const SEVec3<T> &v)                          { x=-v.x;y=-v.y;z=-v.z; return(*this); }
+             SEVec3<T>    &negate(const SEVec3<T> &w)                          { x=-w.x;y=-w.y;z=-w.z; return(*this); }
              SEVec3<T>    &normalize()                                         { T inv_l = (T)1.0/len(); x*=inv_l; y*=inv_l; z*=inv_l; return(*this); }// Normaliza o vetor (0,0,0)->(x,y,z) (reduz a comprimento 1)
-             SEVec3<T>    &normalize(const SEVec3<T> &v)                       { T inv_l = (T)1.0/v.len(); x=v.x*inv_l; y=v.y*inv_l; z=v.z*inv_l; return(*this); }
+             SEVec3<T>    &normalize(const SEVec3<T> &w)                       { T inv_l = (T)1.0/w.len(); x=w.x*inv_l; y=w.y*inv_l; z=w.z*inv_l; return(*this); }
              SEVec3<T>    &normalise()                                         { return normalize(); }
-             SEVec3<T>    &normalise(const SEVec3<T> &v)                       { return normalize(v); }
+             SEVec3<T>    &normalise(const SEVec3<T> &w)                       { return normalize(w); }
 
-             SEVec3<T>    &translate(const T &nx, const T &ny, const T &nz)    { x+=nx;y+=ny;z+=nz; return(*this); }
-             SEVec3<T>    &translate(const T &nx, const T &ny)                 { x+=nx;y+=ny; return(*this); }
+             SEVec3<T>    &translate(T nx, T ny, T nz)                         { x+=nx;y+=ny;z+=nz; return(*this); }
+             SEVec3<T>    &translate(T nx, T ny)                               { x+=nx;y+=ny; return(*this); }
              SEVec3<T>    &translate(const SEVec3<T> &t)                       { x+=t.x;y+=t.y;z+=t.z; return(*this); }
 
              SEVec3<T>     eulerToRadians()                              const { return cetor(*this); }
@@ -277,44 +284,56 @@ template <class T> class SEVec3
                                                                                                   0,0,1,z,
                                                                                                   0,0,0,1); }
 
+             SEVec3<T>    &orbit(const SEVec3<T> &f, const SEVec3<T> &u, T a)                 { SEQuaternion<T> q(a, u); SEVec3<T> t((*this)-f);
+                                                                                                t*=q; (*this).vec(f+t); return(*this); }
+             SEVec3<T>    &rotateAround(const SEVec3<T> &f, const SEVec3<T> &u, T a)          { return orbit(f,u,a); }
+             SEVec3<T>    &orbitByDegrees(const SEVec3<T> &f, const SEVec3<T> &u, T a)        { return orbit(f,u,SEMathUtil<T>::rad(a)); }
+             SEVec3<T>    &rotateAroundByDegrees(const SEVec3<T> &f, const SEVec3<T> &u, T a) { return orbit(f,u,SEMathUtil<T>::rad(a)); }
+
+             SEVec3<T>     orbit(const SEVec3<T> &f, const SEVec3<T> &u, T a)                 const { SEVec3<T> t(*this); return t.orbit(f,u,a); }
+             SEVec3<T>     rotateAround(const SEVec3<T> &f, const SEVec3<T> &u, T a)          const { SEVec3<T> t(*this); return t.orbit(f,u,a); }
+             SEVec3<T>     orbitByDegrees(const SEVec3<T> &f, const SEVec3<T> &u, T a)        const { SEVec3<T> t(*this); return t.orbit(f,u,SEMathUtil<T>::rad(a)); }
+             SEVec3<T>     rotateAroundByDegrees(const SEVec3<T> &f, const SEVec3<T> &u, T a) const { SEVec3<T> t(*this); return t.orbit(f,u,SEMathUtil<T>::rad(a)); }
 };
 
 
 template <class T> class SEVec4
 {
   public:
-             T             x, y, z, w;
+             T             v[4];
+             T             &x, &y, &z, &w;
 
     // default constructor
-                           SEVec4()                         : x(0),    y(0),    z(0),    w(0)    {}
+                           SEVec4()                         : x(v[0]), y(v[1]), z(v[2]), w(v[3]) { null(); }
     // copy constructor
-                           SEVec4(const SEVec4<T> &c)       : x(c.x),  y(c.y),  z(c.z),  w(c.w)  {}
+                           SEVec4(const SEVec4<T> &c)       : x(v[0]), y(v[1]), z(v[2]), w(v[3]) { vec(c); }
 
-    explicit               SEVec4(T f)                      : x(f),    y(f),    z(f),    w(f)    {}
-                           SEVec4(T nx, T ny, T nz)         : x(nx),   y(ny),   z(nz),   w(1)    {}
-                           SEVec4(T nx, T ny, T nz, T nw)   : x(nx),   y(ny),   z(nz),   w(nw)   {}
-    explicit               SEVec4(const T *v)               : x(v[0]), y(v[1]), z(v[2]), w(v[3]) {}
-                           SEVec4(const SEVec3<T> &v)       : x(v.x),  y(v.y),  z(v.z),  w(1)    {} // Aceita conversão implícita
-    explicit               SEVec4(const SEQuaternion<T> &q) : x(q.x),  y(q.y),  z(q.z),  w(q.w)  {}
+    explicit               SEVec4(T f)                      : x(v[0]), y(v[1]), z(v[2]), w(v[3]) { vec(f); }
+                           SEVec4(T nx, T ny, T nz)         : x(v[0]), y(v[1]), z(v[2]), w(v[3]) { vec(nx,ny,nz); }
+                           SEVec4(T nx, T ny, T nz, T nw)   : x(v[0]), y(v[1]), z(v[2]), w(v[3]) { vec(nx,ny,nz,nw); }
+    explicit               SEVec4(const T *u)               : x(v[0]), y(v[1]), z(v[2]), w(v[3]) { vec(u); }
+                           SEVec4(const SEVec3<T> &u)       : x(v[0]), y(v[1]), z(v[2]), w(v[3]) { vec(u); } // Aceita conversão implícita
+                           SEVec4(const SEColor<T> &u)      : x(v[0]), y(v[1]), z(v[2]), w(v[3]) { vec(u); } // Aceita conversão implícita
+    explicit               SEVec4(const SEQuaternion<T> &q) : x(v[0]), y(v[1]), z(v[2]), w(v[3]) { vec(q); }
 
     // destructor
                           ~SEVec4() {}
 
-             SEVec4<T>    &null() { x=y=z=w=0; return(*this); } // função nulificadora
+             SEVec4<T>    &null()                                      { x=y=z=w=0; return(*this); } // função nulificadora
 
              SEVec4<T>    &operator =(const SEVec4<T> &in)             { if (this!=(&in)) { return vec(in); } return(*this); }
              SEVec4<T>    &operator =(const SEVec3<T> &in)             { return vec(in); }
              SEVec4<T>    &operator =(const SEQuaternion<T> &in)       { return vec(in); }
              SEVec4<T>     operator -()                          const { return SEVec4<T>(-x,-y,-z,-w); }
 
-             SEVec4<T>    &operator +=(const SEVec4<T> &v)             { x+=v.x; y+=v.y; z+=v.z; w+=v.w; return(*this); }
-             SEVec4<T>    &operator +=(const SEVec3<T> &v)             { x+=v.x; y+=v.y; z+=v.z; return(*this); }
-             SEVec4<T>    &operator -=(const SEVec4<T> &v)             { x-=v.x; y-=v.y; z-=v.z; w-=v.w; return(*this); }
-             SEVec4<T>    &operator -=(const SEVec3<T> &v)             { x-=v.x; y-=v.y; z-=v.z; return(*this); }
-             SEVec4<T>    &operator *=(const T &a)                     { x*=a; y*=a; z*=a; w*=a; return(*this); }
-             SEVec4<T>    &operator /=(const T &a)                     { T inv_a = (T)1.0/a; x*=inv_a; y*=inv_a; z*=inv_a; w*=inv_a; return(*this); }
+             SEVec4<T>    &operator +=(const SEVec4<T> &u)             { x+=u.x; y+=u.y; z+=u.z; w+=u.w; return(*this); }
+             SEVec4<T>    &operator +=(const SEVec3<T> &u)             { x+=u.x; y+=u.y; z+=u.z; return(*this); }
+             SEVec4<T>    &operator -=(const SEVec4<T> &u)             { x-=u.x; y-=u.y; z-=u.z; w-=u.w; return(*this); }
+             SEVec4<T>    &operator -=(const SEVec3<T> &u)             { x-=u.x; y-=u.y; z-=u.z; return(*this); }
+             SEVec4<T>    &operator *=(T a)                            { x*=a; y*=a; z*=a; w*=a; return(*this); }
+             SEVec4<T>    &operator /=(T a)                            { T inv_a = (T)1.0/a; x*=inv_a; y*=inv_a; z*=inv_a; w*=inv_a; return(*this); }
     // multiplicacao por quaternion
-             SEVec4<T>    &operator *=(const SEQuaternion<T> &q)       { return (*this)=(-q).quickmult(*this); }//return (*this)*=q.mat4(); }
+             SEVec4<T>    &operator *=(const SEQuaternion<T> &q)       { return (*this)=q.quickmult(*this); }//return (*this)*=q.mat4(); }
     // multiplicação por matriz
              SEVec4<T>    &operator *=(const SEMat4<T> &n)             { return vec( x* n[0]+y* n[4]+z* n[8]+w*n[12],
                                                                                      x* n[1]+y* n[5]+z* n[9]+w*n[13],
@@ -327,26 +346,27 @@ template <class T> class SEVec4
     friend   SEVec4<T>     operator -(SEVec4<T>              lhs, SEVec4<T>       const &rhs) { return lhs -= rhs; }
     friend   SEVec4<T>     operator -(SEVec4<T>              lhs, SEVec3<T>       const &rhs) { return lhs -= rhs; }
     friend   SEVec4<T>     operator -(SEVec3<T>       const &lhs, SEVec4<T>              rhs) { return -rhs += lhs; }
-    friend   SEVec4<T>     operator *(SEVec4<T>              lhs, T               const &rhs) { return lhs *= rhs; }
-    friend   SEVec4<T>     operator *(T               const &lhs, SEVec4<T>              rhs) { return rhs *= lhs; }
+    friend   SEVec4<T>     operator *(SEVec4<T>              lhs, T                      rhs) { return lhs *= rhs; }
+    friend   SEVec4<T>     operator *(T                      lhs, SEVec4<T>              rhs) { return rhs *= lhs; }
     friend   SEVec4<T>     operator *(SEVec4<T>              lhs, SEQuaternion<T> const &rhs) { return lhs *= rhs; }
     friend   SEVec4<T>     operator *(SEVec4<T>              lhs, SEMat4<T>       const &rhs) { return lhs *= rhs; }
-    friend   SEVec4<T>     operator /(SEVec4<T>              lhs, T               const &rhs) { return lhs /= rhs; }
+    friend   SEVec4<T>     operator /(SEVec4<T>              lhs, T                      rhs) { return lhs /= rhs; }
 
-             T            &operator [](std::size_t i)                              { return (&x)[i]; }
-             T             operator [](std::size_t i)                        const { return (&x)[i]; }
+             T            &operator [](std::size_t i)                              { return v[i]; }
+    const    T             operator [](std::size_t i)                        const { return v[i]; }
 
-             bool          operator ==(const SEVec4<T> &v)                   const { if (SEMathUtil<T>::ISZERO(ABS(x)-ABS(v.x)) && SEMathUtil<T>::ISZERO(ABS(y)-ABS(v.y)) && SEMathUtil<T>::ISZERO(ABS(z)-ABS(v.z)) && SEMathUtil<T>::ISZERO(ABS(w)-ABS(v.w))) return true; return false; }
-             bool          operator !=(const SEVec4<T> &v)                   const { return !((*this)==v); }
+             bool          operator ==(const SEVec4<T> &u)                   const { if (SEMathUtil<T>::ISZERO(ABS(x)-ABS(u.x)) && SEMathUtil<T>::ISZERO(ABS(y)-ABS(u.y)) && SEMathUtil<T>::ISZERO(ABS(z)-ABS(u.z)) && SEMathUtil<T>::ISZERO(ABS(w)-ABS(u.w))) return true; return false; }
+             bool          operator !=(const SEVec4<T> &u)                   const { return !((*this)==u); }
 
-    friend   std::ostream &operator <<(std::ostream &os, const SEVec4<T> &v)       { os<<"("<<v.x<<", "<<v.y<<", "<<v.z<<", "<<v.w<<")"; return os; }
+    friend   std::ostream &operator <<(std::ostream &os, const SEVec4<T> &u)       { os<<"("<<u.x<<", "<<u.y<<", "<<u.z<<", "<<u.w<<")"; return os; }
 
-             SEVec4<T>    &vec(const T &f)                                         { x=y=z=w=f; return(*this); }
-             SEVec4<T>    &vec(const T &nx, const T &ny, const T &nz, const T &nw) { x=nx; y=ny; z=nz; w=nw; return(*this); }
-             SEVec4<T>    &vec(const T &nx, const T &ny, const T &nz)              { x=nx; y=ny; z=nz; w=1; return(*this); }
-             SEVec4<T>    &vec(const T *v)                                         { x=v[0];y=v[1];z=v[2];w=v[3]; return(*this); }
-             SEVec4<T>    &vec(const SEVec3<T> &v)                                 { x=v.x; y=v.y; z=v.z; w=1; return(*this); } // Coloca valor w=1 por padrão nas conversões de vetores de 3 posições para satisfazer o sistema de coordenadas homogêneas
-             SEVec4<T>    &vec(const SEVec4<T> &v)                                 { x=v.x; y=v.y; z=v.z; w=v.w; return(*this); }
+             SEVec4<T>    &vec(T f)                                                { x=y=z=w=f; return(*this); }
+             SEVec4<T>    &vec(T nx, T ny, T nz)                                   { x=nx; y=ny; z=nz; w=1; return(*this); }
+             SEVec4<T>    &vec(T nx, T ny, T nz, T nw)                             { x=nx; y=ny; z=nz; w=nw; return(*this); }
+             SEVec4<T>    &vec(const T* u)                                         { std::memcpy(v,u,4*sizeof(T)); return(*this); }
+             SEVec4<T>    &vec(const SEVec3<T> &u)                                 { std::memcpy(v,u.v,3*sizeof(T)); w=1; return(*this); } // Coloca valor w=1 por padrão nas conversões de vetores de 3 posições para satisfazer o sistema de coordenadas homogêneas
+             SEVec4<T>    &vec(const SEVec4<T> &u)                                 { std::memcpy(v,u.v,4*sizeof(T)); return(*this); }
+             SEVec4<T>    &vec(const SEColor<T> &u)                                { std::memcpy(v,u.v,4*sizeof(T)); return(*this); }
              SEVec4<T>    &vec(const SEQuaternion<T> &q)                           { x=q.x; y=q.y; z=q.z; w=q.w; return(*this); }
 
              T             dot(const SEVec4<T> &a)                           const { return (x*a.x + y*a.y + z*a.z + w*a.w); }
@@ -358,15 +378,103 @@ template <class T> class SEVec4
              SEVec4<T>     inverse()                                         const { return -(*this); } // retorna o vetor inverso
 
              SEVec4<T>    &negate()                                                { x=-x;y=-y;z=-z;w=-w; return(*this); } // Inverte o vetor
-             SEVec4<T>    &negate(const SEVec4<T> &v)                              { x=-v.x;y=-v.y;z=-v.z;w=-v.w; return(*this); }
+             SEVec4<T>    &negate(const SEVec4<T> &u)                              { x=-u.x;y=-u.y;z=-u.z;w=-u.w; return(*this); }
              SEVec4<T>    &normalize()                                             { T inv_l = (T)1.0/len(); x*=inv_l; y*=inv_l; z*=inv_l; w*=inv_l; return(*this); }
              SEVec4<T>    &normalise()                                             { return normalize(); }
-             SEVec4<T>    &normalize(const SEVec4<T> &v)                           { T inv_l = (T)1.0/v.len(); x=v.x*inv_l; y=v.y*inv_l; z=v.z*inv_l; w=v.w*inv_l; return(*this); }
-             SEVec4<T>    &normalise(const SEVec4<T> &v)                           { return normalize(v); }
+             SEVec4<T>    &normalize(const SEVec4<T> &u)                           { T inv_l = (T)1.0/u.len(); x=u.x*inv_l; y=u.y*inv_l; z=u.z*inv_l; w=u.w*inv_l; return(*this); }
+             SEVec4<T>    &normalise(const SEVec4<T> &u)                           { return normalize(u); }
 
-//             std::string   toString()                                        const { std::string s; s<<"("<<x<<", "<<y<<", "<<z<<", "<<w<<")"; return(s); }
+             SEVec4<T>    &orbit(const SEVec4<T> &f, const SEVec3<T> &u, T a)                 { SEQuaternion<T> q(a, u); SEVec4<T> t((*this)-f);
+                                                                                                t*=q; (*this).vec(f+t); return(*this); }
+             SEVec4<T>    &rotateAround(const SEVec4<T> &f, const SEVec3<T> &u, T a)          { return orbit(f,u,a); }
+             SEVec4<T>    &orbitByDegrees(const SEVec4<T> &f, const SEVec3<T> &u, T a)        { return orbit(f,u,SEMathUtil<T>::rad(a)); }
+             SEVec4<T>    &rotateAroundByDegrees(const SEVec4<T> &f, const SEVec3<T> &u, T a) { return orbit(f,u,SEMathUtil<T>::rad(a)); }
+
+             SEVec4<T>     orbit(const SEVec4<T> &f, const SEVec3<T> &u, T a)                 const { SEVec4<T> t(*this); return t.orbit(f,u,a); }
+             SEVec4<T>     rotateAround(const SEVec4<T> &f, const SEVec3<T> &u, T a)          const { SEVec4<T> t(*this); return t.orbit(f,u,a); }
+             SEVec4<T>     orbitByDegrees(const SEVec4<T> &f, const SEVec3<T> &u, T a)        const { SEVec4<T> t(*this); return t.orbit(f,u,SEMathUtil<T>::rad(a)); }
+             SEVec4<T>     rotateAroundByDegrees(const SEVec4<T> &f, const SEVec3<T> &u, T a) const { SEVec4<T> t(*this); return t.orbit(f,u,SEMathUtil<T>::rad(a)); }
 };
 
+template <class T> class SEColor : private SEVec4<T>
+{
+  public:
+    const    T             &r, &g, &b, &a;
+    const    T*            c;
+
+    // default constructor
+                           SEColor()                         : SEVec4<T>(),                r(SEVec4<T>::v[0]), g(SEVec4<T>::v[1]), b(SEVec4<T>::v[2]), a(SEVec4<T>::v[3]), c(SEVec4<T>::v) {}
+    // copy constructor
+                           SEColor(const SEColor<T> &c)      : SEVec4<T>(c.r,c.g,c.b,c.a), r(SEVec4<T>::v[0]), g(SEVec4<T>::v[1]), b(SEVec4<T>::v[2]), a(SEVec4<T>::v[3]), c(SEVec4<T>::v) {}
+
+    explicit               SEColor(T f)                      : SEVec4<T>(f),               r(SEVec4<T>::v[0]), g(SEVec4<T>::v[1]), b(SEVec4<T>::v[2]), a(SEVec4<T>::v[3]), c(SEVec4<T>::v) { clamp(); }
+                           SEColor(T nr, T ng, T nb)         : SEVec4<T>(nr,ng,nb,(T)1),   r(SEVec4<T>::v[0]), g(SEVec4<T>::v[1]), b(SEVec4<T>::v[2]), a(SEVec4<T>::v[3]), c(SEVec4<T>::v) { clamp(); }
+                           SEColor(T nr, T ng, T nb, T na)   : SEVec4<T>(nr,ng,nb,na),     r(SEVec4<T>::v[0]), g(SEVec4<T>::v[1]), b(SEVec4<T>::v[2]), a(SEVec4<T>::v[3]), c(SEVec4<T>::v) { clamp(); }
+    explicit               SEColor(const T *u)               : SEVec4<T>(u),               r(SEVec4<T>::v[0]), g(SEVec4<T>::v[1]), b(SEVec4<T>::v[2]), a(SEVec4<T>::v[3]), c(SEVec4<T>::v) { clamp(); }
+                           SEColor(const SEVec3<T> &u)       : SEVec4<T>(u),               r(SEVec4<T>::v[0]), g(SEVec4<T>::v[1]), b(SEVec4<T>::v[2]), a(SEVec4<T>::v[3]), c(SEVec4<T>::v) { clamp(); } // Aceita conversão implícita
+                           SEColor(const SEVec4<T> &u)       : SEVec4<T>(u),               r(SEVec4<T>::v[0]), g(SEVec4<T>::v[1]), b(SEVec4<T>::v[2]), a(SEVec4<T>::v[3]), c(SEVec4<T>::v) { clamp(); } // Aceita conversão implícita
+    explicit               SEColor(const SEQuaternion<T> &q) : SEVec4<T>(q),               r(SEVec4<T>::v[0]), g(SEVec4<T>::v[1]), b(SEVec4<T>::v[2]), a(SEVec4<T>::v[3]), c(SEVec4<T>::v) { clamp(); }
+
+    // destructor
+                          ~SEColor() {}
+
+             SEColor<T>   &operator =(const SEColor<T> &in)            { if (this!=(&in)) { return set(in); } return(*this); }
+             SEColor<T>   &operator =(const SEVec4<T> &in)             { return set(in); }
+             SEColor<T>   &operator =(const SEVec3<T> &in)             { return set(in); }
+             SEColor<T>   &operator =(const SEQuaternion<T> &in)       { return set(in); }
+
+             SEColor<T>   &operator +=(const SEColor<T> &u)            { return set(r+u.r, g+u.g, b+u.b, a+u.a); }
+             SEColor<T>   &operator +=(const SEVec4<T> &u)             { return set(r+u.x, g+u.y, b+u.z, a+u.w); }
+             SEColor<T>   &operator +=(const SEVec3<T> &u)             { return set(r+u.x, g+u.y, b+u.z, a); }
+             SEColor<T>   &operator -=(const SEColor<T> &u)            { return set(r-u.r, g-u.g, b-u.b, a-u.a); }
+             SEColor<T>   &operator -=(const SEVec4<T> &u)             { return set(r-u.x, g-u.y, b-u.z, a-u.w); }
+             SEColor<T>   &operator -=(const SEVec3<T> &u)             { return set(r-u.x, g-u.y, b-u.z, a); }
+             SEColor<T>   &operator *=(T k)                            { return set(r*k, g*k, b*k, a*k); }
+             SEColor<T>   &operator /=(T k)                            { T inv_k = (T)1.0/k; return set(r*inv_k, g*inv_k, b*inv_k, a*inv_k); }
+
+    friend   SEColor<T>    operator +(SEColor<T>             lhs, SEColor<T>      const &rhs) { return lhs += rhs; }
+    friend   SEColor<T>    operator +(SEColor<T>             lhs, SEVec4<T>       const &rhs) { return lhs += rhs; }
+    friend   SEColor<T>    operator +(SEVec4<T>              lhs, SEColor<T>      const &rhs) { return lhs += rhs; }
+    friend   SEColor<T>    operator +(SEColor<T>             lhs, SEVec3<T>       const &rhs) { return lhs += rhs; }
+    friend   SEColor<T>    operator +(SEVec3<T>       const &lhs, SEColor<T>             rhs) { return rhs += lhs; }
+    friend   SEColor<T>    operator -(SEColor<T>             lhs, SEColor<T>      const &rhs) { return lhs -= rhs; }
+    friend   SEColor<T>    operator -(SEColor<T>             lhs, SEVec4<T>       const &rhs) { return lhs -= rhs; }
+    friend   SEColor<T>    operator -(SEColor<T>             lhs, SEVec3<T>       const &rhs) { return lhs -= rhs; }
+    friend   SEColor<T>    operator *(SEColor<T>             lhs, T                      rhs) { return lhs *= rhs; }
+    friend   SEColor<T>    operator *(T                      lhs, SEColor<T>             rhs) { return rhs *= lhs; }
+    friend   SEColor<T>    operator /(SEColor<T>             lhs, T                      rhs) { return lhs /= rhs; }
+
+             T            &operator [](std::size_t i)                              { return SEVec4<T>::v[i]; }
+    const    T             operator [](std::size_t i)                        const { return SEVec4<T>::v[i]; }
+
+             bool          operator ==(const SEColor<T> &u)                  const { if (SEMathUtil<T>::ISZERO(ABS(r)-ABS(u.r)) && SEMathUtil<T>::ISZERO(ABS(g)-ABS(u.g)) && SEMathUtil<T>::ISZERO(ABS(b)-ABS(u.b)) && SEMathUtil<T>::ISZERO(ABS(a)-ABS(u.a))) return true; return false; }
+             bool          operator !=(const SEColor<T> &u)                  const { return !((*this)==u); }
+
+    friend   std::ostream &operator <<(std::ostream &os, const SEColor<T> &u)      { os<<"("<<u.r<<", "<<u.g<<", "<<u.b<<", "<<u.a<<")"; return os; }
+
+             SEColor<T>   &set(T f)                                                { SEVec4<T>::vec(CLAMP(f,0,1)); return(*this); }
+             SEColor<T>   &set(T nr, T ng, T nb, T na)                             { SEVec4<T>::vec(nr,ng,nb,na); clamp(); return(*this); }
+             SEColor<T>   &set(T nr, T ng, T nb)                                   { SEVec4<T>::vec(nr,ng,nb,1); clamp(); return(*this); }
+             SEColor<T>   &set(const T *u)                                         { SEVec4<T>::vec(u); clamp(); return(*this); }
+             SEColor<T>   &set(const SEVec3<T> &u)                                 { SEVec4<T>::vec(u); clamp(); return(*this); }
+             SEColor<T>   &set(const SEVec4<T> &u)                                 { SEVec4<T>::vec(u); clamp(); return(*this); }
+             SEColor<T>   &set(const SEColor<T> &u)                                { std::memcpy(SEVec4<T>::v,u.c,4*sizeof(T)); return(*this); }
+             SEColor<T>   &set(const SEQuaternion<T> &q)                           { SEVec4<T>::vec(q); clamp(); return(*this); }
+
+             SEColor<T>   &setIntValues(int nr, int ng, int nb, int na)            { return set((T)CLAMP(nr,0,255)/255,(T)CLAMP(ng,0,255)/255,(T)CLAMP(nb,0,255)/255,(T)CLAMP(na,0,255)/255); }
+             SEColor<T>   &setIntValues(int nr, int ng, int nb)                    { return set((T)CLAMP(nr,0,255)/255,(T)CLAMP(ng,0,255)/255,(T)CLAMP(nb,0,255)/255); }
+
+             SEColor<T>    multColor(T f)                                    const { return SEColor<T>(r*f, g*f, b*f, a); }
+             SEColor<T>   &multColor(T f)                                          { return set(r*f, g*f, b*f, a); }
+             SEColor<T>    multAlpha(T f)                                    const { return SEColor<T>(r, g, b, a*f); }
+             SEColor<T>   &multAlpha(T f)                                          { return set(r, g, b, a*f); }
+
+             void          clamp()                                                 { SEVec4<T>::v[0]=CLAMP(SEVec4<T>::v[0],0,1);
+                                                                                     SEVec4<T>::v[1]=CLAMP(SEVec4<T>::v[1],0,1);
+                                                                                     SEVec4<T>::v[2]=CLAMP(SEVec4<T>::v[2],0,1);
+                                                                                     SEVec4<T>::v[3]=CLAMP(SEVec4<T>::v[3],0,1); }
+
+};
 
 template <class T> class SEQuaternion
 {
@@ -810,10 +918,10 @@ template <class T> class SEMat3
 
              SEMat3<T>      &set(const T &f)                                                    { null(); m00=m11=m22=f; return(*this); }
              SEMat3<T>      &set(const SEVec3<T> &v)                                            { null(); m00=v.x;m11=v.y;m22=v.z; return(*this); }
-             SEMat3<T>      &set(const SEVec3<T> &v1, const SEVec3<T> &v2, const SEVec3<T> &v3) { for (int i=0;i<3;++i) { r1[i]=v1[i];r2[i]=v2[i];r3[i]=v3[i]; } return(*this); }
-             SEMat3<T>      &set(const T *c)                                                    { for (int i=0;i<9;++i) m[i]=c[i]; return(*this); }
-             SEMat3<T>      &set(const T **v)                                                   { for (int i=0;i<3;++i) { r1[i]=v[0][i];r2[i]=v[1][i];r3[i]=v[2][i]; } return(*this); }
-             SEMat3<T>      &set(const SEMat3<T> &n)                                            { for (int i=0;i<9;++i) m[i]=n[i]; return(*this); }
+             SEMat3<T>      &set(const SEVec3<T> &v1, const SEVec3<T> &v2, const SEVec3<T> &v3) { std::memcpy(m,v1.v,3*sizeof(T)); std::memcpy(m+3,v2.v,3*sizeof(T)); std::memcpy(m+6,v3.v,3*sizeof(T)); return(*this); }
+             SEMat3<T>      &set(const T *c)                                                    { std::memcpy(m,c,9*sizeof(T)); return(*this); }
+             SEMat3<T>      &set(const T **v)                                                   { std::memcpy(m,v,3*sizeof(T)); std::memcpy(m+3,v+1,3*sizeof(T)); std::memcpy(m+6,v+2,3*sizeof(T)); return(*this); }
+             SEMat3<T>      &set(const SEMat3<T> &n)                                            { std::memcpy(m,n.m,9*sizeof(T)); return(*this); }
              SEMat3<T>      &set(const T &n00, const T &n01, const T &n02,
                                  const T &n10, const T &n11, const T &n12,
                                  const T &n20, const T &n21, const T &n22)                      { m00=n00; m01=n01; m02=n02; m10=n10; m11=n11; m12=n12; m20=n20; m21=n21; m22=n22; return(*this); }
@@ -1029,9 +1137,9 @@ template <class T> class SEMat4
              SEMat4<T>       &set(const SEVec3<T> &v)                                     { return (*this)=v.mat(); }
              SEMat4<T>       &set(const SEVec4<T> &v)                                     { null(); m00=v.x;m11=v.y;m22=v.z;m33=v.w; return(*this); }
              SEMat4<T>       &set(const SEQuaternion<T> &v)                               { (*this)=v.toMatrix(); return(*this); }
-             SEMat4<T>       &set(const T *c)                                             { for (int i=0;i<16;++i) m[i]=c[i]; return(*this); }
-             SEMat4<T>       &set(const T **v)                                            { for (int i=0;i<4;++i) { r1[i]=v[0][i];r2[i]=v[1][i];r3[i]=v[2][i];r4[i]=v[3][i]; } return(*this); }
-             SEMat4<T>       &set(const SEMat4<T> &n)                                     { for (int i=0;i<16;++i) m[i]=n[i]; return(*this); }
+             SEMat4<T>       &set(const T *c)                                             { std::memcpy(m,c,16*sizeof(T)); return(*this); }
+             SEMat4<T>       &set(const T **v)                                            { std::memcpy(m,v,16*sizeof(T)); std::memcpy(m+4,v+1,16*sizeof(T)); std::memcpy(m+8,v+2,16*sizeof(T)); std::memcpy(m+12,v+3,16*sizeof(T)); return(*this); }
+             SEMat4<T>       &set(const SEMat4<T> &n)                                     { std::memcpy(m,n.m,16*sizeof(T)); return(*this); }
              SEMat4<T>       &set(const T &n00, const T &n01, const T &n02, const T &n03,
                                   const T &n10, const T &n11, const T &n12, const T &n13,
                                   const T &n20, const T &n21, const T &n22, const T &n23,
@@ -1159,17 +1267,28 @@ template <class T> class SEChronometer
 template <class T> class SETimer
 {
   public:
-                               SETimer()    : last_(0) {}
-                               SETimer(T i) : last_(i) {}
+    const   T                 &speed;
+
+                               SETimer()    : last_(0), accum_(0), per_(0), spd_(1), speed(spd_) { reset(); }
+                               SETimer(T i) : last_(i), accum_(i), per_(0), spd_(1), speed(spd_) {}
                               ~SETimer() {}
 
-            T                  get()         { last_=(T)clock(); return(last_); }
-            T                  getLast()     { return(last_); }
-            T                  getInterval() { return((T)clock()-last_); }
+            T                  get()                     { return((T)clock()); }
+            T                  getLast()                 { return(last_); }
+            T                  getInterval()             { T t=((T)clock()-last_)*spd_;last_=(T)clock();return(t); }
+            T                  getCumulativeInterval()   { T t=((T)clock()-accum_)*spd_; if (per_>0 && t>per_) resetAccumulator(t-floor(t/per_)); return(t); }
 
-            void               reset()       { last_=(T)clock(); }
+            void               setAccumulatorPeriod(T p) { per_=(p>0?p:0); }//resetAccumulator(); }
+            void               setSpeedFactor(T f)       { spd_=(f>0?f:0); }//resetAccumulator(); }
+
+            void               reset()                   { last_=accum_=(T)clock(); }
+            void               resetAccumulator()        { accum_=(T)clock(); }
+            void               resetAccumulator(T dt)    { accum_=(T)clock()-dt; }
   private:
             T                  last_;
+            T                  accum_;
+            T                  per_;
+            T                  spd_;
 };
 
 template <class T> class SERandomNumberGenerator

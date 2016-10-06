@@ -1,0 +1,381 @@
+\section{json\+:\+:Array Class Reference}
+\label{classjson_1_1_array}\index{json\+::\+Array@{json\+::\+Array}}
+
+
+{\ttfamily \#include $<$json.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ {\bf Value} $>$ {\bf Value\+Vector}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Array} ()
+\item 
+{\bf Array} (const {\bf Array} \&a)
+\item 
+{\bf Array} \& {\bf operator=} (const {\bf Array} \&a)
+\item 
+{\bf Value} \& {\bf operator[$\,$]} (size\+\_\+t i)
+\item 
+const {\bf Value} \& {\bf operator[$\,$]} (size\+\_\+t i) const 
+\item 
+Value\+Vector\+::const\+\_\+iterator {\bf begin} () const 
+\item 
+Value\+Vector\+::const\+\_\+iterator {\bf end} () const 
+\item 
+Value\+Vector\+::iterator {\bf begin} ()
+\item 
+Value\+Vector\+::iterator {\bf end} ()
+\item 
+Value\+Vector\+::iterator {\bf find} (const {\bf Value} \&v)
+\item 
+Value\+Vector\+::const\+\_\+iterator {\bf find} (const {\bf Value} \&v) const 
+\item 
+bool {\bf Has\+Value} (const {\bf Value} \&v) const 
+\item 
+void {\bf Clear} ()
+\item 
+void {\bf push\+\_\+back} (const {\bf Value} \&v)
+\item 
+void {\bf insert} (size\+\_\+t index, const {\bf Value} \&v)
+\item 
+size\+\_\+t {\bf size} () const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Value\+Vector} {\bf m\+Values}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf operator==} (const {\bf Array} \&lhs, const {\bf Array} \&rhs)
+\item 
+bool {\bf operator!=} (const {\bf Array} \&lhs, const {\bf Array} \&rhs)
+\item 
+bool {\bf operator$<$} (const {\bf Array} \&lhs, const {\bf Array} \&rhs)
+\item 
+bool {\bf operator$>$} (const {\bf Array} \&lhs, const {\bf Array} \&rhs)
+\item 
+bool {\bf operator$<$=} (const {\bf Array} \&lhs, const {\bf Array} \&rhs)
+\item 
+bool {\bf operator$>$=} (const {\bf Array} \&lhs, const {\bf Array} \&rhs)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 324 of file json.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\index{json\+::\+Array@{json\+::\+Array}!Value\+Vector@{Value\+Vector}}
+\index{Value\+Vector@{Value\+Vector}!json\+::\+Array@{json\+::\+Array}}
+\subsubsection[{Value\+Vector}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::vector$<${\bf Value}$>$ {\bf json\+::\+Array\+::\+Value\+Vector}}\label{classjson_1_1_array_a9980cfbe25d0da308156cf489d86b1a9}
+
+
+Definition at line 331 of file json.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{json\+::\+Array@{json\+::\+Array}!Array@{Array}}
+\index{Array@{Array}!json\+::\+Array@{json\+::\+Array}}
+\subsubsection[{Array}]{\setlength{\rightskip}{0pt plus 5cm}Array\+::\+Array (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classjson_1_1_array_ae20b3dbb4aa6083679c0dea835abd861}
+
+
+Definition at line 309 of file json.\+cpp.
+
+\index{json\+::\+Array@{json\+::\+Array}!Array@{Array}}
+\index{Array@{Array}!json\+::\+Array@{json\+::\+Array}}
+\subsubsection[{Array}]{\setlength{\rightskip}{0pt plus 5cm}Array\+::\+Array (
+\begin{DoxyParamCaption}
+\item[{const {\bf Array} \&}]{a}
+\end{DoxyParamCaption}
+)}\label{classjson_1_1_array_a03f59ac3974d3462a5f1956498bcc4f7}
+
+
+Definition at line 313 of file json.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{json\+::\+Array@{json\+::\+Array}!begin@{begin}}
+\index{begin@{begin}!json\+::\+Array@{json\+::\+Array}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}Array\+::\+Value\+Vector\+::const\+\_\+iterator Array\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classjson_1_1_array_a96107b61f986457da99341f08e0d98a0}
+
+
+Definition at line 339 of file json.\+cpp.
+
+\index{json\+::\+Array@{json\+::\+Array}!begin@{begin}}
+\index{begin@{begin}!json\+::\+Array@{json\+::\+Array}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}Array\+::\+Value\+Vector\+::iterator Array\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classjson_1_1_array_a2bcb20f9204852c74b836fe621f86843}
+
+
+Definition at line 349 of file json.\+cpp.
+
+\index{json\+::\+Array@{json\+::\+Array}!Clear@{Clear}}
+\index{Clear@{Clear}!json\+::\+Array@{json\+::\+Array}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}void Array\+::\+Clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classjson_1_1_array_ac6e5d254878a9a15018389857e88edef}
+
+
+Definition at line 374 of file json.\+cpp.
+
+\index{json\+::\+Array@{json\+::\+Array}!end@{end}}
+\index{end@{end}!json\+::\+Array@{json\+::\+Array}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}Array\+::\+Value\+Vector\+::const\+\_\+iterator Array\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classjson_1_1_array_a4fc36b2ad3cac9d57c4a12f92aea668c}
+
+
+Definition at line 344 of file json.\+cpp.
+
+\index{json\+::\+Array@{json\+::\+Array}!end@{end}}
+\index{end@{end}!json\+::\+Array@{json\+::\+Array}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}Array\+::\+Value\+Vector\+::iterator Array\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classjson_1_1_array_a81f9a51107d41ce4edaa932afae80a75}
+
+
+Definition at line 354 of file json.\+cpp.
+
+\index{json\+::\+Array@{json\+::\+Array}!find@{find}}
+\index{find@{find}!json\+::\+Array@{json\+::\+Array}}
+\subsubsection[{find}]{\setlength{\rightskip}{0pt plus 5cm}Array\+::\+Value\+Vector\+::iterator Array\+::find (
+\begin{DoxyParamCaption}
+\item[{const {\bf Value} \&}]{v}
+\end{DoxyParamCaption}
+)}\label{classjson_1_1_array_a846c362ebd65439a5a7dde9c5e9b32ff}
+
+
+Definition at line 379 of file json.\+cpp.
+
+\index{json\+::\+Array@{json\+::\+Array}!find@{find}}
+\index{find@{find}!json\+::\+Array@{json\+::\+Array}}
+\subsubsection[{find}]{\setlength{\rightskip}{0pt plus 5cm}Array\+::\+Value\+Vector\+::const\+\_\+iterator Array\+::find (
+\begin{DoxyParamCaption}
+\item[{const {\bf Value} \&}]{v}
+\end{DoxyParamCaption}
+) const}\label{classjson_1_1_array_aaafe02d0f972088942cff746b99dfdef}
+
+
+Definition at line 384 of file json.\+cpp.
+
+\index{json\+::\+Array@{json\+::\+Array}!Has\+Value@{Has\+Value}}
+\index{Has\+Value@{Has\+Value}!json\+::\+Array@{json\+::\+Array}}
+\subsubsection[{Has\+Value}]{\setlength{\rightskip}{0pt plus 5cm}bool Array\+::\+Has\+Value (
+\begin{DoxyParamCaption}
+\item[{const {\bf Value} \&}]{v}
+\end{DoxyParamCaption}
+) const}\label{classjson_1_1_array_a78ecc1c676d3571dbf9738f6f4300bd8}
+
+
+Definition at line 389 of file json.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{classjson_1_1_array_a78ecc1c676d3571dbf9738f6f4300bd8_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{json\+::\+Array@{json\+::\+Array}!insert@{insert}}
+\index{insert@{insert}!json\+::\+Array@{json\+::\+Array}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}void Array\+::insert (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{index, }
+\item[{const {\bf Value} \&}]{v}
+\end{DoxyParamCaption}
+)}\label{classjson_1_1_array_a0d1db900eecf2c019b028879b1966d72}
+
+
+Definition at line 364 of file json.\+cpp.
+
+\index{json\+::\+Array@{json\+::\+Array}!operator=@{operator=}}
+\index{operator=@{operator=}!json\+::\+Array@{json\+::\+Array}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Array} \& Array\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Array} \&}]{a}
+\end{DoxyParamCaption}
+)}\label{classjson_1_1_array_aa8c368d03d33e248e3d96b4977d2c495}
+
+
+Definition at line 317 of file json.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{classjson_1_1_array_aa8c368d03d33e248e3d96b4977d2c495_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{json\+::\+Array@{json\+::\+Array}!operator[$\,$]@{operator[]}}
+\index{operator[$\,$]@{operator[]}!json\+::\+Array@{json\+::\+Array}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Value} \& Array\+::operator[$\,$] (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{i}
+\end{DoxyParamCaption}
+)}\label{classjson_1_1_array_ac3d31a0bbfeb5d23bc6dc2ac81cbf6b5}
+
+
+Definition at line 328 of file json.\+cpp.
+
+\index{json\+::\+Array@{json\+::\+Array}!operator[$\,$]@{operator[]}}
+\index{operator[$\,$]@{operator[]}!json\+::\+Array@{json\+::\+Array}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Value} \& Array\+::operator[$\,$] (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{i}
+\end{DoxyParamCaption}
+) const}\label{classjson_1_1_array_a46c3c1f009769b7fce1276972dadc386}
+
+
+Definition at line 333 of file json.\+cpp.
+
+\index{json\+::\+Array@{json\+::\+Array}!push\+\_\+back@{push\+\_\+back}}
+\index{push\+\_\+back@{push\+\_\+back}!json\+::\+Array@{json\+::\+Array}}
+\subsubsection[{push\+\_\+back}]{\setlength{\rightskip}{0pt plus 5cm}void Array\+::push\+\_\+back (
+\begin{DoxyParamCaption}
+\item[{const {\bf Value} \&}]{v}
+\end{DoxyParamCaption}
+)}\label{classjson_1_1_array_ae0250880d436a0fa5aa3671ee54cbff8}
+
+
+Definition at line 359 of file json.\+cpp.
+
+\index{json\+::\+Array@{json\+::\+Array}!size@{size}}
+\index{size@{size}!json\+::\+Array@{json\+::\+Array}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t Array\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classjson_1_1_array_a22978bd335f1c97e8448fca782e09420}
+
+
+Definition at line 369 of file json.\+cpp.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\index{json\+::\+Array@{json\+::\+Array}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!json\+::\+Array@{json\+::\+Array}}
+\subsubsection[{operator"!=}]{\setlength{\rightskip}{0pt plus 5cm}bool operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Array} \&}]{lhs, }
+\item[{const {\bf Array} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{classjson_1_1_array_abcd1fdae411433dfd352fe5e9aecaa7a}
+
+
+Definition at line 345 of file json.\+h.
+
+\index{json\+::\+Array@{json\+::\+Array}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!json\+::\+Array@{json\+::\+Array}}
+\subsubsection[{operator$<$}]{\setlength{\rightskip}{0pt plus 5cm}bool operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Array} \&}]{lhs, }
+\item[{const {\bf Array} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{classjson_1_1_array_a63deeecf801827e4b05e0270e787fb37}
+
+
+Definition at line 507 of file json.\+h.
+
+\index{json\+::\+Array@{json\+::\+Array}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!json\+::\+Array@{json\+::\+Array}}
+\subsubsection[{operator$<$=}]{\setlength{\rightskip}{0pt plus 5cm}bool operator$<$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Array} \&}]{lhs, }
+\item[{const {\bf Array} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{classjson_1_1_array_ab353726ade4adcbe93ff219cd51e77b7}
+
+
+Definition at line 348 of file json.\+h.
+
+\index{json\+::\+Array@{json\+::\+Array}!operator==@{operator==}}
+\index{operator==@{operator==}!json\+::\+Array@{json\+::\+Array}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Array} \&}]{lhs, }
+\item[{const {\bf Array} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{classjson_1_1_array_a5eac737578730879ef9b00151a600127}
+
+
+Definition at line 502 of file json.\+h.
+
+\index{json\+::\+Array@{json\+::\+Array}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!json\+::\+Array@{json\+::\+Array}}
+\subsubsection[{operator$>$}]{\setlength{\rightskip}{0pt plus 5cm}bool operator$>$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Array} \&}]{lhs, }
+\item[{const {\bf Array} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{classjson_1_1_array_adaf4ad9e358a52ce82a2be54b1543f95}
+
+
+Definition at line 347 of file json.\+h.
+
+\index{json\+::\+Array@{json\+::\+Array}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!json\+::\+Array@{json\+::\+Array}}
+\subsubsection[{operator$>$=}]{\setlength{\rightskip}{0pt plus 5cm}bool operator$>$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Array} \&}]{lhs, }
+\item[{const {\bf Array} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{classjson_1_1_array_a66aa6acae48cac1ae12ac71613d5b882}
+
+
+Definition at line 349 of file json.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\index{json\+::\+Array@{json\+::\+Array}!m\+Values@{m\+Values}}
+\index{m\+Values@{m\+Values}!json\+::\+Array@{json\+::\+Array}}
+\subsubsection[{m\+Values}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Value\+Vector} json\+::\+Array\+::m\+Values\hspace{0.3cm}{\ttfamily [protected]}}\label{classjson_1_1_array_a6c2619851ee6b74a0ca4d1d8dc49f7cd}
+
+
+Definition at line 335 of file json.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+{\bf json.\+h}\item 
+{\bf json.\+cpp}\end{DoxyCompactItemize}

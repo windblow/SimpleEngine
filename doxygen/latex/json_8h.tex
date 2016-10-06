@@ -1,0 +1,70 @@
+\section{json.\+h File Reference}
+\label{json_8h}\index{json.\+h@{json.\+h}}
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$map$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$stdexcept$>$}\\*
+Include dependency graph for json.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{json_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{json_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf json\+::\+Object}
+\item 
+class {\bf json\+::\+Array}
+\item 
+class {\bf json\+::\+Value}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ {\bf json}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf json\+::\+Value\+Type} \{ \\*
+{\bf json\+::\+N\+U\+L\+L\+Val}, 
+{\bf json\+::\+String\+Val}, 
+{\bf json\+::\+Int\+Val}, 
+{\bf json\+::\+Float\+Val}, 
+\\*
+{\bf json\+::\+Double\+Val}, 
+{\bf json\+::\+Object\+Val}, 
+{\bf json\+::\+Array\+Val}, 
+{\bf json\+::\+Bool\+Val}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bf json\+::\+Serialize} (const {\bf Value} \&obj)
+\item 
+{\bf Value} {\bf json\+::\+Deserialize} (const std\+::string \&str)
+\item 
+bool {\bf json\+::operator==} (const Object \&lhs, const Object \&rhs)
+\item 
+bool {\bf json\+::operator$<$} (const Object \&lhs, const Object \&rhs)
+\item 
+bool {\bf json\+::operator==} (const Array \&lhs, const Array \&rhs)
+\item 
+bool {\bf json\+::operator$<$} (const Array \&lhs, const Array \&rhs)
+\item 
+bool {\bf json\+::operator==} (const Value \&lhs, const Value \&rhs)
+\item 
+bool {\bf json\+::operator$<$} (const Value \&lhs, const Value \&rhs)
+\end{DoxyCompactItemize}

@@ -1,0 +1,6 @@
+<map id="SELight&lt; T &gt;" name="SELight&lt; T &gt;">
+<area shape="rect" id="node2" href="$class_s_e_ambient_light.html" title="SEAmbientLight\&lt; T \&gt;" alt="" coords="5,80,152,107"/>
+<area shape="rect" id="node3" href="$class_s_e_directional_light.html" title="SEDirectionalLight\&lt; T \&gt;" alt="" coords="176,80,336,107"/>
+<area shape="rect" id="node4" href="$class_s_e_point_light.html" title="SEPointLight\&lt; T \&gt;" alt="" coords="361,80,490,107"/>
+<area shape="rect" id="node5" href="$class_s_e_spot_light.html" title="SESpotLight\&lt; T \&gt;" alt="" coords="514,80,641,107"/>
+</map>

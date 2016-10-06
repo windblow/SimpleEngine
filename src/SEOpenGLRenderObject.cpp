@@ -1,35 +1,25 @@
 #include "../inc/SEOpenGLRenderObject.h"
+#include "../inc/SEDebugTools.h"
 
 #include <iostream>
 
-#define DUMPONCE(x) if (dumpOnce) std::cout << x << std::endl
+USEDUMPFLAG;
 
-extern bool dumpOnce;
-
-void SEOpenGLRenderObject::applyTransformation() const
+void SEOpenGLRenderObject::applyTransformation(const SERenderServiceInternals<GLfloat> &rs) const
 {
-    glPushMatrix();
-    DUMPONCE("glPushMatrix()");
-    glMatrixMode(GL_MODELVIEW);
-    DUMPONCE("glMatrixMode(GL_MODELVIEW)");
+    DUMPONCE("===SEOpenGLRenderObject::applyTransformation()===");
+    //glMatrixMode(GL_MODELVIEW);
+    //DUMPONCE("glMatrixMode(GL_MODELVIEW)");
     glPushMatrix();
     DUMPONCE("glPushMatrix()");
     glMultMatrixf(getModelMatrix().transposed().m);
     DUMPONCE("glMultMatrixf({"<<std::endl<<getModelMatrix()<<" })");
+
 }
 
-void SEOpenGLRenderObject::applyLighting(const SERenderServiceInternals<GLfloat> &rs) const
+void SEOpenGLRenderObject::clearTransformation(const SERenderServiceInternals<GLfloat> &rs) const
 {
-    rs.enableLighting();
-}
-
-void SEOpenGLRenderObject::clearLighting(const SERenderServiceInternals<GLfloat> &rs) const
-{
-    rs.disableLighting();
-}
-
-void SEOpenGLRenderObject::clearTransformation() const
-{
+    DUMPONCE("===SEOpenGLRenderObject::clearTransformation()===");
     glPopMatrix();
     DUMPONCE("glPopMatrix()");
 }

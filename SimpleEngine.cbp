@@ -30,7 +30,9 @@
 				<Option compiler="gcc" />
 				<Option createDefFile="1" />
 				<Compiler>
+					<Add option="-Og" />
 					<Add option="-g" />
+					<Add option="-DSEDEBUG" />
 				</Compiler>
 			</Target>
 		</Build>
@@ -80,7 +82,9 @@
 		<Unit filename="inc/SEWindowManager.h" />
 		<Unit filename="inc/SimpleEngine.h" />
 		<Unit filename="inc/json.h" />
+		<Unit filename="inc/se.h" />
 		<Unit filename="src/SEConfigurationLoader.cpp" />
+		<Unit filename="src/SEDebugTools.cpp" />
 		<Unit filename="src/SEGLUIWindow.cpp" />
 		<Unit filename="src/SEGLUIWindowManager.cpp" />
 		<Unit filename="src/SEGLUTFlowController.cpp" />

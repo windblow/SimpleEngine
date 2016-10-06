@@ -234,3 +234,264 @@
 	<iostream>
 	<string>
 
+1415725320 source:c:\users\rafael.savastano\documents\projetos\simpleengine\src\json.cpp
+	"../inc/json.h"
+	<stdlib.h>
+	<string>
+	<algorithm>
+	<cstdlib>
+	<cstdio>
+	<climits>
+	<string.h>
+	<functional>
+	<cctype>
+	<stack>
+	<cerrno>
+
+1415725321 c:\users\rafael.savastano\documents\projetos\simpleengine\inc\json.h
+	<vector>
+	<map>
+	<string>
+	<stdexcept>
+
+1415733506 source:c:\users\rafael.savastano\documents\projetos\simpleengine\src\seconfigurationloader.cpp
+	"../inc/SEConfigurationLoader.h"
+	"../inc/json.h"
+	<fstream>
+
+1417610230 c:\users\rafael.savastano\documents\projetos\simpleengine\inc\seconfigurationloader.h
+	<string>
+	<map>
+
+1427468951 source:c:\users\rafael.savastano\documents\projetos\simpleengine\src\sedebugtools.cpp
+	"../inc/SEDebugTools.h"
+
+1427469213 c:\users\rafael.savastano\documents\projetos\simpleengine\inc\sedebugtools.h
+
+1426700638 source:c:\users\rafael.savastano\documents\projetos\simpleengine\src\segluiwindow.cpp
+	"../inc/SEGLUIWindow.h"
+	<iostream>
+
+1426692812 c:\users\rafael.savastano\documents\projetos\simpleengine\inc\segluiwindow.h
+	"SEWindow.h"
+	<GL/glui.h>
+	<GL/glut.h>
+	<string>
+
+1426693798 c:\users\rafael.savastano\documents\projetos\simpleengine\inc\sewindow.h
+	<string>
+
+1424898204 source:c:\users\rafael.savastano\documents\projetos\simpleengine\src\segluiwindowmanager.cpp
+	"../inc/SEGLUIWindowManager.h"
+	"../inc/SEGLUIWindow.h"
+
+1426693023 c:\users\rafael.savastano\documents\projetos\simpleengine\inc\segluiwindowmanager.h
+	<GL/glui.h>
+	<GL/glut.h>
+	"SEWindowManager.h"
+
+1426700251 c:\users\rafael.savastano\documents\projetos\simpleengine\inc\sewindowmanager.h
+	<map>
+	<string>
+	"SEWindow.h"
+
+1427468354 source:c:\users\rafael.savastano\documents\projetos\simpleengine\src\seglutflowcontroller.cpp
+	"../inc/SEGLUTFlowController.h"
+	"../inc/SimpleEngine.h"
+	"../inc/SEDebugTools.h"
+	<iostream>
+
+1426218451 c:\users\rafael.savastano\documents\projetos\simpleengine\inc\seglutflowcontroller.h
+	<GL/freeglut.h>
+	"SEFlowController.h"
+	"SimpleEngine.h"
+
+1426693938 c:\users\rafael.savastano\documents\projetos\simpleengine\inc\seflowcontroller.h
+
+1426970664 c:\users\rafael.savastano\documents\projetos\simpleengine\inc\simpleengine.h
+	<stdlib.h>
+	<time.h>
+	<list>
+	"SEMath.h"
+	"SEConfigurationLoader.h"
+	"SEServiceLocator.h"
+	"SEFlowController.h"
+	"SEApplicationInterface.h"
+	"SEObject.h"
+	"SEEntity.h"
+	"SEComponent.h"
+	"SESceneGraph.h"
+
+1427912552 c:\users\rafael.savastano\documents\projetos\simpleengine\inc\semath.h
+	<cmath>
+	<cassert>
+	<iostream>
+	<string>
+	<cstdlib>
+	<ctime>
+	<cstring>
+
+1426668296 c:\users\rafael.savastano\documents\projetos\simpleengine\inc\seservicelocator.h
+	<string>
+	"SEConfigurationLoader.h"
+	"SERenderService.h"
+	"SEWindowManager.h"
+	"SEFlowController.h"
+
+1427740679 c:\users\rafael.savastano\documents\projetos\simpleengine\inc\serenderservice.h
+	"SERenderObject.h"
+	"SECamera.h"
+	"SELight.h"
+	<string>
+	<vector>
+
+1427736502 c:\users\rafael.savastano\documents\projetos\simpleengine\inc\serenderobject.h
+	"SEMath.h"
+
+1427477029 c:\users\rafael.savastano\documents\projetos\simpleengine\inc\secamera.h
+	"SERenderObject.h"
+
+1427736060 c:\users\rafael.savastano\documents\projetos\simpleengine\inc\selight.h
+	"SERenderObject.h"
+	"SEMath.h"
+
+1426689261 c:\users\rafael.savastano\documents\projetos\simpleengine\inc\seapplicationinterface.h
+	"SERenderService.h"
+	"SEWindowManager.h"
+	"SEFlowController.h"
+
+1426106349 c:\users\rafael.savastano\documents\projetos\simpleengine\inc\seobject.h
+	<string>
+	<set>
+	<map>
+
+1425852981 c:\users\rafael.savastano\documents\projetos\simpleengine\inc\seentity.h
+	<string>
+	"SEObject.h"
+	"SEComponent.h"
+	"SEMath.h"
+
+1425852981 c:\users\rafael.savastano\documents\projetos\simpleengine\inc\secomponent.h
+	"SEObject.h"
+
+1424877024 c:\users\rafael.savastano\documents\projetos\simpleengine\inc\sescenegraph.h
+
+1418135926 source:c:\users\rafael.savastano\documents\projetos\simpleengine\src\semath.cpp
+	"../inc/SEMath.h"
+
+1426141665 source:c:\users\rafael.savastano\documents\projetos\simpleengine\src\semd2mesh.cpp
+	"../inc/SEMD2Mesh.h"
+	<cstdio>
+
+1426142149 c:\users\rafael.savastano\documents\projetos\simpleengine\inc\semd2mesh.h
+	"SEMesh.h"
+	<string>
+	"../inc/MD2Normals.h"
+	"../inc/MD2NormalsTab.h"
+
+1426616516 c:\users\rafael.savastano\documents\projetos\simpleengine\inc\semesh.h
+	"SEMath.h"
+	"SERenderObject.h"
+	"SEVertexBuffer.h"
+	<map>
+	<string>
+
+1426140874 c:\users\rafael.savastano\documents\projetos\simpleengine\inc\severtexbuffer.h
+	"SEVertex.h"
+	<vector>
+
+1426231537 c:\users\rafael.savastano\documents\projetos\simpleengine\inc\severtex.h
+	"SEMath.h"
+
+1426137589 c:\users\rafael.savastano\documents\projetos\simpleengine\inc\md2normals.h
+
+1426137617 c:\users\rafael.savastano\documents\projetos\simpleengine\inc\md2normalstab.h
+
+1426140741 source:c:\users\rafael.savastano\documents\projetos\simpleengine\src\semesh.cpp
+	"../inc/SEMesh.h"
+	"../inc/SEObject.h"
+
+1426226478 source:c:\users\rafael.savastano\documents\projetos\simpleengine\src\semodel.cpp
+	"../inc/../inc/SEModel.h"
+
+1426231676 c:\users\rafael.savastano\documents\projetos\simpleengine\inc\semodel.h
+	"SERenderObject.h"
+	"SEMath.h"
+	"SEMesh.h"
+	"SEMaterial.h"
+
+1426231676 c:\users\rafael.savastano\documents\projetos\simpleengine\inc\sematerial.h
+
+1426106349 source:c:\users\rafael.savastano\documents\projetos\simpleengine\src\seobject.cpp
+	<sstream>
+	"../inc/SEObject.h"
+
+1427729015 source:c:\users\rafael.savastano\documents\projetos\simpleengine\src\seopenglcamera.cpp
+	"../inc/SEOpenGLCamera.h"
+	"../inc/SEDebugTools.h"
+	<iostream>
+
+1427732976 c:\users\rafael.savastano\documents\projetos\simpleengine\inc\seopenglcamera.h
+	"SEOpenGLRenderObject.h"
+	"SECamera.h"
+
+1427732782 c:\users\rafael.savastano\documents\projetos\simpleengine\inc\seopenglrenderobject.h
+	<GL/gl.h>
+	"SERenderObject.h"
+	"SERenderService.h"
+
+1427256826 source:c:\users\rafael.savastano\documents\projetos\simpleengine\src\seopengllight.cpp
+	"../inc/SEOpenGLLight.h"
+
+1427741914 c:\users\rafael.savastano\documents\projetos\simpleengine\inc\seopengllight.h
+	<map>
+	<GL/gl.h>
+	<GL/freeglut.h>
+	"SELight.h"
+	"SEOpenGLRenderObject.h"
+	"SEDebugTools.h"
+
+1427732813 source:c:\users\rafael.savastano\documents\projetos\simpleengine\src\seopenglrenderobject.cpp
+	"../inc/SEOpenGLRenderObject.h"
+	"../inc/SEDebugTools.h"
+	<iostream>
+
+1427741899 source:c:\users\rafael.savastano\documents\projetos\simpleengine\src\seopenglrenderservice.cpp
+	"../inc/SEOpenGLRenderService.h"
+	"../inc/SEOpenGLRenderObject.h"
+	"../inc/SEOpenGLCamera.h"
+	"../inc/SEOpenGLLight.h"
+	"../inc/SEOpenGLPrimitive.h"
+	"../inc/SEDebugTools.h"
+	"../inc/SEMath.h"
+	<stdexcept>
+
+1427740679 c:\users\rafael.savastano\documents\projetos\simpleengine\inc\seopenglrenderservice.h
+	<string>
+	<vector>
+	<map>
+	<GL/gl.h>
+	"SERenderService.h"
+
+1427733009 c:\users\rafael.savastano\documents\projetos\simpleengine\inc\seopenglprimitive.h
+	<GL/gl.h>
+	<GL/freeglut.h>
+	"SEOpenGLRenderObject.h"
+	"SEPrimitive.h"
+	"SEDebugTools.h"
+	<iostream>
+
+1427345441 c:\users\rafael.savastano\documents\projetos\simpleengine\inc\seprimitive.h
+
+1427258982 source:c:\users\rafael.savastano\documents\projetos\simpleengine\src\seservicelocator.cpp
+	"../inc/SEServiceLocator.h"
+	"../inc/SimpleEngine.h"
+	"../inc/SEOpenGLRenderService.h"
+	"../inc/SEGLUIWindowManager.h"
+	"../inc/SEGLUTFlowController.h"
+
+1426980862 source:c:\users\rafael.savastano\documents\projetos\simpleengine\src\simpleengine.cpp
+	"../inc/SimpleEngine.h"
+	<iostream>
+	<string>
+
